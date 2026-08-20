@@ -2,28 +2,34 @@
 
 **Umbrella:** https://github.com/MahsaKeikha/agentic_ai_library
 
-Local flagship link list: [flagships/README.md](../flagships/README.md)
+Local flagship list: [flagships/README.md](../flagships/README.md)
 
 ---
 
-## Flagship verticals
+## Flagship verticals (F01 to F20)
 
-| ID | Name | Description | Primary users | Status |
-|----|------|-------------|---------------|--------|
-| F01 | agentic_book_writer | Chapter pipeline with outline, research, draft, consistency, edit, ship gate | Authors, educators | Live |
-| F02 | agentic_research_lab | Academic research from notes to synthesis, methods, citations, review | Researchers | Live |
-| F03 | agentic_biotech_rd | Biotech R and D planning (documentation level, not wet lab) | Science ops | Live |
-| F04 | agentic_tech_support | Support tickets: KB, diagnosis, reply, policy, QA, send gate | Support | Live |
-| F05 | agentic_online_shop | Shop cases: catalog, inventory, returns, message, QA | E commerce | Live |
-| F06 | agentic_debug_automation | Incidents: triage, logs, RCA, fix, automation, apply gate | SRE | Live |
-| F07 | agentic_software_design | Design package: requirements, architecture, API, ADR, review | Tech leads | Live |
-| F08 | agentic_ceo_assistant | Executive day: briefing, priorities, memo, risks, CEO gate | Founders | Live |
-| F09 | agentic_ai_safety | AI safety review: hazards, policy, evals, red team, release gate | Safety | Live |
-| F10 | agentic_phd_assistant | PhD weekly loop: reading, gaps, experiment sketch, advisor pack | PhD students | Live |
-| F11 | agentic_account_manager | Account health, opportunity, risk, QBR, playbook, send gate | Account managers | Live |
-| F12 | agentic_robotics_governance | Robotics AI safety and governance director pack | Safety directors | Live |
-| F13 | agentic_qa_safety_manager | QA and AI safety manager: tests, eval gates, release readiness | QA managers | Live |
-| F14 | agentic_client_inquiry_bot | Email and chat client inquiries with KB, draft, policy, QA, API error handling | Client success | Live |
+| ID | Name | Description | Status |
+|----|------|-------------|--------|
+| F01 | agentic_book_writer | Chapter writing pipeline with ship gate | Live |
+| F02 | agentic_research_lab | Academic research pipeline | Live |
+| F03 | agentic_biotech_rd | Biotech R and D planning (documentation level) | Live |
+| F04 | agentic_tech_support | Support tickets with QA and send gate | Live |
+| F05 | agentic_online_shop | E commerce case handling | Live |
+| F06 | agentic_debug_automation | Incident triage and automation sketches | Live |
+| F07 | agentic_software_design | Software design package and ADR style notes | Live |
+| F08 | agentic_ceo_assistant | Executive briefing and decision memo | Live |
+| F09 | agentic_ai_safety | AI safety review and release gate | Live |
+| F10 | agentic_phd_assistant | PhD weekly research assistant | Live |
+| F11 | agentic_account_manager | Account health, QBR, client message | Live |
+| F12 | agentic_robotics_governance | Robotics AI safety and governance director | Live |
+| F13 | agentic_qa_safety_manager | QA and AI safety manager | Live |
+| F14 | agentic_client_inquiry_bot | Email and chat client inquiries | Live |
+| F15 | agentic_fullstack_web | Full stack web product and eng specs | Live |
+| F16 | agentic_engineering_professor | Course, lecture, assignment, publish gate | Live |
+| F17 | agentic_immigration_assistant | Immigration practice workflow (not legal advice) | Live |
+| F18 | agentic_real_estate | Listing, showing, client update, compliance | Live |
+| F19 | agentic_psychologist_assistant | Practice templates (not therapy or diagnosis) | Live |
+| F20 | agentic_dating_advisor | Adult dating coach with safety and send gate | Live |
 
 ### Suggested GitHub URLs
 
@@ -43,10 +49,16 @@ Local flagship link list: [flagships/README.md](../flagships/README.md)
 | F12 | https://github.com/MahsaKeikha/agentic_robotics_governance |
 | F13 | https://github.com/MahsaKeikha/agentic_qa_safety_manager |
 | F14 | https://github.com/MahsaKeikha/agentic_client_inquiry_bot |
+| F15 | https://github.com/MahsaKeikha/agentic_fullstack_web |
+| F16 | https://github.com/MahsaKeikha/agentic_engineering_professor |
+| F17 | https://github.com/MahsaKeikha/agentic_immigration_assistant |
+| F18 | https://github.com/MahsaKeikha/agentic_real_estate |
+| F19 | https://github.com/MahsaKeikha/agentic_psychologist_assistant |
+| F20 | https://github.com/MahsaKeikha/agentic_dating_advisor |
 
 ---
 
-## Core agent patterns (in this repo)
+## Core patterns (C01 to C10)
 
 | ID | Pattern | Status |
 |----|---------|--------|
@@ -65,16 +77,10 @@ Path: `catalog/core/<folder>/run.py`
 
 ---
 
-## How to use with the book and course
+## Notes for sensitive domains
 
-Cite IDs (F14, C04) not zip file names. Assign one flagship per project week and one core pattern per lab.
+- **F17** immigration: organizational aid only, not legal advice  
+- **F19** psychologist assistant: templates only, not therapy or diagnosis  
+- **F20** dating: adults only, consent and safety first  
 
----
-
-## Status legend
-
-- **Live**: runnable with offline path  
-- **Draft**: expanding  
-- **Planned**: roadmap only  
-
-F01 through F14 and C01 through C10 are **Live**.
+Always keep human gates before client or public send.
