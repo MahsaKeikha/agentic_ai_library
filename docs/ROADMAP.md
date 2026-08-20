@@ -5,7 +5,7 @@ Target: an engineering-grade reference collection spanning **F01 to F170**, plus
 ## Status legend
 
 - **Live:** standalone flagship repository exists
-- **Built:** unified implementation has been created on the stacked development branches
+- **Integrated:** unified implementation is present in `main`
 - **Planned:** future expansion concept
 
 ## Current progress
@@ -13,23 +13,23 @@ Target: an engineering-grade reference collection spanning **F01 to F170**, plus
 | Range | Domain | Status |
 |---|---|---|
 | F01-F26 | Standalone flagships | Live |
-| F27-F30 | Executive and leadership | Built |
-| F31-F40 | AI engineering | Built |
-| F41-F50 | Software engineering | Built |
-| F51-F60 | Healthcare | Built |
-| F61-F70 | Neuroscience | Built |
-| F71-F80 | Robotics | Built |
-| F81-F90 | Science | Built |
-| F91-F100 | Education | Built |
-| F101-F110 | Legal and compliance | Built |
-| F111-F120 | Manufacturing | Built |
-| F121-F130 | Marketing and growth | Built |
-| F131-F140 | Creative and media | Built |
-| F141-F150 | Government and public sector | Built |
-| F151-F160 | Finance and risk | Built |
-| F161-F170 | Personal and productivity | Built |
+| F27-F30 | Executive and leadership | Integrated |
+| F31-F40 | AI engineering | Integrated |
+| F41-F50 | Software engineering | Integrated |
+| F51-F60 | Healthcare | Integrated |
+| F61-F70 | Neuroscience | Integrated |
+| F71-F80 | Robotics | Integrated |
+| F81-F90 | Science | Integrated |
+| F91-F100 | Education | Integrated |
+| F101-F110 | Legal and compliance | Integrated |
+| F111-F120 | Manufacturing | Integrated |
+| F121-F130 | Marketing and growth | Integrated |
+| F131-F140 | Creative and media | Integrated |
+| F141-F150 | Government and public sector | Integrated |
+| F151-F160 | Finance and risk | Integrated |
+| F161-F170 | Personal and productivity | Integrated |
 
-**Repository integration status:** F27-F30 are merged into `main`. Later unified batches are organized as stacked pull requests and should be merged/retargeted in sequence before the entire catalog is considered integrated into `main`.
+**Repository integration status:** the full F01-F170 catalog is now represented in `main`. Ongoing work should focus on testing, refinement, packaging, documentation quality, and promotion of selected unified systems into standalone flagship repositories when justified.
 
 ## F21-F30 Executive and leadership
 
