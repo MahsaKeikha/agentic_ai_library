@@ -1,8 +1,19 @@
 # Agentic AI Library
 
-A practical engineering library of **170 agentic AI and multi-agent system patterns** spanning executive operations, AI engineering, software, healthcare, neuroscience, robotics, science, education, legal/compliance, manufacturing, marketing, creative work, public-sector workflows, finance/risk, and personal productivity.
+A practical engineering library of **170 agentic AI and multi-agent systems** spanning executive operations, AI engineering, software, healthcare, neuroscience, robotics, science, education, legal and compliance, manufacturing, marketing, creative work, public-sector workflows, finance and risk, and personal productivity.
 
 The goal is not to collect prompt demos. The library is organized around reusable engineering principles: specialized roles, explicit state, evidence discipline, orchestration, evaluation, failure handling, and human approval before consequential actions.
+
+## Current status
+
+**F01-F170 are now represented in the library and integrated into `main`.**
+
+- F01-F26 are standalone flagship repositories.
+- F27-F170 are organized through the unified `systems/` architecture in this repository.
+- C01-C10 provide small reusable core agentic patterns.
+- Automated tests run through GitHub Actions on pushes and pull requests to `main`.
+
+See [`docs/INDEX.md`](docs/INDEX.md) for the full catalog and [`docs/ROADMAP.md`](docs/ROADMAP.md) for domain-level organization.
 
 ## Library at a glance
 
@@ -25,8 +36,6 @@ The goal is not to collect prompt demos. The library is organized around reusabl
 | F151-F160 | Finance and risk | Unified batch |
 | F161-F170 | Personal and productivity | Unified batch |
 
-See [`docs/INDEX.md`](docs/INDEX.md) for the catalog and [`docs/ROADMAP.md`](docs/ROADMAP.md) for domain-level details.
-
 ## Engineering philosophy
 
 A useful multi-agent system needs more than several personas talking to one another. Unified systems are designed around:
@@ -41,7 +50,7 @@ A useful multi-agent system needs more than several personas talking to one anot
 - human approval gates for consequential actions
 - responsible-use boundaries appropriate to the domain
 
-The common engineering contract is documented in [`systems/STANDARD.md`](systems/STANDARD.md).
+The shared engineering contract is documented in [`systems/STANDARD.md`](systems/STANDARD.md).
 
 ## Standalone flagships F01-F26
 
@@ -60,7 +69,7 @@ The common engineering contract is documented in [`systems/STANDARD.md`](systems
 | F11 | [agentic_account_manager](https://github.com/MahsaKeikha/agentic_account_manager) | B2B account management |
 | F12 | [agentic_robotics_governance](https://github.com/MahsaKeikha/agentic_robotics_governance) | Robotics AI safety and governance |
 | F13 | [agentic_qa_safety_manager](https://github.com/MahsaKeikha/agentic_qa_safety_manager) | QA and AI safety management |
-| F14 | [agentic_client_inquiry_bot](https://github.com/MahsaKeikha/agentic_client_inquiry_bot) | Client email and chat inquiries |
+| F14 | [agentic_client_inquiry_bot](https://github.com/MahsaKeikha/agentic_client_inquiry_bot) | Client inquiry workflow |
 | F15 | [agentic_fullstack_web](https://github.com/MahsaKeikha/agentic_fullstack_web) | Full-stack web engineering specs |
 | F16 | [agentic_engineering_professor](https://github.com/MahsaKeikha/agentic_engineering_professor) | Engineering course and lecture preparation |
 | F17 | [agentic_immigration_assistant](https://github.com/MahsaKeikha/agentic_immigration_assistant) | Immigration workflow support, not legal advice |
@@ -74,48 +83,57 @@ The common engineering contract is documented in [`systems/STANDARD.md`](systems
 | F25 | [agentic_strategy_consultant](https://github.com/MahsaKeikha/agentic_strategy_consultant) | Competitive strategy workflow |
 | F26 | [agentic_venture_capital_analyst](https://github.com/MahsaKeikha/agentic_venture_capital_analyst) | Evidence-aware venture due diligence |
 
-## Unified multi-agent systems F27-F170
-
-F27 onward use the umbrella repository rather than requiring one repository per system. The first systems use dedicated package directories, while later domain batches provide standardized specifications, runnable deterministic reference workflows, tests, and evaluation frameworks under [`systems/`](systems/).
+## Unified systems F27-F170
 
 | Range | Domain | Representative systems |
 |---|---|---|
 | F27-F30 | Executive | M&A Advisor, Startup Accelerator, Innovation Officer, Corporate Governance |
-| F31-F40 | AI Engineering | ML Engineer, MLOps, Data Engineering, RAG, Multi-Agent Orchestration, LLM Evaluation |
+| F31-F40 | AI Engineering | ML Engineer, MLOps, Data Engineering, Prompt Engineering, RAG, Orchestration, LLM Evaluation |
 | F41-F50 | Software | Mobile, Cloud, DevOps, Kubernetes, SOC, API, Database, Embedded, IoT |
-| F51-F60 | Healthcare | Digital Health, Clinical Trials, Medical Devices, FDA Documentation, Caregiver Support |
+| F51-F60 | Healthcare | Digital Health, Clinical Trials, Medical Devices, FDA Documentation, Hospital Operations, Caregiver Support |
 | F61-F70 | Neuroscience | Parkinson, Dementia, EEG, Sleep, Neurotechnology, BCI, Aging, Biomarkers |
 | F71-F80 | Robotics | Industrial, Service, Medical, AV, Drone, Humanoid, Safety, HRI, Swarm, Ethics |
 | F81-F90 | Science | Physics, Quantum, Materials, Chemistry, Climate, Space, Astronomy, Energy, Nuclear |
 | F91-F100 | Education | Professor, Curriculum, Tutor, Exams, STEM Lab, Grants, Thesis, Accreditation |
 | F101-F110 | Legal & Compliance | Contracts, Privacy, IP, Patents, Employment, Trade, Export, Regulatory Affairs |
-| F111-F120 | Manufacturing | Manufacturing, Production, Quality, Maintenance, Supply Chain, Digital Twin, Automation |
+| F111-F120 | Manufacturing | Manufacturing, Production, Quality, Maintenance, Supply Chain, Digital Twin, Automation, Safety |
 | F121-F130 | Marketing & Growth | Brand, Content, SEO, Social, Lifecycle, Acquisition, Product Marketing, PR, Growth |
-| F131-F140 | Creative & Media | Publishing, Screenwriting, Music, Graphic/UX Design, Architecture, Games, Animation |
+| F131-F140 | Creative & Media | Publishing, Screenwriting, Music, Graphic Design, UX, Architecture, Games, Animation |
 | F141-F150 | Public Sector | Smart City, Emergency, Disaster, Public Health, Transport, Environment, Policy |
 | F151-F160 | Finance & Risk | Investment Research, Portfolio, Quant Research, Insurance, Banking, Tax, Risk, Treasury |
 | F161-F170 | Personal & Productivity | Life Planning, Knowledge, Career, Resume, Speaking, Interview, Language, Travel, Habits |
 
-## Core reusable patterns
+## Core reusable patterns C01-C10
 
-C01-C10 under `catalog/core/` demonstrate smaller reusable primitives including tool loops, ReAct-style steps, planner-executor workflows, human gates, memory, checklist editing, offline clients, escalation packages, idempotent tools, and evaluation gates.
+The `catalog/core/` folder contains compact reusable patterns for tool loops, ReAct-style steps, planner-executor workflows, human approval gates, structured memory, checklist editing, offline stand-in clients, escalation packages, idempotent tool calls, and evaluation gates.
 
 ```bash
 cd catalog/core/C04_human_gate
 python3 run.py --offline
 ```
 
+## Testing
+
+The repository includes automated tests for the unified batches. GitHub Actions runs the test suite against Python 3.10, 3.11, and 3.12 on pushes and pull requests to `main`.
+
+Local test command:
+
+```bash
+python -m pip install pytest
+python -m pytest -q
+```
+
 ## Safety and responsible use
 
-The library intentionally separates decision support from consequential execution. Sensitive systems must preserve appropriate scope limits and qualified review. Reference workflows should not silently invent missing facts or autonomously perform consequential actions such as clinical decisions, legal certification, financial transactions, physical robot control, industrial equipment commands, targeted voter persuasion, binding public decisions, or external submissions without appropriate authorization and safeguards.
+The library intentionally separates decision support from consequential execution. Sensitive systems preserve appropriate scope limits and qualified review. Reference workflows should not silently invent missing facts or autonomously perform consequential actions such as clinical decisions, legal certification, financial transactions, physical robot control, industrial equipment commands, targeted voter persuasion, binding public decisions, or external submissions without appropriate authorization and safeguards.
 
 ## Repository structure
 
 ```text
 agentic_ai_library/
+├── .github/workflows/tests.yml
 ├── README.md
-├── catalog/
-│   └── core/
+├── catalog/core/
 ├── docs/
 │   ├── INDEX.md
 │   └── ROADMAP.md
@@ -126,13 +144,12 @@ agentic_ai_library/
 │   ├── F28_agentic_startup_accelerator/
 │   ├── F29_agentic_innovation_officer/
 │   ├── F30_agentic_corporate_governance/
-│   └── domain batch specifications, workflows, tests, and evaluations
+│   ├── domain specifications
+│   ├── deterministic reference workflows
+│   ├── evaluation frameworks
+│   └── tests/
 └── templates/
 ```
-
-## Status
-
-The F01-F170 catalog is now represented across the flagship repositories and unified development branches. The remaining repository-management work is to review and merge the stacked unified-system pull requests into `main`, run the complete test suite, and maintain the catalog as a versioned engineering library.
 
 ## Author
 
