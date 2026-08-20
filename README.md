@@ -11,9 +11,17 @@ This repository is a companion engineering library for my **AI Engineering Handb
 - **AI Engineering Handbook Series, Book 1:** https://a.co/d/0cbZnSMi
 - **AI Engineering Handbook Series, Book 2:** https://a.co/d/07HnRY7H
 
+## Clickable F01-F170 catalog
+
+Every F-number now has a direct clickable GitHub link in the master catalog:
+
+### [Open the complete clickable F01-F170 Agent Catalog](docs/AGENT_LINKS.md)
+
+F01-F26 link to their standalone repositories. F27-F30 link to their individual packages inside this repository. F31-F170 link directly to the domain implementation/specification files that contain each runnable unified system.
+
 ## Run the library from one place
 
-The repository now includes a unified launcher and a local browser dashboard.
+The repository includes a unified launcher and a local browser dashboard.
 
 List all F01-F170 systems:
 
@@ -54,7 +62,7 @@ Full instructions: [`docs/LAUNCHER.md`](docs/LAUNCHER.md).
 - `launcher.py` provides one CLI entry point.
 - `dashboard.py` provides a zero-dependency local web interface.
 
-See [`docs/INDEX.md`](docs/INDEX.md) for the full catalog and [`docs/ROADMAP.md`](docs/ROADMAP.md) for domain organization.
+See [`docs/INDEX.md`](docs/INDEX.md) for the full catalog, [`docs/AGENT_LINKS.md`](docs/AGENT_LINKS.md) for direct links to every F-number, and [`docs/ROADMAP.md`](docs/ROADMAP.md) for domain organization.
 
 ## Library at a glance
 
@@ -116,6 +124,8 @@ The shared engineering contract is documented in [`systems/STANDARD.md`](systems
 
 ## Unified systems F27-F170
 
+For individual direct links to every F-number, use the [Clickable Agent Catalog](docs/AGENT_LINKS.md).
+
 | Range | Domain | Representative systems |
 |---|---|---|
 | F27-F30 | Executive | M&A Advisor, Startup Accelerator, Innovation Officer, Corporate Governance |
@@ -160,6 +170,7 @@ agentic_ai_library/
 ├── catalog/core/
 ├── docs/
 │   ├── INDEX.md
+│   ├── AGENT_LINKS.md
 │   ├── ROADMAP.md
 │   └── LAUNCHER.md
 ├── flagships/
