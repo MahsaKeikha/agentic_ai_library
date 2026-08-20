@@ -120,7 +120,7 @@ Curated growth toward about **500** agentic patterns (flagships for depth, micro
 
 **Mahsa Keikha**
 
-Companion to the AI Engineering Handbook series and related courses.
+Companion to the AI Engineering Handbook series and related courses. https://a.co/d/0cXYwuHR
 
 **One line:** Runnable agent patterns with tools, memory, orchestration, and human gates.
 
