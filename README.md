@@ -27,16 +27,17 @@ Real agent work needs more than a single chat loop:
 
 | Layer | Meaning |
 |--------|---------|
-| **Flagship projects** | Full vertical demos (separate repos) |
+| **Flagship projects** | Full vertical demos in separate repositories |
 | **Core catalog** | Small patterns under `catalog/core/` (C01 to C10) |
 | **Templates** | Consistent layout for new examples |
-| **Index** | Stable IDs for book and course |
+| **Index** | Stable IDs for book and course references |
+| **Roadmap** | F01 to F170 plus multi-agent organization concepts |
 
 Offline first. Live models optional with an API key.
 
 ---
 
-## Flagship projects (F01 to F20)
+## Flagship projects (F01 to F25)
 
 | ID | Repository | What it shows |
 |----|------------|---------------|
@@ -60,6 +61,11 @@ Offline first. Live models optional with an API key.
 | F18 | [agentic_real_estate](https://github.com/MahsaKeikha/agentic_real_estate) | Real estate listing and client updates |
 | F19 | [agentic_psychologist_assistant](https://github.com/MahsaKeikha/agentic_psychologist_assistant) | Psychology practice templates (not therapy) |
 | F20 | [agentic_dating_advisor](https://github.com/MahsaKeikha/agentic_dating_advisor) | Adult dating coach with safety and send gate |
+| F21 | [agentic_coo_assistant](https://github.com/MahsaKeikha/agentic_coo_assistant) | COO operations, KPI, bottleneck, capacity, risk, and action-board workflow |
+| F22 | [agentic_cfo_assistant](https://github.com/MahsaKeikha/agentic_cfo_assistant) | CFO period brief, P and L, cash, forecast, variance, risk, and board numbers workflow |
+| F23 | [agentic_board_advisor](https://github.com/MahsaKeikha/agentic_board_advisor) | Board package, agenda, KPI, risk, governance, and decision-request workflow |
+| F24 | [agentic_chief_of_staff](https://github.com/MahsaKeikha/agentic_chief_of_staff) | Executive priorities, calendar focus, decision log, follow-ups, and briefing workflow |
+| F25 | [agentic_strategy_consultant](https://github.com/MahsaKeikha/agentic_strategy_consultant) | Competitive strategy, market map, positioning, options, recommendation, and risk workflow |
 
 Local link list: [flagships/README.md](flagships/README.md)
 
@@ -95,7 +101,7 @@ cd agentic_ai_library/catalog/core/C01_tool_loop
 python3 run.py --offline
 ```
 
-Clone any flagship separately and run its `run_*.py --offline`.
+Clone any flagship separately and run its documented offline entry point.
 
 ---
 
@@ -105,14 +111,18 @@ Many flagships are **workflow assistants**, not professional licenses.
 
 - Immigration assistant is **not legal advice**
 - Psychologist assistant is **not therapy or diagnosis**
+- CFO and strategy workflows are planning and analysis support, not personalized financial or investment advice
+- Board Advisor supports board-package preparation and does not replace directors' duties or legal review
 - Real estate and dating tools need human judgment and local rules
-- Always keep the human gate before send, publish, or file
+- Always keep the human gate before send, publish, circulate, or file
 
 ---
 
 ## Roadmap
 
-Curated growth toward about **500** agentic patterns (flagships for depth, micros for breadth). Quality over empty repos.
+The flagship roadmap now spans **F01 to F170**, with **F01 to F25 live**, plus multi-agent organization concepts M01 to M06. The long-term direction is a curated engineering-grade collection with quality over empty repositories.
+
+See [docs/ROADMAP.md](docs/ROADMAP.md) for the full roadmap.
 
 ---
 
@@ -123,7 +133,3 @@ Curated growth toward about **500** agentic patterns (flagships for depth, micro
 Companion to the AI Engineering Handbook series and related courses. https://a.co/d/0cXYwuHR and https://a.co/d/02Inzh4Q
 
 **One line:** Runnable agent patterns with tools, memory, orchestration, and human gates.
-
-## Full roadmap
-
-See [docs/ROADMAP.md](docs/ROADMAP.md) for F21 to F170 and multi agent organizations M01 to M06.
