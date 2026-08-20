@@ -1,6 +1,6 @@
 # Agentic AI Library Roadmap
 
-Target: one of the most complete **engineering grade** multi agent reference collections in the world.
+Target: one of the most complete **engineering grade** multi agent reference collections.
 
 Style for every Live entry:
 
