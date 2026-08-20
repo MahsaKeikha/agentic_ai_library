@@ -20,12 +20,16 @@ Style for every Live entry:
 
 ---
 
-## Already Live (F01 to F21)
+## Already Live (F01 to F25)
 
 | ID | Name | Status |
 |----|------|--------|
 | F01 to F20 | See main INDEX | Live |
 | F21 | agentic_coo_assistant | Live |
+| F22 | agentic_cfo_assistant | Live |
+| F23 | agentic_board_advisor | Live |
+| F24 | agentic_chief_of_staff | Live |
+| F25 | agentic_strategy_consultant | Live |
 
 ---
 
@@ -34,10 +38,10 @@ Style for every Live entry:
 | ID | Name | Focus | Status |
 |----|------|--------|--------|
 | F21 | Agentic COO | Ops, KPIs, risks, projects | Live |
-| F22 | Agentic CFO | Budgeting, forecasting, analysis | Next |
-| F23 | Agentic Board Advisor | Board packages, governance reports | Planned |
-| F24 | Agentic Chief of Staff | Executive priority coordination | Planned |
-| F25 | Agentic Strategy Consultant | Competitive strategy | Planned |
+| F22 | Agentic CFO | Budgeting, forecasting, analysis | Live |
+| F23 | Agentic Board Advisor | Board packages, governance reports | Live |
+| F24 | Agentic Chief of Staff | Executive priority coordination | Live |
+| F25 | Agentic Strategy Consultant | Competitive strategy | Live |
 | F26 | Agentic Venture Capital Analyst | Startup due diligence | Planned |
 | F27 | Agentic M and A Advisor | Acquisition analysis | Planned |
 | F28 | Agentic Startup Accelerator | Idea to MVP roadmap | Planned |
@@ -328,12 +332,7 @@ Full org simulations composed of specialized agents.
 
 ## Build policy
 
-- Prefer **working offline demos** over empty README only repos  
-- Sensitive domains keep explicit non advice disclaimers  
-- Stable IDs never renumber once Live  
-- Topic packs of micro examples can fill breadth toward 500 entries  
-
----
-
-
-
+- Prefer **working offline demos** over empty README only repos
+- Sensitive domains keep explicit non advice disclaimers
+- Stable IDs never renumber once Live
+- Topic packs of micro examples can fill breadth toward 500 entries
