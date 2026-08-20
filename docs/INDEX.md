@@ -6,7 +6,7 @@ Local flagship list: [flagships/README.md](../flagships/README.md)
 
 ---
 
-## Flagship verticals (F01 to F20)
+## Flagship verticals (F01 to F25)
 
 | ID | Name | Description | Status |
 |----|------|-------------|--------|
@@ -24,14 +24,19 @@ Local flagship list: [flagships/README.md](../flagships/README.md)
 | F12 | agentic_robotics_governance | Robotics AI safety and governance director | Live |
 | F13 | agentic_qa_safety_manager | QA and AI safety manager | Live |
 | F14 | agentic_client_inquiry_bot | Email and chat client inquiries | Live |
-| F15 | agentic_fullstack_web | Full stack web product and eng specs | Live |
+| F15 | agentic_fullstack_web | Full stack web product and engineering specs | Live |
 | F16 | agentic_engineering_professor | Course, lecture, assignment, publish gate | Live |
 | F17 | agentic_immigration_assistant | Immigration practice workflow (not legal advice) | Live |
 | F18 | agentic_real_estate | Listing, showing, client update, compliance | Live |
 | F19 | agentic_psychologist_assistant | Practice templates (not therapy or diagnosis) | Live |
 | F20 | agentic_dating_advisor | Adult dating coach with safety and send gate | Live |
+| F21 | agentic_coo_assistant | Operations brief, KPIs, bottlenecks, risks, capacity, actions, and communications | Live |
+| F22 | agentic_cfo_assistant | Period brief, P and L, cash, forecast, variance, risks, and board numbers | Live |
+| F23 | agentic_board_advisor | Board agenda, KPI summary, risk register, governance, decisions, and narrative | Live |
+| F24 | agentic_chief_of_staff | Executive priorities, calendar focus, decision log, follow-ups, and briefing | Live |
+| F25 | agentic_strategy_consultant | Market map, competitor analysis, positioning, strategic options, recommendation, and risks | Live |
 
-### Suggested GitHub URLs
+### GitHub URLs
 
 | ID | URL |
 |----|-----|
@@ -55,6 +60,11 @@ Local flagship list: [flagships/README.md](../flagships/README.md)
 | F18 | https://github.com/MahsaKeikha/agentic_real_estate |
 | F19 | https://github.com/MahsaKeikha/agentic_psychologist_assistant |
 | F20 | https://github.com/MahsaKeikha/agentic_dating_advisor |
+| F21 | https://github.com/MahsaKeikha/agentic_coo_assistant |
+| F22 | https://github.com/MahsaKeikha/agentic_cfo_assistant |
+| F23 | https://github.com/MahsaKeikha/agentic_board_advisor |
+| F24 | https://github.com/MahsaKeikha/agentic_chief_of_staff |
+| F25 | https://github.com/MahsaKeikha/agentic_strategy_consultant |
 
 ---
 
@@ -79,8 +89,16 @@ Path: `catalog/core/<folder>/run.py`
 
 ## Notes for sensitive domains
 
-- **F17** immigration: organizational aid only, not legal advice  
-- **F19** psychologist assistant: templates only, not therapy or diagnosis  
-- **F20** dating: adults only, consent and safety first  
+- **F17** immigration: organizational aid only, not legal advice
+- **F19** psychologist assistant: templates only, not therapy or diagnosis
+- **F20** dating: adults only, consent and safety first
+- **F22** CFO: educational and operational support, not personalized investment advice or audited financial reporting
+- **F23** Board Advisor: workflow support, not legal advice or a substitute for directors' duties
 
-Always keep human gates before client or public send.
+Always keep human gates before client, board, public, or official circulation.
+
+---
+
+## Roadmap
+
+See [ROADMAP.md](ROADMAP.md) for F26 to F170 and the multi-agent organization roadmap.
