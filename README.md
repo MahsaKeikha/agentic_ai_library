@@ -11,23 +11,57 @@ This repository is a companion engineering library for my **AI Engineering Handb
 - **AI Engineering Handbook Series, Book 1:** https://a.co/d/0cbZnSMi
 - **AI Engineering Handbook Series, Book 2:** https://a.co/d/07HnRY7H
 
+## Run the library from one place
+
+The repository now includes a unified launcher and a local browser dashboard.
+
+List all F01-F170 systems:
+
+```bash
+python launcher.py --list
+```
+
+Run a unified system directly:
+
+```bash
+python launcher.py F35
+```
+
+Run with structured evidence/context:
+
+```bash
+python launcher.py F35 --json '{"corpus":"internal knowledge base","retrieval":"hybrid search"}'
+```
+
+Launch the browser dashboard:
+
+```bash
+python dashboard.py
+```
+
+Then open `http://127.0.0.1:8765`. The dashboard lets you select an F-number, provide JSON context, record a human-approval flag, and inspect the structured result. F27-F170 execute from this repository. F01-F26 are standalone flagships, so the launcher returns their repository locations rather than pretending they are installed locally.
+
+Full instructions: [`docs/LAUNCHER.md`](docs/LAUNCHER.md).
+
 ## Current status
 
-**F01-F170 are now represented in the library and integrated into `main`.**
+**F01-F170 are represented in the library and integrated into `main`.**
 
 - F01-F26 are standalone flagship repositories.
-- F27-F170 are organized through the unified `systems/` architecture in this repository.
-- C01-C10 provide small reusable core agentic patterns.
+- F27-F170 use the unified `systems/` architecture.
+- C01-C10 provide small reusable core patterns.
 - Automated tests run through GitHub Actions on pushes and pull requests to `main`.
+- `launcher.py` provides one CLI entry point.
+- `dashboard.py` provides a zero-dependency local web interface.
 
-See [`docs/INDEX.md`](docs/INDEX.md) for the full catalog and [`docs/ROADMAP.md`](docs/ROADMAP.md) for domain-level organization.
+See [`docs/INDEX.md`](docs/INDEX.md) for the full catalog and [`docs/ROADMAP.md`](docs/ROADMAP.md) for domain organization.
 
 ## Library at a glance
 
 | Range | Domain | Architecture |
 |---|---|---|
 | F01-F26 | Standalone flagship systems | Dedicated repositories |
-| F27-F30 | Executive and leadership | Unified systems |
+| F27-F30 | Executive and leadership | Unified individual packages |
 | F31-F40 | AI engineering | Unified batch |
 | F41-F50 | Software engineering | Unified batch |
 | F51-F60 | Healthcare | Unified batch |
@@ -45,17 +79,7 @@ See [`docs/INDEX.md`](docs/INDEX.md) for the full catalog and [`docs/ROADMAP.md`
 
 ## Engineering philosophy
 
-A useful multi-agent system needs more than several personas talking to one another. Unified systems are designed around:
-
-- specialized agents with narrow responsibilities
-- structured inputs and outputs
-- shared or traceable workflow state
-- explicit treatment of missing evidence and uncertainty
-- deterministic offline reference paths where practical
-- domain-specific evaluation criteria
-- failure, escalation, and stop conditions
-- human approval gates for consequential actions
-- responsible-use boundaries appropriate to the domain
+A useful multi-agent system needs more than several personas talking to one another. Unified systems are designed around specialized agents, structured inputs and outputs, traceable workflow state, explicit missing evidence, deterministic offline reference paths where practical, domain-specific evaluation, escalation/stop conditions, and human approval before consequential actions.
 
 The shared engineering contract is documented in [`systems/STANDARD.md`](systems/STANDARD.md).
 
@@ -110,40 +134,34 @@ The shared engineering contract is documented in [`systems/STANDARD.md`](systems
 | F151-F160 | Finance & Risk | Investment Research, Portfolio, Quant Research, Insurance, Banking, Tax, Risk, Treasury |
 | F161-F170 | Personal & Productivity | Life Planning, Knowledge, Career, Resume, Speaking, Interview, Language, Travel, Habits |
 
-## Core reusable patterns C01-C10
-
-The `catalog/core/` folder contains compact reusable patterns for tool loops, ReAct-style steps, planner-executor workflows, human approval gates, structured memory, checklist editing, offline stand-in clients, escalation packages, idempotent tool calls, and evaluation gates.
-
-```bash
-cd catalog/core/C04_human_gate
-python3 run.py --offline
-```
-
 ## Testing
 
-The repository includes automated tests for the unified batches. GitHub Actions runs the test suite against Python 3.10, 3.11, and 3.12 on pushes and pull requests to `main`.
-
-Local test command:
+Run locally:
 
 ```bash
 python -m pip install pytest
 python -m pytest -q
 ```
 
+GitHub Actions runs the test suite against Python 3.10, 3.11, and 3.12.
+
 ## Safety and responsible use
 
-The library intentionally separates decision support from consequential execution. Sensitive systems preserve appropriate scope limits and qualified review. Reference workflows should not silently invent missing facts or autonomously perform consequential actions such as clinical decisions, legal certification, financial transactions, physical robot control, industrial equipment commands, targeted voter persuasion, binding public decisions, or external submissions without appropriate authorization and safeguards.
+The library separates decision support from consequential execution. Sensitive systems preserve scope limits and qualified review. Reference workflows should not silently invent missing facts or autonomously perform consequential actions such as clinical decisions, legal certification, financial transactions, physical robot control, industrial equipment commands, targeted voter persuasion, binding public decisions, or external submissions without appropriate authorization and safeguards.
 
 ## Repository structure
 
 ```text
 agentic_ai_library/
+├── launcher.py
+├── dashboard.py
 ├── .github/workflows/tests.yml
 ├── README.md
 ├── catalog/core/
 ├── docs/
 │   ├── INDEX.md
-│   └── ROADMAP.md
+│   ├── ROADMAP.md
+│   └── LAUNCHER.md
 ├── flagships/
 ├── systems/
 │   ├── STANDARD.md
@@ -155,6 +173,8 @@ agentic_ai_library/
 │   ├── deterministic reference workflows
 │   ├── evaluation frameworks
 │   └── tests/
+├── tests/
+│   └── test_launcher.py
 └── templates/
 ```
 
