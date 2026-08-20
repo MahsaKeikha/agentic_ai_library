@@ -1,0 +1,8 @@
+{
+  "idea": "AI workflow assistant for regulated small businesses",
+  "customer": "Operations leaders at 50 to 500 person firms",
+  "problem_hypothesis": "Teams lose time coordinating repetitive compliance-heavy workflows",
+  "current_alternatives": ["manual spreadsheets", "generic automation tools", "outsourced operations"],
+  "constraints": ["small founding team", "limited budget", "must validate willingness to pay before scaling"],
+  "evidence_to_collect": ["customer interviews", "prototype usage", "paid pilot conversion", "retention"]
+}
