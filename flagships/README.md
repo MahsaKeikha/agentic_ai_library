@@ -2,10 +2,10 @@
 
 **Umbrella:** https://github.com/MahsaKeikha/agentic_ai_library
 
-This page tracks the live flagship repositories linked from the Agentic AI Library.
+This page tracks the live standalone flagship repositories linked from the Agentic AI Library.
 
 | ID | Name | GitHub URL |
-|----|------|------------|
+|---|---|---|
 | F01 | agentic_book_writer | https://github.com/MahsaKeikha/agentic_book_writer |
 | F02 | agentic_research_lab | https://github.com/MahsaKeikha/agentic_research_lab |
 | F03 | agentic_biotech_rd | https://github.com/MahsaKeikha/agentic_biotech_rd |
@@ -31,17 +31,10 @@ This page tracks the live flagship repositories linked from the Agentic AI Libra
 | F23 | agentic_board_advisor | https://github.com/MahsaKeikha/agentic_board_advisor |
 | F24 | agentic_chief_of_staff | https://github.com/MahsaKeikha/agentic_chief_of_staff |
 | F25 | agentic_strategy_consultant | https://github.com/MahsaKeikha/agentic_strategy_consultant |
+| F26 | agentic_venture_capital_analyst | https://github.com/MahsaKeikha/agentic_venture_capital_analyst |
 
 ## Current live range
 
-**F01 to F25 are live.** Future flagships are tracked in [docs/ROADMAP.md](../docs/ROADMAP.md).
+**F01 to F26 are live standalone flagships.** F27 onward use the unified `systems/` architecture unless intentionally promoted to standalone status.
 
-## Update checklist
-
-1. Build and test the flagship repository.
-2. Push the runnable project to GitHub.
-3. Add the live URL here and in the main README.
-4. Update `docs/INDEX.md` and `docs/ROADMAP.md` so status remains consistent.
-5. Keep stable flagship IDs once a system is Live.
-
-Back: [README](../README.md) · [INDEX](../docs/INDEX.md) · [ROADMAP](../docs/ROADMAP.md)
+Back: [README](../README.md) · [INDEX](../docs/INDEX.md) · [ROADMAP](../docs/ROADMAP.md) · [Unified systems](../systems/README.md)
