@@ -1,0 +1,8 @@
+{
+  "entity": "Example Technology Corp",
+  "board_cycle": "Quarterly",
+  "policies": ["conflict of interest", "information security", "delegation of authority"],
+  "upcoming_obligations": ["quarterly board meeting", "annual policy review", "committee reporting"],
+  "open_items": ["two policies lack confirmed review owner", "one prior board action remains open"],
+  "evidence": ["board calendar", "policy register", "prior minutes"]
+}
