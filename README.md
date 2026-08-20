@@ -4,6 +4,13 @@ A practical engineering library of **170 agentic AI and multi-agent systems** sp
 
 The goal is not to collect prompt demos. The library is organized around reusable engineering principles: specialized roles, explicit state, evidence discipline, orchestration, evaluation, failure handling, and human approval before consequential actions.
 
+## AI Engineering Handbook Series
+
+This repository is a companion engineering library for my **AI Engineering Handbook Series**. The books provide the conceptual and engineering foundation, while this repository provides practical agentic AI and multi-agent system implementations.
+
+- **AI Engineering Handbook Series, Book 1:** https://a.co/d/0cbZnSMi
+- **AI Engineering Handbook Series, Book 2:** https://a.co/d/07HnRY7H
+
 ## Current status
 
 **F01-F170 are now represented in the library and integrated into `main`.**
