@@ -335,11 +335,5 @@ Full org simulations composed of specialized agents.
 
 ---
 
-## Suggested build order
 
-1. Finish executive suite F22 to F30  
-2. AI engineering F31 to F40 (aligns with handbook)  
-3. Neuroscience F61 to F70 (your research direction)  
-4. Organizations M01 to M06  
-5. Fill other categories in parallel as needed for book and course  
 
