@@ -1,0 +1,11 @@
+{
+  "id": "F27",
+  "name": "Agentic M&A Advisor",
+  "category": "Executive and Leadership",
+  "status": "In Development",
+  "agents": ["target_intake", "strategic_fit", "financial_review", "synergy", "integration_risk", "diligence", "deal_memo", "gatekeeper"],
+  "capabilities": ["target_screening", "strategic_fit", "financial_review", "synergy_hypotheses", "risk_register", "diligence_questions", "deal_memo"],
+  "human_gate_required": true,
+  "consequential_actions": false,
+  "disclaimer": "Decision-support only. Not legal, tax, accounting, valuation, or investment advice."
+}
