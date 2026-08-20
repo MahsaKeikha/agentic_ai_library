@@ -1,0 +1,10 @@
+{
+  "id": "F28",
+  "name": "Agentic Startup Accelerator",
+  "category": "Executive and Leadership",
+  "status": "In Development",
+  "agents": ["problem_framer", "customer_discovery", "market", "product_strategy", "mvp_architect", "gtm", "metrics", "experiment_design", "fundraising_readiness", "gatekeeper"],
+  "capabilities": ["problem_validation", "customer_discovery", "market_analysis", "mvp_scope", "gtm_plan", "metrics", "experiments", "fundraising_readiness"],
+  "human_gate_required": true,
+  "consequential_actions": false
+}

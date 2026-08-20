@@ -1,0 +1,8 @@
+{
+  "organization": "Example Manufacturing Group",
+  "strategic_priorities": ["reduce unplanned downtime", "improve operator productivity", "lower quality escapes"],
+  "signals": ["vision AI maturity", "edge compute cost decline", "growing maintenance backlog"],
+  "candidate_opportunities": ["predictive maintenance copilot", "visual quality inspection", "operator knowledge assistant"],
+  "constraints": ["legacy equipment", "limited plant IT capacity", "safety review required"],
+  "decision_horizon": "12 months"
+}

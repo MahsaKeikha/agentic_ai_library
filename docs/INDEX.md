@@ -2,76 +2,46 @@
 
 **Umbrella:** https://github.com/MahsaKeikha/agentic_ai_library
 
-Local flagship list: [flagships/README.md](../flagships/README.md)
+---
+
+## Live standalone flagships (F01 to F26)
+
+F01 to F25 retain their existing standalone repositories. F26 is now also live as a standalone flagship:
+
+| ID | Name | Description | Status |
+|---|---|---|---|
+| F26 | agentic_venture_capital_analyst | Startup screening, evidence-aware due diligence, risk register, diligence queue, and investment memo | Live |
+
+F26: https://github.com/MahsaKeikha/agentic_venture_capital_analyst
+
+See the main README and [flagships/README.md](../flagships/README.md) for F01 to F25 links.
 
 ---
 
-## Flagship verticals (F01 to F25)
+## Unified systems (F27 onward)
 
 | ID | Name | Description | Status |
-|----|------|-------------|--------|
-| F01 | agentic_book_writer | Chapter writing pipeline with ship gate | Live |
-| F02 | agentic_research_lab | Academic research pipeline | Live |
-| F03 | agentic_biotech_rd | Biotech R and D planning (documentation level) | Live |
-| F04 | agentic_tech_support | Support tickets with QA and send gate | Live |
-| F05 | agentic_online_shop | E commerce case handling | Live |
-| F06 | agentic_debug_automation | Incident triage and automation sketches | Live |
-| F07 | agentic_software_design | Software design package and ADR style notes | Live |
-| F08 | agentic_ceo_assistant | Executive briefing and decision memo | Live |
-| F09 | agentic_ai_safety | AI safety review and release gate | Live |
-| F10 | agentic_phd_assistant | PhD weekly research assistant | Live |
-| F11 | agentic_account_manager | Account health, QBR, client message | Live |
-| F12 | agentic_robotics_governance | Robotics AI safety and governance director | Live |
-| F13 | agentic_qa_safety_manager | QA and AI safety manager | Live |
-| F14 | agentic_client_inquiry_bot | Email and chat client inquiries | Live |
-| F15 | agentic_fullstack_web | Full stack web product and engineering specs | Live |
-| F16 | agentic_engineering_professor | Course, lecture, assignment, publish gate | Live |
-| F17 | agentic_immigration_assistant | Immigration practice workflow (not legal advice) | Live |
-| F18 | agentic_real_estate | Listing, showing, client update, compliance | Live |
-| F19 | agentic_psychologist_assistant | Practice templates (not therapy or diagnosis) | Live |
-| F20 | agentic_dating_advisor | Adult dating coach with safety and send gate | Live |
-| F21 | agentic_coo_assistant | Operations brief, KPIs, bottlenecks, risks, capacity, actions, and communications | Live |
-| F22 | agentic_cfo_assistant | Period brief, P and L, cash, forecast, variance, risks, and board numbers | Live |
-| F23 | agentic_board_advisor | Board agenda, KPI summary, risk register, governance, decisions, and narrative | Live |
-| F24 | agentic_chief_of_staff | Executive priorities, calendar focus, decision log, follow-ups, and briefing | Live |
-| F25 | agentic_strategy_consultant | Market map, competitor analysis, positioning, strategic options, recommendation, and risks | Live |
+|---|---|---|---|
+| F27 | Agentic M&A Advisor | Strategic fit, financial review, synergy hypotheses, integration risk, diligence, and deal memo | Built on feature branch |
+| F28 | Agentic Startup Accelerator | Customer discovery, market, product thesis, MVP, GTM, metrics, experiments, and fundraising readiness | Built on feature branch |
+| F29 | Agentic Innovation Officer | Opportunity scouting, technology assessment, alignment, experiments, portfolio prioritization, risk, and executive brief | Built on feature branch |
+| F30 | Agentic Corporate Governance | Governance calendar, policy register, board process, decision log, actions, risk escalation, and status brief | Built on feature branch |
 
-### GitHub URLs
+Paths:
 
-| ID | URL |
-|----|-----|
-| F01 | https://github.com/MahsaKeikha/agentic_book_writer |
-| F02 | https://github.com/MahsaKeikha/agentic_research_lab |
-| F03 | https://github.com/MahsaKeikha/agentic_biotech_rd |
-| F04 | https://github.com/MahsaKeikha/agentic_tech_support |
-| F05 | https://github.com/MahsaKeikha/agentic_online_shop |
-| F06 | https://github.com/MahsaKeikha/agentic_debug_automation |
-| F07 | https://github.com/MahsaKeikha/agentic_software_design |
-| F08 | https://github.com/MahsaKeikha/agentic_ceo_assistant |
-| F09 | https://github.com/MahsaKeikha/agentic_ai_safety |
-| F10 | https://github.com/MahsaKeikha/agentic_phd_assistant |
-| F11 | https://github.com/MahsaKeikha/agentic_account_manager |
-| F12 | https://github.com/MahsaKeikha/agentic_robotics_governance |
-| F13 | https://github.com/MahsaKeikha/agentic_qa_safety_manager |
-| F14 | https://github.com/MahsaKeikha/agentic_client_inquiry_bot |
-| F15 | https://github.com/MahsaKeikha/agentic_fullstack_web |
-| F16 | https://github.com/MahsaKeikha/agentic_engineering_professor |
-| F17 | https://github.com/MahsaKeikha/agentic_immigration_assistant |
-| F18 | https://github.com/MahsaKeikha/agentic_real_estate |
-| F19 | https://github.com/MahsaKeikha/agentic_psychologist_assistant |
-| F20 | https://github.com/MahsaKeikha/agentic_dating_advisor |
-| F21 | https://github.com/MahsaKeikha/agentic_coo_assistant |
-| F22 | https://github.com/MahsaKeikha/agentic_cfo_assistant |
-| F23 | https://github.com/MahsaKeikha/agentic_board_advisor |
-| F24 | https://github.com/MahsaKeikha/agentic_chief_of_staff |
-| F25 | https://github.com/MahsaKeikha/agentic_strategy_consultant |
+- `systems/F27_agentic_ma_advisor/`
+- `systems/F28_agentic_startup_accelerator/`
+- `systems/F29_agentic_innovation_officer/`
+- `systems/F30_agentic_corporate_governance/`
+
+All unified systems follow [systems/STANDARD.md](../systems/STANDARD.md).
 
 ---
 
 ## Core patterns (C01 to C10)
 
 | ID | Pattern | Status |
-|----|---------|--------|
+|---|---|---|
 | C01 | Single tool call loop | Live |
 | C02 | ReAct style thought and act | Live |
 | C03 | Planner then executor | Live |
@@ -87,18 +57,20 @@ Path: `catalog/core/<folder>/run.py`
 
 ---
 
-## Notes for sensitive domains
+## Sensitive-domain notes
 
-- **F17** immigration: organizational aid only, not legal advice
-- **F19** psychologist assistant: templates only, not therapy or diagnosis
-- **F20** dating: adults only, consent and safety first
-- **F22** CFO: educational and operational support, not personalized investment advice or audited financial reporting
-- **F23** Board Advisor: workflow support, not legal advice or a substitute for directors' duties
+- F17: organizational immigration aid only, not legal advice
+- F19: psychology practice templates only, not therapy or diagnosis
+- F22: operational finance support, not personalized investment advice or audited reporting
+- F23: board workflow support, not legal advice or a substitute for directors' duties
+- F26: venture diligence support, not autonomous investment advice or capital deployment
+- F27: M&A workflow support, not legal, tax, valuation, or transaction certification
+- F30: governance workflow support, not legal advice or compliance certification
 
-Always keep human gates before client, board, public, or official circulation.
+Human review remains required before consequential circulation or action.
 
 ---
 
 ## Roadmap
 
-See [ROADMAP.md](ROADMAP.md) for F26 to F170 and the multi-agent organization roadmap.
+See [ROADMAP.md](ROADMAP.md) for F31 to F170 and multi-agent organizations M01 to M06.

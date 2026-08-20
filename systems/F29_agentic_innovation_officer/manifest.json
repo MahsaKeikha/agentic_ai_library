@@ -1,0 +1,10 @@
+{
+  "id": "F29",
+  "name": "Agentic Innovation Officer",
+  "category": "Executive and Leadership",
+  "status": "In Development",
+  "agents": ["opportunity_scout", "technology_analyst", "strategic_alignment", "experiment_designer", "portfolio_analyst", "risk_analyst", "resource_planner", "executive_brief", "gatekeeper"],
+  "capabilities": ["opportunity_scouting", "technology_assessment", "portfolio_prioritization", "experiment_design", "risk_analysis", "resource_planning", "executive_briefing"],
+  "human_gate_required": true,
+  "consequential_actions": false
+}

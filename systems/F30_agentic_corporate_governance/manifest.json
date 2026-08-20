@@ -1,0 +1,11 @@
+{
+  "id": "F30",
+  "name": "Agentic Corporate Governance",
+  "category": "Executive and Leadership",
+  "status": "In Development",
+  "agents": ["governance_intake", "calendar_obligations", "policy_register", "board_process", "decision_log", "action_tracker", "governance_risk", "governance_brief", "gatekeeper"],
+  "capabilities": ["governance_calendar", "policy_tracking", "board_readiness", "decision_logging", "action_tracking", "risk_escalation", "governance_briefing"],
+  "human_gate_required": true,
+  "consequential_actions": false,
+  "disclaimer": "Workflow support only. Not legal advice and not a substitute for corporate counsel or directors' duties."
+}

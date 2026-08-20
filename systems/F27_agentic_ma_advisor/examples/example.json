@@ -1,0 +1,9 @@
+{
+  "buyer": "Northstar Systems",
+  "target": "Atlas Robotics",
+  "transaction": "Potential majority acquisition",
+  "strategic_thesis": "Add industrial autonomy capability and recurring software revenue",
+  "evidence": ["management deck", "financial summary", "customer concentration table"],
+  "known_risks": ["customer concentration", "key-person dependency", "integration complexity"],
+  "open_questions": ["validate ARR quality", "validate retention", "quantify integration cost", "test synergy assumptions"]
+}
