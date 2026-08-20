@@ -47,7 +47,10 @@ def run_system(system_id: str, case: Dict[str, Any], approve: bool = False) -> S
 
     if case.get("hazardous_experimental_request"):
         result.risks.append("Hazardous experimental execution request is outside this reference workflow")
-        result.recommendation = "Keep the workflow at literature, simulation, documentation, or qualified institutional review level."
+        result.recommendation = (
+            "Hazardous experimental execution is outside this reference workflow. "
+            "Keep the workflow at literature, simulation, documentation, or qualified institutional review level."
+        )
         return result
 
     result.recommendation = (
