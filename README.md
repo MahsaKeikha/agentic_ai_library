@@ -123,3 +123,7 @@ Curated growth toward about **500** agentic patterns (flagships for depth, micro
 Companion to the AI Engineering Handbook series and related courses.
 
 **One line:** Runnable agent patterns with tools, memory, orchestration, and human gates.
+
+## Full roadmap
+
+See [docs/ROADMAP.md](docs/ROADMAP.md) for F21 to F170 and multi agent organizations M01 to M06.
