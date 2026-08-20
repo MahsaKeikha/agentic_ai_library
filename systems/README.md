@@ -2,12 +2,19 @@
 
 From F27 onward, new systems are developed inside this repository as standardized packages rather than as separate repositories.
 
-Each system package should include:
+See [STANDARD.md](STANDARD.md) for the engineering contract.
 
-- `README.md` with purpose, scope, agents, workflow, and responsible-use boundaries
-- `manifest.json` with stable ID, category, capabilities, and human-gate policy
-- runnable `run.py` offline demo
-- example input under `examples/`
-- tests and evaluation notes as the system matures
+## Current systems
 
-Current build batch: F27 to F30.
+| ID | System | Status |
+|---|---|---|
+| F27 | Agentic M&A Advisor | Built on feature branch |
+| F28 | Agentic Startup Accelerator | Built on feature branch |
+| F29 | Agentic Innovation Officer | Built on feature branch |
+| F30 | Agentic Corporate Governance | Built on feature branch |
+
+Each package includes a README, manifest, offline runnable entry point, example input, tests, evaluation criteria, responsible-use boundaries, and human approval logic.
+
+## Next batch
+
+F31 to F40 will cover AI Engineering: ML Engineer, MLOps Team, Data Engineering, Prompt Engineering, RAG Engineering, Multi-Agent Orchestrator, LLM Evaluator, AI Benchmark Suite, AI Product Manager, and AI Infrastructure Architect.
