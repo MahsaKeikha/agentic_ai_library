@@ -2,10 +2,10 @@
 
 **Umbrella:** https://github.com/MahsaKeikha/agentic_ai_library
 
-After you push each repo, prefer the live URL in the main README.
+This page tracks the live flagship repositories linked from the Agentic AI Library.
 
-| ID | Name | Suggested GitHub URL |
-|----|------|----------------------|
+| ID | Name | GitHub URL |
+|----|------|------------|
 | F01 | agentic_book_writer | https://github.com/MahsaKeikha/agentic_book_writer |
 | F02 | agentic_research_lab | https://github.com/MahsaKeikha/agentic_research_lab |
 | F03 | agentic_biotech_rd | https://github.com/MahsaKeikha/agentic_biotech_rd |
@@ -26,23 +26,22 @@ After you push each repo, prefer the live URL in the main README.
 | F18 | agentic_real_estate | https://github.com/MahsaKeikha/agentic_real_estate |
 | F19 | agentic_psychologist_assistant | https://github.com/MahsaKeikha/agentic_psychologist_assistant |
 | F20 | agentic_dating_advisor | https://github.com/MahsaKeikha/agentic_dating_advisor |
+| F21 | agentic_coo_assistant | https://github.com/MahsaKeikha/agentic_coo_assistant |
+| F22 | agentic_cfo_assistant | https://github.com/MahsaKeikha/agentic_cfo_assistant |
+| F23 | agentic_board_advisor | https://github.com/MahsaKeikha/agentic_board_advisor |
+| F24 | agentic_chief_of_staff | https://github.com/MahsaKeikha/agentic_chief_of_staff |
+| F25 | agentic_strategy_consultant | https://github.com/MahsaKeikha/agentic_strategy_consultant |
 
-## New since last major index
+## Current live range
 
-| ID | Zip you may have downloaded |
-|----|------------------------------|
-| F15 | agentic_fullstack_web_v1.zip |
-| F16 | agentic_engineering_professor_v1.zip |
-| F17 | agentic_immigration_assistant_v1.zip |
-| F18 | agentic_real_estate_v1.zip |
-| F19 | agentic_psychologist_assistant_v1.zip |
-| F20 | agentic_dating_advisor_v1.zip |
-| Umbrella | agentic_ai_library_v5_f01_f20.zip |
+**F01 to F25 are live.** Future flagships are tracked in [docs/ROADMAP.md](../docs/ROADMAP.md).
 
-## Push checklist
+## Update checklist
 
-1. Create empty GitHub repo for each missing name  
-2. Push the project  
-3. Commit and push this umbrella so README and INDEX match  
+1. Build and test the flagship repository.
+2. Push the runnable project to GitHub.
+3. Add the live URL here and in the main README.
+4. Update `docs/INDEX.md` and `docs/ROADMAP.md` so status remains consistent.
+5. Keep stable flagship IDs once a system is Live.
 
-Back: [README](../README.md) · [INDEX](../docs/INDEX.md)
+Back: [README](../README.md) · [INDEX](../docs/INDEX.md) · [ROADMAP](../docs/ROADMAP.md)
