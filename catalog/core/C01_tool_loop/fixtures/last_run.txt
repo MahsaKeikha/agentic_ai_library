@@ -1,0 +1,5 @@
+tool=read_status
+observation=service=checkout
+health=ok
+region=us-east-1
+action=stop

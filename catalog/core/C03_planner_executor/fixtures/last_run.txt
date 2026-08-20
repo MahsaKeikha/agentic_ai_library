@@ -1,0 +1,9 @@
+PLAN:
+- load_input
+- validate
+- summarize
+
+EXEC:
+load_input: 45 chars
+validate: ok
+summarize: Customer asks for tracking on order ORD-

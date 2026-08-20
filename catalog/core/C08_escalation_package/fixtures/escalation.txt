@@ -1,0 +1,6 @@
+ticket: T-1001
+symptom: SSO login loop after certificate change
+steps_tried:
+  - cleared local session
+  - reproduced in Chrome
+ask_of_specialist: confirm IdP certificate rotation window

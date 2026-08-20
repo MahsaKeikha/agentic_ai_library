@@ -1,0 +1,1 @@
+Product CloudSync. Symptom login loop after SSO change.

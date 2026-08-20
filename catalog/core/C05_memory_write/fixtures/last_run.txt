@@ -1,0 +1,5 @@
+intake:
+Product CloudSync. Symptom login loop after SSO change.
+
+priority:
+P2

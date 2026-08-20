@@ -1,0 +1,3 @@
+- [ ] Clarity: short sentences
+- [ ] Action: next step for the reader
+- [ ] Policy: no extra promises

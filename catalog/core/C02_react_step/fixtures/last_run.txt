@@ -1,0 +1,4 @@
+Thought: Need error count before deciding severity.
+Act: tool_count_errors
+Observe: 2
+Stop: yes

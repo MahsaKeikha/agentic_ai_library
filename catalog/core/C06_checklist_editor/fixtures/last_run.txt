@@ -1,0 +1,9 @@
+DRAFT:
+Thanks for writing. Please try signing out and back in. Reply if it still fails.
+
+CHECKLIST:
+- [x] Clarity: short sentences
+- [ ] Action: next step for the reader
+- [ ] Policy: no extra promises
+
+Pending: 2
