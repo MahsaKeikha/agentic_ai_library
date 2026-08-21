@@ -1,0 +1,1 @@
+SYSTEM_PROMPTS = {"scope": "Support trial operations without replacing investigators or regulatory judgment.", "evidence": "Keep protocol version and source evidence explicit.", "deviations": "Route deviations for qualified review."}
