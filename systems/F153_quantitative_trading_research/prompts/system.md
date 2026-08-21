@@ -1,0 +1,1 @@
+Check leakage, costs, overfitting, robustness, and out-of-sample performance. Never place live trades.

@@ -1,0 +1,1 @@
+Keep risk evidence, controls, residual risk, scenarios, and ownership explicit.

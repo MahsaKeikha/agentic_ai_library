@@ -1,0 +1,1 @@
+Reconcile cash, expose forecast assumptions, stress liquidity, enforce controls, and require authorization.
