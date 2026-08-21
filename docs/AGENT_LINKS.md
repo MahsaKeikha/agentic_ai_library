@@ -1,6 +1,6 @@
 # Direct Agent Links: F01-F170
 
-Every entry below points to a real GitHub location. F01-F26 are standalone repositories. F27-F170 each have an individual system page; F27-F30 are full individual packages and F31-F170 are individual catalog folders connected to their runnable shared-domain implementation and the unified launcher.
+Every entry below points to a real GitHub location. F01-F26 are standalone repositories. F27-F29 remain individual system packages inside this umbrella repository. F30-F37 and F39-F45 are standalone repositories. F38 remains linked to its current in-repository system page until its standalone repository is confirmed. F46-F170 remain individual system pages connected to the runnable shared-domain implementation and unified launcher.
 
 ## F01-F30
 
@@ -35,27 +35,27 @@ Every entry below points to a real GitHub location. F01-F26 are standalone repos
 | F27 | Agentic M&A Advisor | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F27_agentic_ma_advisor) |
 | F28 | Agentic Startup Accelerator | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F28_agentic_startup_accelerator) |
 | F29 | Agentic Innovation Officer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F29_agentic_innovation_officer) |
-| F30 | Agentic Corporate Governance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F30_agentic_corporate_governance) |
+| F30 | Agentic Corporate Governance | [Open](https://github.com/MahsaKeikha/agentic_corporate_governance) |
 
 ## F31-F70
 
 | ID | System | Direct link |
 |---|---|---|
-| F31 | Agentic ML Engineer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F31_agentic_ml_engineer) |
-| F32 | Agentic MLOps Team | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F32_agentic_mlops_team) |
-| F33 | Agentic Data Engineering | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F33_agentic_data_engineering) |
-| F34 | Agentic Prompt Engineering | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F34_agentic_prompt_engineering) |
-| F35 | Agentic RAG Engineering | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F35_agentic_rag_engineering) |
-| F36 | Agentic Multi-Agent Orchestrator | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F36_agentic_multi_agent_orchestrator) |
-| F37 | Agentic LLM Evaluator | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F37_agentic_llm_evaluator) |
+| F31 | Agentic ML Engineer | [Open](https://github.com/MahsaKeikha/agentic_ml_engineer) |
+| F32 | Agentic MLOps Team | [Open](https://github.com/MahsaKeikha/agentic_mlops_team) |
+| F33 | Agentic Data Engineering | [Open](https://github.com/MahsaKeikha/agentic_data_engineering) |
+| F34 | Agentic Prompt Engineering | [Open](https://github.com/MahsaKeikha/agentic_prompt_engineering) |
+| F35 | Agentic RAG Engineering | [Open](https://github.com/MahsaKeikha/agentic_rag_engineering) |
+| F36 | Agentic Multi Agent Orchestrator | [Open](https://github.com/MahsaKeikha/agentic_multi_agent_orchestrator) |
+| F37 | Agentic LLM Evaluator | [Open](https://github.com/MahsaKeikha/agentic_llm_evaluator) |
 | F38 | Agentic AI Benchmark Suite | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F38_agentic_ai_benchmark_suite) |
-| F39 | Agentic AI Product Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F39_agentic_ai_product_manager) |
-| F40 | Agentic AI Infrastructure Architect | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F40_agentic_ai_infrastructure_architect) |
-| F41 | Mobile App Engineering | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F41_mobile_app_engineering) |
-| F42 | Cloud Architecture | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F42_cloud_architecture) |
-| F43 | DevOps | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F43_devops) |
-| F44 | Kubernetes Operations | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F44_kubernetes_operations) |
-| F45 | Cybersecurity SOC | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F45_cybersecurity_soc) |
+| F39 | Agentic AI Program Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_program_manager) |
+| F40 | Agentic AI Infrastructure Architect | [Open](https://github.com/MahsaKeikha/agentic_ai_infrastructure_architect) |
+| F41 | Mobile App Engineering | [Open](https://github.com/MahsaKeikha/mobile_app_engineering) |
+| F42 | Cloud Architecture | [Open](https://github.com/MahsaKeikha/cloud_architecture) |
+| F43 | DevOps | [Open](https://github.com/MahsaKeikha/devops) |
+| F44 | Kubernetes Operations | [Open](https://github.com/MahsaKeikha/kubernetes_operations) |
+| F45 | Cybersecurity SOC | [Open](https://github.com/MahsaKeikha/cybersecurity_soc) |
 | F46 | Penetration Testing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F46_penetration_testing) |
 | F47 | API Engineering | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F47_api_engineering) |
 | F48 | Database Architecture | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F48_database_architecture) |
