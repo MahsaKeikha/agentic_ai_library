@@ -11,13 +11,30 @@ This repository is a companion engineering library for my **AI Engineering Handb
 - **AI Engineering Handbook Series, Book 1:** https://a.co/d/0cbZnSMi
 - **AI Engineering Handbook Series, Book 2:** https://a.co/d/07HnRY7H
 
+## Mission
+
+Build an open engineering reference collection of standalone multi-agent AI systems that is easy to run, easy to inspect, easy to compare, easy to cite, and difficult to misunderstand.
+
+The project is designed around reproducibility, transparent architecture, evidence discipline, evaluation, safety, human authority, and cross-domain comparability. Recognition and adoption are goals, but technical credibility comes first.
+
+Key project standards and strategy:
+
+- [`Canonical Multi-Agent AI Reference Architecture`](docs/GLOBAL_REFERENCE_ARCHITECTURE.md)
+- [`World-Class Multi-Agent AI Reference Standard`](docs/WORLD_CLASS_REFERENCE_STANDARD.md)
+- [`Standalone Repository Acceptance Checklist`](docs/REPOSITORY_ACCEPTANCE_CHECKLIST.md)
+- [`Trust and Adoption Roadmap`](docs/TRUST_AND_ADOPTION_ROADMAP.md)
+- [`Reference Library Principles`](docs/REFERENCE_LIBRARY_PRINCIPLES.md)
+- [`F30-F170 Standalone Repository Migration`](docs/STANDALONE_REPOSITORY_MIGRATION.md)
+
+## Standalone F30-F170 migration
+
+The library is being upgraded so every F30-F170 system becomes its **own independently runnable GitHub repository**, not merely a folder or batch entry inside this umbrella repository.
+
+A system is not marked as a verified standalone repository until the repository actually exists, runs offline, passes tests and CI, has genuine specialized-agent separation, documents architecture/evaluation/safety, and is linked correctly from the canonical catalog.
+
 ## Clickable F01-F170 catalog
 
-Every F-number now has a direct clickable GitHub link in the master catalog:
-
-### [Open the complete clickable F01-F170 Agent Catalog](docs/AGENT_LINKS.md)
-
-F01-F26 link to their standalone repositories. F27-F30 link to their individual packages inside this repository. F31-F170 link directly to the domain implementation/specification files that contain each runnable unified system.
+The current catalog is available at [`docs/AGENT_LINKS.md`](docs/AGENT_LINKS.md). During the F30-F170 migration, catalog entries must reflect the **actual** repository state and must not claim standalone status prematurely.
 
 ## Run the library from one place
 
@@ -47,102 +64,44 @@ Launch the browser dashboard:
 python dashboard.py
 ```
 
-Then open `http://127.0.0.1:8765`. The dashboard lets you select an F-number, provide JSON context, record a human-approval flag, and inspect the structured result. F27-F170 execute from this repository. F01-F26 are standalone flagships, so the launcher returns their repository locations rather than pretending they are installed locally.
+Then open `http://127.0.0.1:8765`.
 
 Full instructions: [`docs/LAUNCHER.md`](docs/LAUNCHER.md).
 
-## Current status
-
-**F01-F170 are represented in the library and integrated into `main`.**
-
-- F01-F26 are standalone flagship repositories.
-- F27-F170 use the unified `systems/` architecture.
-- C01-C10 provide small reusable core patterns.
-- Automated tests run through GitHub Actions on pushes and pull requests to `main`.
-- `launcher.py` provides one CLI entry point.
-- `dashboard.py` provides a zero-dependency local web interface.
-
-See [`docs/INDEX.md`](docs/INDEX.md) for the full catalog, [`docs/AGENT_LINKS.md`](docs/AGENT_LINKS.md) for direct links to every F-number, and [`docs/ROADMAP.md`](docs/ROADMAP.md) for domain organization.
-
-## Library at a glance
-
-| Range | Domain | Architecture |
-|---|---|---|
-| F01-F26 | Standalone flagship systems | Dedicated repositories |
-| F27-F30 | Executive and leadership | Unified individual packages |
-| F31-F40 | AI engineering | Unified batch |
-| F41-F50 | Software engineering | Unified batch |
-| F51-F60 | Healthcare | Unified batch |
-| F61-F70 | Neuroscience | Unified batch |
-| F71-F80 | Robotics | Unified batch |
-| F81-F90 | Science | Unified batch |
-| F91-F100 | Education | Unified batch |
-| F101-F110 | Legal and compliance | Unified batch |
-| F111-F120 | Manufacturing | Unified batch |
-| F121-F130 | Marketing and growth | Unified batch |
-| F131-F140 | Creative and media | Unified batch |
-| F141-F150 | Government and public sector | Unified batch |
-| F151-F160 | Finance and risk | Unified batch |
-| F161-F170 | Personal and productivity | Unified batch |
-
 ## Engineering philosophy
 
-A useful multi-agent system needs more than several personas talking to one another. Unified systems are designed around specialized agents, structured inputs and outputs, traceable workflow state, explicit missing evidence, deterministic offline reference paths where practical, domain-specific evaluation, escalation/stop conditions, and human approval before consequential actions.
+A useful multi-agent system needs more than several personas talking to one another. Systems are designed around specialized agents, structured inputs and outputs, traceable workflow state, explicit missing evidence, deterministic offline reference paths where practical, domain-specific evaluation, escalation/stop conditions, and human approval before consequential actions.
 
 The shared engineering contract is documented in [`systems/STANDARD.md`](systems/STANDARD.md).
 
-## Standalone flagships F01-F26
+## Current architecture
 
-| ID | Repository | Focus |
-|---|---|---|
-| F01 | [agentic_book_writer](https://github.com/MahsaKeikha/agentic_book_writer) | Book chapter pipeline with ship gate |
-| F02 | [agentic_research_lab](https://github.com/MahsaKeikha/agentic_research_lab) | Academic research pipeline |
-| F03 | [agentic_biotech_rd](https://github.com/MahsaKeikha/agentic_biotech_rd) | Biotech R&D planning |
-| F04 | [agentic_tech_support](https://github.com/MahsaKeikha/agentic_tech_support) | Support workflow with send gate |
-| F05 | [agentic_online_shop](https://github.com/MahsaKeikha/agentic_online_shop) | Online-shop case handling |
-| F06 | [agentic_debug_automation](https://github.com/MahsaKeikha/agentic_debug_automation) | Incident debugging and automation |
-| F07 | [agentic_software_design](https://github.com/MahsaKeikha/agentic_software_design) | Senior software design package |
-| F08 | [agentic_ceo_assistant](https://github.com/MahsaKeikha/agentic_ceo_assistant) | CEO daily briefing |
-| F09 | [agentic_ai_safety](https://github.com/MahsaKeikha/agentic_ai_safety) | AI safety review |
-| F10 | [agentic_phd_assistant](https://github.com/MahsaKeikha/agentic_phd_assistant) | PhD research-week assistant |
-| F11 | [agentic_account_manager](https://github.com/MahsaKeikha/agentic_account_manager) | B2B account management |
-| F12 | [agentic_robotics_governance](https://github.com/MahsaKeikha/agentic_robotics_governance) | Robotics AI safety and governance |
-| F13 | [agentic_qa_safety_manager](https://github.com/MahsaKeikha/agentic_qa_safety_manager) | QA and AI safety management |
-| F14 | [agentic_client_inquiry_bot](https://github.com/MahsaKeikha/agentic_client_inquiry_bot) | Client inquiry workflow |
-| F15 | [agentic_fullstack_web](https://github.com/MahsaKeikha/agentic_fullstack_web) | Full-stack web engineering specs |
-| F16 | [agentic_engineering_professor](https://github.com/MahsaKeikha/agentic_engineering_professor) | Engineering course and lecture preparation |
-| F17 | [agentic_immigration_assistant](https://github.com/MahsaKeikha/agentic_immigration_assistant) | Immigration workflow support, not legal advice |
-| F18 | [agentic_real_estate](https://github.com/MahsaKeikha/agentic_real_estate) | Real-estate workflow support |
-| F19 | [agentic_psychologist_assistant](https://github.com/MahsaKeikha/agentic_psychologist_assistant) | Psychology-practice templates, not therapy |
-| F20 | [agentic_dating_advisor](https://github.com/MahsaKeikha/agentic_dating_advisor) | Adult dating coaching with safety/send gate |
-| F21 | [agentic_coo_assistant](https://github.com/MahsaKeikha/agentic_coo_assistant) | COO operations and KPI workflow |
-| F22 | [agentic_cfo_assistant](https://github.com/MahsaKeikha/agentic_cfo_assistant) | CFO forecast, variance, and risk workflow |
-| F23 | [agentic_board_advisor](https://github.com/MahsaKeikha/agentic_board_advisor) | Board package and governance workflow |
-| F24 | [agentic_chief_of_staff](https://github.com/MahsaKeikha/agentic_chief_of_staff) | Executive priorities and follow-up |
-| F25 | [agentic_strategy_consultant](https://github.com/MahsaKeikha/agentic_strategy_consultant) | Competitive strategy workflow |
-| F26 | [agentic_venture_capital_analyst](https://github.com/MahsaKeikha/agentic_venture_capital_analyst) | Evidence-aware venture due diligence |
+- F01-F26 are established standalone flagship repositories.
+- F27-F30 have individual system packages inside this repository.
+- F31-F170 currently have unified implementations and individual in-repository pages.
+- F30-F170 are being migrated to true standalone repositories under the reference standard above.
+- C01-C10 provide reusable core patterns.
+- Automated tests run through GitHub Actions on pushes and pull requests to `main`.
 
-## Unified systems F27-F170
+## Domains
 
-For individual direct links to every F-number, use the [Clickable Agent Catalog](docs/AGENT_LINKS.md).
-
-| Range | Domain | Representative systems |
-|---|---|---|
-| F27-F30 | Executive | M&A Advisor, Startup Accelerator, Innovation Officer, Corporate Governance |
-| F31-F40 | AI Engineering | ML Engineer, MLOps, Data Engineering, Prompt Engineering, RAG, Orchestration, LLM Evaluation |
-| F41-F50 | Software | Mobile, Cloud, DevOps, Kubernetes, SOC, API, Database, Embedded, IoT |
-| F51-F60 | Healthcare | Digital Health, Clinical Trials, Medical Devices, FDA Documentation, Hospital Operations, Caregiver Support |
-| F61-F70 | Neuroscience | Parkinson, Dementia, EEG, Sleep, Neurotechnology, BCI, Aging, Biomarkers |
-| F71-F80 | Robotics | Industrial, Service, Medical, AV, Drone, Humanoid, Safety, HRI, Swarm, Ethics |
-| F81-F90 | Science | Physics, Quantum, Materials, Chemistry, Climate, Space, Astronomy, Energy, Nuclear |
-| F91-F100 | Education | Professor, Curriculum, Tutor, Exams, STEM Lab, Grants, Thesis, Accreditation |
-| F101-F110 | Legal & Compliance | Contracts, Privacy, IP, Patents, Employment, Trade, Export, Regulatory Affairs |
-| F111-F120 | Manufacturing | Manufacturing, Production, Quality, Maintenance, Supply Chain, Digital Twin, Automation, Safety |
-| F121-F130 | Marketing & Growth | Brand, Content, SEO, Social, Lifecycle, Acquisition, Product Marketing, PR, Growth |
-| F131-F140 | Creative & Media | Publishing, Screenwriting, Music, Graphic Design, UX, Architecture, Games, Animation |
-| F141-F150 | Public Sector | Smart City, Emergency, Disaster, Public Health, Transport, Environment, Policy |
-| F151-F160 | Finance & Risk | Investment Research, Portfolio, Quant Research, Insurance, Banking, Tax, Risk, Treasury |
-| F161-F170 | Personal & Productivity | Life Planning, Knowledge, Career, Resume, Speaking, Interview, Language, Travel, Habits |
+| Range | Domain |
+|---|---|
+| F01-F30 | Flagship, executive, and leadership systems |
+| F31-F40 | AI engineering |
+| F41-F50 | Software engineering |
+| F51-F60 | Healthcare |
+| F61-F70 | Neuroscience |
+| F71-F80 | Robotics |
+| F81-F90 | Science |
+| F91-F100 | Education |
+| F101-F110 | Legal and compliance |
+| F111-F120 | Manufacturing |
+| F121-F130 | Marketing and growth |
+| F131-F140 | Creative and media |
+| F141-F150 | Government and public sector |
+| F151-F160 | Finance and risk |
+| F161-F170 | Personal and productivity |
 
 ## Testing
 
@@ -153,7 +112,7 @@ python -m pip install pytest
 python -m pytest -q
 ```
 
-GitHub Actions runs the test suite against Python 3.10, 3.11, and 3.12.
+GitHub Actions runs the umbrella test suite against supported Python versions.
 
 ## Safety and responsible use
 
@@ -165,27 +124,22 @@ The library separates decision support from consequential execution. Sensitive s
 agentic_ai_library/
 ├── launcher.py
 ├── dashboard.py
-├── .github/workflows/tests.yml
-├── README.md
-├── catalog/core/
+├── scripts/
+│   └── create_standalone_repositories.py
 ├── docs/
 │   ├── INDEX.md
 │   ├── AGENT_LINKS.md
 │   ├── ROADMAP.md
-│   └── LAUNCHER.md
-├── flagships/
+│   ├── LAUNCHER.md
+│   ├── GLOBAL_REFERENCE_ARCHITECTURE.md
+│   ├── WORLD_CLASS_REFERENCE_STANDARD.md
+│   ├── REPOSITORY_ACCEPTANCE_CHECKLIST.md
+│   ├── TRUST_AND_ADOPTION_ROADMAP.md
+│   ├── REFERENCE_LIBRARY_PRINCIPLES.md
+│   └── STANDALONE_REPOSITORY_MIGRATION.md
+├── catalog/core/
 ├── systems/
-│   ├── STANDARD.md
-│   ├── F27_agentic_ma_advisor/
-│   ├── F28_agentic_startup_accelerator/
-│   ├── F29_agentic_innovation_officer/
-│   ├── F30_agentic_corporate_governance/
-│   ├── domain specifications
-│   ├── deterministic reference workflows
-│   ├── evaluation frameworks
-│   └── tests/
 ├── tests/
-│   └── test_launcher.py
 └── templates/
 ```
 
@@ -195,4 +149,4 @@ agentic_ai_library/
 
 Companion engineering library for the **AI Engineering Handbook Series** and related educational work.
 
-**One line:** 170 agentic AI systems built around tools, state, orchestration, evidence, evaluation, safety boundaries, and human gates.
+**Mission:** build a transparent, reproducible, safety-aware reference collection of multi-agent AI systems that can be studied, tested, cited, and extended across domains.
