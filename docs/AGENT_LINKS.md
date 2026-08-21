@@ -144,16 +144,16 @@ This catalog mirrors the canonical direct link table in the root README. Standal
 | F138 | Architecture Studio | [Open](https://github.com/MahsaKeikha/agentic_architecture_studio) |
 | F139 | Game Design | [Open](https://github.com/MahsaKeikha/agentic_game_design) |
 | F140 | Animation Studio | [Open](https://github.com/MahsaKeikha/agentic_animation_studio) |
-| F141 | Smart City Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F141_smart_city_planner) |
-| F142 | Emergency Management | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F142_emergency_management) |
-| F143 | Disaster Response | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F143_disaster_response) |
-| F144 | Public Health Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F144_public_health_planner) |
-| F145 | Transportation Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F145_transportation_planner) |
-| F146 | Environmental Compliance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F146_environmental_compliance) |
-| F147 | Defense Policy Analyst | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F147_defense_policy_analyst) |
-| F148 | Public-Sector Intelligence Analyst | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F148_public_sector_intelligence_analyst) |
-| F149 | Election Information Reviewer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F149_election_information_reviewer) |
-| F150 | Policy Analyst | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F150_policy_analyst) |
+| F141 | Smart City Planner | [Open](https://github.com/MahsaKeikha/agentic_smart_city_planner) |
+| F142 | Emergency Management | [Open](https://github.com/MahsaKeikha/agentic_emergency_management) |
+| F143 | Disaster Response | [Open](https://github.com/MahsaKeikha/agentic_disaster_response) |
+| F144 | Public Health Planner | [Open](https://github.com/MahsaKeikha/agentic_public_health_planner) |
+| F145 | Transportation Planner | [Open](https://github.com/MahsaKeikha/agentic_transportation_planner) |
+| F146 | Environmental Compliance | [Open](https://github.com/MahsaKeikha/agentic_environmental_compliance) |
+| F147 | Defense Policy Analyst | [Open](https://github.com/MahsaKeikha/agentic_defense_policy_analyst) |
+| F148 | Public-Sector Intelligence Analyst | [Open](https://github.com/MahsaKeikha/agentic_public_sector_intelligence_analyst) |
+| F149 | Election Information Reviewer | [Open](https://github.com/MahsaKeikha/agentic_election_information_reviewer) |
+| F150 | Policy Analyst | [Open](https://github.com/MahsaKeikha/agentic_policy_analyst) |
 | F151 | Investment Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F151_investment_research) |
 | F152 | Portfolio Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F152_portfolio_manager) |
 | F153 | Quantitative Trading Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F153_quantitative_trading_research) |
