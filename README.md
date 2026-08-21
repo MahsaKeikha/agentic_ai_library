@@ -2,31 +2,16 @@
 
 A practical engineering library of **170 agentic AI and multi-agent systems** spanning executive operations, AI engineering, software, healthcare, neuroscience, robotics, science, education, legal and compliance, manufacturing, marketing, creative work, public-sector workflows, finance and risk, and personal productivity.
 
-The goal is not to collect prompt demos. The library is organized around reusable engineering principles: specialized roles, explicit state, evidence discipline, orchestration, evaluation, failure handling, and human approval before consequential actions.
+The library emphasizes specialized roles, explicit state, evidence discipline, orchestration, evaluation, failure handling, safety boundaries, and human approval before consequential actions.
 
 ## AI Engineering Handbook Series
 
-This repository is a companion engineering library for my **AI Engineering Handbook Series**. The books provide the conceptual and engineering foundation, while this repository provides practical agentic AI and multi-agent system implementations.
-
-- **AI Engineering Handbook Series, Book 1:** https://a.co/d/0cbZnSMi
-- **AI Engineering Handbook Series, Book 2:** https://a.co/d/07HnRY7H
-
-## Mission
-
-Build an open engineering reference collection of multi-agent AI systems that is easy to run, easy to inspect, easy to compare, easy to cite, and difficult to misunderstand.
-
-Key project standards and strategy:
-
-- [`Canonical Multi-Agent AI Reference Architecture`](docs/GLOBAL_REFERENCE_ARCHITECTURE.md)
-- [`World-Class Multi-Agent AI Reference Standard`](docs/WORLD_CLASS_REFERENCE_STANDARD.md)
-- [`Standalone Repository Acceptance Checklist`](docs/REPOSITORY_ACCEPTANCE_CHECKLIST.md)
-- [`Trust and Adoption Roadmap`](docs/TRUST_AND_ADOPTION_ROADMAP.md)
-- [`Reference Library Principles`](docs/REFERENCE_LIBRARY_PRINCIPLES.md)
-- [`F30-F170 Standalone Repository Migration`](docs/STANDALONE_REPOSITORY_MIGRATION.md)
+- **Book 1:** https://a.co/d/0cbZnSMi
+- **Book 2:** https://a.co/d/07HnRY7H
 
 ## Direct F01-F170 system links
 
-Every system in the 170-system library is listed below. Where a standalone repository exists, the link opens that repository. Where migration is still in progress, the link opens the current runnable system page inside this umbrella repository.
+Standalone repositories are linked directly. Systems still awaiting standalone migration point to their runnable mirror inside this umbrella repository.
 
 | ID | Multi-agent system | Direct link |
 |---|---|---|
@@ -180,16 +165,16 @@ Every system in the 170-system library is listed below. Where a standalone repos
 | F148 | Public-Sector Intelligence Analyst | [Open](https://github.com/MahsaKeikha/agentic_public_sector_intelligence_analyst) |
 | F149 | Election Information Reviewer | [Open](https://github.com/MahsaKeikha/agentic_election_information_reviewer) |
 | F150 | Policy Analyst | [Open](https://github.com/MahsaKeikha/agentic_policy_analyst) |
-| F151 | Investment Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F151_investment_research) |
-| F152 | Portfolio Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F152_portfolio_manager) |
-| F153 | Quantitative Trading Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F153_quantitative_trading_research) |
-| F154 | Insurance Operations | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F154_insurance_operations) |
-| F155 | Banking Assistant | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F155_banking_assistant) |
-| F156 | Tax Planning | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F156_tax_planning) |
-| F157 | Enterprise Risk Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F157_enterprise_risk_manager) |
-| F158 | Treasury Operations | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F158_treasury_operations) |
-| F159 | Credit Analyst | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F159_credit_analyst) |
-| F160 | ESG Reporting | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F160_esg_reporting) |
+| F151 | Investment Research | [Open](https://github.com/MahsaKeikha/agentic_investment_research) |
+| F152 | Portfolio Manager | [Open](https://github.com/MahsaKeikha/agentic_portfolio_manager) |
+| F153 | Quantitative Trading Research | [Open](https://github.com/MahsaKeikha/agentic_quantitative_trading_research) |
+| F154 | Insurance Operations | [Open](https://github.com/MahsaKeikha/agentic_insurance_operations) |
+| F155 | Banking Assistant | [Open](https://github.com/MahsaKeikha/agentic_banking_assistant) |
+| F156 | Tax Planning | [Open](https://github.com/MahsaKeikha/agentic_tax_planning) |
+| F157 | Enterprise Risk Manager | [Open](https://github.com/MahsaKeikha/agentic_enterprise_risk_manager) |
+| F158 | Treasury Operations | [Open](https://github.com/MahsaKeikha/agentic_treasury_operations) |
+| F159 | Credit Analyst | [Open](https://github.com/MahsaKeikha/agentic_credit_analyst) |
+| F160 | ESG Reporting | [Open](https://github.com/MahsaKeikha/agentic_esg_reporting) |
 | F161 | Life Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F161_life_planner) |
 | F162 | Personal Knowledge Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F162_personal_knowledge_manager) |
 | F163 | Career Coach | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F163_career_coach) |
@@ -200,40 +185,6 @@ Every system in the 170-system library is listed below. Where a standalone repos
 | F168 | Productivity Coach | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F168_productivity_coach) |
 | F169 | Travel Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F169_travel_planner) |
 | F170 | Habit Builder | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F170_habit_builder) |
-
-## Standalone repository migration
-
-The library is being upgraded so each system can become its own independently runnable GitHub repository rather than only a folder inside this umbrella repository.
-
-A system is not marked as a verified standalone repository until the repository actually exists, runs offline, passes tests and CI, has genuine specialized-agent separation, documents architecture, evaluation, and safety, and is linked correctly from the canonical catalog.
-
-## Run the library from one place
-
-List all F01-F170 systems:
-
-```bash
-python launcher.py --list
-```
-
-Run a unified system directly:
-
-```bash
-python launcher.py F35
-```
-
-Launch the browser dashboard:
-
-```bash
-python dashboard.py
-```
-
-Full instructions: [`docs/LAUNCHER.md`](docs/LAUNCHER.md).
-
-## Engineering philosophy
-
-A useful multi-agent system needs specialized agents, structured inputs and outputs, traceable workflow state, explicit missing evidence, evaluation, escalation and stop conditions, and human approval before consequential actions.
-
-The shared engineering contract is documented in [`systems/STANDARD.md`](systems/STANDARD.md).
 
 ## Domains
 
@@ -255,21 +206,12 @@ The shared engineering contract is documented in [`systems/STANDARD.md`](systems
 | F151-F160 | Finance and risk |
 | F161-F170 | Personal and productivity |
 
-## Testing
-
-```bash
-python -m pip install pytest
-python -m pytest -q
-```
-
 ## Safety and responsible use
 
-The library separates decision support from consequential execution. Sensitive systems preserve scope limits and qualified review. Reference workflows should not silently invent missing facts or autonomously perform consequential clinical, legal, financial, physical, regulatory, or public decisions without appropriate authorization and safeguards.
+The library separates decision support from consequential execution. Sensitive systems preserve scope limits, evidence requirements, qualified review, and explicit authorization gates.
 
 ## Author
 
 **Mahsa Keikha**
 
-Companion engineering library for the **AI Engineering Handbook Series** and related educational work.
-
-**Mission:** build a transparent, reproducible, safety-aware reference collection of multi-agent AI systems that can be studied, tested, cited, and extended across domains.
+Companion engineering library for the **AI Engineering Handbook Series**.
