@@ -92,16 +92,16 @@ Every system in the 170-system library is listed below. Where a standalone repos
 | F58 | Nursing Assistant | [Open](https://github.com/MahsaKeikha/agentic_nursing_assistant) |
 | F59 | Caregiver Support | [Open](https://github.com/MahsaKeikha/agentic_caregiver_support) |
 | F60 | Rehabilitation Planning | [Open](https://github.com/MahsaKeikha/agentic_rehabilitation_planning) |
-| F61 | Parkinson Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F61_parkinson_research) |
-| F62 | Dementia Care Planning | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F62_dementia_care_planning) |
-| F63 | Hallucination Monitoring | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F63_hallucination_monitoring) |
-| F64 | EEG Analysis | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F64_eeg_analysis) |
-| F65 | Sleep Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F65_sleep_research) |
-| F66 | Neurotechnology Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F66_neurotechnology_design) |
-| F67 | Brain Computer Interface | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F67_brain_computer_interface) |
-| F68 | Cognitive Assessment | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F68_cognitive_assessment) |
-| F69 | Aging Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F69_aging_research) |
-| F70 | Biomarker Discovery | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F70_biomarker_discovery) |
+| F61 | Parkinson Research | [Open](https://github.com/MahsaKeikha/agentic_parkinson_research) |
+| F62 | Dementia Care Planning | [Open](https://github.com/MahsaKeikha/agentic_dementia_care_planning) |
+| F63 | Hallucination Monitoring | [Open](https://github.com/MahsaKeikha/agentic_hallucination_monitoring) |
+| F64 | EEG Analysis | [Open](https://github.com/MahsaKeikha/agentic_eeg_analysis) |
+| F65 | Sleep Research | [Open](https://github.com/MahsaKeikha/agentic_sleep_research) |
+| F66 | Neurotechnology Design | [Open](https://github.com/MahsaKeikha/agentic_neurotechnology_design) |
+| F67 | Brain Computer Interface | [Open](https://github.com/MahsaKeikha/agentic_brain_computer_interface) |
+| F68 | Cognitive Assessment | [Open](https://github.com/MahsaKeikha/agentic_cognitive_assessment) |
+| F69 | Aging Research | [Open](https://github.com/MahsaKeikha/agentic_aging_research) |
+| F70 | Biomarker Discovery | [Open](https://github.com/MahsaKeikha/agentic_biomarker_discovery) |
 | F71 | Industrial Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F71_industrial_robotics) |
 | F72 | Service Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F72_service_robotics) |
 | F73 | Medical Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F73_medical_robotics) |
