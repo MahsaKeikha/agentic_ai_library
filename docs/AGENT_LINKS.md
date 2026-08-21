@@ -6,8 +6,8 @@ Every entry below points to a real GitHub location. F01-F26 are standalone repos
 
 | ID | System | Direct link |
 |---|---|---|
-| F01 | Agentic Book Writer | [Open](https://github.com/MahsaKeikha/agentic_book_writer) |
-| F02 | Agentic Research Lab | [Open](https://github.com/MahsaKeikha/agentic_research_lab) |
+| F01 | Agentic Book Writer | [Open](https://github.com/MahsaKeikha/agentic-book-writer) |
+| F02 | Agentic Research Lab | [Open](https://github.com/MahsaKeikha/agentic-research-lab) |
 | F03 | Agentic Biotech R&D | [Open](https://github.com/MahsaKeikha/agentic_biotech_rd) |
 | F04 | Agentic Tech Support | [Open](https://github.com/MahsaKeikha/agentic_tech_support) |
 | F05 | Agentic Online Shop | [Open](https://github.com/MahsaKeikha/agentic_online_shop) |
