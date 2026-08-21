@@ -1,6 +1,6 @@
 # Direct Agent Links: F01-F170
 
-This catalog mirrors the canonical direct link table in the root README. Standalone repositories are linked directly. Systems that have not yet been migrated remain linked to their current runnable system page inside `agentic_ai_library`.
+Standalone repositories are linked directly. Systems not yet migrated point to their runnable mirror inside `agentic_ai_library`.
 
 | ID | System | Direct link |
 |---|---|---|
@@ -154,16 +154,16 @@ This catalog mirrors the canonical direct link table in the root README. Standal
 | F148 | Public-Sector Intelligence Analyst | [Open](https://github.com/MahsaKeikha/agentic_public_sector_intelligence_analyst) |
 | F149 | Election Information Reviewer | [Open](https://github.com/MahsaKeikha/agentic_election_information_reviewer) |
 | F150 | Policy Analyst | [Open](https://github.com/MahsaKeikha/agentic_policy_analyst) |
-| F151 | Investment Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F151_investment_research) |
-| F152 | Portfolio Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F152_portfolio_manager) |
-| F153 | Quantitative Trading Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F153_quantitative_trading_research) |
-| F154 | Insurance Operations | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F154_insurance_operations) |
-| F155 | Banking Assistant | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F155_banking_assistant) |
-| F156 | Tax Planning | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F156_tax_planning) |
-| F157 | Enterprise Risk Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F157_enterprise_risk_manager) |
-| F158 | Treasury Operations | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F158_treasury_operations) |
-| F159 | Credit Analyst | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F159_credit_analyst) |
-| F160 | ESG Reporting | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F160_esg_reporting) |
+| F151 | Investment Research | [Open](https://github.com/MahsaKeikha/agentic_investment_research) |
+| F152 | Portfolio Manager | [Open](https://github.com/MahsaKeikha/agentic_portfolio_manager) |
+| F153 | Quantitative Trading Research | [Open](https://github.com/MahsaKeikha/agentic_quantitative_trading_research) |
+| F154 | Insurance Operations | [Open](https://github.com/MahsaKeikha/agentic_insurance_operations) |
+| F155 | Banking Assistant | [Open](https://github.com/MahsaKeikha/agentic_banking_assistant) |
+| F156 | Tax Planning | [Open](https://github.com/MahsaKeikha/agentic_tax_planning) |
+| F157 | Enterprise Risk Manager | [Open](https://github.com/MahsaKeikha/agentic_enterprise_risk_manager) |
+| F158 | Treasury Operations | [Open](https://github.com/MahsaKeikha/agentic_treasury_operations) |
+| F159 | Credit Analyst | [Open](https://github.com/MahsaKeikha/agentic_credit_analyst) |
+| F160 | ESG Reporting | [Open](https://github.com/MahsaKeikha/agentic_esg_reporting) |
 | F161 | Life Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F161_life_planner) |
 | F162 | Personal Knowledge Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F162_personal_knowledge_manager) |
 | F163 | Career Coach | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F163_career_coach) |
