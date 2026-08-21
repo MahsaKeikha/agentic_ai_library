@@ -11,7 +11,7 @@ The library emphasizes specialized roles, explicit state, evidence discipline, o
 
 ## Direct F01-F170 system links
 
-Standalone repositories are linked directly. Systems still awaiting standalone migration point to their runnable mirror inside this umbrella repository.
+Standalone repositories are linked directly.
 
 | ID | Multi-agent system | Direct link |
 |---|---|---|
@@ -41,9 +41,9 @@ Standalone repositories are linked directly. Systems still awaiting standalone m
 | F24 | Agentic Chief of Staff | [Open](https://github.com/MahsaKeikha/agentic_chief_of_staff) |
 | F25 | Agentic Strategy Consultant | [Open](https://github.com/MahsaKeikha/agentic_strategy_consultant) |
 | F26 | Agentic Venture Capital Analyst | [Open](https://github.com/MahsaKeikha/agentic_venture_capital_analyst) |
-| F27 | Agentic M&A Advisor | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F27_agentic_ma_advisor) |
-| F28 | Agentic Startup Accelerator | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F28_agentic_startup_accelerator) |
-| F29 | Agentic Innovation Officer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F29_agentic_innovation_officer) |
+| F27 | Agentic M&A Advisor | [Open](https://github.com/MahsaKeikha/agentic_ma_advisor) |
+| F28 | Agentic Startup Accelerator | [Open](https://github.com/MahsaKeikha/agentic_startup_accelerator) |
+| F29 | Agentic Innovation Officer | [Open](https://github.com/MahsaKeikha/agentic_innovation_officer) |
 | F30 | Agentic Corporate Governance | [Open](https://github.com/MahsaKeikha/agentic_corporate_governance) |
 | F31 | Agentic ML Engineer | [Open](https://github.com/MahsaKeikha/agentic_ml_engineer) |
 | F32 | Agentic MLOps Team | [Open](https://github.com/MahsaKeikha/agentic_mlops_team) |
@@ -52,7 +52,7 @@ Standalone repositories are linked directly. Systems still awaiting standalone m
 | F35 | Agentic RAG Engineering | [Open](https://github.com/MahsaKeikha/agentic_rag_engineering) |
 | F36 | Agentic Multi Agent Orchestrator | [Open](https://github.com/MahsaKeikha/agentic_multi_agent_orchestrator) |
 | F37 | Agentic LLM Evaluator | [Open](https://github.com/MahsaKeikha/agentic_llm_evaluator) |
-| F38 | Agentic AI Benchmark Suite | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F38_agentic_ai_benchmark_suite) |
+| F38 | Agentic AI Benchmark Suite | [Open](https://github.com/MahsaKeikha/agentic_ai_benchmark_suite) |
 | F39 | Agentic AI Program Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_program_manager) |
 | F40 | Agentic AI Infrastructure Architect | [Open](https://github.com/MahsaKeikha/agentic_ai_infrastructure_architect) |
 | F41 | Mobile App Engineering | [Open](https://github.com/MahsaKeikha/mobile_app_engineering) |
@@ -60,11 +60,11 @@ Standalone repositories are linked directly. Systems still awaiting standalone m
 | F43 | DevOps | [Open](https://github.com/MahsaKeikha/devops) |
 | F44 | Kubernetes Operations | [Open](https://github.com/MahsaKeikha/kubernetes_operations) |
 | F45 | Cybersecurity SOC | [Open](https://github.com/MahsaKeikha/cybersecurity_soc) |
-| F46 | Penetration Testing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F46_penetration_testing) |
-| F47 | API Engineering | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F47_api_engineering) |
-| F48 | Database Architecture | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F48_database_architecture) |
-| F49 | Embedded Systems | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F49_embedded_systems) |
-| F50 | IoT Engineering | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F50_iot_engineering) |
+| F46 | Penetration Testing | [Open](https://github.com/MahsaKeikha/Penetration-Testing) |
+| F47 | API Engineering | [Open](https://github.com/MahsaKeikha/API-Engineering) |
+| F48 | Database Architecture | [Open](https://github.com/MahsaKeikha/Database-Architecture) |
+| F49 | Embedded Systems | [Open](https://github.com/MahsaKeikha/Embedded-Systems) |
+| F50 | IoT Engineering | [Open](https://github.com/MahsaKeikha/IoT-Engineering) |
 | F51 | Digital Health Assistant | [Open](https://github.com/MahsaKeikha/agentic_digital_health_assistant) |
 | F52 | Clinical Trial Manager | [Open](https://github.com/MahsaKeikha/agentic_clinical_trial_manager) |
 | F53 | Medical Device Development | [Open](https://github.com/MahsaKeikha/agentic_medical_device_development) |
