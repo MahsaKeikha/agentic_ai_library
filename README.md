@@ -82,16 +82,16 @@ Every system in the 170-system library is listed below. Where a standalone repos
 | F48 | Database Architecture | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F48_database_architecture) |
 | F49 | Embedded Systems | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F49_embedded_systems) |
 | F50 | IoT Engineering | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F50_iot_engineering) |
-| F51 | Digital Health Assistant | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F51_digital_health_assistant) |
-| F52 | Clinical Trial Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F52_clinical_trial_manager) |
-| F53 | Medical Device Development | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F53_medical_device_development) |
-| F54 | FDA Documentation | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F54_fda_documentation) |
-| F55 | Hospital Operations | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F55_hospital_operations) |
-| F56 | Radiology Workflow | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F56_radiology_workflow) |
-| F57 | Pathology Review | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F57_pathology_review) |
-| F58 | Nursing Assistant | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F58_nursing_assistant) |
-| F59 | Caregiver Support | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F59_caregiver_support) |
-| F60 | Rehabilitation Planning | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F60_rehabilitation_planning) |
+| F51 | Digital Health Assistant | [Open](https://github.com/MahsaKeikha/agentic_digital_health_assistant) |
+| F52 | Clinical Trial Manager | [Open](https://github.com/MahsaKeikha/agentic_clinical_trial_manager) |
+| F53 | Medical Device Development | [Open](https://github.com/MahsaKeikha/agentic_medical_device_development) |
+| F54 | FDA Documentation | [Open](https://github.com/MahsaKeikha/agentic_fda_documentation) |
+| F55 | Hospital Operations | [Open](https://github.com/MahsaKeikha/agentic_hospital_operations) |
+| F56 | Radiology Workflow | [Open](https://github.com/MahsaKeikha/agentic_radiology_workflow) |
+| F57 | Pathology Review | [Open](https://github.com/MahsaKeikha/agentic_pathology_review) |
+| F58 | Nursing Assistant | [Open](https://github.com/MahsaKeikha/agentic_nursing_assistant) |
+| F59 | Caregiver Support | [Open](https://github.com/MahsaKeikha/agentic_caregiver_support) |
+| F60 | Rehabilitation Planning | [Open](https://github.com/MahsaKeikha/agentic_rehabilitation_planning) |
 | F61 | Parkinson Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F61_parkinson_research) |
 | F62 | Dementia Care Planning | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F62_dementia_care_planning) |
 | F63 | Hallucination Monitoring | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F63_hallucination_monitoring) |
