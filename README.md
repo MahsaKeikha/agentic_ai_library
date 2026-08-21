@@ -26,15 +26,39 @@ Key project standards and strategy:
 - [`Reference Library Principles`](docs/REFERENCE_LIBRARY_PRINCIPLES.md)
 - [`F30-F170 Standalone Repository Migration`](docs/STANDALONE_REPOSITORY_MIGRATION.md)
 
+## Direct standalone repository links
+
+The entries below link directly to the standalone repositories that currently exist for this migration cohort.
+
+| ID | Multi-agent system | Direct repository |
+|---|---|---|
+| F30 | Agentic Corporate Governance | [Open F30](https://github.com/MahsaKeikha/agentic_corporate_governance) |
+| F31 | Agentic ML Engineer | [Open F31](https://github.com/MahsaKeikha/agentic_ml_engineer) |
+| F32 | Agentic MLOps Team | [Open F32](https://github.com/MahsaKeikha/agentic_mlops_team) |
+| F33 | Agentic Data Engineering | [Open F33](https://github.com/MahsaKeikha/agentic_data_engineering) |
+| F34 | Agentic Prompt Engineering | [Open F34](https://github.com/MahsaKeikha/agentic_prompt_engineering) |
+| F35 | Agentic RAG Engineering | [Open F35](https://github.com/MahsaKeikha/agentic_rag_engineering) |
+| F36 | Agentic Multi Agent Orchestrator | [Open F36](https://github.com/MahsaKeikha/agentic_multi_agent_orchestrator) |
+| F37 | Agentic LLM Evaluator | [Open F37](https://github.com/MahsaKeikha/agentic_llm_evaluator) |
+| F39 | Agentic AI Program Manager | [Open F39](https://github.com/MahsaKeikha/agentic_ai_program_manager) |
+| F40 | Agentic AI Infrastructure Architect | [Open F40](https://github.com/MahsaKeikha/agentic_ai_infrastructure_architect) |
+| F41 | Mobile App Engineering | [Open F41](https://github.com/MahsaKeikha/mobile_app_engineering) |
+| F42 | Cloud Architecture | [Open F42](https://github.com/MahsaKeikha/cloud_architecture) |
+| F43 | DevOps | [Open F43](https://github.com/MahsaKeikha/devops) |
+| F44 | Kubernetes Operations | [Open F44](https://github.com/MahsaKeikha/kubernetes_operations) |
+| F45 | Cybersecurity SOC | [Open F45](https://github.com/MahsaKeikha/cybersecurity_soc) |
+
+F38 is intentionally not listed as a standalone repository here until its exact standalone repository is confirmed and validated.
+
 ## Standalone F30-F170 migration
 
 The library is being upgraded so every F30-F170 system becomes its **own independently runnable GitHub repository**, not merely a folder or batch entry inside this umbrella repository.
 
-A system is not marked as a verified standalone repository until the repository actually exists, runs offline, passes tests and CI, has genuine specialized-agent separation, documents architecture/evaluation/safety, and is linked correctly from the canonical catalog.
+A system is not marked as a verified standalone repository until the repository actually exists, runs offline, passes tests and CI, has genuine specialized-agent separation, documents architecture, evaluation, and safety, and is linked correctly from the canonical catalog.
 
 ## Clickable F01-F170 catalog
 
-The current catalog is available at [`docs/AGENT_LINKS.md`](docs/AGENT_LINKS.md). During the F30-F170 migration, catalog entries must reflect the **actual** repository state and must not claim standalone status prematurely.
+The full catalog is available at [`docs/AGENT_LINKS.md`](docs/AGENT_LINKS.md). During the F30-F170 migration, catalog entries must reflect the **actual** repository state and must not claim standalone status prematurely.
 
 ## Run the library from one place
 
@@ -70,16 +94,17 @@ Full instructions: [`docs/LAUNCHER.md`](docs/LAUNCHER.md).
 
 ## Engineering philosophy
 
-A useful multi-agent system needs more than several personas talking to one another. Systems are designed around specialized agents, structured inputs and outputs, traceable workflow state, explicit missing evidence, deterministic offline reference paths where practical, domain-specific evaluation, escalation/stop conditions, and human approval before consequential actions.
+A useful multi-agent system needs more than several personas talking to one another. Systems are designed around specialized agents, structured inputs and outputs, traceable workflow state, explicit missing evidence, deterministic offline reference paths where practical, domain-specific evaluation, escalation and stop conditions, and human approval before consequential actions.
 
 The shared engineering contract is documented in [`systems/STANDARD.md`](systems/STANDARD.md).
 
 ## Current architecture
 
 - F01-F26 are established standalone flagship repositories.
-- F27-F30 have individual system packages inside this repository.
-- F31-F170 currently have unified implementations and individual in-repository pages.
-- F30-F170 are being migrated to true standalone repositories under the reference standard above.
+- F27-F29 have individual system packages inside this repository.
+- F30-F37 and F39-F45 have standalone repositories linked above.
+- F38 remains pending standalone repository confirmation.
+- Remaining F-series systems are being migrated to true standalone repositories under the reference standard above.
 - C01-C10 provide reusable core patterns.
 - Automated tests run through GitHub Actions on pushes and pull requests to `main`.
 
