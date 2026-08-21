@@ -13,7 +13,7 @@ This repository is a companion engineering library for my **AI Engineering Handb
 
 ## Mission
 
-Build an open engineering reference collection of standalone multi-agent AI systems that is easy to run, easy to inspect, easy to compare, easy to cite, and difficult to misunderstand.
+Build an open engineering reference collection of multi-agent AI systems that is easy to run, easy to inspect, easy to compare, easy to cite, and difficult to misunderstand.
 
 The project is designed around reproducibility, transparent architecture, evidence discipline, evaluation, safety, human authority, and cross-domain comparability. Recognition and adoption are goals, but technical credibility comes first.
 
@@ -26,39 +26,188 @@ Key project standards and strategy:
 - [`Reference Library Principles`](docs/REFERENCE_LIBRARY_PRINCIPLES.md)
 - [`F30-F170 Standalone Repository Migration`](docs/STANDALONE_REPOSITORY_MIGRATION.md)
 
-## Direct standalone repository links
+## Direct F01-F170 system links
 
-The entries below link directly to the standalone repositories that currently exist for this migration cohort.
+Every system in the 170-system library is listed below. Where a standalone repository already exists, the link opens that repository. Where migration is still in progress, the link opens the current runnable system page inside this umbrella repository. This keeps the catalog complete without claiming standalone status before a repository exists.
 
-| ID | Multi-agent system | Direct repository |
+| ID | Multi-agent system | Direct link |
 |---|---|---|
-| F30 | Agentic Corporate Governance | [Open F30](https://github.com/MahsaKeikha/agentic_corporate_governance) |
-| F31 | Agentic ML Engineer | [Open F31](https://github.com/MahsaKeikha/agentic_ml_engineer) |
-| F32 | Agentic MLOps Team | [Open F32](https://github.com/MahsaKeikha/agentic_mlops_team) |
-| F33 | Agentic Data Engineering | [Open F33](https://github.com/MahsaKeikha/agentic_data_engineering) |
-| F34 | Agentic Prompt Engineering | [Open F34](https://github.com/MahsaKeikha/agentic_prompt_engineering) |
-| F35 | Agentic RAG Engineering | [Open F35](https://github.com/MahsaKeikha/agentic_rag_engineering) |
-| F36 | Agentic Multi Agent Orchestrator | [Open F36](https://github.com/MahsaKeikha/agentic_multi_agent_orchestrator) |
-| F37 | Agentic LLM Evaluator | [Open F37](https://github.com/MahsaKeikha/agentic_llm_evaluator) |
-| F39 | Agentic AI Program Manager | [Open F39](https://github.com/MahsaKeikha/agentic_ai_program_manager) |
-| F40 | Agentic AI Infrastructure Architect | [Open F40](https://github.com/MahsaKeikha/agentic_ai_infrastructure_architect) |
-| F41 | Mobile App Engineering | [Open F41](https://github.com/MahsaKeikha/mobile_app_engineering) |
-| F42 | Cloud Architecture | [Open F42](https://github.com/MahsaKeikha/cloud_architecture) |
-| F43 | DevOps | [Open F43](https://github.com/MahsaKeikha/devops) |
-| F44 | Kubernetes Operations | [Open F44](https://github.com/MahsaKeikha/kubernetes_operations) |
-| F45 | Cybersecurity SOC | [Open F45](https://github.com/MahsaKeikha/cybersecurity_soc) |
+| F01 | Agentic Book Writer | [Open](https://github.com/MahsaKeikha/agentic-book-writer) |
+| F02 | Agentic Research Lab | [Open](https://github.com/MahsaKeikha/agentic-research-lab) |
+| F03 | Agentic Biotech R&D | [Open](https://github.com/MahsaKeikha/agentic_biotech_rd) |
+| F04 | Agentic Tech Support | [Open](https://github.com/MahsaKeikha/agentic_tech_support) |
+| F05 | Agentic Online Shop | [Open](https://github.com/MahsaKeikha/agentic_online_shop) |
+| F06 | Agentic Debug Automation | [Open](https://github.com/MahsaKeikha/agentic_debug_automation) |
+| F07 | Agentic Software Design | [Open](https://github.com/MahsaKeikha/agentic_software_design) |
+| F08 | Agentic CEO Assistant | [Open](https://github.com/MahsaKeikha/agentic_ceo_assistant) |
+| F09 | Agentic AI Safety | [Open](https://github.com/MahsaKeikha/agentic_ai_safety) |
+| F10 | Agentic PhD Assistant | [Open](https://github.com/MahsaKeikha/agentic_phd_assistant) |
+| F11 | Agentic Account Manager | [Open](https://github.com/MahsaKeikha/agentic_account_manager) |
+| F12 | Agentic Robotics Governance | [Open](https://github.com/MahsaKeikha/agentic_robotics_governance) |
+| F13 | Agentic QA Safety Manager | [Open](https://github.com/MahsaKeikha/agentic_qa_safety_manager) |
+| F14 | Agentic Client Inquiry Bot | [Open](https://github.com/MahsaKeikha/agentic_client_inquiry_bot) |
+| F15 | Agentic Fullstack Web | [Open](https://github.com/MahsaKeikha/agentic_fullstack_web) |
+| F16 | Agentic Engineering Professor | [Open](https://github.com/MahsaKeikha/agentic_engineering_professor) |
+| F17 | Agentic Immigration Assistant | [Open](https://github.com/MahsaKeikha/agentic_immigration_assistant) |
+| F18 | Agentic Real Estate | [Open](https://github.com/MahsaKeikha/agentic_real_estate) |
+| F19 | Agentic Psychologist Assistant | [Open](https://github.com/MahsaKeikha/agentic_psychologist_assistant) |
+| F20 | Agentic Dating Advisor | [Open](https://github.com/MahsaKeikha/agentic_dating_advisor) |
+| F21 | Agentic COO Assistant | [Open](https://github.com/MahsaKeikha/agentic_coo_assistant) |
+| F22 | Agentic CFO Assistant | [Open](https://github.com/MahsaKeikha/agentic_cfo_assistant) |
+| F23 | Agentic Board Advisor | [Open](https://github.com/MahsaKeikha/agentic_board_advisor) |
+| F24 | Agentic Chief of Staff | [Open](https://github.com/MahsaKeikha/agentic_chief_of_staff) |
+| F25 | Agentic Strategy Consultant | [Open](https://github.com/MahsaKeikha/agentic_strategy_consultant) |
+| F26 | Agentic Venture Capital Analyst | [Open](https://github.com/MahsaKeikha/agentic_venture_capital_analyst) |
+| F27 | Agentic M&A Advisor | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F27_agentic_ma_advisor) |
+| F28 | Agentic Startup Accelerator | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F28_agentic_startup_accelerator) |
+| F29 | Agentic Innovation Officer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F29_agentic_innovation_officer) |
+| F30 | Agentic Corporate Governance | [Open](https://github.com/MahsaKeikha/agentic_corporate_governance) |
+| F31 | Agentic ML Engineer | [Open](https://github.com/MahsaKeikha/agentic_ml_engineer) |
+| F32 | Agentic MLOps Team | [Open](https://github.com/MahsaKeikha/agentic_mlops_team) |
+| F33 | Agentic Data Engineering | [Open](https://github.com/MahsaKeikha/agentic_data_engineering) |
+| F34 | Agentic Prompt Engineering | [Open](https://github.com/MahsaKeikha/agentic_prompt_engineering) |
+| F35 | Agentic RAG Engineering | [Open](https://github.com/MahsaKeikha/agentic_rag_engineering) |
+| F36 | Agentic Multi Agent Orchestrator | [Open](https://github.com/MahsaKeikha/agentic_multi_agent_orchestrator) |
+| F37 | Agentic LLM Evaluator | [Open](https://github.com/MahsaKeikha/agentic_llm_evaluator) |
+| F38 | Agentic AI Benchmark Suite | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F38_agentic_ai_benchmark_suite) |
+| F39 | Agentic AI Program Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_program_manager) |
+| F40 | Agentic AI Infrastructure Architect | [Open](https://github.com/MahsaKeikha/agentic_ai_infrastructure_architect) |
+| F41 | Mobile App Engineering | [Open](https://github.com/MahsaKeikha/mobile_app_engineering) |
+| F42 | Cloud Architecture | [Open](https://github.com/MahsaKeikha/cloud_architecture) |
+| F43 | DevOps | [Open](https://github.com/MahsaKeikha/devops) |
+| F44 | Kubernetes Operations | [Open](https://github.com/MahsaKeikha/kubernetes_operations) |
+| F45 | Cybersecurity SOC | [Open](https://github.com/MahsaKeikha/cybersecurity_soc) |
+| F46 | Penetration Testing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F46_penetration_testing) |
+| F47 | API Engineering | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F47_api_engineering) |
+| F48 | Database Architecture | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F48_database_architecture) |
+| F49 | Embedded Systems | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F49_embedded_systems) |
+| F50 | IoT Engineering | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F50_iot_engineering) |
+| F51 | Digital Health Assistant | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F51_digital_health_assistant) |
+| F52 | Clinical Trial Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F52_clinical_trial_manager) |
+| F53 | Medical Device Development | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F53_medical_device_development) |
+| F54 | FDA Documentation | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F54_fda_documentation) |
+| F55 | Hospital Operations | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F55_hospital_operations) |
+| F56 | Radiology Workflow | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F56_radiology_workflow) |
+| F57 | Pathology Review | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F57_pathology_review) |
+| F58 | Nursing Assistant | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F58_nursing_assistant) |
+| F59 | Caregiver Support | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F59_caregiver_support) |
+| F60 | Rehabilitation Planning | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F60_rehabilitation_planning) |
+| F61 | Parkinson Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F61_parkinson_research) |
+| F62 | Dementia Care Planning | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F62_dementia_care_planning) |
+| F63 | Hallucination Monitoring | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F63_hallucination_monitoring) |
+| F64 | EEG Analysis | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F64_eeg_analysis) |
+| F65 | Sleep Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F65_sleep_research) |
+| F66 | Neurotechnology Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F66_neurotechnology_design) |
+| F67 | Brain Computer Interface | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F67_brain_computer_interface) |
+| F68 | Cognitive Assessment | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F68_cognitive_assessment) |
+| F69 | Aging Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F69_aging_research) |
+| F70 | Biomarker Discovery | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F70_biomarker_discovery) |
+| F71 | Industrial Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F71_industrial_robotics) |
+| F72 | Service Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F72_service_robotics) |
+| F73 | Medical Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F73_medical_robotics) |
+| F74 | Autonomous Vehicles | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F74_autonomous_vehicles) |
+| F75 | Drone Operations | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F75_drone_operations) |
+| F76 | Humanoid Robot Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F76_humanoid_robot_design) |
+| F77 | Robot Safety Validation | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F77_robot_safety_validation) |
+| F78 | Human-Robot Interaction | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F78_human_robot_interaction) |
+| F79 | Swarm Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F79_swarm_robotics) |
+| F80 | Robotics Ethics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F80_robotics_ethics) |
+| F81 | Physics Research Assistant | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F81_physics_research_assistant) |
+| F82 | Quantum Computing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F82_quantum_computing) |
+| F83 | Materials Science | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F83_materials_science) |
+| F84 | Chemistry Planning | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F84_chemistry_planning) |
+| F85 | Climate Science | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F85_climate_science) |
+| F86 | Space Mission Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F86_space_mission_design) |
+| F87 | Astronomy Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F87_astronomy_research) |
+| F88 | Energy Systems | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F88_energy_systems) |
+| F89 | Nuclear Engineering | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F89_nuclear_engineering) |
+| F90 | Scientific Literature Review | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F90_scientific_literature_review) |
+| F91 | Professor Assistant | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F91_professor_assistant) |
+| F92 | Curriculum Builder | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F92_curriculum_builder) |
+| F93 | Student Tutor | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F93_student_tutor) |
+| F94 | Exam Generator | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F94_exam_generator) |
+| F95 | STEM Laboratory Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F95_stem_laboratory_planner) |
+| F96 | University Research Office | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F96_university_research_office) |
+| F97 | Academic Integrity Checker | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F97_academic_integrity_checker) |
+| F98 | Grant Writer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F98_grant_writer) |
+| F99 | Thesis Committee | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F99_thesis_committee) |
+| F100 | Accreditation Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F100_accreditation_manager) |
+| F101 | Contract Review | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F101_contract_review) |
+| F102 | Corporate Compliance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F102_corporate_compliance) |
+| F103 | Privacy Compliance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F103_privacy_compliance) |
+| F104 | Intellectual Property | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F104_intellectual_property) |
+| F105 | Patent Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F105_patent_research) |
+| F106 | Employment Compliance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F106_employment_compliance) |
+| F107 | International Trade | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F107_international_trade) |
+| F108 | Export Control | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F108_export_control) |
+| F109 | Healthcare Compliance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F109_healthcare_compliance) |
+| F110 | Regulatory Affairs | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F110_regulatory_affairs) |
+| F111 | Manufacturing Engineer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F111_manufacturing_engineer) |
+| F112 | Production Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F112_production_planner) |
+| F113 | Quality Engineer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F113_quality_engineer) |
+| F114 | Predictive Maintenance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F114_predictive_maintenance) |
+| F115 | Supply Chain Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F115_supply_chain_planner) |
+| F116 | Lean Manufacturing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F116_lean_manufacturing) |
+| F117 | Digital Twin Engineer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F117_digital_twin_engineer) |
+| F118 | Factory Automation | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F118_factory_automation) |
+| F119 | Industrial Safety | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F119_industrial_safety) |
+| F120 | Sustainability Engineer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F120_sustainability_engineer) |
+| F121 | Brand Strategist | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F121_brand_strategist) |
+| F122 | Content Marketing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F122_content_marketing) |
+| F123 | SEO Growth | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F123_seo_growth) |
+| F124 | Social Media Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F124_social_media_manager) |
+| F125 | Lifecycle Marketing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F125_lifecycle_marketing) |
+| F126 | Paid Acquisition | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F126_paid_acquisition) |
+| F127 | Product Marketing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F127_product_marketing) |
+| F128 | PR and Communications | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F128_pr_and_communications) |
+| F129 | Growth Experimentation | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F129_growth_experimentation) |
+| F130 | Customer Insights | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F130_customer_insights) |
+| F131 | Book Publishing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F131_book_publishing) |
+| F132 | Screenwriting Studio | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F132_screenwriting_studio) |
+| F133 | Music Production | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F133_music_production) |
+| F134 | Graphic Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F134_graphic_design) |
+| F135 | UX Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F135_ux_design) |
+| F136 | Interior Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F136_interior_design) |
+| F137 | Fashion Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F137_fashion_design) |
+| F138 | Architecture Studio | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F138_architecture_studio) |
+| F139 | Game Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F139_game_design) |
+| F140 | Animation Studio | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F140_animation_studio) |
+| F141 | Smart City Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F141_smart_city_planner) |
+| F142 | Emergency Management | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F142_emergency_management) |
+| F143 | Disaster Response | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F143_disaster_response) |
+| F144 | Public Health Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F144_public_health_planner) |
+| F145 | Transportation Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F145_transportation_planner) |
+| F146 | Environmental Compliance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F146_environmental_compliance) |
+| F147 | Defense Policy Analyst | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F147_defense_policy_analyst) |
+| F148 | Public-Sector Intelligence Analyst | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F148_public_sector_intelligence_analyst) |
+| F149 | Election Information Reviewer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F149_election_information_reviewer) |
+| F150 | Policy Analyst | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F150_policy_analyst) |
+| F151 | Investment Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F151_investment_research) |
+| F152 | Portfolio Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F152_portfolio_manager) |
+| F153 | Quantitative Trading Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F153_quantitative_trading_research) |
+| F154 | Insurance Operations | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F154_insurance_operations) |
+| F155 | Banking Assistant | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F155_banking_assistant) |
+| F156 | Tax Planning | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F156_tax_planning) |
+| F157 | Enterprise Risk Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F157_enterprise_risk_manager) |
+| F158 | Treasury Operations | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F158_treasury_operations) |
+| F159 | Credit Analyst | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F159_credit_analyst) |
+| F160 | ESG Reporting | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F160_esg_reporting) |
+| F161 | Life Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F161_life_planner) |
+| F162 | Personal Knowledge Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F162_personal_knowledge_manager) |
+| F163 | Career Coach | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F163_career_coach) |
+| F164 | Resume Studio | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F164_resume_studio) |
+| F165 | Public Speaking Coach | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F165_public_speaking_coach) |
+| F166 | Interview Coach | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F166_interview_coach) |
+| F167 | Language Tutor | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F167_language_tutor) |
+| F168 | Productivity Coach | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F168_productivity_coach) |
+| F169 | Travel Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F169_travel_planner) |
+| F170 | Habit Builder | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F170_habit_builder) |
 
-F38 is intentionally not listed as a standalone repository here until its exact standalone repository is confirmed and validated.
+## Standalone repository migration
 
-## Standalone F30-F170 migration
-
-The library is being upgraded so every F30-F170 system becomes its **own independently runnable GitHub repository**, not merely a folder or batch entry inside this umbrella repository.
+The library is being upgraded so each system can become its own independently runnable GitHub repository rather than only a folder inside this umbrella repository.
 
 A system is not marked as a verified standalone repository until the repository actually exists, runs offline, passes tests and CI, has genuine specialized-agent separation, documents architecture, evaluation, and safety, and is linked correctly from the canonical catalog.
-
-## Clickable F01-F170 catalog
-
-The full catalog is available at [`docs/AGENT_LINKS.md`](docs/AGENT_LINKS.md). During the F30-F170 migration, catalog entries must reflect the **actual** repository state and must not claim standalone status prematurely.
 
 ## Run the library from one place
 
@@ -98,16 +247,6 @@ A useful multi-agent system needs more than several personas talking to one anot
 
 The shared engineering contract is documented in [`systems/STANDARD.md`](systems/STANDARD.md).
 
-## Current architecture
-
-- F01-F26 are established standalone flagship repositories.
-- F27-F29 have individual system packages inside this repository.
-- F30-F37 and F39-F45 have standalone repositories linked above.
-- F38 remains pending standalone repository confirmation.
-- Remaining F-series systems are being migrated to true standalone repositories under the reference standard above.
-- C01-C10 provide reusable core patterns.
-- Automated tests run through GitHub Actions on pushes and pull requests to `main`.
-
 ## Domains
 
 | Range | Domain |
@@ -142,31 +281,6 @@ GitHub Actions runs the umbrella test suite against supported Python versions.
 ## Safety and responsible use
 
 The library separates decision support from consequential execution. Sensitive systems preserve scope limits and qualified review. Reference workflows should not silently invent missing facts or autonomously perform consequential actions such as clinical decisions, legal certification, financial transactions, physical robot control, industrial equipment commands, targeted voter persuasion, binding public decisions, or external submissions without appropriate authorization and safeguards.
-
-## Repository structure
-
-```text
-agentic_ai_library/
-├── launcher.py
-├── dashboard.py
-├── scripts/
-│   └── create_standalone_repositories.py
-├── docs/
-│   ├── INDEX.md
-│   ├── AGENT_LINKS.md
-│   ├── ROADMAP.md
-│   ├── LAUNCHER.md
-│   ├── GLOBAL_REFERENCE_ARCHITECTURE.md
-│   ├── WORLD_CLASS_REFERENCE_STANDARD.md
-│   ├── REPOSITORY_ACCEPTANCE_CHECKLIST.md
-│   ├── TRUST_AND_ADOPTION_ROADMAP.md
-│   ├── REFERENCE_LIBRARY_PRINCIPLES.md
-│   └── STANDALONE_REPOSITORY_MIGRATION.md
-├── catalog/core/
-├── systems/
-├── tests/
-└── templates/
-```
 
 ## Author
 
