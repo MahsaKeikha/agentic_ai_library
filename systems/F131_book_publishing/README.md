@@ -1,11 +1,5 @@
 # F131 Book Publishing
 
-Individual F131 system page.
+Multi-agent publishing workflow for manuscript development, editorial review, production planning, metadata, release readiness, and human approval.
 
-**Domain:** Creative and Media
-
-**Run:** `python launcher.py F131`
-
-**Implementation:** [`../creative_media_batch.py`](../creative_media_batch.py)
-
-**Specification:** [`../F131_F140_CREATIVE_MEDIA.md`](../F131_F140_CREATIVE_MEDIA.md)
+Domain: Creative and Media
