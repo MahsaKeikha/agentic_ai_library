@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MahsaKeikha/agentic_ai_library/docs/CANONICAL_RESULT_SCHEMA.json",
+  "title": "Agentic AI Library Canonical Run Result",
+  "type": "object",
+  "required": [
+    "system_id",
+    "system_name",
+    "version",
+    "run_id",
+    "analyses",
+    "evidence",
+    "unresolved_questions",
+    "conflicts",
+    "risks",
+    "recommendation",
+    "status",
+    "trace"
+  ],
+  "properties": {
+    "system_id": {"type": "string", "pattern": "^F(0[1-9]|[1-9][0-9]|1[0-6][0-9]|170)$"},
+    "system_name": {"type": "string", "minLength": 1},
+    "version": {"type": "string", "minLength": 1},
+    "run_id": {"type": "string", "minLength": 1},
+    "domain": {"type": "string"},
+    "analyses": {"type": "object"},
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source", "status"],
+        "properties": {
+          "claim": {"type": "string"},
+          "source": {"type": "string"},
+          "status": {"enum": ["supplied", "derived", "missing", "conflicting", "unverified"]}
+        },
+        "additionalProperties": true
+      }
+    },
+    "unresolved_questions": {"type": "array", "items": {"type": "string"}},
+    "conflicts": {"type": "array", "items": {"type": "string"}},
+    "risks": {"type": "array", "items": {"type": "string"}},
+    "recommendation": {"type": "string"},
+    "status": {"type": "string"},
+    "trace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["step", "actor", "event"],
+        "properties": {
+          "step": {"type": "integer", "minimum": 1},
+          "actor": {"type": "string"},
+          "event": {"type": "string"},
+          "artifact": {}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
