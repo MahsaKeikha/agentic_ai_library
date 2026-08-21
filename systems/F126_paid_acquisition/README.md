@@ -1,11 +1,5 @@
 # F126 Paid Acquisition
 
-Individual F126 system page.
+Mirrored multi-agent implementation. Standalone repository: https://github.com/MahsaKeikha/agentic_paid_acquisition
 
-**Domain:** Marketing and Growth
-
-**Run:** `python launcher.py F126`
-
-**Implementation:** [`../marketing_growth_batch.py`](../marketing_growth_batch.py)
-
-**Specification:** [`../F121_F130_MARKETING_GROWTH.md`](../F121_F130_MARKETING_GROWTH.md)
+Architecture: audience -> creative -> budget -> measurement -> review.

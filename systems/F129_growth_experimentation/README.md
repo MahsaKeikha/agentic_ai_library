@@ -1,11 +1,5 @@
 # F129 Growth Experimentation
 
-Individual F129 system page.
+Mirrored multi-agent implementation. Standalone repository: https://github.com/MahsaKeikha/agentic_growth_experimentation
 
-**Domain:** Marketing and Growth
-
-**Run:** `python launcher.py F129`
-
-**Implementation:** [`../marketing_growth_batch.py`](../marketing_growth_batch.py)
-
-**Specification:** [`../F121_F130_MARKETING_GROWTH.md`](../F121_F130_MARKETING_GROWTH.md)
+Architecture: hypothesis -> experiment -> measurement -> risk -> review.
