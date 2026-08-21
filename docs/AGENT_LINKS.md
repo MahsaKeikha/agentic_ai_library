@@ -111,19 +111,19 @@ This catalog mirrors the canonical direct link table in the root README. Standal
 | F105 | Patent Research | [Open](https://github.com/MahsaKeikha/agentic_patent_research) |
 | F106 | Employment Compliance | [Open](https://github.com/MahsaKeikha/agentic_employment_compliance) |
 | F107 | International Trade | [Open](https://github.com/MahsaKeikha/agentic_international_trade) |
-| F108 | Export Control | [Open](https://github.com/MahsaKeikha/gentic_export_control) |
+| F108 | Export Control | [Open](https://github.com/MahsaKeikha/agentic_export_control) |
 | F109 | Healthcare Compliance | [Open](https://github.com/MahsaKeikha/agentic_healthcare_compliance) |
 | F110 | Regulatory Affairs | [Open](https://github.com/MahsaKeikha/agentic_regulatory_affairs) |
-| F111 | Manufacturing Engineer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F111_manufacturing_engineer) |
-| F112 | Production Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F112_production_planner) |
-| F113 | Quality Engineer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F113_quality_engineer) |
-| F114 | Predictive Maintenance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F114_predictive_maintenance) |
-| F115 | Supply Chain Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F115_supply_chain_planner) |
-| F116 | Lean Manufacturing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F116_lean_manufacturing) |
-| F117 | Digital Twin Engineer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F117_digital_twin_engineer) |
-| F118 | Factory Automation | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F118_factory_automation) |
-| F119 | Industrial Safety | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F119_industrial_safety) |
-| F120 | Sustainability Engineer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F120_sustainability_engineer) |
+| F111 | Manufacturing Engineer | [Open](https://github.com/MahsaKeikha/agentic_manufacturing_engineer) |
+| F112 | Production Planner | [Open](https://github.com/MahsaKeikha/agentic_production_planner) |
+| F113 | Quality Engineer | [Open](https://github.com/MahsaKeikha/agentic_quality_engineer) |
+| F114 | Predictive Maintenance | [Open](https://github.com/MahsaKeikha/agentic_predictive_maintenance) |
+| F115 | Supply Chain Planner | [Open](https://github.com/MahsaKeikha/agentic_supply_chain_planner) |
+| F116 | Lean Manufacturing | [Open](https://github.com/MahsaKeikha/agentic_lean_manufacturing) |
+| F117 | Digital Twin Engineer | [Open](https://github.com/MahsaKeikha/agentic_digital_twin_engineer) |
+| F118 | Factory Automation | [Open](https://github.com/MahsaKeikha/agentic_factory_automation) |
+| F119 | Industrial Safety | [Open](https://github.com/MahsaKeikha/agentic_industrial_safety) |
+| F120 | Sustainability Engineer | [Open](https://github.com/MahsaKeikha/agentic_sustainability_engineer) |
 | F121 | Brand Strategist | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F121_brand_strategist) |
 | F122 | Content Marketing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F122_content_marketing) |
 | F123 | SEO Growth | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F123_seo_growth) |
