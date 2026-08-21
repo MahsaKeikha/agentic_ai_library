@@ -11,15 +11,24 @@ This repository is a companion engineering library for my **AI Engineering Handb
 - **AI Engineering Handbook Series, Book 1:** https://a.co/d/0cbZnSMi
 - **AI Engineering Handbook Series, Book 2:** https://a.co/d/07HnRY7H
 
+## Mission
+
+Build an open engineering reference collection of standalone multi-agent AI systems that is easy to run, easy to inspect, easy to compare, easy to cite, and difficult to misunderstand.
+
+The project is designed around reproducibility, transparent architecture, evidence discipline, evaluation, safety, human authority, and cross-domain comparability. Recognition and adoption are goals, but technical credibility comes first.
+
+Key project standards and strategy:
+
+- [`Canonical Multi-Agent AI Reference Architecture`](docs/GLOBAL_REFERENCE_ARCHITECTURE.md)
+- [`World-Class Multi-Agent AI Reference Standard`](docs/WORLD_CLASS_REFERENCE_STANDARD.md)
+- [`Standalone Repository Acceptance Checklist`](docs/REPOSITORY_ACCEPTANCE_CHECKLIST.md)
+- [`Trust and Adoption Roadmap`](docs/TRUST_AND_ADOPTION_ROADMAP.md)
+- [`Reference Library Principles`](docs/REFERENCE_LIBRARY_PRINCIPLES.md)
+- [`F30-F170 Standalone Repository Migration`](docs/STANDALONE_REPOSITORY_MIGRATION.md)
+
 ## Standalone F30-F170 migration
 
 The library is being upgraded so every F30-F170 system becomes its **own independently runnable GitHub repository**, not merely a folder or batch entry inside this umbrella repository.
-
-This migration follows a formal quality gate rather than optimizing for repository count:
-
-- [`World-Class Multi-Agent AI Reference Standard`](docs/WORLD_CLASS_REFERENCE_STANDARD.md)
-- [`Standalone Repository Acceptance Checklist`](docs/REPOSITORY_ACCEPTANCE_CHECKLIST.md)
-- [`F30-F170 Standalone Repository Migration`](docs/STANDALONE_REPOSITORY_MIGRATION.md)
 
 A system is not marked as a verified standalone repository until the repository actually exists, runs offline, passes tests and CI, has genuine specialized-agent separation, documents architecture/evaluation/safety, and is linked correctly from the canonical catalog.
 
@@ -70,7 +79,7 @@ The shared engineering contract is documented in [`systems/STANDARD.md`](systems
 - F01-F26 are established standalone flagship repositories.
 - F27-F30 have individual system packages inside this repository.
 - F31-F170 currently have unified implementations and individual in-repository pages.
-- F30-F170 are being migrated to true standalone repositories under the world-class reference standard above.
+- F30-F170 are being migrated to true standalone repositories under the reference standard above.
 - C01-C10 provide reusable core patterns.
 - Automated tests run through GitHub Actions on pushes and pull requests to `main`.
 
@@ -122,8 +131,11 @@ agentic_ai_library/
 │   ├── AGENT_LINKS.md
 │   ├── ROADMAP.md
 │   ├── LAUNCHER.md
+│   ├── GLOBAL_REFERENCE_ARCHITECTURE.md
 │   ├── WORLD_CLASS_REFERENCE_STANDARD.md
 │   ├── REPOSITORY_ACCEPTANCE_CHECKLIST.md
+│   ├── TRUST_AND_ADOPTION_ROADMAP.md
+│   ├── REFERENCE_LIBRARY_PRINCIPLES.md
 │   └── STANDALONE_REPOSITORY_MIGRATION.md
 ├── catalog/core/
 ├── systems/
