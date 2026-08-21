@@ -1,8 +1,6 @@
 # Direct Agent Links: F01-F170
 
-Every entry below points to a real GitHub location. F01-F26 are standalone repositories. F27-F29 remain individual system packages inside this umbrella repository. F30-F37, F39-F45, F51-F60, F61-F70, and F71-F80 are standalone repositories. F38 remains linked to its current in-repository system page until its standalone repository is confirmed. Other systems remain individual system pages until their standalone repositories are created and validated.
-
-## F01-F30
+This catalog mirrors the canonical direct link table in the root README. Standalone repositories are linked directly. Systems that have not yet been migrated remain linked to their current runnable system page inside `agentic_ai_library`.
 
 | ID | System | Direct link |
 |---|---|---|
@@ -36,11 +34,6 @@ Every entry below points to a real GitHub location. F01-F26 are standalone repos
 | F28 | Agentic Startup Accelerator | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F28_agentic_startup_accelerator) |
 | F29 | Agentic Innovation Officer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F29_agentic_innovation_officer) |
 | F30 | Agentic Corporate Governance | [Open](https://github.com/MahsaKeikha/agentic_corporate_governance) |
-
-## F31-F70
-
-| ID | System | Direct link |
-|---|---|---|
 | F31 | Agentic ML Engineer | [Open](https://github.com/MahsaKeikha/agentic_ml_engineer) |
 | F32 | Agentic MLOps Team | [Open](https://github.com/MahsaKeikha/agentic_mlops_team) |
 | F33 | Agentic Data Engineering | [Open](https://github.com/MahsaKeikha/agentic_data_engineering) |
@@ -81,11 +74,6 @@ Every entry below points to a real GitHub location. F01-F26 are standalone repos
 | F68 | Cognitive Assessment | [Open](https://github.com/MahsaKeikha/agentic_cognitive_assessment) |
 | F69 | Aging Research | [Open](https://github.com/MahsaKeikha/agentic_aging_research) |
 | F70 | Biomarker Discovery | [Open](https://github.com/MahsaKeikha/agentic_biomarker_discovery) |
-
-## F71-F110
-
-| ID | System | Direct link |
-|---|---|---|
 | F71 | Industrial Robotics | [Open](https://github.com/MahsaKeikha/agentic_industrial_robotics) |
 | F72 | Service Robotics | [Open](https://github.com/MahsaKeikha/agentic_service_robotics) |
 | F73 | Medical Robotics | [Open](https://github.com/MahsaKeikha/agentic_medical_robotics) |
@@ -96,26 +84,26 @@ Every entry below points to a real GitHub location. F01-F26 are standalone repos
 | F78 | Human-Robot Interaction | [Open](https://github.com/MahsaKeikha/agentic_human_robot_interaction) |
 | F79 | Swarm Robotics | [Open](https://github.com/MahsaKeikha/agentic_swarm_robotics) |
 | F80 | Robotics Ethics | [Open](https://github.com/MahsaKeikha/agentic_robotics_ethics) |
-| F81 | Physics Research Assistant | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F81_physics_research_assistant) |
-| F82 | Quantum Computing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F82_quantum_computing) |
-| F83 | Materials Science | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F83_materials_science) |
-| F84 | Chemistry Planning | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F84_chemistry_planning) |
-| F85 | Climate Science | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F85_climate_science) |
-| F86 | Space Mission Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F86_space_mission_design) |
-| F87 | Astronomy Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F87_astronomy_research) |
-| F88 | Energy Systems | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F88_energy_systems) |
-| F89 | Nuclear Engineering | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F89_nuclear_engineering) |
-| F90 | Scientific Literature Review | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F90_scientific_literature_review) |
-| F91 | Professor Assistant | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F91_professor_assistant) |
-| F92 | Curriculum Builder | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F92_curriculum_builder) |
-| F93 | Student Tutor | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F93_student_tutor) |
-| F94 | Exam Generator | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F94_exam_generator) |
-| F95 | STEM Laboratory Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F95_stem_laboratory_planner) |
-| F96 | University Research Office | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F96_university_research_office) |
-| F97 | Academic Integrity Checker | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F97_academic_integrity_checker) |
-| F98 | Grant Writer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F98_grant_writer) |
-| F99 | Thesis Committee | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F99_thesis_committee) |
-| F100 | Accreditation Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F100_accreditation_manager) |
+| F81 | Physics Research Assistant | [Open](https://github.com/MahsaKeikha/agentic_physics_research_assistant) |
+| F82 | Quantum Computing | [Open](https://github.com/MahsaKeikha/agentic_quantum_computing) |
+| F83 | Materials Science | [Open](https://github.com/MahsaKeikha/agentic_materials_science) |
+| F84 | Chemistry Planning | [Open](https://github.com/MahsaKeikha/agentic_chemistry_planning) |
+| F85 | Climate Science | [Open](https://github.com/MahsaKeikha/agentic_climate_science) |
+| F86 | Space Mission Design | [Open](https://github.com/MahsaKeikha/agentic_space_mission_design) |
+| F87 | Astronomy Research | [Open](https://github.com/MahsaKeikha/agentic_astronomy_research) |
+| F88 | Energy Systems | [Open](https://github.com/MahsaKeikha/agentic_energy_systems) |
+| F89 | Nuclear Engineering | [Open](https://github.com/MahsaKeikha/agentic_nuclear_engineering) |
+| F90 | Scientific Literature Review | [Open](https://github.com/MahsaKeikha/agentic_scientific_literature_review) |
+| F91 | Professor Assistant | [Open](https://github.com/MahsaKeikha/agentic_professor_assistant) |
+| F92 | Curriculum Builder | [Open](https://github.com/MahsaKeikha/agentic_curriculum_builder) |
+| F93 | Student Tutor | [Open](https://github.com/MahsaKeikha/agentic_student_tutor) |
+| F94 | Exam Generator | [Open](https://github.com/MahsaKeikha/agentic_exam_generator) |
+| F95 | STEM Laboratory Planner | [Open](https://github.com/MahsaKeikha/agentic_stem_laboratory_planner) |
+| F96 | University Research Office | [Open](https://github.com/MahsaKeikha/agentic_university_research_office) |
+| F97 | Academic Integrity Checker | [Open](https://github.com/MahsaKeikha/agentic_academic_integrity_checker) |
+| F98 | Grant Writer | [Open](https://github.com/MahsaKeikha/agentic_grant_writer) |
+| F99 | Thesis Committee | [Open](https://github.com/MahsaKeikha/agentic_thesis_committee) |
+| F100 | Accreditation Manager | [Open](https://github.com/MahsaKeikha/agentic_accreditation_manager) |
 | F101 | Contract Review | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F101_contract_review) |
 | F102 | Corporate Compliance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F102_corporate_compliance) |
 | F103 | Privacy Compliance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F103_privacy_compliance) |
@@ -126,11 +114,6 @@ Every entry below points to a real GitHub location. F01-F26 are standalone repos
 | F108 | Export Control | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F108_export_control) |
 | F109 | Healthcare Compliance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F109_healthcare_compliance) |
 | F110 | Regulatory Affairs | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F110_regulatory_affairs) |
-
-## F111-F150
-
-| ID | System | Direct link |
-|---|---|---|
 | F111 | Manufacturing Engineer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F111_manufacturing_engineer) |
 | F112 | Production Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F112_production_planner) |
 | F113 | Quality Engineer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F113_quality_engineer) |
@@ -171,11 +154,6 @@ Every entry below points to a real GitHub location. F01-F26 are standalone repos
 | F148 | Public-Sector Intelligence Analyst | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F148_public_sector_intelligence_analyst) |
 | F149 | Election Information Reviewer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F149_election_information_reviewer) |
 | F150 | Policy Analyst | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F150_policy_analyst) |
-
-## F151-F170
-
-| ID | System | Direct link |
-|---|---|---|
 | F151 | Investment Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F151_investment_research) |
 | F152 | Portfolio Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F152_portfolio_manager) |
 | F153 | Quantitative Trading Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F153_quantitative_trading_research) |
