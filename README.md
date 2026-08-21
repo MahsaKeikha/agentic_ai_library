@@ -160,16 +160,16 @@ Every system in the 170-system library is listed below. Where a standalone repos
 | F128 | PR and Communications | [Open](https://github.com/MahsaKeikha/agentic_pr_communications) |
 | F129 | Growth Experimentation | [Open](https://github.com/MahsaKeikha/agentic_growth_experimentation) |
 | F130 | Customer Insights | [Open](https://github.com/MahsaKeikha/agentic_customer_insights) |
-| F131 | Book Publishing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F131_book_publishing) |
-| F132 | Screenwriting Studio | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F132_screenwriting_studio) |
-| F133 | Music Production | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F133_music_production) |
-| F134 | Graphic Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F134_graphic_design) |
-| F135 | UX Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F135_ux_design) |
-| F136 | Interior Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F136_interior_design) |
-| F137 | Fashion Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F137_fashion_design) |
-| F138 | Architecture Studio | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F138_architecture_studio) |
-| F139 | Game Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F139_game_design) |
-| F140 | Animation Studio | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F140_animation_studio) |
+| F131 | Book Publishing | [Open](https://github.com/MahsaKeikha/agentic_book_publishing) |
+| F132 | Screenwriting Studio | [Open](https://github.com/MahsaKeikha/agentic_screenwriting_studio) |
+| F133 | Music Production | [Open](https://github.com/MahsaKeikha/agentic_music_production) |
+| F134 | Graphic Design | [Open](https://github.com/MahsaKeikha/agentic_graphic_design) |
+| F135 | UX Design | [Open](https://github.com/MahsaKeikha/agentic_ux_design) |
+| F136 | Interior Design | [Open](https://github.com/MahsaKeikha/agentic_interior_design) |
+| F137 | Fashion Design | [Open](https://github.com/MahsaKeikha/agentic_fashion_design) |
+| F138 | Architecture Studio | [Open](https://github.com/MahsaKeikha/agentic_architecture_studio) |
+| F139 | Game Design | [Open](https://github.com/MahsaKeikha/agentic_game_design) |
+| F140 | Animation Studio | [Open](https://github.com/MahsaKeikha/agentic_animation_studio) |
 | F141 | Smart City Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F141_smart_city_planner) |
 | F142 | Emergency Management | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F142_emergency_management) |
 | F143 | Disaster Response | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F143_disaster_response) |
