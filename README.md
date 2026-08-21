@@ -102,16 +102,16 @@ Every system in the 170-system library is listed below. Where a standalone repos
 | F68 | Cognitive Assessment | [Open](https://github.com/MahsaKeikha/agentic_cognitive_assessment) |
 | F69 | Aging Research | [Open](https://github.com/MahsaKeikha/agentic_aging_research) |
 | F70 | Biomarker Discovery | [Open](https://github.com/MahsaKeikha/agentic_biomarker_discovery) |
-| F71 | Industrial Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F71_industrial_robotics) |
-| F72 | Service Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F72_service_robotics) |
-| F73 | Medical Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F73_medical_robotics) |
-| F74 | Autonomous Vehicles | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F74_autonomous_vehicles) |
-| F75 | Drone Operations | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F75_drone_operations) |
-| F76 | Humanoid Robot Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F76_humanoid_robot_design) |
-| F77 | Robot Safety Validation | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F77_robot_safety_validation) |
-| F78 | Human-Robot Interaction | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F78_human_robot_interaction) |
-| F79 | Swarm Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F79_swarm_robotics) |
-| F80 | Robotics Ethics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F80_robotics_ethics) |
+| F71 | Industrial Robotics | [Open](https://github.com/MahsaKeikha/agentic_industrial_robotics) |
+| F72 | Service Robotics | [Open](https://github.com/MahsaKeikha/agentic_service_robotics) |
+| F73 | Medical Robotics | [Open](https://github.com/MahsaKeikha/agentic_medical_robotics) |
+| F74 | Autonomous Vehicles | [Open](https://github.com/MahsaKeikha/agentic_autonomous_vehicles) |
+| F75 | Drone Operations | [Open](https://github.com/MahsaKeikha/agentic_drone_operations) |
+| F76 | Humanoid Robot Design | [Open](https://github.com/MahsaKeikha/agentic_humanoid_robot_design) |
+| F77 | Robot Safety Validation | [Open](https://github.com/MahsaKeikha/agentic_robot_safety_validation) |
+| F78 | Human-Robot Interaction | [Open](https://github.com/MahsaKeikha/agentic_human_robot_interaction) |
+| F79 | Swarm Robotics | [Open](https://github.com/MahsaKeikha/agentic_swarm_robotics) |
+| F80 | Robotics Ethics | [Open](https://github.com/MahsaKeikha/agentic_robotics_ethics) |
 | F81 | Physics Research Assistant | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F81_physics_research_assistant) |
 | F82 | Quantum Computing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F82_quantum_computing) |
 | F83 | Materials Science | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F83_materials_science) |
