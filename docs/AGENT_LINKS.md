@@ -124,16 +124,16 @@ This catalog mirrors the canonical direct link table in the root README. Standal
 | F118 | Factory Automation | [Open](https://github.com/MahsaKeikha/agentic_factory_automation) |
 | F119 | Industrial Safety | [Open](https://github.com/MahsaKeikha/agentic_industrial_safety) |
 | F120 | Sustainability Engineer | [Open](https://github.com/MahsaKeikha/agentic_sustainability_engineer) |
-| F121 | Brand Strategist | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F121_brand_strategist) |
-| F122 | Content Marketing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F122_content_marketing) |
-| F123 | SEO Growth | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F123_seo_growth) |
-| F124 | Social Media Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F124_social_media_manager) |
-| F125 | Lifecycle Marketing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F125_lifecycle_marketing) |
-| F126 | Paid Acquisition | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F126_paid_acquisition) |
-| F127 | Product Marketing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F127_product_marketing) |
-| F128 | PR and Communications | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F128_pr_and_communications) |
-| F129 | Growth Experimentation | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F129_growth_experimentation) |
-| F130 | Customer Insights | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F130_customer_insights) |
+| F121 | Brand Strategist | [Open](https://github.com/MahsaKeikha/agentic_brand_strategist) |
+| F122 | Content Marketing | [Open](https://github.com/MahsaKeikha/agentic_content_marketing) |
+| F123 | SEO Growth | [Open](https://github.com/MahsaKeikha/agentic_seo_growth) |
+| F124 | Social Media Manager | [Open](https://github.com/MahsaKeikha/agentic_social_media_manager) |
+| F125 | Lifecycle Marketing | [Open](https://github.com/MahsaKeikha/agentic_lifecycle_marketing) |
+| F126 | Paid Acquisition | [Open](https://github.com/MahsaKeikha/agentic_paid_acquisition) |
+| F127 | Product Marketing | [Open](https://github.com/MahsaKeikha/agentic_product_marketing) |
+| F128 | PR and Communications | [Open](https://github.com/MahsaKeikha/agentic_pr_communications) |
+| F129 | Growth Experimentation | [Open](https://github.com/MahsaKeikha/agentic_growth_experimentation) |
+| F130 | Customer Insights | [Open](https://github.com/MahsaKeikha/agentic_customer_insights) |
 | F131 | Book Publishing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F131_book_publishing) |
 | F132 | Screenwriting Studio | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F132_screenwriting_studio) |
 | F133 | Music Production | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F133_music_production) |
