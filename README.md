@@ -15,8 +15,6 @@ This repository is a companion engineering library for my **AI Engineering Handb
 
 Build an open engineering reference collection of multi-agent AI systems that is easy to run, easy to inspect, easy to compare, easy to cite, and difficult to misunderstand.
 
-The project is designed around reproducibility, transparent architecture, evidence discipline, evaluation, safety, human authority, and cross-domain comparability. Recognition and adoption are goals, but technical credibility comes first.
-
 Key project standards and strategy:
 
 - [`Canonical Multi-Agent AI Reference Architecture`](docs/GLOBAL_REFERENCE_ARCHITECTURE.md)
@@ -28,7 +26,7 @@ Key project standards and strategy:
 
 ## Direct F01-F170 system links
 
-Every system in the 170-system library is listed below. Where a standalone repository already exists, the link opens that repository. Where migration is still in progress, the link opens the current runnable system page inside this umbrella repository. This keeps the catalog complete without claiming standalone status before a repository exists.
+Every system in the 170-system library is listed below. Where a standalone repository exists, the link opens that repository. Where migration is still in progress, the link opens the current runnable system page inside this umbrella repository.
 
 | ID | Multi-agent system | Direct link |
 |---|---|---|
@@ -132,16 +130,16 @@ Every system in the 170-system library is listed below. Where a standalone repos
 | F98 | Grant Writer | [Open](https://github.com/MahsaKeikha/agentic_grant_writer) |
 | F99 | Thesis Committee | [Open](https://github.com/MahsaKeikha/agentic_thesis_committee) |
 | F100 | Accreditation Manager | [Open](https://github.com/MahsaKeikha/agentic_accreditation_manager) |
-| F101 | Contract Review | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F101_contract_review) |
-| F102 | Corporate Compliance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F102_corporate_compliance) |
-| F103 | Privacy Compliance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F103_privacy_compliance) |
-| F104 | Intellectual Property | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F104_intellectual_property) |
-| F105 | Patent Research | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F105_patent_research) |
-| F106 | Employment Compliance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F106_employment_compliance) |
-| F107 | International Trade | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F107_international_trade) |
-| F108 | Export Control | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F108_export_control) |
-| F109 | Healthcare Compliance | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F109_healthcare_compliance) |
-| F110 | Regulatory Affairs | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F110_regulatory_affairs) |
+| F101 | Contract Review | [Open](https://github.com/MahsaKeikha/agentic_contract_review) |
+| F102 | Corporate Compliance | [Open](https://github.com/MahsaKeikha/agentic_corporate_compliance) |
+| F103 | Privacy Compliance | [Open](https://github.com/MahsaKeikha/agentic_privacy_compliance) |
+| F104 | Intellectual Property | [Open](https://github.com/MahsaKeikha/agentic_intellectual_property) |
+| F105 | Patent Research | [Open](https://github.com/MahsaKeikha/agentic_patent_research) |
+| F106 | Employment Compliance | [Open](https://github.com/MahsaKeikha/agentic_employment_compliance) |
+| F107 | International Trade | [Open](https://github.com/MahsaKeikha/agentic_international_trade) |
+| F108 | Export Control | [Open](https://github.com/MahsaKeikha/gentic_export_control) |
+| F109 | Healthcare Compliance | [Open](https://github.com/MahsaKeikha/agentic_healthcare_compliance) |
+| F110 | Regulatory Affairs | [Open](https://github.com/MahsaKeikha/agentic_regulatory_affairs) |
 | F111 | Manufacturing Engineer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F111_manufacturing_engineer) |
 | F112 | Production Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F112_production_planner) |
 | F113 | Quality Engineer | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F113_quality_engineer) |
@@ -211,8 +209,6 @@ A system is not marked as a verified standalone repository until the repository 
 
 ## Run the library from one place
 
-The repository includes a unified launcher and a local browser dashboard.
-
 List all F01-F170 systems:
 
 ```bash
@@ -225,25 +221,17 @@ Run a unified system directly:
 python launcher.py F35
 ```
 
-Run with structured evidence/context:
-
-```bash
-python launcher.py F35 --json '{"corpus":"internal knowledge base","retrieval":"hybrid search"}'
-```
-
 Launch the browser dashboard:
 
 ```bash
 python dashboard.py
 ```
 
-Then open `http://127.0.0.1:8765`.
-
 Full instructions: [`docs/LAUNCHER.md`](docs/LAUNCHER.md).
 
 ## Engineering philosophy
 
-A useful multi-agent system needs more than several personas talking to one another. Systems are designed around specialized agents, structured inputs and outputs, traceable workflow state, explicit missing evidence, deterministic offline reference paths where practical, domain-specific evaluation, escalation and stop conditions, and human approval before consequential actions.
+A useful multi-agent system needs specialized agents, structured inputs and outputs, traceable workflow state, explicit missing evidence, evaluation, escalation and stop conditions, and human approval before consequential actions.
 
 The shared engineering contract is documented in [`systems/STANDARD.md`](systems/STANDARD.md).
 
@@ -269,18 +257,14 @@ The shared engineering contract is documented in [`systems/STANDARD.md`](systems
 
 ## Testing
 
-Run locally:
-
 ```bash
 python -m pip install pytest
 python -m pytest -q
 ```
 
-GitHub Actions runs the umbrella test suite against supported Python versions.
-
 ## Safety and responsible use
 
-The library separates decision support from consequential execution. Sensitive systems preserve scope limits and qualified review. Reference workflows should not silently invent missing facts or autonomously perform consequential actions such as clinical decisions, legal certification, financial transactions, physical robot control, industrial equipment commands, targeted voter persuasion, binding public decisions, or external submissions without appropriate authorization and safeguards.
+The library separates decision support from consequential execution. Sensitive systems preserve scope limits and qualified review. Reference workflows should not silently invent missing facts or autonomously perform consequential clinical, legal, financial, physical, regulatory, or public decisions without appropriate authorization and safeguards.
 
 ## Author
 
