@@ -1,5 +1,1 @@
-class IntegrationAgent:
-    name = "integration_agent"
-
-    def run(self, context):
-        return {"agent": self.name, "integration_priorities": context.get("integration_priorities", []), "status": "planned"}
+def run(ctx): return {'integration':'Day 1 and synergy dependencies'}
