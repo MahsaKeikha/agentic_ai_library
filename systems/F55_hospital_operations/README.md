@@ -1,11 +1,26 @@
-# F55 Hospital Operations
+# F55 Agentic Hospital Operations
 
-Individual F55 system page.
+## Agents
+- [Capacity Agent](AGENTS/capacity_agent.py)
+- [Flow Coordinator](AGENTS/flow_coordinator.py)
+- [Staffing Analyst](AGENTS/staffing_analyst.py)
+- [Quality Agent](AGENTS/quality_agent.py)
+- [Safety Escalation Agent](AGENTS/safety_escalation_agent.py)
+- [Operations Briefing Agent](AGENTS/operations_briefing_agent.py)
 
-**Domain:** Healthcare
-
-**Run:** `python launcher.py F55`
-
-**Implementation:** [`../healthcare_batch.py`](../healthcare_batch.py)
-
-**Specification:** [`../F51_F60_HEALTHCARE.md`](../F51_F60_HEALTHCARE.md)
+## Core layers
+- [Tools](TOOLS/)
+- [Skills](SKILLS/)
+- [Orchestration](orchestration/)
+- [Memory](memory/store.py)
+- [State](state/run_state.py)
+- [Schemas](schemas/contracts.py)
+- [Prompts](prompts/system_prompts.py)
+- [Config](config/settings.py)
+- [Safety](safety/operations_gate.py)
+- [Observability](observability/tracing.py)
+- [Evals](evals/evaluator.py)
+- [Benchmarks](benchmarks/benchmark.py)
+- [Examples](examples/example_run.py)
+- [Tests](tests/test_structure.py)
+- [Architecture](docs/ARCHITECTURE.md)

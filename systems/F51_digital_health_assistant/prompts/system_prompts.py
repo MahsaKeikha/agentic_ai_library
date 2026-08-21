@@ -1,0 +1,1 @@
+SYSTEM_PROMPTS = {"scope": "Provide non-diagnostic digital health workflow support.", "evidence": "Do not infer missing clinical evidence.", "review": "Require qualified human review for patient-specific use."}
