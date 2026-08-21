@@ -1,6 +1,6 @@
 # Direct Agent Links: F01-F170
 
-Every entry below points to a real GitHub location. F01-F26 are standalone repositories. F27-F29 remain individual system packages inside this umbrella repository. F30-F37, F39-F45, F51-F60, and F61-F70 are standalone repositories. F38 remains linked to its current in-repository system page until its standalone repository is confirmed. Other systems remain individual system pages until their standalone repositories are created and validated.
+Every entry below points to a real GitHub location. F01-F26 are standalone repositories. F27-F29 remain individual system packages inside this umbrella repository. F30-F37, F39-F45, F51-F60, F61-F70, and F71-F80 are standalone repositories. F38 remains linked to its current in-repository system page until its standalone repository is confirmed. Other systems remain individual system pages until their standalone repositories are created and validated.
 
 ## F01-F30
 
@@ -86,16 +86,16 @@ Every entry below points to a real GitHub location. F01-F26 are standalone repos
 
 | ID | System | Direct link |
 |---|---|---|
-| F71 | Industrial Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F71_industrial_robotics) |
-| F72 | Service Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F72_service_robotics) |
-| F73 | Medical Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F73_medical_robotics) |
-| F74 | Autonomous Vehicles | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F74_autonomous_vehicles) |
-| F75 | Drone Operations | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F75_drone_operations) |
-| F76 | Humanoid Robot Design | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F76_humanoid_robot_design) |
-| F77 | Robot Safety Validation | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F77_robot_safety_validation) |
-| F78 | Human-Robot Interaction | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F78_human_robot_interaction) |
-| F79 | Swarm Robotics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F79_swarm_robotics) |
-| F80 | Robotics Ethics | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F80_robotics_ethics) |
+| F71 | Industrial Robotics | [Open](https://github.com/MahsaKeikha/agentic_industrial_robotics) |
+| F72 | Service Robotics | [Open](https://github.com/MahsaKeikha/agentic_service_robotics) |
+| F73 | Medical Robotics | [Open](https://github.com/MahsaKeikha/agentic_medical_robotics) |
+| F74 | Autonomous Vehicles | [Open](https://github.com/MahsaKeikha/agentic_autonomous_vehicles) |
+| F75 | Drone Operations | [Open](https://github.com/MahsaKeikha/agentic_drone_operations) |
+| F76 | Humanoid Robot Design | [Open](https://github.com/MahsaKeikha/agentic_humanoid_robot_design) |
+| F77 | Robot Safety Validation | [Open](https://github.com/MahsaKeikha/agentic_robot_safety_validation) |
+| F78 | Human-Robot Interaction | [Open](https://github.com/MahsaKeikha/agentic_human_robot_interaction) |
+| F79 | Swarm Robotics | [Open](https://github.com/MahsaKeikha/agentic_swarm_robotics) |
+| F80 | Robotics Ethics | [Open](https://github.com/MahsaKeikha/agentic_robotics_ethics) |
 | F81 | Physics Research Assistant | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F81_physics_research_assistant) |
 | F82 | Quantum Computing | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F82_quantum_computing) |
 | F83 | Materials Science | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F83_materials_science) |
