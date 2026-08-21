@@ -164,13 +164,13 @@ Standalone repositories are linked directly. Systems not yet migrated point to t
 | F158 | Treasury Operations | [Open](https://github.com/MahsaKeikha/agentic_treasury_operations) |
 | F159 | Credit Analyst | [Open](https://github.com/MahsaKeikha/agentic_credit_analyst) |
 | F160 | ESG Reporting | [Open](https://github.com/MahsaKeikha/agentic_esg_reporting) |
-| F161 | Life Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F161_life_planner) |
-| F162 | Personal Knowledge Manager | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F162_personal_knowledge_manager) |
-| F163 | Career Coach | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F163_career_coach) |
-| F164 | Resume Studio | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F164_resume_studio) |
-| F165 | Public Speaking Coach | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F165_public_speaking_coach) |
-| F166 | Interview Coach | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F166_interview_coach) |
-| F167 | Language Tutor | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F167_language_tutor) |
-| F168 | Productivity Coach | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F168_productivity_coach) |
-| F169 | Travel Planner | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F169_travel_planner) |
-| F170 | Habit Builder | [Open](https://github.com/MahsaKeikha/agentic_ai_library/tree/main/systems/F170_habit_builder) |
+| F161 | Life Planner | [Open](https://github.com/MahsaKeikha/agentic_life_planner) |
+| F162 | Personal Knowledge Manager | [Open](https://github.com/MahsaKeikha/agentic_personal_knowledge_manager) |
+| F163 | Career Coach | [Open](https://github.com/MahsaKeikha/agentic_career_coach) |
+| F164 | Resume Studio | [Open](https://github.com/MahsaKeikha/agentic_resume_studio) |
+| F165 | Public Speaking Coach | [Open](https://github.com/MahsaKeikha/agentic_public_speaking_coach) |
+| F166 | Interview Coach | [Open](https://github.com/MahsaKeikha/agentic_interview_coach) |
+| F167 | Language Tutor | [Open](https://github.com/MahsaKeikha/agentic_language_tutor) |
+| F168 | Productivity Coach | [Open](https://github.com/MahsaKeikha/agentic_productivity_coach) |
+| F169 | Travel Planner | [Open](https://github.com/MahsaKeikha/agentic_travel_planner) |
+| F170 | Habit Builder | [Open](https://github.com/MahsaKeikha/agentic_habit_builder) |
