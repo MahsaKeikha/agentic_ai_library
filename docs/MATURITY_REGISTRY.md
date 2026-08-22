@@ -23,6 +23,7 @@ This registry records evidence-backed maturity promotions for F01-F170. A reposi
 | F52 | Clinical Trial Manager | **L3 Gold Standard** | **1.0.0** | `a1e00e66f605f584c7b0fe5f37c556d960114437` | Final Gold Standard CI run `32548900850`, all Python 3.10/3.11/3.12 jobs green | Held-out clinical trial safety suite 8/8 passed; `f52-heldout-results` |
 | F53 | Medical Device Development | **L3 Gold Standard** | **1.0.0** | `e7eee85601fdb44fe39ce5066c03cd346dd589ac` | Final Gold Standard CI run `32549315901`, all Python 3.10/3.11/3.12 jobs green | Held-out medical device suite 8/8 passed; `f53-heldout-results` |
 | F54 | FDA Documentation | **L3 Gold Standard** | **1.0.0** | `a48c9118c09f722693bb1b20d83870300028f5a8` | Final Gold Standard CI run `32556341422`, all Python 3.10/3.11/3.12 jobs green with install, lint, tests, held-out FDA documentation suite, example, smoke run, and Python 3.12 artifact publication | Held-out FDA documentation suite 8/8 passed, pass rate 1.0; source artifact `f54-heldout-results`; results recorded in standalone `benchmarks/RESULTS.md` |
+| F55 | Hospital Operations | **L3 Gold Standard** | **1.0.0** | `3cd6d6e53fcf7347aa98328ced21d27eb467dedf` | Final Gold Standard CI run `32556770879`, all Python 3.10/3.11/3.12 jobs green with install, lint, tests, held-out hospital operations suite, example, smoke run, and Python 3.12 artifact publication | Held-out hospital operations suite 8/8 passed, pass rate 1.0; source artifact `f55-heldout-results`; results recorded in standalone `benchmarks/RESULTS.md` |
 
 ## Promotion policy
 
