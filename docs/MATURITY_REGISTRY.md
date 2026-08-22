@@ -4,6 +4,7 @@ This registry records evidence-backed maturity promotions for F01-F170. A reposi
 
 | ID | System | Maturity | Version | Verified main commit | CI evidence | Benchmark evidence |
 |---|---|---|---|---|---|---|
+| F39 | Agentic AI Program Manager | **L3 Gold Standard** | **1.0.0** | `66f70eed3cecac53aaee0bd19381020cda11ba06` | Gold Standard CI run `32540101097` and compatibility CI run `32540101093`, all Python 3.10/3.11/3.12 jobs green | Held-out suite 8/8 passed, pass rate 1.0; source artifact `f39-heldout-results`; results recorded in standalone `benchmarks/RESULTS.md` |
 | F40 | Agentic AI Infrastructure Architect | **L3 Gold Standard** | **1.0.0** | `f7411a7e6a2d15287555752e3dc9b10f387720dd` | Gold Standard CI run `32539482014` and compatibility CI run `32539481959`, all Python 3.10/3.11/3.12 jobs green | Held-out suite 8/8 passed, pass rate 1.0; source artifact `f40-heldout-results`; results recorded in standalone `benchmarks/RESULTS.md` |
 
 ## Promotion policy
