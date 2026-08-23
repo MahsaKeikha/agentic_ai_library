@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Architecture Atlas | 170 Multi-Agent AI Systems</title>
+  <meta name="description" content="Search and explore 170 multi-agent AI reference architectures across 15 engineering domains, with direct links to every standalone GitHub repository." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="atlas-page">
+  <header class="nav-shell">
+    <nav class="nav container">
+      <a class="brand" href="index.html"><span class="brand-mark">AK</span><span>Agentic AI Gold Standard</span></a>
+      <div class="nav-links">
+        <a href="index.html#standard">The Standard</a>
+        <a class="active-link" href="atlas.html">170 Systems</a>
+        <a href="index.html#scorecard">Readiness</a>
+        <a href="index.html#services">Enterprise</a>
+        <a class="nav-cta" href="index.html#inquiry">Request assessment</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="atlas-hero container">
+      <div class="atlas-kicker">THE ARCHITECTURE ATLAS / F01–F170</div>
+      <div class="atlas-hero-grid">
+        <div>
+          <h1>One field guide.<br>170 ways to structure agentic systems.</h1>
+        </div>
+        <div class="atlas-intro">
+          <p>This atlas is the public index to every standalone system in the Agentic AI Library. It is designed for comparison, not spectacle: browse by domain, search by system name, then open the repository and inspect the architecture itself.</p>
+          <p class="atlas-note">The catalog reads directly from the canonical GitHub README, so the website and repository index stay synchronized.</p>
+        </div>
+      </div>
+      <div class="atlas-statline">
+        <span><strong id="atlas-total">170</strong> systems</span>
+        <span><strong>15</strong> domains</span>
+        <span><strong>1</strong> shared engineering philosophy</span>
+      </div>
+    </section>
+
+    <section class="atlas-controls-wrap">
+      <div class="container atlas-controls">
+        <label class="atlas-search-label" for="atlas-search">Search the atlas</label>
+        <div class="atlas-search-row">
+          <input id="atlas-search" class="atlas-search" type="search" placeholder="Try robotics, safety, CEO, healthcare, finance…" autocomplete="off" />
+          <span id="atlas-result-count" class="atlas-result-count">Loading systems…</span>
+        </div>
+        <div id="atlas-filters" class="atlas-filters" aria-label="Filter by domain"></div>
+      </div>
+    </section>
+
+    <section class="atlas-catalog container">
+      <div id="atlas-grid" class="atlas-grid" aria-live="polite"></div>
+      <div id="atlas-empty" class="atlas-empty" hidden>
+        <p>No systems match that search.</p>
+        <button id="atlas-reset" class="text-button" type="button">Clear filters</button>
+      </div>
+      <div id="atlas-error" class="atlas-error" hidden>
+        <p>The live catalog could not be loaded from GitHub.</p>
+        <a href="https://github.com/MahsaKeikha/agentic_ai_library#explore-all-170-systems">Open the canonical repository index →</a>
+      </div>
+    </section>
+
+    <section class="atlas-method">
+      <div class="container atlas-method-grid">
+        <div>
+          <p class="eyebrow light">HOW TO USE THE ATLAS</p>
+          <h2>Compare systems by architecture, not by buzzword.</h2>
+        </div>
+        <div class="atlas-method-copy">
+          <p>Open several systems in the same domain and compare role decomposition, orchestration, tools, state, memory, evaluation, failure behavior, and protected actions. The value of the library is not that every system looks identical. It is that the same engineering questions become visible across very different domains.</p>
+          <a class="text-link light-link" href="index.html#standard">Read the Gold Standard →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div><strong>Agentic AI Architecture Atlas</strong><p>Created by Mahsa Keikha.</p></div>
+    <div><a href="index.html">Home</a> · <a href="https://github.com/MahsaKeikha/agentic_ai_library">GitHub</a> · <a href="index.html#inquiry">Enterprise assessment</a></div>
+  </footer>
+
+  <script src="atlas.js"></script>
+</body>
+</html>
