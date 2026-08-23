@@ -6,8 +6,8 @@ authors:
   - family-names: Keikha
     given-names: Mahsa
 repository-code: "https://github.com/MahsaKeikha/agentic_ai_library"
-url: "https://github.com/MahsaKeikha/agentic_ai_library"
-abstract: "An engineering atlas of 170 agentic AI and multi-agent reference systems spanning executive operations, AI engineering, software, healthcare, neuroscience, robotics, science, education, legal and compliance, manufacturing, marketing, creative work, public-sector workflows, finance and risk, and personal productivity. The library emphasizes specialized agents, orchestration, deterministic tools, explicit state, evidence, evaluation, observability, fail-closed governance, and human authority over consequential actions."
+url: "https://mahsakeikha.github.io/agentic_ai_library/"
+abstract: "An open engineering atlas of 170 agentic AI and multi-agent reference systems across 15 domains, accompanied by a production-oriented Gold Standard and readiness framework emphasizing specialized agents, orchestration, deterministic controls, memory governance, evaluation, observability, security, provenance, fail-closed governance, and human authority over consequential actions."
 keywords:
   - agentic AI
   - multi-agent systems
@@ -16,6 +16,8 @@ keywords:
   - agent orchestration
   - agentic workflows
   - AI engineering
+  - AI governance
+  - AI evaluation
   - AI safety
   - human-in-the-loop
   - multi-agent architecture
