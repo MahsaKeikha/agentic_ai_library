@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use the Agentic AI Library in research, teaching, engineering, benchmarking, or publications, please cite it using this metadata."
+title: "Agentic AI Library: 170 Multi-Agent AI Reference Architectures Across 15 Domains"
+type: software
+authors:
+  - family-names: Keikha
+    given-names: Mahsa
+repository-code: "https://github.com/MahsaKeikha/agentic_ai_library"
+url: "https://github.com/MahsaKeikha/agentic_ai_library"
+abstract: "An engineering atlas of 170 agentic AI and multi-agent reference systems spanning executive operations, AI engineering, software, healthcare, neuroscience, robotics, science, education, legal and compliance, manufacturing, marketing, creative work, public-sector workflows, finance and risk, and personal productivity. The library emphasizes specialized agents, orchestration, deterministic tools, explicit state, evidence, evaluation, observability, fail-closed governance, and human authority over consequential actions."
+keywords:
+  - agentic AI
+  - multi-agent systems
+  - AI agents
+  - LLM agents
+  - agent orchestration
+  - agentic workflows
+  - AI engineering
+  - AI safety
+  - human-in-the-loop
+  - multi-agent architecture
+license: NOASSERTION
