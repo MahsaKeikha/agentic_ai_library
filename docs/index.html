@@ -16,7 +16,7 @@
         <a href="#assessment">Assessment</a>
         <a href="#architectures">170 Architectures</a>
         <a href="#services">Services</a>
-        <a class="nav-cta" href="#scorecard">Check readiness</a>
+        <a class="nav-cta" href="#inquiry">Request assessment</a>
       </div>
     </nav>
   </header>
@@ -29,6 +29,7 @@
         <p class="hero-sub">Move beyond impressive demos. Design multi-agent systems with explicit orchestration, evaluation, observability, fail-closed controls, and human authority over consequential actions.</p>
         <div class="hero-actions">
           <a class="button primary" href="#scorecard">Check your readiness</a>
+          <a class="button secondary" href="#inquiry">Request an assessment</a>
           <a class="button secondary" href="https://github.com/MahsaKeikha/agentic_ai_library">Explore the open library</a>
         </div>
         <div class="proof-row">
@@ -49,10 +50,7 @@
 
     <section class="dark-band">
       <div class="container statement-grid">
-        <div>
-          <p class="eyebrow light">FROM DEMO TO PRODUCTION</p>
-          <h2>The model is only one part of the system.</h2>
-        </div>
+        <div><p class="eyebrow light">FROM DEMO TO PRODUCTION</p><h2>The model is only one part of the system.</h2></div>
         <p>Production introduces conflicting agents, stale or malicious context, excessive permissions, tool failures, retries, sensitive memory, external side effects, unclear decision rights, and regulatory obligations. The Gold Standard evaluates the engineering architecture around the model.</p>
       </div>
     </section>
@@ -81,13 +79,7 @@
           <p class="eyebrow">INTERACTIVE READINESS SCORECARD</p>
           <h2>How mature is your agentic system?</h2>
           <p>Answer 20 engineering questions. The scorecard produces an initial maturity estimate and highlights where deeper evidence-based assessment is needed.</p>
-          <div class="score-legend">
-            <span><i></i> Experimental 0–39</span>
-            <span><i></i> Emerging 40–59</span>
-            <span><i></i> Managed 60–74</span>
-            <span><i></i> Production Candidate 75–89</span>
-            <span><i></i> Gold Standard Candidate 90–100</span>
-          </div>
+          <div class="score-legend"><span><i></i> Experimental 0–39</span><span><i></i> Emerging 40–59</span><span><i></i> Managed 60–74</span><span><i></i> Production Candidate 75–89</span><span><i></i> Gold Standard Candidate 90–100</span></div>
         </div>
         <form id="readiness-form" class="scorecard"></form>
       </div>
@@ -97,6 +89,7 @@
           <p class="eyebrow">INITIAL MATURITY ESTIMATE</p>
           <h3 id="score-band">Experimental</h3>
           <p id="score-summary"></p>
+          <div class="result-actions"><a class="button primary" id="assessment-result-cta" href="#inquiry">Request an evidence-based assessment</a><button class="button secondary" id="copy-result" type="button">Copy result</button></div>
           <p class="fine-print">This self-assessment is directional only. It does not replace evidence review, security testing, domain review, legal review, or a formal production decision.</p>
         </div>
       </div>
@@ -104,69 +97,60 @@
 
     <section id="assessment" class="section container">
       <div class="split">
-        <div>
-          <p class="eyebrow">ENTERPRISE READINESS ASSESSMENT</p>
-          <h2>Know where your system stands before production risk becomes production reality.</h2>
-          <p>An evidence-based review maps your architecture, authority, tooling, memory, evaluation, observability, security, provenance, and operational controls against the Gold Standard.</p>
-        </div>
-        <div class="deliverables">
-          <h3>You receive</h3>
-          <ul>
-            <li>Readiness score out of 100</li>
-            <li>Maturity classification</li>
-            <li>Agent, tool, and authority map</li>
-            <li>Production blockers</li>
-            <li>Gold Standard gap analysis</li>
-            <li>P0 to P3 remediation roadmap</li>
-            <li>Executive readout</li>
-            <li>Technical findings review</li>
-          </ul>
-        </div>
+        <div><p class="eyebrow">ENTERPRISE READINESS ASSESSMENT</p><h2>Know where your system stands before production risk becomes production reality.</h2><p>An evidence-based review maps your architecture, authority, tooling, memory, evaluation, observability, security, provenance, and operational controls against the Gold Standard.</p></div>
+        <div class="deliverables"><h3>You receive</h3><ul><li>Readiness score out of 100</li><li>Maturity classification</li><li>Agent, tool, and authority map</li><li>Production blockers</li><li>Gold Standard gap analysis</li><li>P0 to P3 remediation roadmap</li><li>Executive readout</li><li>Technical findings review</li></ul></div>
       </div>
-      <a class="button primary" href="https://github.com/MahsaKeikha/agentic_ai_library/blob/main/business/READINESS_ASSESSMENT_ONE_PAGER.md">View assessment overview</a>
+      <div class="hero-actions"><a class="button primary" href="#inquiry">Request an assessment</a><a class="button secondary" href="https://github.com/MahsaKeikha/agentic_ai_library/blob/main/business/READINESS_ASSESSMENT_ONE_PAGER.md">View assessment overview</a></div>
     </section>
 
-    <section id="architectures" class="section dark-section">
-      <div class="container">
-        <p class="eyebrow light">THE OPEN REFERENCE LIBRARY</p>
-        <h2>170 architectures across the systems shaping the agentic era.</h2>
-        <div class="domain-grid">
-          <span>Executive & Strategy</span><span>AI Engineering</span><span>Software & Cloud</span><span>Healthcare</span><span>Neuroscience</span><span>Robotics</span><span>Science</span><span>Education</span><span>Legal & Compliance</span><span>Manufacturing</span><span>Marketing</span><span>Creative & Media</span><span>Public Sector</span><span>Finance & Risk</span><span>Personal Intelligence</span>
-        </div>
-        <a class="button inverted" href="https://github.com/MahsaKeikha/agentic_ai_library">Explore all 170 systems</a>
-      </div>
-    </section>
+    <section id="architectures" class="section dark-section"><div class="container"><p class="eyebrow light">THE OPEN REFERENCE LIBRARY</p><h2>170 architectures across the systems shaping the agentic era.</h2><div class="domain-grid"><span>Executive & Strategy</span><span>AI Engineering</span><span>Software & Cloud</span><span>Healthcare</span><span>Neuroscience</span><span>Robotics</span><span>Science</span><span>Education</span><span>Legal & Compliance</span><span>Manufacturing</span><span>Marketing</span><span>Creative & Media</span><span>Public Sector</span><span>Finance & Risk</span><span>Personal Intelligence</span></div><a class="button inverted" href="https://github.com/MahsaKeikha/agentic_ai_library">Explore all 170 systems</a></div></section>
 
     <section id="services" class="section container">
-      <p class="eyebrow">ENTERPRISE SERVICES</p>
-      <h2>From architecture to production governance.</h2>
-      <div class="service-grid">
-        <article><h3>Readiness Assessment</h3><p>Independent architecture and governance review against the Gold Standard.</p></article>
-        <article><h3>Gold Standard Gap Review</h3><p>Focused remediation planning for systems moving toward production maturity.</p></article>
-        <article><h3>Architecture Sprint</h3><p>Design agents, orchestration, tools, state, memory, evaluation, observability, and authority.</p></article>
-        <article><h3>Evaluation & Governance Program</h3><p>Build repeatable tests, traceability, authorization, and release infrastructure.</p></article>
-        <article><h3>Executive Workshops</h3><p>Align boards, executives, engineering, security, risk, legal, and product teams.</p></article>
-        <article><h3>Advisory</h3><p>Ongoing architecture and governance support for organizations scaling agentic AI.</p></article>
+      <p class="eyebrow">ENTERPRISE SERVICES</p><h2>From architecture to production governance.</h2>
+      <div class="service-grid"><article><h3>Readiness Assessment</h3><p>Independent architecture and governance review against the Gold Standard.</p></article><article><h3>Gold Standard Gap Review</h3><p>Focused remediation planning for systems moving toward production maturity.</p></article><article><h3>Architecture Sprint</h3><p>Design agents, orchestration, tools, state, memory, evaluation, observability, and authority.</p></article><article><h3>Evaluation & Governance Program</h3><p>Build repeatable tests, traceability, authorization, and release infrastructure.</p></article><article><h3>Executive Workshops</h3><p>Align boards, executives, engineering, security, risk, legal, and product teams.</p></article><article><h3>Advisory</h3><p>Ongoing architecture and governance support for organizations scaling agentic AI.</p></article></div>
+    </section>
+
+    <section id="inquiry" class="section inquiry-section">
+      <div class="container inquiry-layout">
+        <div class="inquiry-copy">
+          <p class="eyebrow">REQUEST AN ASSESSMENT</p>
+          <h2>Turn your current architecture into an evidence-based readiness plan.</h2>
+          <p>Share only high-level business and system information here. A qualified inquiry can move to a private discovery process for architecture evidence, security-sensitive material, or confidential documentation.</p>
+          <div class="trust-list"><span>Private endpoint ready</span><span>No public GitHub issues</span><span>No credentials or secrets</span><span>No sensitive architecture uploads</span></div>
+          <p class="privacy-note"><strong>Privacy:</strong> Do not submit passwords, API keys, protected health information, personal customer records, classified information, trade secrets, or confidential source code through this public form. Detailed evidence should be exchanged only through an approved private channel after discovery.</p>
+        </div>
+        <form id="lead-form" class="lead-form" novalidate>
+          <div class="form-grid">
+            <label>Full name<input name="name" autocomplete="name" required maxlength="100" /></label>
+            <label>Work email<input name="email" type="email" autocomplete="email" required maxlength="160" /></label>
+            <label>Company<input name="company" autocomplete="organization" required maxlength="140" /></label>
+            <label>Role<input name="role" autocomplete="organization-title" required maxlength="140" /></label>
+            <label>Company size<select name="company_size" required><option value="">Select</option><option>1-10</option><option>11-50</option><option>51-200</option><option>201-1,000</option><option>1,001-5,000</option><option>5,001+</option></select></label>
+            <label>Industry<input name="industry" required maxlength="120" placeholder="AI, healthcare, finance, robotics..." /></label>
+            <label>Deployment stage<select name="stage" required><option value="">Select</option><option>Exploring</option><option>Prototype</option><option>Pilot</option><option>Pre-production</option><option>Production</option></select></label>
+            <label>Desired timeline<select name="timeline" required><option value="">Select</option><option>Immediately</option><option>Within 30 days</option><option>1-3 months</option><option>3-6 months</option><option>Exploratory</option></select></label>
+            <label>Approximate number of agents<input name="agents" type="number" min="1" max="10000" inputmode="numeric" required /></label>
+            <label>Approximate number of external tools<input name="tools_count" type="number" min="0" max="10000" inputmode="numeric" required /></label>
+          </div>
+          <label>What does the system do?<textarea name="system_description" rows="4" required maxlength="1200" placeholder="High-level description only. Do not include confidential implementation details."></textarea></label>
+          <label>External tools or systems involved<textarea name="tools_description" rows="3" maxlength="800" placeholder="Examples: CRM, payments, cloud APIs, EHR, robotics control, internal databases."></textarea></label>
+          <label>Primary concern<textarea name="primary_concern" rows="4" required maxlength="1200" placeholder="Examples: production readiness, tool authority, evaluation, governance, security, observability, human approval."></textarea></label>
+          <input type="hidden" name="readiness_score" id="lead-score" value="Not completed" />
+          <input type="hidden" name="readiness_band" id="lead-band" value="Not completed" />
+          <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <label class="consent"><input type="checkbox" name="consent" required /> <span>I consent to being contacted about this assessment inquiry and confirm that I have not included secrets or regulated/sensitive personal data in this form.</span></label>
+          <button class="button primary lead-submit" type="submit">Request assessment</button>
+          <p class="form-status" id="lead-status" role="status" aria-live="polite"></p>
+          <p class="fine-print">Submission routing is configured separately through a private form endpoint. Until that endpoint is connected, this page can prepare and copy your inquiry without transmitting it.</p>
+        </form>
       </div>
     </section>
 
-    <section class="cta-section">
-      <div class="container cta-box">
-        <p class="eyebrow light">DESIGN IT. EVALUATE IT. GOVERN IT.</p>
-        <h2>Know when your agentic system is ready.</h2>
-        <p>Use the open library, run the readiness scorecard, and move to an evidence-based assessment when the system matters enough to require proof.</p>
-        <div class="hero-actions">
-          <a class="button inverted" href="#scorecard">Run the scorecard</a>
-          <a class="button ghost" href="https://github.com/MahsaKeikha/agentic_ai_library/blob/main/business/ENTERPRISE_SERVICES.md">Enterprise services</a>
-        </div>
-      </div>
-    </section>
+    <section class="cta-section"><div class="container cta-box"><p class="eyebrow light">DESIGN IT. EVALUATE IT. GOVERN IT.</p><h2>Know when your agentic system is ready.</h2><p>Use the open library, run the readiness scorecard, and move to an evidence-based assessment when the system matters enough to require proof.</p><div class="hero-actions"><a class="button inverted" href="#inquiry">Request an assessment</a><a class="button ghost" href="#scorecard">Run the scorecard</a><a class="button ghost" href="https://github.com/MahsaKeikha/agentic_ai_library/blob/main/business/ENTERPRISE_SERVICES.md">Enterprise services</a></div></div></section>
   </main>
 
-  <footer class="footer container">
-    <div><strong>Agentic AI Gold Standard</strong><p>Created by Mahsa Keikha.</p></div>
-    <div><a href="https://github.com/MahsaKeikha/agentic_ai_library">GitHub</a> · <a href="https://github.com/MahsaKeikha/agentic_ai_library/blob/main/AGENTIC_AI_GOLD_STANDARD.md">Gold Standard</a> · <a href="https://github.com/MahsaKeikha/agentic_ai_library/blob/main/ENTERPRISE_READINESS_ASSESSMENT.md">Assessment</a></div>
-  </footer>
+  <footer class="footer container"><div><strong>Agentic AI Gold Standard</strong><p>Created by Mahsa Keikha.</p></div><div><a href="https://github.com/MahsaKeikha/agentic_ai_library">GitHub</a> · <a href="https://github.com/MahsaKeikha/agentic_ai_library/blob/main/AGENTIC_AI_GOLD_STANDARD.md">Gold Standard</a> · <a href="https://github.com/MahsaKeikha/agentic_ai_library/blob/main/ENTERPRISE_READINESS_ASSESSMENT.md">Assessment</a></div></footer>
+  <script src="lead-config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
