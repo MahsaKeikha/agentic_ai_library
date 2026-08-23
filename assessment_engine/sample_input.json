@@ -1,0 +1,83 @@
+{
+  "organization": "ExampleCo",
+  "system": "Customer Operations Multi-Agent Platform",
+  "assessment_date": "2026-08-23",
+  "scores": {
+    "specialization": 80,
+    "orchestration": 75,
+    "deterministic_controls": 70,
+    "memory_governance": 62,
+    "evaluation": 60,
+    "observability": 70,
+    "safety_security_privacy": 58,
+    "human_authority": 50,
+    "provenance_auditability": 72,
+    "lifecycle_governance": 85
+  },
+  "evidence": {
+    "architecture": "Architecture diagram and system description reviewed",
+    "agent_inventory": "Five agent roles documented",
+    "tool_inventory": "CRM, refund, policy retrieval, and messaging tools documented",
+    "permission_map": "Partial permission matrix available",
+    "memory_policy": "Draft retention guidance only",
+    "evaluation_results": "Held-out support scenarios available",
+    "observability_traces": "Workflow traces available for common paths",
+    "security_review": "Threat model incomplete",
+    "protected_actions": "Refund and outbound communication controls partially documented",
+    "incident_rollback": "General incident plan exists but is not agent-specific"
+  },
+  "findings": [
+    {
+      "id": "P0-1",
+      "pillar": "human_authority",
+      "title": "Consequential refund actions lack an independent authorization boundary",
+      "evidence": "Refund approval is represented primarily as mutable workflow state.",
+      "risk": "A prompt, state, or orchestration failure could result in an unauthorized financial action.",
+      "recommendation": "Classify refunds as protected actions, enforce deterministic thresholds, and require attributable human approval above defined limits.",
+      "priority": "P0",
+      "blocker_type": "missing_authorization_boundary"
+    },
+    {
+      "id": "P0-2",
+      "pillar": "human_authority",
+      "title": "High-impact outbound communications can execute without meaningful approval",
+      "evidence": "The communication agent can send selected messages directly after generation.",
+      "risk": "Incorrect commitments or sensitive disclosures may leave the system before review.",
+      "recommendation": "Separate drafting from send authority and require approval for contractual, legal, privacy-sensitive, or reputationally significant messages.",
+      "priority": "P0",
+      "blocker_type": "uncontrolled_consequential_action"
+    },
+    {
+      "id": "P1-1",
+      "pillar": "evaluation",
+      "title": "Adversarial evaluation coverage is incomplete",
+      "evidence": "Current tests emphasize ordinary support scenarios.",
+      "risk": "Prompt injection, stale policy context, malformed tool output, and retry duplication are not systematically tested.",
+      "recommendation": "Add adversarial and degraded-dependency scenarios to the release evaluation suite.",
+      "priority": "P1"
+    },
+    {
+      "id": "P1-2",
+      "pillar": "memory_governance",
+      "title": "Memory retention and deletion rules are not enforceable",
+      "evidence": "Retention is documented informally but not represented as explicit system controls.",
+      "risk": "Sensitive or stale customer context may persist longer than intended.",
+      "recommendation": "Define scoped memory classes, retention periods, correction precedence, deletion behavior, and sensitive-data exclusions.",
+      "priority": "P1"
+    },
+    {
+      "id": "P2-1",
+      "pillar": "observability",
+      "title": "Trace correlation is incomplete across agent and tool boundaries",
+      "evidence": "Common-path traces exist, but not all events share a workflow correlation identifier.",
+      "risk": "Incident reconstruction can become slow or ambiguous when workflows span multiple agents and retries.",
+      "recommendation": "Add correlation IDs to all agent decisions, tool calls, approvals, retries, and external side effects.",
+      "priority": "P2"
+    }
+  ],
+  "limitations": [
+    "This example is fictional and is not evidence of a real customer engagement.",
+    "No penetration testing or regulatory compliance review was performed.",
+    "Scores are illustrative and are included to demonstrate the engine workflow."
+  ]
+}
