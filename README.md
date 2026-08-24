@@ -8,6 +8,18 @@ This library brings together **170 standalone multi-agent systems** spanning exe
 
 > **170 systems. 15 domains. One engineering philosophy: build agents that can reason and coordinate together without surrendering human authority.**
 
+## Navigate the Atlas
+
+| Explore | What you will find |
+|---|---|
+| [Architecture Atlas](https://mahsakeikha.github.io/agentic_ai_library/atlas.html) | The complete F01-F170 catalog across 15 domains |
+| [10 Flagships](https://mahsakeikha.github.io/agentic_ai_library/flagships.html) | A focused portfolio selected for demonstration and enterprise relevance |
+| [Interactive Demo Lab](https://mahsakeikha.github.io/agentic_ai_library/demo-lab.html) | Ten synthetic simulations with visible handoffs, evidence, and human approval gates |
+| [Evidence and Maturity](https://mahsakeikha.github.io/agentic_ai_library/evidence.html) | Public definitions, verification boundaries, and registry links |
+| [Training](https://mahsakeikha.github.io/agentic_ai_library/training.html) | Multi-agent AI education for technical teams, leaders, and organizations |
+| [Field Guide](https://mahsakeikha.github.io/agentic_ai_library/atlas-book.html) | The 95-page companion book and downloadable PDF |
+| [Enterprise Inquiry](https://mahsakeikha.github.io/agentic_ai_library/#inquiry) | A confidential route for assessment, training, and implementation discussions |
+
 ## Read the official Atlas field guide
 
 **[The Multi-Agent AI Atlas: Engineering Observable, Governed, Human-Accountable Agent Systems](https://mahsakeikha.github.io/agentic_ai_library/atlas-book.html)** is the standalone companion to this repository and the public Atlas website.
@@ -29,6 +41,7 @@ The Atlas separates catalog inclusion, structured implementation, L3 verificatio
 - [Review the external review policy](docs/EXTERNAL_REVIEW_POLICY.md)
 - [Inspect the public adoption registry](docs/ADOPTION_REGISTRY.md)
 - [Read the release and change evidence policy](docs/RELEASE_AND_CHANGE_POLICY.md)
+- [Read the Atlas README standard](docs/README_STANDARD.md)
 - [Meet the founder](https://mahsakeikha.github.io/agentic_ai_library/about.html)
 
 Catalog inclusion does not imply L3 maturity, independent review, regulatory certification, or production deployment. Public claims are limited to evidence that can be inspected or disclosed with permission.
@@ -104,7 +117,7 @@ The architecture intentionally separates **decision support** from **consequenti
 
 Every entry below links directly to its standalone repository.
 
-## F01-F30 | Flagship, Executive, Strategy, and Leadership
+## F01-F30 | Foundational, Executive, Strategy, and Leadership
 
 | ID | Multi-Agent System | Repository |
 |---|---|---|
@@ -380,6 +393,8 @@ The library is being normalized toward an **L3 Gold Standard** for governed mult
 10. comprehensive engineering documentation
 
 This standard is intentionally stricter for healthcare, legal, finance, public-sector, safety, security, robotics, and other consequential domains.
+
+L3 is a project-defined engineering maturity designation. It is not a legal, regulatory, safety, security, or production certification. At the time of this release, only systems recorded in the [public maturity registry](docs/MATURITY_REGISTRY.md) may be described as L3. A repository link, local package, flagship selection, or Demo Lab simulation does not establish L3 status by itself.
 
 ## For researchers
 

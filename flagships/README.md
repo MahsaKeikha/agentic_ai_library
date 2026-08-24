@@ -1,40 +1,30 @@
-# Flagships (link list)
+# Atlas Flagship Portfolio
 
-**Umbrella:** https://github.com/MahsaKeikha/agentic_ai_library
+The Atlas contains 170 reference architectures. These ten systems form the focused public demonstration portfolio. They were selected for demand, differentiation, demonstration value, implementation potential, and the importance of visible human authority.
 
-This page tracks the live standalone flagship repositories linked from the Agentic AI Library.
+Selection as a flagship is a portfolio decision. It is not an L3 designation, independent validation, regulatory certification, or production approval.
 
-| ID | Name | GitHub URL |
-|---|---|---|
-| F01 | agentic_book_writer | https://github.com/MahsaKeikha/agentic_book_writer |
-| F02 | agentic_research_lab | https://github.com/MahsaKeikha/agentic_research_lab |
-| F03 | agentic_biotech_rd | https://github.com/MahsaKeikha/agentic_biotech_rd |
-| F04 | agentic_tech_support | https://github.com/MahsaKeikha/agentic_tech_support |
-| F05 | agentic_online_shop | https://github.com/MahsaKeikha/agentic_online_shop |
-| F06 | agentic_debug_automation | https://github.com/MahsaKeikha/agentic_debug_automation |
-| F07 | agentic_software_design | https://github.com/MahsaKeikha/agentic_software_design |
-| F08 | agentic_ceo_assistant | https://github.com/MahsaKeikha/agentic_ceo_assistant |
-| F09 | agentic_ai_safety | https://github.com/MahsaKeikha/agentic_ai_safety |
-| F10 | agentic_phd_assistant | https://github.com/MahsaKeikha/agentic_phd_assistant |
-| F11 | agentic_account_manager | https://github.com/MahsaKeikha/agentic_account_manager |
-| F12 | agentic_robotics_governance | https://github.com/MahsaKeikha/agentic_robotics_governance |
-| F13 | agentic_qa_safety_manager | https://github.com/MahsaKeikha/agentic_qa_safety_manager |
-| F14 | agentic_client_inquiry_bot | https://github.com/MahsaKeikha/agentic_client_inquiry_bot |
-| F15 | agentic_fullstack_web | https://github.com/MahsaKeikha/agentic_fullstack_web |
-| F16 | agentic_engineering_professor | https://github.com/MahsaKeikha/agentic_engineering_professor |
-| F17 | agentic_immigration_assistant | https://github.com/MahsaKeikha/agentic_immigration_assistant |
-| F18 | agentic_real_estate | https://github.com/MahsaKeikha/agentic_real_estate |
-| F19 | agentic_psychologist_assistant | https://github.com/MahsaKeikha/agentic_psychologist_assistant |
-| F20 | agentic_dating_advisor | https://github.com/MahsaKeikha/agentic_dating_advisor |
-| F21 | agentic_coo_assistant | https://github.com/MahsaKeikha/agentic_coo_assistant |
-| F22 | agentic_cfo_assistant | https://github.com/MahsaKeikha/agentic_cfo_assistant |
-| F23 | agentic_board_advisor | https://github.com/MahsaKeikha/agentic_board_advisor |
-| F24 | agentic_chief_of_staff | https://github.com/MahsaKeikha/agentic_chief_of_staff |
-| F25 | agentic_strategy_consultant | https://github.com/MahsaKeikha/agentic_strategy_consultant |
-| F26 | agentic_venture_capital_analyst | https://github.com/MahsaKeikha/agentic_venture_capital_analyst |
+| ID | Flagship | Domain | Explore |
+|---|---|---|---|
+| F117 | Digital Twin Engineer | Industrial intelligence | [Architecture](https://mahsakeikha.github.io/agentic_ai_library/atlas.html#f117) |
+| F118 | Factory Automation | Industrial intelligence | [Architecture](https://mahsakeikha.github.io/agentic_ai_library/atlas.html#f118) |
+| F36 | Multi-Agent Orchestrator | AI engineering | [Architecture](https://mahsakeikha.github.io/agentic_ai_library/atlas.html#f36) |
+| F59 | Caregiver Support | Healthcare | [Architecture](https://mahsakeikha.github.io/agentic_ai_library/atlas.html#f59) |
+| F37 | LLM Evaluator | AI engineering | [Architecture](https://mahsakeikha.github.io/agentic_ai_library/atlas.html#f37) |
+| F101 | Contract Review | Legal and compliance | [Architecture](https://mahsakeikha.github.io/agentic_ai_library/atlas.html#f101) |
+| F52 | Clinical Trial Manager | Healthcare | [Architecture](https://mahsakeikha.github.io/agentic_ai_library/atlas.html#f52) |
+| F98 | Grant Writer | Education and research | [Architecture](https://mahsakeikha.github.io/agentic_ai_library/atlas.html#f98) |
+| F09 | AI Safety | AI safety | [Architecture](https://mahsakeikha.github.io/agentic_ai_library/atlas.html#f09) |
+| F116 | Lean Manufacturing | Industrial intelligence | [Architecture](https://mahsakeikha.github.io/agentic_ai_library/atlas.html#f116) |
 
-## Current live range
+Each flagship has a synthetic interactive scenario in the [Atlas Demo Lab](https://mahsakeikha.github.io/agentic_ai_library/demo-lab.html). The demonstrations expose agent roles, handoffs, evidence status, stop conditions, and protected actions. They do not operate external systems or replace professional judgment.
 
-**F01 to F26 are live standalone flagships.** F27 onward use the unified `systems/` architecture unless intentionally promoted to standalone status.
+## Evidence route
 
-Back: [README](../README.md) · [INDEX](../docs/INDEX.md) · [ROADMAP](../docs/ROADMAP.md) · [Unified systems](../systems/README.md)
+- [Flagship portfolio](https://mahsakeikha.github.io/agentic_ai_library/flagships.html)
+- [Interactive Demo Lab](https://mahsakeikha.github.io/agentic_ai_library/demo-lab.html)
+- [Evidence and maturity definitions](https://mahsakeikha.github.io/agentic_ai_library/evidence.html)
+- [Public maturity registry](../docs/MATURITY_REGISTRY.md)
+- [Complete F01-F170 repository index](../docs/AGENT_LINKS.md)
+
+Back to the [main README](../README.md) or the [unified systems index](../systems/README.md).

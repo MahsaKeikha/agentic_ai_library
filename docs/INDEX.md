@@ -4,10 +4,14 @@ This is the stable catalog for the F01-F170 Agentic AI Library.
 
 ## Architecture
 
-- **F01-F26:** live standalone flagship repositories
-- **F27-F30:** dedicated unified packages under `systems/`
-- **F31-F170:** domain-batch specifications, deterministic reference workflows, tests, and evaluation frameworks developed under `systems/`
+- **F01-F170:** public standalone repositories linked from the complete catalog
+- **F27-F170:** local packages and domain batches maintained under `systems/` for unified comparison and shared engineering work
+- **10 selected flagships:** the public demonstration portfolio, listed separately from maturity status
 - **C01-C10:** reusable core agentic patterns under `catalog/core/`
+
+Catalog presence, local implementation, flagship selection, interactive simulation, L3 verification, independent review, and production deployment are separate evidence states. See the [maturity registry](MATURITY_REGISTRY.md) and [public evidence definitions](evidence.html) before describing a system's status.
+
+README positioning and claim language are governed by the [Atlas README Standard](README_STANDARD.md).
 
 ## Complete catalog
 
@@ -33,7 +37,7 @@ This is the stable catalog for the F01-F170 Agentic AI Library.
 
 ## Unified implementation files
 
-The unified batches are represented by domain specification files, Python reference workflows, automated tests, and evaluation documents. Examples include `F31_F40_AI_ENGINEERING.md`, `ai_engineering_batch.py`, `F71_F80_ROBOTICS.md`, `robotics_batch.py`, and their corresponding tests/evaluation files.
+The unified batches are represented by domain specification files, Python reference workflows, automated tests, and evaluation documents. Examples include `F31_F40_AI_ENGINEERING.md`, `ai_engineering_batch.py`, `F71_F80_ROBOTICS.md`, `robotics_batch.py`, and their corresponding tests and evaluation files. Package depth varies, and presence in this directory does not establish L3 maturity.
 
 ## Core patterns C01-C10
 
