@@ -15,6 +15,8 @@ This library brings together **170 standalone multi-agent systems** spanning exe
 | [Architecture Atlas](https://mahsakeikha.github.io/agentic_ai_library/atlas.html) | The complete F01-F170 catalog across 15 domains |
 | [10 Flagships](https://mahsakeikha.github.io/agentic_ai_library/flagships.html) | A focused portfolio selected for demonstration and enterprise relevance |
 | [Interactive Demo Lab](https://mahsakeikha.github.io/agentic_ai_library/demo-lab.html) | Ten synthetic simulations with visible handoffs, evidence, and human approval gates |
+| [Flagship Evidence](https://mahsakeikha.github.io/agentic_ai_library/flagship-evidence.html) | Public evidence, limitations, maturity boundaries, and inspection routes for the 10 flagships |
+| [Atlas Challenge](https://mahsakeikha.github.io/agentic_ai_library/atlas-challenge.html) | Shareable scenarios that ask readers to find the failure before agents act |
 | [Evidence and Maturity](https://mahsakeikha.github.io/agentic_ai_library/evidence.html) | Public definitions, verification boundaries, and registry links |
 | [Training](https://mahsakeikha.github.io/agentic_ai_library/training.html) | Multi-agent AI education for technical teams, leaders, and organizations |
 | [Field Guide](https://mahsakeikha.github.io/agentic_ai_library/atlas-book.html) | The 95-page companion book and downloadable PDF |
@@ -29,6 +31,8 @@ The 95-page field guide connects the 170-system taxonomy, canonical reference ar
 - [Explore the field guide](https://mahsakeikha.github.io/agentic_ai_library/atlas-book.html)
 - [Read or download the PDF](https://mahsakeikha.github.io/agentic_ai_library/books/The_Multi_Agent_AI_Atlas.pdf)
 - [Explore the live Architecture Atlas](https://mahsakeikha.github.io/agentic_ai_library/atlas.html)
+- [Inspect the flagship evidence hub](https://mahsakeikha.github.io/agentic_ai_library/flagship-evidence.html)
+- [Take the Atlas Challenge](https://mahsakeikha.github.io/agentic_ai_library/atlas-challenge.html)
 
 The public materials establish the engineering principles and evidence standard. Organization-specific assessment, training, implementation, and delivery methods remain private professional work. Teams applying the Atlas to a consequential workflow can [start a confidential inquiry](https://mahsakeikha.github.io/agentic_ai_library/#inquiry).
 
