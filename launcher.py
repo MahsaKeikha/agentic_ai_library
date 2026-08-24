@@ -9,7 +9,9 @@ from __future__ import annotations
 import argparse
 import importlib
 import importlib.util
+import inspect
 import json
+import sys
 from dataclasses import asdict, is_dataclass
 from pathlib import Path
 from typing import Any, Dict
@@ -114,16 +116,31 @@ def registry() -> Dict[str, Dict[str, str]]:
 
 def _run_individual(fid: str) -> Dict[str, Any]:
     name, folder = INDIVIDUAL_UNIFIED[fid]
-    path = ROOT / "systems" / folder / "run.py"
+    system_root = ROOT / "systems" / folder
+    path = system_root / "run.py"
     spec = importlib.util.spec_from_file_location(f"launcher_{fid}", path)
     if not spec or not spec.loader:
         raise RuntimeError(f"Cannot load {fid} from {path}")
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
+    # Standalone systems deliberately use local top-level package names such
+    # as ``orchestration``.  Give the selected system its normal import
+    # context, then remove only modules loaded from that system so a later
+    # launch cannot accidentally reuse another system's implementation.
+    sys.path.insert(0, str(system_root))
+    try:
+        spec.loader.exec_module(module)
+        run_parameters = inspect.signature(module.run).parameters
+        individual_result = module.run({}) if run_parameters else module.run()
+    finally:
+        sys.path.remove(str(system_root))
+        for module_name, loaded_module in list(sys.modules.items()):
+            module_file = getattr(loaded_module, "__file__", None)
+            if module_file and Path(module_file).resolve().is_relative_to(system_root):
+                sys.modules.pop(module_name, None)
     return {
         "system_id": fid,
         "system_name": name,
-        "result": _to_jsonable(module.run()),
+        "result": _to_jsonable(individual_result),
         "status": "DRAFT - HUMAN REVIEW REQUIRED",
     }
 
