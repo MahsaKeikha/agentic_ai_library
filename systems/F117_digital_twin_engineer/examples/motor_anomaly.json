@@ -1,0 +1,10 @@
+{
+  "asset_id": "PACKAGING-LINE-2-MOTOR-07",
+  "observed_at": "2026-08-24T10:00:00Z",
+  "temperature_c": 97.0,
+  "vibration_mm_s": 7.6,
+  "current_a": 34.2,
+  "speed_rpm": 1768.0,
+  "throughput_units_min": 118.0,
+  "source": "synthetic://f117/motor-anomaly/v1"
+}
