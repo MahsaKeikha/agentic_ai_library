@@ -6,7 +6,7 @@ This file contains production-ready copy for a future website or dedicated enter
 
 # Build Agentic AI That Can Be Trusted With Real Work
 
-## 170 reference architectures. One engineering standard for production-ready multi-agent systems.
+## 170 reference architectures. One engineering standard for evaluating multi-agent production readiness.
 
 Agentic AI is moving from assistants that generate answers to systems that coordinate workflows, use tools, retain memory, and take actions.
 
