@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mahsakeikha.github.io/agentic_ai_library/sitemap.xml
+Sitemap: https://multiagentaiatlas.com/sitemap.xml
