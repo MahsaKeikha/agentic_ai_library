@@ -19,6 +19,7 @@ This library brings together **170 standalone multi-agent systems** spanning exe
 | [Atlas Challenge](https://mahsakeikha.github.io/agentic_ai_library/atlas-challenge.html) | Shareable scenarios that ask readers to find the failure before agents act |
 | [Evidence and Maturity](https://mahsakeikha.github.io/agentic_ai_library/evidence.html) | Public definitions, verification boundaries, and registry links |
 | [Training](https://mahsakeikha.github.io/agentic_ai_library/training.html) | Multi-agent AI education for technical teams, leaders, and organizations |
+| [Enterprise Services](https://mahsakeikha.github.io/agentic_ai_library/services.html) | Readiness assessment, architecture, training, governed prototype direction, and advisory pathways |
 | [Field Guide](https://mahsakeikha.github.io/agentic_ai_library/atlas-book.html) | The 95-page companion book and downloadable PDF |
 | [Enterprise Inquiry](https://mahsakeikha.github.io/agentic_ai_library/#inquiry) | A confidential route for assessment, training, and implementation discussions |
 
@@ -47,6 +48,9 @@ The Atlas separates catalog inclusion, structured implementation, L3 verificatio
 - [Read the release and change evidence policy](docs/RELEASE_AND_CHANGE_POLICY.md)
 - [Read the Atlas README standard](docs/README_STANDARD.md)
 - [Meet the founder](https://mahsakeikha.github.io/agentic_ai_library/about.html)
+- [Review website privacy](https://mahsakeikha.github.io/agentic_ai_library/privacy.html)
+- [Review public terms of use](https://mahsakeikha.github.io/agentic_ai_library/terms.html)
+- [Read the accessibility commitment](https://mahsakeikha.github.io/agentic_ai_library/accessibility.html)
 
 Catalog inclusion does not imply L3 maturity, independent review, regulatory certification, or production deployment. Public claims are limited to evidence that can be inspected or disclosed with permission.
 
