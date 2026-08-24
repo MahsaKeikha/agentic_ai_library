@@ -60,15 +60,15 @@ Public README files should explain the engineering principles, observable contro
 
 ## Canonical public links
 
-- [Atlas home](https://mahsakeikha.github.io/agentic_ai_library/)
-- [F01-F170 Architecture Atlas](https://mahsakeikha.github.io/agentic_ai_library/atlas.html)
-- [10 Flagships](https://mahsakeikha.github.io/agentic_ai_library/flagships.html)
-- [Interactive Demo Lab](https://mahsakeikha.github.io/agentic_ai_library/demo-lab.html)
-- [Flagship Evidence](https://mahsakeikha.github.io/agentic_ai_library/flagship-evidence.html)
-- [Atlas Challenge](https://mahsakeikha.github.io/agentic_ai_library/atlas-challenge.html)
-- [Evidence and Maturity](https://mahsakeikha.github.io/agentic_ai_library/evidence.html)
-- [Training](https://mahsakeikha.github.io/agentic_ai_library/training.html)
-- [Field Guide](https://mahsakeikha.github.io/agentic_ai_library/atlas-book.html)
+- [Atlas home](https://multiagentaiatlas.com/)
+- [F01-F170 Architecture Atlas](https://multiagentaiatlas.com/atlas.html)
+- [10 Flagships](https://multiagentaiatlas.com/flagships.html)
+- [Interactive Demo Lab](https://multiagentaiatlas.com/demo-lab.html)
+- [Flagship Evidence](https://multiagentaiatlas.com/flagship-evidence.html)
+- [Atlas Challenge](https://multiagentaiatlas.com/atlas-challenge.html)
+- [Evidence and Maturity](https://multiagentaiatlas.com/evidence.html)
+- [Training](https://multiagentaiatlas.com/training.html)
+- [Field Guide](https://multiagentaiatlas.com/atlas-book.html)
 
 ## Release review
 

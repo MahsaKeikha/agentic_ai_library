@@ -12,45 +12,45 @@ This library brings together **170 standalone multi-agent systems** spanning exe
 
 | Explore | What you will find |
 |---|---|
-| [Architecture Atlas](https://mahsakeikha.github.io/agentic_ai_library/atlas.html) | The complete F01-F170 catalog across 15 domains |
-| [10 Flagships](https://mahsakeikha.github.io/agentic_ai_library/flagships.html) | A focused portfolio selected for demonstration and enterprise relevance |
-| [Interactive Demo Lab](https://mahsakeikha.github.io/agentic_ai_library/demo-lab.html) | Ten synthetic simulations with visible handoffs, evidence, and human approval gates |
-| [Flagship Evidence](https://mahsakeikha.github.io/agentic_ai_library/flagship-evidence.html) | Public evidence, limitations, maturity boundaries, and inspection routes for the 10 flagships |
-| [Atlas Challenge](https://mahsakeikha.github.io/agentic_ai_library/atlas-challenge.html) | Shareable scenarios that ask readers to find the failure before agents act |
-| [Evidence and Maturity](https://mahsakeikha.github.io/agentic_ai_library/evidence.html) | Public definitions, verification boundaries, and registry links |
-| [Training](https://mahsakeikha.github.io/agentic_ai_library/training.html) | Multi-agent AI education for technical teams, leaders, and organizations |
-| [Enterprise Services](https://mahsakeikha.github.io/agentic_ai_library/services.html) | Readiness assessment, architecture, training, governed prototype direction, and advisory pathways |
-| [Field Guide](https://mahsakeikha.github.io/agentic_ai_library/atlas-book.html) | The 95-page companion book and downloadable PDF |
-| [Enterprise Inquiry](https://mahsakeikha.github.io/agentic_ai_library/#inquiry) | A confidential route for assessment, training, and implementation discussions |
+| [Architecture Atlas](https://multiagentaiatlas.com/atlas.html) | The complete F01-F170 catalog across 15 domains |
+| [10 Flagships](https://multiagentaiatlas.com/flagships.html) | A focused portfolio selected for demonstration and enterprise relevance |
+| [Interactive Demo Lab](https://multiagentaiatlas.com/demo-lab.html) | Ten synthetic simulations with visible handoffs, evidence, and human approval gates |
+| [Flagship Evidence](https://multiagentaiatlas.com/flagship-evidence.html) | Public evidence, limitations, maturity boundaries, and inspection routes for the 10 flagships |
+| [Atlas Challenge](https://multiagentaiatlas.com/atlas-challenge.html) | Shareable scenarios that ask readers to find the failure before agents act |
+| [Evidence and Maturity](https://multiagentaiatlas.com/evidence.html) | Public definitions, verification boundaries, and registry links |
+| [Training](https://multiagentaiatlas.com/training.html) | Multi-agent AI education for technical teams, leaders, and organizations |
+| [Enterprise Services](https://multiagentaiatlas.com/services.html) | Readiness assessment, architecture, training, governed prototype direction, and advisory pathways |
+| [Field Guide](https://multiagentaiatlas.com/atlas-book.html) | The 95-page companion book and downloadable PDF |
+| [Enterprise Inquiry](https://multiagentaiatlas.com/#inquiry) | A confidential route for assessment, training, and implementation discussions |
 
 ## Read the official Atlas field guide
 
-**[The Multi-Agent AI Atlas: Engineering Observable, Governed, Human-Accountable Agent Systems](https://mahsakeikha.github.io/agentic_ai_library/atlas-book.html)** is the standalone companion to this repository and the public Atlas website.
+**[The Multi-Agent AI Atlas: Engineering Observable, Governed, Human-Accountable Agent Systems](https://multiagentaiatlas.com/atlas-book.html)** is the standalone companion to this repository and the public Atlas website.
 
 The 95-page field guide connects the 170-system taxonomy, canonical reference architecture, Agentic AI Gold Standard, deterministic code, evaluation strategy, ten flagship simulations, public Demo Lab, training pathway, and enterprise adoption model into one practical engineering resource.
 
-- [Explore the field guide](https://mahsakeikha.github.io/agentic_ai_library/atlas-book.html)
-- [Read or download the PDF](https://mahsakeikha.github.io/agentic_ai_library/books/The_Multi_Agent_AI_Atlas.pdf)
-- [Explore the live Architecture Atlas](https://mahsakeikha.github.io/agentic_ai_library/atlas.html)
-- [Inspect the flagship evidence hub](https://mahsakeikha.github.io/agentic_ai_library/flagship-evidence.html)
-- [Take the Atlas Challenge](https://mahsakeikha.github.io/agentic_ai_library/atlas-challenge.html)
+- [Explore the field guide](https://multiagentaiatlas.com/atlas-book.html)
+- [Read or download the PDF](https://multiagentaiatlas.com/books/The_Multi_Agent_AI_Atlas.pdf)
+- [Explore the live Architecture Atlas](https://multiagentaiatlas.com/atlas.html)
+- [Inspect the flagship evidence hub](https://multiagentaiatlas.com/flagship-evidence.html)
+- [Take the Atlas Challenge](https://multiagentaiatlas.com/atlas-challenge.html)
 
-The public materials establish the engineering principles and evidence standard. Organization-specific assessment, training, implementation, and delivery methods remain private professional work. Teams applying the Atlas to a consequential workflow can [start a confidential inquiry](https://mahsakeikha.github.io/agentic_ai_library/#inquiry).
+The public materials establish the engineering principles and evidence standard. Organization-specific assessment, training, implementation, and delivery methods remain private professional work. Teams applying the Atlas to a consequential workflow can [start a confidential inquiry](https://multiagentaiatlas.com/#inquiry).
 
 ## Evidence, maturity, and claim boundaries
 
 The Atlas separates catalog inclusion, structured implementation, L3 verification, interactive simulation, independent review, and real-world deployment. These labels represent different levels and types of evidence.
 
-- [Read what each evidence label means](https://mahsakeikha.github.io/agentic_ai_library/evidence.html)
+- [Read what each evidence label means](https://multiagentaiatlas.com/evidence.html)
 - [Inspect the maturity registry](docs/MATURITY_REGISTRY.md)
 - [Review the external review policy](docs/EXTERNAL_REVIEW_POLICY.md)
 - [Inspect the public adoption registry](docs/ADOPTION_REGISTRY.md)
 - [Read the release and change evidence policy](docs/RELEASE_AND_CHANGE_POLICY.md)
 - [Read the Atlas README standard](docs/README_STANDARD.md)
-- [Meet the founder](https://mahsakeikha.github.io/agentic_ai_library/about.html)
-- [Review website privacy](https://mahsakeikha.github.io/agentic_ai_library/privacy.html)
-- [Review public terms of use](https://mahsakeikha.github.io/agentic_ai_library/terms.html)
-- [Read the accessibility commitment](https://mahsakeikha.github.io/agentic_ai_library/accessibility.html)
+- [Meet the founder](https://multiagentaiatlas.com/about.html)
+- [Review website privacy](https://multiagentaiatlas.com/privacy.html)
+- [Review public terms of use](https://multiagentaiatlas.com/terms.html)
+- [Read the accessibility commitment](https://multiagentaiatlas.com/accessibility.html)
 
 Catalog inclusion does not imply L3 maturity, independent review, regulatory certification, or production deployment. Public claims are limited to evidence that can be inspected or disclosed with permission.
 
