@@ -72,7 +72,7 @@ with predictable result fields for identity, state, analyses, evidence gaps, ris
 
 Add optional adapters for:
 
-- OpenAI-compatible APIs
+- Provider-compatible model APIs
 - local models
 - tool/function calling
 - vector stores
