@@ -20,6 +20,19 @@ The 95-page field guide connects the 170-system taxonomy, canonical reference ar
 
 The public materials establish the engineering principles and evidence standard. Organization-specific assessment, training, implementation, and delivery methods remain private professional work. Teams applying the Atlas to a consequential workflow can [start a confidential inquiry](https://mahsakeikha.github.io/agentic_ai_library/#inquiry).
 
+## Evidence, maturity, and claim boundaries
+
+The Atlas separates catalog inclusion, structured implementation, L3 verification, interactive simulation, independent review, and real-world deployment. These labels represent different levels and types of evidence.
+
+- [Read what each evidence label means](https://mahsakeikha.github.io/agentic_ai_library/evidence.html)
+- [Inspect the maturity registry](docs/MATURITY_REGISTRY.md)
+- [Review the external review policy](docs/EXTERNAL_REVIEW_POLICY.md)
+- [Inspect the public adoption registry](docs/ADOPTION_REGISTRY.md)
+- [Read the release and change evidence policy](docs/RELEASE_AND_CHANGE_POLICY.md)
+- [Meet the founder](https://mahsakeikha.github.io/agentic_ai_library/about.html)
+
+Catalog inclusion does not imply L3 maturity, independent review, regulatory certification, or production deployment. Public claims are limited to evidence that can be inspected or disclosed with permission.
+
 `Multi-Agent Systems` · `Agentic AI` · `AI Agents` · `Agent Orchestration` · `LLM Agents` · `AI Engineering` · `Agentic Workflows` · `AI Safety` · `Evals` · `Human-in-the-Loop`
 
 ---
