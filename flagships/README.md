@@ -19,6 +19,8 @@ Selection as a flagship is a portfolio decision. It is not an L3 designation, in
 
 Each flagship has a synthetic interactive scenario in the [Atlas Demo Lab](https://mahsakeikha.github.io/agentic_ai_library/demo-lab.html). The demonstrations expose agent roles, handoffs, evidence status, stop conditions, and protected actions. They do not operate external systems or replace professional judgment.
 
+The [Flagship Evidence Hub](https://mahsakeikha.github.io/agentic_ai_library/flagship-evidence.html) records what each demonstration supports and where its public evidence stops. The [Atlas Challenge](https://mahsakeikha.github.io/agentic_ai_library/atlas-challenge.html) turns the same authority model into short, shareable engineering scenarios.
+
 ## Evidence route
 
 - [Flagship portfolio](https://mahsakeikha.github.io/agentic_ai_library/flagships.html)
