@@ -8,6 +8,18 @@ This library brings together **170 standalone multi-agent systems** spanning exe
 
 > **170 systems. 15 domains. One engineering philosophy: build agents that can reason and coordinate together without surrendering human authority.**
 
+## Read the official Atlas field guide
+
+**[The Multi-Agent AI Atlas: Engineering Observable, Governed, Human-Accountable Agent Systems](https://mahsakeikha.github.io/agentic_ai_library/atlas-book.html)** is the standalone companion to this repository and the public Atlas website.
+
+The 95-page field guide connects the 170-system taxonomy, canonical reference architecture, Agentic AI Gold Standard, deterministic code, evaluation strategy, ten flagship simulations, public Demo Lab, training pathway, and enterprise adoption model into one practical engineering resource.
+
+- [Explore the field guide](https://mahsakeikha.github.io/agentic_ai_library/atlas-book.html)
+- [Read or download the PDF](https://mahsakeikha.github.io/agentic_ai_library/books/The_Multi_Agent_AI_Atlas.pdf)
+- [Explore the live Architecture Atlas](https://mahsakeikha.github.io/agentic_ai_library/atlas.html)
+
+The public materials establish the engineering principles and evidence standard. Organization-specific assessment, training, implementation, and delivery methods remain private professional work. Teams applying the Atlas to a consequential workflow can [start a confidential inquiry](https://mahsakeikha.github.io/agentic_ai_library/#inquiry).
+
 `Multi-Agent Systems` · `Agentic AI` · `AI Agents` · `Agent Orchestration` · `LLM Agents` · `AI Engineering` · `Agentic Workflows` · `AI Safety` · `Evals` · `Human-in-the-Loop`
 
 ---
