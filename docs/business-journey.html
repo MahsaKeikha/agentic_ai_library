@@ -12,7 +12,7 @@
 <meta property="og:image" content="https://multiagentaiatlas.com/atlas-demo-lab-social-preview.png">
 <link rel="canonical" href="https://multiagentaiatlas.com/business-journey.html">
 <link rel="stylesheet" href="styles.css?v=20260824.5">
-<link rel="stylesheet" href="business-journey.css?v=20260824.1">
+<link rel="stylesheet" href="business-journey.css?v=20260824.2">
 </head>
 <body>
 <header class="nav-shell">
@@ -126,6 +126,22 @@
 <button id="run-journey" type="button">Watch this system work <span>▶</span></button>
 </div>
 
+<div class="human-control-bar" aria-label="Human workflow controls">
+<div class="control-message"><span>HUMAN CONTROL</span><strong>You can pause, redirect, or stop this AI team at any moment.</strong></div>
+<div class="control-actions">
+<button id="pause-workflow" type="button" disabled>Pause</button>
+<button id="change-workflow" type="button" disabled>Change request</button>
+<button id="stop-workflow" class="danger-control" type="button" disabled>Stop now</button>
+</div>
+</div>
+<div id="change-request-panel" class="change-request-panel" hidden>
+<div><span>CHANGE THE REQUEST</span><h3>Tell the AI team what must change.</h3><p>The current work will pause. Your instruction will be recorded, and the team will restart from the revised goal.</p></div>
+<label for="change-request-text">Your revised instruction</label>
+<textarea id="change-request-text" rows="3" placeholder="For example: Focus only on safety risks and compare two lower-cost options."></textarea>
+<div class="change-actions"><button id="apply-change" type="button">Apply change and restart</button><button id="cancel-change" type="button">Cancel</button></div>
+<p id="change-request-error" class="change-error" hidden>Please enter the change you want the team to make.</p>
+</div>
+
 <div class="process-overview" aria-label="Business task workflow">
 <div class="process-line"><span id="progress-fill"></span></div>
 <article class="agent-station" data-step="0">
@@ -226,6 +242,6 @@
 <footer class="visual-footer"><div class="container"><div><strong>The Multi-Agent AI Atlas</strong><p>Making intelligent systems visible, bounded, and accountable.</p></div><div><a href="about.html">About</a><a href="evidence.html">Evidence</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div></footer>
 <script src="atlas-data.js?v=20260824.2"></script>
 <script src="agent-role-manifest.js?v=20260824.1"></script>
-<script src="business-journey.js?v=20260824.6"></script>
+<script src="business-journey.js?v=20260824.7"></script>
 </body>
 </html>
