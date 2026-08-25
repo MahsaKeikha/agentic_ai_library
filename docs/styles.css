@@ -268,3 +268,257 @@ table{max-width:100%}
   .record-meta span,.record-badge{line-height:1.4}
   h1,h2,h3,p,li,a,button{overflow-wrap:anywhere}
 }
+
+
+/* High contrast text system for every dark surface */
+:root{
+  --on-dark:#ffffff;
+  --on-dark-muted:#d6dde5;
+  --on-dark-link:#d7e5ff;
+  --on-dark-line:#708096;
+}
+.dark-band,.dark-section,.hero-panel,.trust-hero,.enterprise-hero,.training-hero,
+.curriculum-section,.verification-result,.verification-method,.registry-boundary{
+  color:var(--on-dark);
+}
+.dark-band p,.dark-section p,.hero-panel p,.trust-hero p,.enterprise-hero p,.training-hero p,
+.curriculum-section p,.curriculum-section li span,.verification-result>p,
+.verification-method p,.verification-method li,.registry-boundary p{
+  color:var(--on-dark-muted)!important;
+}
+.dark-band .eyebrow.light,.dark-section .eyebrow.light,.hero-panel .panel-label,
+.trust-hero .eyebrow.light,.enterprise-hero .eyebrow.light,.training-hero .eyebrow.light,
+.verification-method .eyebrow.light,.registry-boundary .eyebrow.light{
+  color:#c9d8f2!important;
+}
+.light-link,
+.dark-band a:not(.button),.dark-section a:not(.button),.hero-panel a:not(.button),
+.trust-hero a:not(.button),.enterprise-hero a:not(.button),.training-hero a:not(.button),
+.curriculum-section a:not(.button),.verification-result a:not(.button),
+.verification-method a:not(.button),.registry-boundary a:not(.button){
+  color:var(--on-dark-link)!important;
+  text-decoration-color:currentColor;
+  text-underline-offset:4px;
+}
+.light-link:hover,.light-link:focus-visible,
+.dark-band a:not(.button):hover,.dark-section a:not(.button):hover,
+.trust-hero a:not(.button):hover,.enterprise-hero a:not(.button):hover,
+.training-hero a:not(.button):hover,.curriculum-section a:not(.button):hover,
+.verification-method a:not(.button):hover,.registry-boundary a:not(.button):hover{
+  color:var(--on-dark)!important;
+}
+
+
+/* Premium editorial refinement */
+:root{
+  --gold:#b27a22;
+  --gold-soft:#f2e6cf;
+  --blue-bright:#2f65bd;
+  --shadow-soft:0 14px 38px rgba(13,20,28,.08);
+  --shadow-strong:0 24px 64px rgba(8,18,30,.18);
+}
+body{
+  background:
+    radial-gradient(circle at 8% 3%,rgba(47,101,189,.07),transparent 26rem),
+    var(--paper);
+}
+.nav-shell{
+  background:rgba(247,246,242,.9);
+  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);
+  box-shadow:0 1px 18px rgba(13,20,28,.045);
+}
+.brand-mark{
+  background:linear-gradient(145deg,#fff,#eeeae1);
+  box-shadow:3px 3px 0 rgba(21,63,143,.14);
+}
+.hero,.atlas-hero,.verification-hero,.registry-hero{
+  position:relative;
+}
+.hero:before,.atlas-hero:before,.verification-hero:before,.registry-hero:before{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(47,101,189,.1),transparent 68%);
+  pointer-events:none;
+  z-index:-1;
+  top:25px;
+  left:-150px;
+}
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.eyebrow:before{
+  content:"";
+  width:28px;
+  height:2px;
+  flex:0 0 auto;
+  background:currentColor;
+}
+.hero h1,.section h2,.dark-section h2,.dark-band h2,.cta-section h2,
+.atlas-hero h1,.verification-hero h1,.registry-hero h1{
+  text-wrap:balance;
+}
+.hero-panel{
+  background:
+    radial-gradient(circle at 100% 0,rgba(47,101,189,.22),transparent 42%),
+    linear-gradient(155deg,#111c28,#091018 78%);
+  box-shadow:var(--shadow-strong);
+}
+.hero-panel:after{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border:1px solid rgba(255,255,255,.06);
+  pointer-events:none;
+}
+.button{
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 7px 18px rgba(13,20,28,.07);
+}
+.button.primary{
+  background:linear-gradient(135deg,var(--ink),#1c2b3c);
+}
+.button.secondary{
+  background:rgba(255,255,255,.5);
+}
+.button.inverted{
+  background:linear-gradient(135deg,#fff,#edf3fb);
+}
+.dark-band,.dark-section,.trust-hero,.enterprise-hero,.training-hero,
+.curriculum-section,.verification-method,.registry-boundary{
+  position:relative;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(47,101,189,.22),transparent 28rem),
+    linear-gradient(145deg,#111b27,#091018 72%);
+}
+.dark-band:after,.dark-section:after,.trust-hero:after,.enterprise-hero:after,
+.training-hero:after,.curriculum-section:after,.verification-method:after,
+.registry-boundary:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.22;
+  background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:42px 42px;
+}
+.dark-band>.container,.dark-section>.container,.trust-hero>.container,
+.enterprise-hero>.container,.training-hero>.container,.curriculum-section>.container,
+.verification-method>.container,.registry-boundary>.container{
+  position:relative;
+  z-index:1;
+}
+.trust-grid article,.service-grid article,.evidence-grid article,.principle-list article,
+.offer-grid article,.format-grid article,.engagement-grid article,.registry-card,
+.review-callout,.scorecard,.lead-form,.verification-form{
+  transition:transform .22s ease,box-shadow .22s ease,background-color .22s ease,border-color .22s ease;
+}
+.trust-grid article,.evidence-grid article,.principle-list article,.offer-grid article,
+.format-grid article,.engagement-grid article,.scorecard,.lead-form,.verification-form{
+  background:rgba(255,255,255,.58);
+}
+.trust-grid article h3,.evidence-grid article h3,.principle-list article h3,
+.offer-grid article h3,.format-grid article h3,.service-grid article h3{
+  text-wrap:balance;
+}
+.trust-grid b,.pillar-grid b,.evidence-grid b,.offer-grid b,.process-grid b{
+  color:var(--blue-bright);
+}
+.proof-row,.atlas-statline,.book-stats{
+  background:rgba(255,255,255,.34);
+  box-shadow:inset 0 1px rgba(255,255,255,.65);
+}
+.proof-row strong,.atlas-statline strong,.registry-stats strong{
+  color:var(--accent);
+}
+.soft-bg,.book-feature,.inquiry-section{
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.4),transparent 48%),
+    #ebe8e0;
+}
+.review-callout{
+  background:linear-gradient(135deg,#fff,rgba(223,232,246,.55));
+  border-left:4px solid var(--accent);
+  box-shadow:var(--shadow-soft);
+}
+.record-badge{
+  background:linear-gradient(135deg,#fff2c8,#ead18a);
+  box-shadow:inset 0 0 0 1px rgba(178,122,34,.18);
+}
+.cta-section{
+  background:
+    radial-gradient(circle at 82% 25%,rgba(255,255,255,.2),transparent 24rem),
+    linear-gradient(135deg,#153f8f,#0e2c66);
+}
+.footer{
+  position:relative;
+}
+.footer:before{
+  content:"";
+  position:absolute;
+  top:-1px;
+  left:0;
+  width:92px;
+  height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--gold));
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  .trust-grid article:hover,.service-grid article:hover,.evidence-grid article:hover,
+  .principle-list article:hover,.offer-grid article:hover,.format-grid article:hover,
+  .engagement-grid article:hover,.review-callout:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-soft);
+    border-color:#aab7c5;
+    background:#fff;
+  }
+  .button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 25px rgba(13,20,28,.14);
+  }
+  .brand-mark,.hero-panel{
+    transition:transform .25s ease,box-shadow .25s ease;
+  }
+  .brand:hover .brand-mark{transform:translate(-1px,-1px);box-shadow:5px 5px 0 rgba(21,63,143,.18)}
+  .hero-panel:hover{transform:translateY(-3px);box-shadow:0 30px 72px rgba(8,18,30,.22)}
+}
+@media(max-width:640px){
+  body{background:var(--paper)}
+  .hero:before,.atlas-hero:before,.verification-hero:before,.registry-hero:before{
+    width:220px;
+    height:220px;
+    left:-120px;
+  }
+  .eyebrow{gap:8px}
+  .eyebrow:before{width:20px}
+  .hero-panel{box-shadow:0 18px 42px rgba(8,18,30,.16)}
+  .trust-grid article,.evidence-grid article,.principle-list article,.offer-grid article,
+  .format-grid article,.engagement-grid article,.scorecard,.lead-form,.verification-form{
+    background:rgba(255,255,255,.72);
+  }
+}
+
+
+/* Shared system precedence over page level legacy colors */
+body .dark-band,body .dark-section,body .trust-hero,body .enterprise-hero,
+body .training-hero,body .curriculum-section,body .verification-method,body .registry-boundary{
+  background:
+    radial-gradient(circle at 88% 12%,rgba(47,101,189,.22),transparent 28rem),
+    linear-gradient(145deg,#111b27,#091018 72%);
+}
+body .hero-panel{
+  background:
+    radial-gradient(circle at 100% 0,rgba(47,101,189,.22),transparent 42%),
+    linear-gradient(155deg,#111c28,#091018 78%);
+}
+body .trust-grid article,body .evidence-grid article,body .principle-list article,
+body .offer-grid article,body .format-grid article,body .engagement-grid article,
+body .scorecard,body .lead-form,body .verification-form{
+  background-color:rgba(255,255,255,.68);
+}
