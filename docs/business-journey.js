@@ -19,7 +19,7 @@ const templates={
 const roleDescriptions=["Understands the goal, defines the scope, and assigns the work.","Collects permitted information and keeps its source visible.","Develops a domain-specific analysis for the selected system.","Builds practical options within the system's rules.","Finds mistakes, uncertainty, risks, and protected actions."];
 let systems=[],selected=null,running=false,paused=false,runToken=0,currentRevision="",timers=[],expanded=false;
 const qs=s=>document.querySelector(s),qsa=s=>[...document.querySelectorAll(s)];
-const wait=ms=>new Promise(resolve=>{const timer=setTimeout(resolve,ms);timers.push(timer)});
+const wait=ms=>new Promise(resolve=>{const readableDelay=ms===720?1400:ms===420?650:ms;const timer=setTimeout(resolve,readableDelay);timers.push(timer)});
 function domainFor(id){const n=Number(id.replace("F",""));return window.ATLAS_DOMAIN_RANGES.find(d=>n>=d.min&&n<=d.max)?.name||"Executive & Strategy"}
 function purposeFor(id){return window.ATLAS_PURPOSES[Number(id.slice(1))-1]||"Coordinates specialized AI roles with visible evidence, bounded actions, and human authority."}
 function parseReadme(markdown){const entries=[],seen=new Set();for(const line of markdown.split("\n")){const m=line.match(/^\|\s*\*\*(F\d{2,3})\*\*\s*\|\s*\*\*(.*?)\*\*\s*\|.*?\((https:\/\/github\.com\/MahsaKeikha\/[^)]+)\)/)||line.match(/^\|\s*(F\d{2,3})\s*\|\s*(.*?)\s*\|.*?\((https:\/\/github\.com\/MahsaKeikha\/[^)]+)\)/);if(!m)continue;const id=m[1].trim();if(seen.has(id))continue;seen.add(id);entries.push({id,name:m[2].replace(/\*\*/g,"").trim(),url:m[3].trim(),domain:domainFor(id),purpose:purposeFor(id)})}return entries.sort((a,b)=>Number(a.id.slice(1))-Number(b.id.slice(1)))}
