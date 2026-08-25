@@ -13,7 +13,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://multiagentaiatlas.com/verification.html">
 <link rel="stylesheet" href="styles.css?v=20260824.7">
-<link rel="stylesheet" href="verification.css?v=20260824-1">
+<link rel="stylesheet" href="verification.css?v=20260825-1">
 </head>
 <body class="verification-page">
 <header class="nav-shell"><nav class="nav container" aria-label="Primary navigation">
@@ -60,8 +60,10 @@
 <section class="verification-shell container">
 <form id="verification-form" class="verification-form">
 <div class="system-field">
-<label for="system-name">System being assessed</label>
-<input id="system-name" name="system_name" type="text" maxlength="160" placeholder="Enter a system name" required>
+<label for="system-name">Choose a repository to assess</label>
+<div class="system-select-wrap"><select id="system-name" name="system_name" required disabled><option value="">Loading all 170 repositories...</option></select></div>
+<div class="system-field-meta"><span id="system-load-status">Loading the complete F01 to F170 list...</span><a id="selected-system-repo" href="atlas.html" target="_blank" rel="noopener" hidden>Open selected repository</a></div>
+<p class="system-field-help">Tap the selector to choose any Atlas repository. Systems are grouped by engineering domain.</p>
 </div>
 <div class="section-heading">
 <div><p class="eyebrow">PART 01</p><h2>Weighted dimensions</h2></div>
@@ -113,7 +115,7 @@
 <div><strong>Multi-Agent System Verification</strong><p>Created by Mahsa Keikha, PhD.</p></div>
 <div><a href="index.html">Home</a> · <a href="atlas.html">Atlas</a> · <a href="terms.html">Terms</a></div>
 </footer>
-<script src="verification.js?v=20260824-1"></script>
+<script src="verification.js?v=20260825-1"></script>
 <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b1823f8dc0c046e8888f7e27c0e8efc5"}'></script><!-- End Cloudflare Web Analytics -->
 <script src="navigation.js?v=20260824.1" defer></script>\n</body>
 </html>
