@@ -17,6 +17,7 @@ This library brings together **170 standalone multi-agent systems** spanning exe
 | [Interactive Demo Lab](https://multiagentaiatlas.com/demo-lab.html) | Ten synthetic simulations with visible handoffs, evidence, and human approval gates |
 | [Flagship Evidence](https://multiagentaiatlas.com/flagship-evidence.html) | Public evidence, limitations, maturity boundaries, and inspection routes for the 10 flagships |
 | [Atlas Challenge](https://multiagentaiatlas.com/atlas-challenge.html) | Shareable scenarios that ask readers to find the failure before agents act |
+| [Verification Standard](https://multiagentaiatlas.com/verification.html) | Score evidence, test hard gates, and produce a consistent readiness classification |
 | [Evidence and Maturity](https://multiagentaiatlas.com/evidence.html) | Public definitions, verification boundaries, and registry links |
 | [Training](https://multiagentaiatlas.com/training.html) | Multi-agent AI education for technical teams, leaders, and organizations |
 | [Enterprise Services](https://multiagentaiatlas.com/services.html) | Readiness assessment, architecture, training, governed prototype direction, and advisory pathways |
