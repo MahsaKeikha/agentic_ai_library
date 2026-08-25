@@ -1,0 +1,145 @@
+{
+  "schema_version": "0.2",
+  "generated_at": "2026-08-24T19:30:00-07:00",
+  "claim_boundary": "Registry inclusion is not regulatory certification, legal compliance, independent validation, or proof of production safety.",
+  "status_definitions": {
+    "evidence_intake": "Public evidence has been mapped. Scoring and hard-gate verification are not complete.",
+    "assessed": "A dated assessment has been completed against the public standard.",
+    "verified": "The public score threshold and applicable hard gates passed within the stated scope.",
+    "independent_review_pending": "Project evidence exists, but named external review has not been completed."
+  },
+  "records": [
+    {
+      "record_id": "MASVS-F09-2026-08-24-INTAKE",
+      "system_id": "F09",
+      "system_name": "Agentic AI Safety",
+      "system_version": "unversioned reference implementation",
+      "repository": "https://github.com/MahsaKeikha/agentic_ai_safety",
+      "assessed_commit": "d833980193cc1ec2ab24a2ee9b1f47bee77fd518",
+      "record_type": "evidence_intake",
+      "status": "evidence_intake",
+      "badge_label": "Evidence Intake",
+      "published_at": "2026-08-24",
+      "reassessment_due": null,
+      "score": null,
+      "level": null,
+      "certification_eligibility": "not_evaluated",
+      "assessor": {
+        "type": "project_owner_review",
+        "name": "Mahsa Keikha, PhD",
+        "independent": false
+      },
+      "dimensions": {
+        "reliability": {
+          "score": null,
+          "evidence_level": null,
+          "status": "not_scored"
+        },
+        "safety": {
+          "score": null,
+          "evidence_level": null,
+          "status": "not_scored"
+        },
+        "evidence": {
+          "score": null,
+          "evidence_level": null,
+          "status": "not_scored"
+        },
+        "human_oversight": {
+          "score": null,
+          "evidence_level": null,
+          "status": "not_scored"
+        },
+        "failure_handling": {
+          "score": null,
+          "evidence_level": null,
+          "status": "not_scored"
+        },
+        "observability": {
+          "score": null,
+          "evidence_level": null,
+          "status": "not_scored"
+        },
+        "security": {
+          "score": null,
+          "evidence_level": null,
+          "status": "not_scored"
+        },
+        "interoperability": {
+          "score": null,
+          "evidence_level": null,
+          "status": "not_scored"
+        }
+      },
+      "hard_gates": {
+        "human_owner": {
+          "status": "documented_not_tested"
+        },
+        "consequential_approval": {
+          "status": "documented_not_tested"
+        },
+        "least_privilege": {
+          "status": "not_verified"
+        },
+        "audit_trail": {
+          "status": "partially_documented_not_tested"
+        },
+        "containment": {
+          "status": "documented_not_tested"
+        },
+        "claim_traceability": {
+          "status": "partially_documented_not_tested"
+        }
+      },
+      "public_evidence": [
+        {
+          "type": "architecture",
+          "label": "Eight-agent safety review workflow",
+          "url": "https://github.com/MahsaKeikha/agentic_ai_safety#multi-agent-architecture"
+        },
+        {
+          "type": "human_gate",
+          "label": "Explicit human release boundary",
+          "url": "https://github.com/MahsaKeikha/agentic_ai_safety#human-release-gate"
+        },
+        {
+          "type": "implementation",
+          "label": "Offline reference orchestrator",
+          "url": "https://github.com/MahsaKeikha/agentic_ai_safety/blob/main/orchestrator.py"
+        },
+        {
+          "type": "simulation",
+          "label": "Synthetic Atlas Demo Lab scenario",
+          "url": "https://multiagentaiatlas.com/demo-lab.html?demo=F09"
+        }
+      ],
+      "verified_facts": [
+        "The repository documents separate scope, hazard, policy, evaluation, red-team, residual-risk, incident, and gatekeeper roles.",
+        "The orchestrator stops at a human release gate unless an explicit ship option is provided.",
+        "The README states that the system does not certify a model or product as safe.",
+        "A synthetic public scenario is available in the Atlas Demo Lab."
+      ],
+      "missing_evidence": [
+        "No public continuous integration run was found at intake.",
+        "No repeatable automated verification suite was found at intake.",
+        "No held-out benchmark results were found at intake.",
+        "No named independent assessment has been completed.",
+        "No production deployment evidence is claimed."
+      ],
+      "next_actions": [
+        "Add deterministic tests for normal flow, failed agent flow, and human release-gate enforcement.",
+        "Add CI across supported Python versions.",
+        "Add held-out safety scenarios covering injection, privilege escalation, stale evidence, and unsafe tool requests.",
+        "Publish test artifacts and rerun the v0.1 scoring assessment.",
+        "Seek named independent review after project verification passes."
+      ],
+      "history": [
+        {
+          "date": "2026-08-24",
+          "event": "Initial evidence intake published",
+          "status": "evidence_intake"
+        }
+      ]
+    }
+  ]
+}
