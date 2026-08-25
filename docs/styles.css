@@ -718,3 +718,218 @@ body .scorecard,body .lead-form,body .verification-form{
   .command-signals{grid-template-columns:1fr}
   .command-signals span{font-size:12px}
 }
+
+
+/* Visual depth for the Atlas, evidence, verification, training, and enterprise pages */
+body .atlas-card{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.92),rgba(235,240,247,.58));
+  box-shadow:0 12px 34px rgba(13,20,28,.07);
+}
+body .atlas-card:after{
+  content:"";
+  position:absolute;
+  right:-42px;
+  bottom:-42px;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  border:1px solid rgba(47,101,189,.14);
+  box-shadow:0 0 0 18px rgba(47,101,189,.035),0 0 0 36px rgba(47,101,189,.022);
+  pointer-events:none;
+}
+body .atlas-card h2{position:relative;z-index:1}
+body .atlas-card-meta{
+  position:relative;
+  z-index:1;
+  color:var(--accent);
+}
+body .evidence-grid{
+  position:relative;
+  gap:14px;
+  border:0;
+  background:linear-gradient(90deg,var(--accent),#7da4df,var(--gold)) top/100% 3px no-repeat;
+  padding-top:18px;
+}
+body .evidence-grid:before{
+  content:"EVIDENCE MATURITY";
+  position:absolute;
+  right:0;
+  top:-24px;
+  color:var(--muted);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.14em;
+}
+body .evidence-grid article{
+  position:relative;
+  border:1px solid var(--line);
+  box-shadow:0 10px 30px rgba(13,20,28,.055);
+}
+body .evidence-grid article b{
+  display:grid;
+  place-items:center;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  color:#fff;
+  background:linear-gradient(145deg,var(--accent),#2f65bd);
+  box-shadow:0 0 0 7px rgba(47,101,189,.08);
+}
+body .status-table{
+  overflow:hidden;
+  background:rgba(255,255,255,.76);
+  box-shadow:var(--shadow-soft);
+}
+body .status-table th{
+  color:#fff;
+  background:linear-gradient(135deg,#17324a,#102133);
+}
+body .status-table td:first-child{
+  border-left:3px solid rgba(47,101,189,.32);
+}
+body .dimension-row{
+  position:relative;
+  margin:0 -10px;
+  padding-left:12px;
+  padding-right:12px;
+  border-radius:2px;
+}
+body .dimension-row:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:18px;
+  bottom:18px;
+  width:3px;
+  background:linear-gradient(var(--accent),#7da4df);
+  opacity:.72;
+}
+body .verification-result{
+  background:
+    radial-gradient(circle at 75% 8%,rgba(47,101,189,.3),transparent 45%),
+    linear-gradient(155deg,#111c28,#091018 78%);
+  box-shadow:var(--shadow-strong);
+}
+body .result-number{
+  color:#fff;
+  text-shadow:0 0 40px rgba(125,164,223,.28);
+}
+body .format-grid{
+  gap:16px;
+  border:0;
+}
+body .format-grid article{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow-soft);
+}
+body .format-grid article:after{
+  content:"";
+  position:absolute;
+  right:-35px;
+  top:-35px;
+  width:105px;
+  height:105px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(47,101,189,.14),transparent 70%);
+}
+body .format-grid article.featured{
+  border-color:#c99b4f;
+  background:linear-gradient(145deg,#fffaf0,#fff);
+}
+body .curriculum-grid ol{
+  position:relative;
+  border-top:0;
+}
+body .curriculum-grid ol:before{
+  content:"";
+  position:absolute;
+  left:22px;
+  top:22px;
+  bottom:22px;
+  width:1px;
+  background:linear-gradient(#e3bd68,rgba(227,189,104,.15));
+}
+body .curriculum-grid li{
+  position:relative;
+  padding-left:8px;
+}
+body .curriculum-grid li>b{
+  position:relative;
+  z-index:1;
+  display:grid;
+  place-items:center;
+  width:40px;
+  height:40px;
+  border:1px solid rgba(227,189,104,.6);
+  border-radius:50%;
+  background:#17324a;
+}
+body .offer-grid{
+  gap:16px;
+  border:0;
+}
+body .offer-grid article{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow-soft);
+}
+body .offer-grid article:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:4px;
+  background:linear-gradient(90deg,var(--accent),#7da4df,var(--gold));
+}
+body .process-grid{
+  gap:12px;
+  border:0;
+}
+body .process-grid article{
+  position:relative;
+  overflow:hidden;
+  min-height:230px;
+  border:1px solid rgba(255,255,255,.2);
+  background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.015));
+}
+body .process-grid article b{
+  display:block;
+  font:500 50px/1 Georgia,serif;
+  color:#8fb1e4;
+  opacity:.9;
+}
+body .process-grid article:after{
+  content:"";
+  position:absolute;
+  right:-30px;
+  bottom:-30px;
+  width:95px;
+  height:95px;
+  border:1px solid rgba(143,177,228,.22);
+  transform:rotate(45deg);
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  body .atlas-card:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(13,20,28,.12)}
+  body .dimension-row:hover{background:rgba(223,232,246,.38)}
+  body .process-grid article:hover{transform:translateY(-4px);background:rgba(255,255,255,.09)}
+}
+@media(max-width:640px){
+  body .evidence-grid{gap:12px}
+  body .evidence-grid:before{display:none}
+  body .status-table{box-shadow:none}
+  body .dimension-row{margin:0}
+  body .format-grid,body .offer-grid,body .process-grid{gap:12px}
+  body .curriculum-grid ol:before{left:27px}
+  body .process-grid article{min-height:auto}
+}
+
+@media(max-width:640px){
+  body .status-table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
