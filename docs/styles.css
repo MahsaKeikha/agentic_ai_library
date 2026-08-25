@@ -503,3 +503,22 @@ body{
     background:rgba(255,255,255,.72);
   }
 }
+
+
+/* Shared system precedence over page level legacy colors */
+body .dark-band,body .dark-section,body .trust-hero,body .enterprise-hero,
+body .training-hero,body .curriculum-section,body .verification-method,body .registry-boundary{
+  background:
+    radial-gradient(circle at 88% 12%,rgba(47,101,189,.22),transparent 28rem),
+    linear-gradient(145deg,#111b27,#091018 72%);
+}
+body .hero-panel{
+  background:
+    radial-gradient(circle at 100% 0,rgba(47,101,189,.22),transparent 42%),
+    linear-gradient(155deg,#111c28,#091018 78%);
+}
+body .trust-grid article,body .evidence-grid article,body .principle-list article,
+body .offer-grid article,body .format-grid article,body .engagement-grid article,
+body .scorecard,body .lead-form,body .verification-form{
+  background-color:rgba(255,255,255,.68);
+}
