@@ -13,7 +13,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://multiagentaiatlas.com/verification.html">
 <link rel="stylesheet" href="styles.css?v=20260824.7">
-<link rel="stylesheet" href="verification.css?v=20260825-1">
+<link rel="stylesheet" href="verification.css?v=20260825-2">
 </head>
 <body class="verification-page">
 <header class="nav-shell"><nav class="nav container" aria-label="Primary navigation">
@@ -57,8 +57,8 @@
 <span>Failures contained</span>
 </div>
 </section>
-<section class="verification-shell container">
-<form id="verification-form" class="verification-form">
+<section class="verification-shell container result-pending" id="verification-shell">
+<form id="verification-form" class="verification-form" novalidate>
 <div class="system-field">
 <label for="system-name">Choose a repository to assess</label>
 <div class="system-select-wrap"><select id="system-name" name="system_name" required disabled><option value="">Loading all 170 repositories...</option></select></div>
@@ -77,10 +77,11 @@
 <div id="gate-list" class="gate-list"></div>
 <div class="form-actions">
 <button class="button primary verify-button" type="submit">Calculate verification result</button>
-<button class="button secondary" id="reset-verification" type="button">Reset</button>
+<button class="button secondary" id="reset-verification" type="button">Reset assessment</button>
 </div>
+<p class="verification-form-status" id="verification-form-status" role="status"></p>
 </form>
-<aside class="verification-result" id="verification-result" aria-live="polite">
+<aside class="verification-result" id="verification-result" aria-live="polite" hidden>
 <p class="result-kicker">VERIFICATION RESULT</p>
 <div class="result-number"><span id="verification-score">0</span><small>/100</small></div>
 <h2 id="verification-level">Not assessed</h2>
@@ -115,7 +116,7 @@
 <div><strong>Multi-Agent System Verification</strong><p>Created by Mahsa Keikha, PhD.</p></div>
 <div><a href="index.html">Home</a> · <a href="atlas.html">Atlas</a> · <a href="terms.html">Terms</a></div>
 </footer>
-<script src="verification.js?v=20260825-1"></script>
+<script src="verification.js?v=20260825-2"></script>
 <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b1823f8dc0c046e8888f7e27c0e8efc5"}'></script><!-- End Cloudflare Web Analytics -->
 <script src="navigation.js?v=20260824.1" defer></script>\n</body>
 </html>
