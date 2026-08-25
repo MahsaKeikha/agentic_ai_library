@@ -933,3 +933,8 @@ body .process-grid article:after{
 @media(max-width:640px){
   body .status-table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
 }
+
+
+/* Keep section labels clean and free of formulaic decorative marks */
+.eyebrow{gap:0}
+.eyebrow:before{display:none}
