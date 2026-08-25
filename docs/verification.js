@@ -15,6 +15,63 @@ const GATES=[
 {id:"containment",label:"Tested stop, rollback, or containment",help:"Operators can halt the system and limit damage when behavior fails."},
 {id:"claim_traceability",label:"Critical claim traceability",help:"High-impact claims can be traced to inspectable evidence."}];
 const evidenceLabels=["No evidence","Claim only","Documented","Repeatably tested","Independent or production evidence"];
+const README_URL="https://raw.githubusercontent.com/MahsaKeikha/agentic_ai_library/main/README.md";
+const DOMAIN_RANGES=[{min:1,max:30,name:"Executive and Strategy"},{min:31,max:40,name:"AI Engineering"},{min:41,max:50,name:"Software and Cloud"},{min:51,max:60,name:"Healthcare"},{min:61,max:70,name:"Neuroscience"},{min:71,max:80,name:"Robotics"},{min:81,max:90,name:"Science"},{min:91,max:100,name:"Education"},{min:101,max:110,name:"Legal and Compliance"},{min:111,max:120,name:"Manufacturing"},{min:121,max:130,name:"Marketing"},{min:131,max:140,name:"Creative and Media"},{min:141,max:150,name:"Public Sector"},{min:151,max:160,name:"Finance and Risk"},{min:161,max:170,name:"Personal Intelligence"}];
+const systemSelect=document.getElementById("system-name");
+const systemLoadStatus=document.getElementById("system-load-status");
+const selectedSystemRepo=document.getElementById("selected-system-repo");
+let atlasSystems=[];
+function parseAtlasSystems(markdown){
+const entries=[],seen=new Set();
+for(const line of markdown.split("\n")){
+const match=line.match(/^\|\s*\*\*(F\d{2,3})\*\*\s*\|\s*\*\*(.*?)\*\*\s*\|.*?\((https:\/\/github\.com\/MahsaKeikha\/[^)]+)\)/)||line.match(/^\|\s*(F\d{2,3})\s*\|\s*(.*?)\s*\|.*?\((https:\/\/github\.com\/MahsaKeikha\/[^)]+)\)/);
+if(!match)continue;
+const id=match[1].trim(),name=match[2].replace(/\*\*/g,"").trim(),repository=match[3].trim();
+if(seen.has(id))continue;
+seen.add(id);entries.push({id,name,repository});
+}
+return entries.sort((a,b)=>Number(a.id.slice(1))-Number(b.id.slice(1)));
+}
+function selectedSystem(){
+return atlasSystems.find(system=>systemSelect.value===system.id+" "+system.name);
+}
+function updateSelectedSystem(syncUrl=false){
+const system=selectedSystem();
+selectedSystemRepo.hidden=!system;
+if(system)selectedSystemRepo.href=system.repository;
+if(syncUrl){
+const url=new URL(location.href);
+if(system)url.searchParams.set("system",system.id+" "+system.name);else url.searchParams.delete("system");
+history.replaceState(null,"",url);
+}
+}
+async function loadAtlasSystems(preset){
+try{
+const response=await fetch(README_URL,{cache:"no-store"});
+if(!response.ok)throw new Error("Repository list unavailable");
+atlasSystems=parseAtlasSystems(await response.text());
+if(atlasSystems.length<150)throw new Error("Complete repository list unavailable");
+systemSelect.innerHTML='<option value="">Select a repository from F01 to F170</option>';
+for(const range of DOMAIN_RANGES){
+const group=document.createElement("optgroup");group.label=range.name;
+for(const system of atlasSystems.filter(item=>{const n=Number(item.id.slice(1));return n>=range.min&&n<=range.max})){
+const option=document.createElement("option");option.value=system.id+" "+system.name;option.textContent=system.id+" | "+system.name;group.appendChild(option);
+}
+systemSelect.appendChild(group);
+}
+systemSelect.disabled=false;
+systemLoadStatus.textContent=atlasSystems.length+" repositories available";
+const presetId=(preset||"").match(/F\d{2,3}/i)?.[0].toUpperCase();
+const initial=atlasSystems.find(system=>system.id===presetId)||atlasSystems.find(system=>(system.id+" "+system.name).toLowerCase()===(preset||"").toLowerCase());
+if(initial)systemSelect.value=initial.id+" "+initial.name;
+updateSelectedSystem(false);
+}catch(error){
+console.error(error);
+systemSelect.innerHTML='<option value="">Repository list could not be loaded</option>';
+systemLoadStatus.textContent="Repository list unavailable. Please refresh the page.";
+selectedSystemRepo.hidden=false;selectedSystemRepo.href="atlas.html";selectedSystemRepo.textContent="Open the 170 Systems Atlas";
+}
+}
 const dimensionList=document.getElementById("dimension-list");
 const gateList=document.getElementById("gate-list");
 const form=document.getElementById("verification-form");
@@ -46,7 +103,8 @@ document.getElementById("verification-result").dataset.copy=`${result.systemName
 }
 renderForm();
 const preset=new URLSearchParams(location.search).get("system");
-if(preset)document.getElementById("system-name").value=preset;
+loadAtlasSystems(preset);
+systemSelect.addEventListener("change",()=>updateSelectedSystem(true));
 form.addEventListener("submit",event=>{event.preventDefault();show(assess());document.getElementById("verification-result").scrollIntoView({behavior:"smooth",block:"start"})});
-document.getElementById("reset-verification").addEventListener("click",()=>{form.reset();if(preset)document.getElementById("system-name").value=preset;document.getElementById("verification-score").textContent="0";document.getElementById("verification-level").textContent="Not assessed";document.getElementById("verification-summary").textContent="Complete the assessment to see the evidence-adjusted score and gate status.";document.getElementById("gate-status").textContent="Hard gates not yet evaluated";document.getElementById("gate-status").className="gate-status";document.getElementById("dimension-breakdown").innerHTML=""});
+document.getElementById("reset-verification").addEventListener("click",()=>{const chosenSystem=systemSelect.value;form.reset();systemSelect.value=chosenSystem;updateSelectedSystem(false);document.getElementById("verification-score").textContent="0";document.getElementById("verification-level").textContent="Not assessed";document.getElementById("verification-summary").textContent="Complete the assessment to see the evidence-adjusted score and gate status.";document.getElementById("gate-status").textContent="Hard gates not yet evaluated";document.getElementById("gate-status").className="gate-status";document.getElementById("dimension-breakdown").innerHTML=""});
 document.getElementById("copy-verification").addEventListener("click",async event=>{const text=document.getElementById("verification-result").dataset.copy;if(!text)return;try{await navigator.clipboard.writeText(text);event.currentTarget.textContent="Result copied";setTimeout(()=>event.currentTarget.textContent="Copy result",1600)}catch{event.currentTarget.textContent="Copy unavailable"}});
