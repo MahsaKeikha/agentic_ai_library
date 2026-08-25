@@ -929,3 +929,7 @@ body .process-grid article:after{
   body .curriculum-grid ol:before{left:27px}
   body .process-grid article{min-height:auto}
 }
+
+@media(max-width:640px){
+  body .status-table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
