@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Multi-Agent System Verification | Multi-Agent AI Atlas</title>
+<meta name="description" content="Evaluate a multi-agent AI system across eight weighted dimensions, evidence strength, and six mandatory governance gates.">
+<meta property="og:title" content="Multi-Agent System Verification">
+<meta property="og:description" content="A transparent, evidence-based readiness assessment for multi-agent AI systems.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://multiagentaiatlas.com/verification.html">
+<meta property="og:image" content="https://multiagentaiatlas.com/atlas-demo-lab-social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://multiagentaiatlas.com/verification.html">
+<link rel="stylesheet" href="styles.css?v=20260824-1">
+<link rel="stylesheet" href="verification.css?v=20260824-1">
+</head>
+<body class="verification-page">
+<header class="nav-shell">
+<nav class="nav container">
+<a class="brand" href="index.html"><span class="brand-mark">A</span><span>Multi-Agent AI Atlas</span></a>
+<div class="nav-links">
+<a href="atlas.html">170 Systems</a>
+<a href="flagships.html">10 Flagships</a>
+<a href="demo-lab.html">Demo Lab</a>
+<a class="active-link" href="verification.html">Verify</a>
+<a href="evidence.html">Evidence</a>
+<a href="services.html">Services</a>
+<a class="nav-cta" href="index.html#inquiry">Enterprise Inquiry</a>
+</div>
+<details class="mobile-menu">
+<summary aria-label="Open website navigation"><span>MENU</span><i aria-hidden="true"></i></summary>
+<div class="mobile-menu-panel">
+<a href="index.html">Home</a>
+<a href="atlas.html">170 Systems</a>
+<a href="flagships.html">10 Flagships</a>
+<a href="demo-lab.html">Interactive Demo Lab</a>
+<a href="verification.html">Verification Standard</a>
+<a href="evidence.html">Evidence and Maturity</a>
+<a href="services.html">Enterprise Services</a>
+<a class="mobile-partner" href="index.html#inquiry">Enterprise Inquiry</a>
+</div>
+</details>
+</nav>
+</header>
+<main>
+<section class="verification-hero container">
+<div>
+<p class="eyebrow">MULTI-AGENT SYSTEM VERIFICATION / V0.1</p>
+<h1>Trust should be measured against evidence.</h1>
+<p class="verification-lead">Evaluate demonstrated performance, inspect non-negotiable controls, and produce a consistent readiness classification. This public tool is a structured self-assessment, not an independent certification.</p>
+</div>
+<div class="verification-principles">
+<span>Evidence before claims</span>
+<span>Human authority preserved</span>
+<span>Least privilege enforced</span>
+<span>Failures contained</span>
+</div>
+</section>
+<section class="verification-shell container">
+<form id="verification-form" class="verification-form">
+<div class="system-field">
+<label for="system-name">System being assessed</label>
+<input id="system-name" name="system_name" type="text" maxlength="160" placeholder="Enter a system name" required>
+</div>
+<div class="section-heading">
+<div><p class="eyebrow">PART 01</p><h2>Weighted dimensions</h2></div>
+<p>Score what can be demonstrated today. Then select the strongest evidence available for that score.</p>
+</div>
+<div id="dimension-list" class="dimension-list"></div>
+<div class="section-heading gates-heading">
+<div><p class="eyebrow">PART 02</p><h2>Mandatory gates</h2></div>
+<p>Every applicable gate must pass before a system can reach Verified or Gold status.</p>
+</div>
+<div id="gate-list" class="gate-list"></div>
+<div class="form-actions">
+<button class="button primary verify-button" type="submit">Calculate verification result</button>
+<button class="button secondary" id="reset-verification" type="button">Reset</button>
+</div>
+</form>
+<aside class="verification-result" id="verification-result" aria-live="polite">
+<p class="result-kicker">VERIFICATION RESULT</p>
+<div class="result-number"><span id="verification-score">0</span><small>/100</small></div>
+<h2 id="verification-level">Not assessed</h2>
+<p id="verification-summary">Complete the assessment to see the evidence-adjusted score and gate status.</p>
+<div class="gate-status" id="gate-status">Hard gates not yet evaluated</div>
+<div id="dimension-breakdown" class="dimension-breakdown"></div>
+<div class="result-actions">
+<button class="button secondary" id="copy-verification" type="button">Copy result</button>
+<a class="button primary" href="index.html#inquiry">Request independent review</a>
+</div>
+<p class="result-note">Results are generated locally in your browser. This page does not upload assessment responses.</p>
+</aside>
+</section>
+<section class="verification-method">
+<div class="container method-grid">
+<div><p class="eyebrow light">HOW THE STANDARD WORKS</p><h2>High scores cannot substitute for missing controls.</h2></div>
+<div>
+<p>Eight dimensions produce the weighted score. Evidence strength can cap unsupported ratings. Six hard gates then determine whether the system is eligible for Verified or Gold status.</p>
+<ul>
+<li>Gold: 90 to 100 with all applicable gates passed</li>
+<li>Verified: 80 to 89.99 with all applicable gates passed</li>
+<li>Assessed: 65 to 79.99, or a higher score with a failed gate</li>
+<li>Developing: 40 to 64.99, or three or more failed gates</li>
+<li>Not Ready: below 40</li>
+</ul>
+<a class="text-link light-link" href="evidence.html">Read the evidence and maturity boundaries →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer container">
+<div><strong>Multi-Agent System Verification</strong><p>Created by Mahsa Keikha, PhD.</p></div>
+<div><a href="index.html">Home</a> · <a href="atlas.html">Atlas</a> · <a href="terms.html">Terms</a></div>
+</footer>
+<script src="verification.js?v=20260824-1"></script>
+<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b1823f8dc0c046e8888f7e27c0e8efc5"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
