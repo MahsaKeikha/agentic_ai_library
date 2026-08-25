@@ -268,3 +268,42 @@ table{max-width:100%}
   .record-meta span,.record-badge{line-height:1.4}
   h1,h2,h3,p,li,a,button{overflow-wrap:anywhere}
 }
+
+
+/* High contrast text system for every dark surface */
+:root{
+  --on-dark:#ffffff;
+  --on-dark-muted:#d6dde5;
+  --on-dark-link:#d7e5ff;
+  --on-dark-line:#708096;
+}
+.dark-band,.dark-section,.hero-panel,.trust-hero,.enterprise-hero,.training-hero,
+.curriculum-section,.verification-result,.verification-method,.registry-boundary{
+  color:var(--on-dark);
+}
+.dark-band p,.dark-section p,.hero-panel p,.trust-hero p,.enterprise-hero p,.training-hero p,
+.curriculum-section p,.curriculum-section li span,.verification-result>p,
+.verification-method p,.verification-method li,.registry-boundary p{
+  color:var(--on-dark-muted)!important;
+}
+.dark-band .eyebrow.light,.dark-section .eyebrow.light,.hero-panel .panel-label,
+.trust-hero .eyebrow.light,.enterprise-hero .eyebrow.light,.training-hero .eyebrow.light,
+.verification-method .eyebrow.light,.registry-boundary .eyebrow.light{
+  color:#c9d8f2!important;
+}
+.light-link,
+.dark-band a:not(.button),.dark-section a:not(.button),.hero-panel a:not(.button),
+.trust-hero a:not(.button),.enterprise-hero a:not(.button),.training-hero a:not(.button),
+.curriculum-section a:not(.button),.verification-result a:not(.button),
+.verification-method a:not(.button),.registry-boundary a:not(.button){
+  color:var(--on-dark-link)!important;
+  text-decoration-color:currentColor;
+  text-underline-offset:4px;
+}
+.light-link:hover,.light-link:focus-visible,
+.dark-band a:not(.button):hover,.dark-section a:not(.button):hover,
+.trust-hero a:not(.button):hover,.enterprise-hero a:not(.button):hover,
+.training-hero a:not(.button):hover,.curriculum-section a:not(.button):hover,
+.verification-method a:not(.button):hover,.registry-boundary a:not(.button):hover{
+  color:var(--on-dark)!important;
+}
