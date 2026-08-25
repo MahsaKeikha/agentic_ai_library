@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://multiagentaiatlas.com/schemas/verification-record-0.2.json",
+  "title": "Multi-Agent System Verification Record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.2"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "claim_boundary": {
+      "type": "string"
+    },
+    "status_definitions": {
+      "type": "object"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "record_id",
+          "system_id",
+          "system_name",
+          "repository",
+          "assessed_commit",
+          "record_type",
+          "status",
+          "published_at",
+          "score",
+          "level",
+          "certification_eligibility",
+          "assessor",
+          "dimensions",
+          "hard_gates",
+          "public_evidence",
+          "missing_evidence",
+          "history"
+        ],
+        "properties": {
+          "record_id": {
+            "type": "string",
+            "pattern": "^MASVS-"
+          },
+          "system_id": {
+            "type": "string",
+            "pattern": "^F[0-9]{2,3}$"
+          },
+          "system_name": {
+            "type": "string"
+          },
+          "system_version": {
+            "type": "string"
+          },
+          "repository": {
+            "type": "string",
+            "format": "uri"
+          },
+          "assessed_commit": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          },
+          "record_type": {
+            "enum": [
+              "evidence_intake",
+              "assessment",
+              "reassessment",
+              "independent_review"
+            ]
+          },
+          "status": {
+            "enum": [
+              "evidence_intake",
+              "assessed",
+              "verified",
+              "independent_review_pending",
+              "suspended",
+              "expired"
+            ]
+          },
+          "badge_label": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string"
+          },
+          "reassessment_due": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "score": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "level": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "certification_eligibility": {
+            "enum": [
+              "not_evaluated",
+              "eligible",
+              "ineligible",
+              "expired",
+              "suspended"
+            ]
+          },
+          "assessor": {
+            "type": "object",
+            "required": [
+              "type",
+              "name",
+              "independent"
+            ]
+          },
+          "dimensions": {
+            "type": "object"
+          },
+          "hard_gates": {
+            "type": "object"
+          },
+          "public_evidence": {
+            "type": "array"
+          },
+          "missing_evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "history": {
+            "type": "array"
+          }
+        }
+      }
+    }
+  }
+}
