@@ -352,13 +352,6 @@ body{
   align-items:center;
   gap:10px;
 }
-.eyebrow:before{
-  content:"";
-  width:28px;
-  height:2px;
-  flex:0 0 auto;
-  background:currentColor;
-}
 .hero h1,.section h2,.dark-section h2,.dark-band h2,.cta-section h2,
 .atlas-hero h1,.verification-hero h1,.registry-hero h1{
   text-wrap:balance;
@@ -496,7 +489,6 @@ body{
     left:-120px;
   }
   .eyebrow{gap:8px}
-  .eyebrow:before{width:20px}
   .hero-panel{box-shadow:0 18px 42px rgba(8,18,30,.16)}
   .trust-grid article,.evidence-grid article,.principle-list article,.offer-grid article,
   .format-grid article,.engagement-grid article,.scorecard,.lead-form,.verification-form{
@@ -935,6 +927,15 @@ body .process-grid article:after{
 }
 
 
-/* Keep section labels clean and free of formulaic decorative marks */
-.eyebrow{gap:0}
-.eyebrow:before{display:none}
+
+
+/* Definitive sitewide rule: section labels never use leading decorative lines */
+body .eyebrow{display:block!important;gap:0!important}
+body .eyebrow:before,body .eyebrow::before{
+  content:none!important;
+  display:none!important;
+  width:0!important;
+  height:0!important;
+  border:0!important;
+  background:none!important;
+}
