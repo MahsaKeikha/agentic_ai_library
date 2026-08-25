@@ -248,3 +248,23 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{
   }
   .footer{font-size:14px;line-height:1.65}
 }
+
+
+/* Final production safeguards for tablet and mobile presentation */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img,svg,video,canvas{max-width:100%}
+table{max-width:100%}
+@media(max-width:1180px){
+  .nav-links{display:none}
+  .mobile-menu{display:block}
+  .nav{position:relative}
+}
+@media(max-width:640px){
+  .nav-shell{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+  .mobile-menu-panel{max-height:calc(100vh - 90px);overflow-y:auto;overscroll-behavior:contain}
+  .status-table,.verification-form,.verification-result,.scorecard{max-width:100%}
+  .status-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .record-meta,.record-links,.hero-actions,.result-actions{align-items:stretch}
+  .record-meta span,.record-badge{line-height:1.4}
+  h1,h2,h3,p,li,a,button{overflow-wrap:anywhere}
+}
