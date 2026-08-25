@@ -75,6 +75,9 @@ selectedSystemRepo.hidden=false;selectedSystemRepo.href="atlas.html";selectedSys
 const dimensionList=document.getElementById("dimension-list");
 const gateList=document.getElementById("gate-list");
 const form=document.getElementById("verification-form");
+const verificationShell=document.getElementById("verification-shell");
+const formStatus=document.getElementById("verification-form-status");
+const verificationResult=document.getElementById("verification-result");
 function clamp(value,min,max){return Math.min(max,Math.max(min,Number(value)||0))}
 function adjustedScore(score,evidence){let value=clamp(score,0,5),level=clamp(evidence,0,4);if(level<2&&value>3)value=3;if(level<3&&value>4)value=4;return value}
 function baseLevel(score){if(score>=90)return"Gold";if(score>=80)return"Verified";if(score>=65)return"Assessed";if(score>=40)return"Developing";return"Not Ready"}
@@ -92,6 +95,10 @@ else if(failed.length&&["Gold","Verified"].includes(level))level="Assessed";
 return{systemName:document.getElementById("system-name").value.trim()||"Unnamed system",score,level,details,failed};
 }
 function show(result){
+verificationResult.hidden=false;
+verificationShell.classList.remove("result-pending");
+formStatus.className="verification-form-status is-success";
+formStatus.textContent="Verification result calculated for "+result.systemName+".";
 document.getElementById("verification-score").textContent=result.score;
 document.getElementById("verification-level").textContent=result.level;
 document.getElementById("verification-summary").textContent=`${result.systemName} received an evidence-adjusted score of ${result.score}. This self-assessment indicates ${result.level} readiness under version 0.1 of the public standard.`;
@@ -105,6 +112,27 @@ renderForm();
 const preset=new URLSearchParams(location.search).get("system");
 loadAtlasSystems(preset);
 systemSelect.addEventListener("change",()=>updateSelectedSystem(true));
-form.addEventListener("submit",event=>{event.preventDefault();show(assess());document.getElementById("verification-result").scrollIntoView({behavior:"smooth",block:"start"})});
-document.getElementById("reset-verification").addEventListener("click",()=>{const chosenSystem=systemSelect.value;form.reset();systemSelect.value=chosenSystem;updateSelectedSystem(false);document.getElementById("verification-score").textContent="0";document.getElementById("verification-level").textContent="Not assessed";document.getElementById("verification-summary").textContent="Complete the assessment to see the evidence-adjusted score and gate status.";document.getElementById("gate-status").textContent="Hard gates not yet evaluated";document.getElementById("gate-status").className="gate-status";document.getElementById("dimension-breakdown").innerHTML=""});
+form.addEventListener("submit",event=>{
+event.preventDefault();
+formStatus.className="verification-form-status";
+formStatus.textContent="";
+if(!selectedSystem()){
+formStatus.className="verification-form-status is-error";
+formStatus.textContent="Choose one repository from the F01 to F170 list before calculating.";
+systemSelect.focus();
+systemSelect.scrollIntoView({behavior:"smooth",block:"center"});
+return;
+}
+const invalidScore=DIMENSIONS.map(d=>document.getElementById("score-"+d.id)).find(input=>input.value===""||Number(input.value)<0||Number(input.value)>5);
+if(invalidScore){
+formStatus.className="verification-form-status is-error";
+formStatus.textContent="Every dimension needs a score from 0 to 5.";
+invalidScore.focus();
+invalidScore.scrollIntoView({behavior:"smooth",block:"center"});
+return;
+}
+show(assess());
+requestAnimationFrame(()=>verificationResult.scrollIntoView({behavior:"smooth",block:"start"}));
+});
+document.getElementById("reset-verification").addEventListener("click",()=>{const chosenSystem=systemSelect.value;form.reset();systemSelect.value=chosenSystem;updateSelectedSystem(false);verificationResult.hidden=true;verificationShell.classList.add("result-pending");formStatus.className="verification-form-status";formStatus.textContent="Assessment reset. Your selected repository was preserved.";document.getElementById("verification-score").textContent="0";document.getElementById("verification-level").textContent="Not assessed";document.getElementById("verification-summary").textContent="Complete the assessment to see the evidence-adjusted score and gate status.";document.getElementById("gate-status").textContent="Hard gates not yet evaluated";document.getElementById("gate-status").className="gate-status";document.getElementById("dimension-breakdown").innerHTML=""});
 document.getElementById("copy-verification").addEventListener("click",async event=>{const text=document.getElementById("verification-result").dataset.copy;if(!text)return;try{await navigator.clipboard.writeText(text);event.currentTarget.textContent="Result copied";setTimeout(()=>event.currentTarget.textContent="Copy result",1600)}catch{event.currentTarget.textContent="Copy unavailable"}});
