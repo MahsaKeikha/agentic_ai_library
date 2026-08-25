@@ -1000,3 +1000,26 @@ body .footer:before{content:none!important;display:none!important}
     box-shadow:var(--shadow-soft)!important;
   }
 }
+
+/* Unified professional navigation */
+.nav{overflow:visible}
+.nav-links{gap:22px}
+.nav-links>a,.nav-dropdown>summary{font-size:14px;font-weight:700;letter-spacing:.005em}
+.nav-dropdown{position:relative}
+.nav-dropdown>summary{display:flex;align-items:center;gap:6px;min-height:72px;color:#343b44;cursor:pointer;list-style:none}
+.nav-dropdown>summary::-webkit-details-marker{display:none}
+.nav-dropdown>summary span{color:#6e7b8a;font-size:15px;transition:transform .2s ease}
+.nav-dropdown[open]>summary span{transform:rotate(180deg)}
+.nav-dropdown>summary:after{content:"";position:absolute;left:0;right:100%;bottom:19px;height:2px;background:var(--accent);transition:right .2s ease}
+.nav-dropdown:hover>summary:after,.nav-dropdown[open]>summary:after,.nav-dropdown.group-active>summary:after{right:0}
+.nav-dropdown.group-active>summary{color:var(--accent)}
+.nav-dropdown-panel{position:absolute;z-index:100;top:62px;left:-18px;display:grid;min-width:220px;padding:10px;border:1px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:0 22px 55px rgba(13,20,28,.18)}
+.nav-dropdown-panel a{display:block;padding:12px 14px;border-radius:9px;color:var(--ink);text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}
+.nav-dropdown-panel a:hover,.nav-dropdown-panel a.active-link{background:var(--soft);color:var(--accent)}
+.nav-links>.active-link{color:var(--accent)}
+.nav-links>.nav-cta.active-link{color:#fff;box-shadow:0 0 0 3px rgba(25,170,200,.18)}
+.mobile-menu-label{padding:14px 12px 7px;color:#748091;font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.mobile-menu-panel a.active-link{background:var(--soft);color:var(--accent)}
+.mobile-menu-panel .mobile-partner.active-link{background:var(--accent);color:#fff}
+@media(max-width:1180px){.nav-links{gap:16px}.nav-links>a,.nav-dropdown>summary{font-size:13px}}
+@media(max-width:980px){.nav-links{display:none}.mobile-menu{display:block}}
