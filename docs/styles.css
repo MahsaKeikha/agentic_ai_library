@@ -952,3 +952,51 @@ body .score-legend span{
 body .score-legend span:last-child{border-bottom:0}
 body .score-legend i{display:none!important;width:0!important;height:0!important}
 body .footer:before{content:none!important;display:none!important}
+
+
+/* Static information cards must not imitate clickable controls */
+@media(hover:hover){
+  body .service-grid article:hover{
+    transform:none!important;
+    box-shadow:none!important;
+    background:transparent!important;
+    color:inherit!important;
+    border-color:var(--line)!important;
+  }
+  body .dark-section .service-grid article:hover{
+    background:transparent!important;
+    color:#fff!important;
+    border-color:rgba(255,255,255,.2)!important;
+  }
+  body .dark-section .service-grid article:hover p{color:#d6dde5!important}
+  body .trust-grid article:hover,
+  body .evidence-grid article:hover,
+  body .principle-list article:hover,
+  body .offer-grid article:hover,
+  body .format-grid article:hover,
+  body .engagement-grid article:hover{
+    transform:none!important;
+    box-shadow:var(--shadow-soft)!important;
+    background-color:rgba(255,255,255,.68)!important;
+    border-color:var(--line)!important;
+    color:var(--ink)!important;
+  }
+  body .format-grid article.featured:hover{
+    background:linear-gradient(145deg,#fffaf0,#fff)!important;
+    border-color:#c99b4f!important;
+  }
+  body .process-grid article:hover{
+    transform:none!important;
+    box-shadow:none!important;
+    background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.015))!important;
+    color:#fff!important;
+    border-color:rgba(255,255,255,.2)!important;
+  }
+  body .process-grid article:hover p{color:#d6dde5!important}
+  body .review-callout:hover{
+    transform:none!important;
+    background:linear-gradient(135deg,#fff,rgba(223,232,246,.55))!important;
+    border-color:var(--line)!important;
+    box-shadow:var(--shadow-soft)!important;
+  }
+}
