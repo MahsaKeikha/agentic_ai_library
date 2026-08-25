@@ -1,0 +1,166 @@
+{
+  "record_id": "MASVS-F09-2026-08-24-REASSESSMENT-01",
+  "system_id": "F09",
+  "system_name": "Agentic AI Safety",
+  "system_version": "least privilege and audit v0.1",
+  "repository": "https://github.com/MahsaKeikha/agentic_ai_safety",
+  "assessed_commit": "ee839a22508779c34a93afc8ad7132e834d8dd41",
+  "record_type": "reassessment",
+  "status": "assessed",
+  "badge_label": "Assessed, All Hard Gates Passed",
+  "published_at": "2026-08-24",
+  "reassessment_due": "2026-11-24",
+  "score": 77.68,
+  "level": "Assessed",
+  "certification_eligibility": "ineligible",
+  "assessor": {
+    "type": "project_owner_reassessment",
+    "name": "Mahsa Keikha, PhD",
+    "independent": false
+  },
+  "dimensions": {
+    "reliability": {
+      "score": 4,
+      "evidence_level": 3,
+      "status": "repeatably_tested",
+      "weighted_points": 14.4
+    },
+    "safety": {
+      "score": 3.8,
+      "evidence_level": 3,
+      "status": "repeatably_tested_with_scope_limits",
+      "weighted_points": 13.68
+    },
+    "evidence": {
+      "score": 3.5,
+      "evidence_level": 3,
+      "status": "test_artifacts_published",
+      "weighted_points": 8.4
+    },
+    "human_oversight": {
+      "score": 4.5,
+      "evidence_level": 3,
+      "status": "release_gate_repeatably_tested",
+      "weighted_points": 12.6
+    },
+    "failure_handling": {
+      "score": 4,
+      "evidence_level": 3,
+      "status": "fail_closed_paths_tested",
+      "weighted_points": 9.6
+    },
+    "observability": {
+      "score": 4,
+      "evidence_level": 3,
+      "status": "hash_chained_audit_tested",
+      "weighted_points": 8
+    },
+    "security": {
+      "score": 4,
+      "evidence_level": 3,
+      "status": "role_bound_permissions_tested",
+      "weighted_points": 8
+    },
+    "interoperability": {
+      "score": 2.5,
+      "evidence_level": 2,
+      "status": "interfaces_documented_not_protocol_verified",
+      "weighted_points": 3
+    }
+  },
+  "hard_gates": {
+    "human_owner": {
+      "status": "pass_documented",
+      "evidence": "Project owner and human release authority documented."
+    },
+    "consequential_approval": {
+      "status": "pass_tested",
+      "evidence": "Default and prompt-bypass tests prove no approval marker is created without explicit ship authorization."
+    },
+    "least_privilege": {
+      "status": "pass_tested",
+      "evidence": "Role-bound memory permissions deny unauthorized operations before execution and record denials."
+    },
+    "audit_trail": {
+      "status": "pass_tested",
+      "evidence": "Append-only JSONL records use sequence and SHA-256 hash chaining; mutation is detected by verification tests."
+    },
+    "containment": {
+      "status": "pass_tested",
+      "evidence": "Missing brief and forced agent failure stop downstream execution."
+    },
+    "claim_traceability": {
+      "status": "pass_scoped",
+      "evidence": "Claims trace to a pinned commit, CI run, test source, held-out suite, and workflow artifacts."
+    }
+  },
+  "public_evidence": [
+    {
+      "type": "ci",
+      "label": "Eleven deterministic tests and held-out suite passed on Python 3.10, 3.11, and 3.12",
+      "url": "https://github.com/MahsaKeikha/agentic_ai_safety/actions/runs/32801570480"
+    },
+    {
+      "type": "permissions",
+      "label": "Role-bound permission enforcement",
+      "url": "https://github.com/MahsaKeikha/agentic_ai_safety/blob/ee839a22508779c34a93afc8ad7132e834d8dd41/security/permissions.py"
+    },
+    {
+      "type": "audit",
+      "label": "Hash-chained append-only audit implementation",
+      "url": "https://github.com/MahsaKeikha/agentic_ai_safety/blob/ee839a22508779c34a93afc8ad7132e834d8dd41/audit.py"
+    },
+    {
+      "type": "tests",
+      "label": "Permission denial and audit tamper-detection tests",
+      "url": "https://github.com/MahsaKeikha/agentic_ai_safety/blob/ee839a22508779c34a93afc8ad7132e834d8dd41/tests/test_workflow.py"
+    },
+    {
+      "type": "heldout",
+      "label": "Four of four held-out structural control-path scenarios passed",
+      "url": "https://github.com/MahsaKeikha/agentic_ai_safety/tree/ee839a22508779c34a93afc8ad7132e834d8dd41/benchmarks"
+    }
+  ],
+  "verified_facts": [
+    "Each agent receives a role-bound memory interface with an explicit action allowlist.",
+    "Unauthorized operations are denied before execution and recorded in the audit trail.",
+    "Every audit record includes a sequence, UTC timestamp, actor, action, target, outcome, previous hash, and SHA-256 record hash.",
+    "Audit verification detects a modified record while preserving the original hash.",
+    "Eleven deterministic tests pass across Python 3.10, 3.11, and 3.12.",
+    "Four held-out structural control-path scenarios pass in every CI matrix job.",
+    "All six hard gates pass within the disclosed reference-implementation scope."
+  ],
+  "missing_evidence": [
+    "The audit is tamper-evident on the local filesystem, not immutable or externally anchored.",
+    "The held-out suite tests structural control paths, not semantic hazard recall or model robustness.",
+    "No protocol-level interoperability test has been completed.",
+    "No named independent assessment has been completed.",
+    "No production deployment evidence is claimed."
+  ],
+  "next_actions": [
+    "Add semantic safety cases with explicit expected outcomes and scoring rubrics.",
+    "Add a protocol-neutral assessment manifest and interoperability contract tests.",
+    "Add regression thresholds for semantic safety performance.",
+    "Anchor signed audit checkpoints in protected external storage for production use.",
+    "Seek named independent review after the score reaches the Verified threshold."
+  ],
+  "history": [
+    {
+      "date": "2026-08-24",
+      "event": "Initial evidence intake published",
+      "record_id": "MASVS-F09-2026-08-24-INTAKE",
+      "status": "evidence_intake"
+    },
+    {
+      "date": "2026-08-24",
+      "event": "First scored assessment published at 72.68",
+      "record_id": "MASVS-F09-2026-08-24-ASSESSMENT",
+      "status": "assessed"
+    },
+    {
+      "date": "2026-08-24",
+      "event": "Least privilege and hash-chained audit gates passed; score updated to 77.68",
+      "status": "assessed"
+    }
+  ]
+}
