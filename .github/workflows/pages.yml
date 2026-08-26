@@ -26,6 +26,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Build and verify handbook showcase image
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat docs/books/showcase-source/chunk-*.txt | tr -d '\n\r ' | base64 -d > docs/books/handbook-series-showcase.webp
+          echo "2be904f9cd03b2220201c345e419cdddd16885f4f3f30f204e96316d550b0e30  docs/books/handbook-series-showcase.webp" | sha256sum -c -
+          test "$(wc -c < docs/books/handbook-series-showcase.webp)" -gt 50000
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs
