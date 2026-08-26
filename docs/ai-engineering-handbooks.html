@@ -22,7 +22,7 @@ main{background:#061522;color:#f4f7fb;min-height:calc(100vh - 72px);padding:34px
 <p class="visually-hidden">Three volumes covering AI foundations, agentic AI and engineering practice, production AI systems, specialized agents, and multi-agent architecture.</p>
 <section class="showcase-shell" aria-label="AI Engineering Handbook Series">
 <div class="showcase-wrap" id="showcaseWrap">
-<div class="showcase-loading" id="showcaseLoading">Loading AI Engineering Handbook Series...</div>
+<div class="showcase-loading">Loading AI Engineering Handbook Series...</div>
 <div class="showcase-error">The handbook showcase could not be loaded. Please refresh the page.</div>
 <img id="handbookShowcase" width="1034" height="618" alt="AI Engineering Handbook Series showing Volume 1 Foundations and Core AI Components, Volume 2 Agentic AI and Engineering Practice, and Volume 3 Production AI and Multi-Agent Architecture">
 <a class="hotspot book1-link" href="https://a.co/d/0awLaJI1" target="_blank" rel="noopener" aria-label="Buy AI Engineering Handbook Book 1 on Amazon">Buy Book 1 on Amazon</a>
@@ -34,11 +34,16 @@ main{background:#061522;color:#f4f7fb;min-height:calc(100vh - 72px);padding:34px
 <script src="navigation.js?v=20260826.1" defer></script>
 <script>
 (()=>{
-const files=[1,2,3,4,5].map(n=>`books/handbook-series-image/chunk-${String(n).padStart(2,'0')}.txt?v=20260826.10`);
+const files=[1,2,3,4,5].map(n=>`books/handbook-series-image/chunk-${String(n).padStart(2,'0')}.txt?v=20260826.11`);
 const wrap=document.getElementById('showcaseWrap');
 const img=document.getElementById('handbookShowcase');
 Promise.all(files.map(url=>fetch(url,{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error(`Failed to load ${url}`);return response.text();})))
-.then(parts=>{img.onload=()=>wrap.classList.add('loaded');img.onerror=()=>wrap.classList.add('failed');img.src='data:image/webp;base64,'+parts.join('').replace(/\s/g,'');})
+.then(parts=>{
+  const cleaned=parts.map((part,index)=>{const value=part.replace(/\s/g,'');return index===1?value.slice(0,-1):value;}).join('');
+  img.onload=()=>wrap.classList.add('loaded');
+  img.onerror=()=>wrap.classList.add('failed');
+  img.src='data:image/webp;base64,'+cleaned;
+})
 .catch(()=>wrap.classList.add('failed'));
 })();
 </script>
