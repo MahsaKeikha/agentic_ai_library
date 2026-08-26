@@ -8,18 +8,45 @@
 <link rel="canonical" href="https://multiagentaiatlas.com/ai-engineering-handbooks.html">
 <link rel="stylesheet" href="styles.css?v=20260824.7">
 <style>
-main{min-height:calc(100vh - 72px);padding:28px 0 58px;background:#061522;color:#f4f7fb}
-.showcase-shell{width:min(1100px,calc(100% - 28px));margin:0 auto}
-.showcase-wrap{position:relative;width:100%;max-width:1034px;aspect-ratio:1034/618;margin:0 auto;overflow:hidden;border-radius:22px;background:#061522;box-shadow:0 26px 72px rgba(0,0,0,.34)}
-.showcase-wrap img{display:block;width:100%;height:100%;object-fit:contain}
-.hotspot{position:absolute;z-index:2;display:block;border-radius:7px;background:transparent;text-indent:-9999px;overflow:hidden;cursor:pointer}
-.hotspot:hover{background:rgba(255,255,255,.045)}
-.hotspot:focus-visible{outline:3px solid #fff;outline-offset:3px;background:rgba(255,255,255,.06)}
-.book1-link{left:10.735%;top:92.233%;width:19.245%;height:5.663%}
-.book2-link{left:39.749%;top:92.233%;width:19.149%;height:5.663%}
+:root{
+  --page:#061522;
+  --panel:#081a29;
+  --panel-deep:#06131f;
+  --text:#f4f7fb;
+  --muted:#a9b8c7;
+  --line:rgba(149,180,207,.16);
+  --gold:#d49b38;
+  --teal:#55c9c2;
+}
+main{min-height:calc(100vh - 72px);padding:30px 0 70px;background:radial-gradient(circle at 50% 0,rgba(21,67,102,.20),transparent 34%),var(--page);color:var(--text)}
+.handbook-shell{width:min(1120px,calc(100% - 32px));margin:0 auto}
+.hero-panel{overflow:hidden;border:1px solid var(--line);border-radius:26px 26px 0 0;background:#061522;box-shadow:0 28px 80px rgba(0,0,0,.30)}
+.hero-crop{position:relative;width:100%;aspect-ratio:1034/430;overflow:hidden;background:#061522}
+.hero-crop img{position:absolute;inset:0 auto auto 0;width:100%;height:auto;display:block}
+.details-panel{border:1px solid var(--line);border-top:0;border-radius:0 0 26px 26px;background:linear-gradient(180deg,rgba(8,26,41,.98),rgba(5,17,28,.99));padding:32px 34px 34px;box-shadow:0 30px 80px rgba(0,0,0,.24)}
+.book-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.book-card{display:flex;min-height:255px;flex-direction:column;padding:24px 22px 22px;border:1px solid rgba(155,183,207,.14);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.012));text-align:left}
+.book-card:hover{border-color:rgba(155,183,207,.24);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.015))}
+.volume-row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.volume-dot{width:7px;height:7px;border-radius:50%;background:#8da7bd;box-shadow:0 0 0 4px rgba(141,167,189,.08)}
+.book-card:nth-child(2) .volume-dot{background:var(--teal);box-shadow:0 0 0 4px rgba(85,201,194,.08)}
+.book-card:nth-child(3) .volume-dot{background:var(--gold);box-shadow:0 0 0 4px rgba(212,155,56,.08)}
+.volume-label{font-size:12px;font-weight:750;letter-spacing:.11em;text-transform:uppercase;color:#93a7b8}
+.book-card h2{margin:0 0 7px;font-family:inherit;font-size:19px;line-height:1.25;font-weight:700;color:#f6f8fb}
+.book-subtitle{margin:0 0 13px;font-size:14px;line-height:1.4;font-weight:600;color:#c8d5df}
+.book-description{margin:0 0 22px;color:var(--muted);font-size:13.5px;line-height:1.58}
+.card-action{margin-top:auto}
+.book-button,.soon-button{width:100%;min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:9px;font-size:13.5px;font-weight:700;letter-spacing:.01em;text-decoration:none}
+.book-button{border:1px solid rgba(197,216,232,.30);background:rgba(255,255,255,.035);color:#f6f8fb;transition:transform .16s ease,border-color .16s ease,background .16s ease}
+.book-button:hover{transform:translateY(-1px);border-color:rgba(197,216,232,.48);background:rgba(255,255,255,.06)}
+.book-button:focus-visible{outline:3px solid rgba(255,255,255,.75);outline-offset:3px}
+.book-button .arrow{font-size:15px;opacity:.8}
+.soon-button{border:1px solid rgba(212,155,56,.42);background:rgba(212,155,56,.06);color:#e7b85e;cursor:default}
+.series-note{margin:24px auto 0;max-width:780px;text-align:center;color:#8fa3b5;font-size:12.5px;line-height:1.55}
 .visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 .footer{background:#05111c;color:#c7d5e3}.footer a{color:#d7e4f0}
-@media(max-width:760px){main{padding:14px 0 38px}.showcase-shell{width:100%}.showcase-wrap{border-radius:0;box-shadow:none}}
+@media(max-width:900px){.hero-crop{aspect-ratio:1034/455}.details-panel{padding:26px 22px 28px}.book-grid{gap:14px}.book-card{padding:21px 18px 20px}.book-card h2{font-size:17px}.book-description{font-size:13px}}
+@media(max-width:760px){main{padding:16px 0 42px}.handbook-shell{width:min(100% - 18px,620px)}.hero-panel{border-radius:20px 20px 0 0}.hero-crop{aspect-ratio:1034/470}.details-panel{border-radius:0 0 20px 20px;padding:22px 16px 24px}.book-grid{grid-template-columns:1fr;gap:14px}.book-card{min-height:0}.series-note{text-align:left;margin-top:18px}}
 </style>
 </head>
 <body>
@@ -30,12 +57,37 @@ main{min-height:calc(100vh - 72px);padding:28px 0 58px;background:#061522;color:
 </nav></header>
 <main>
 <h1 class="visually-hidden">AI Engineering Handbook Series</h1>
-<p class="visually-hidden">Three volumes covering foundations and core AI components, agentic AI and engineering practice, production AI systems, specialized agents, and multi-agent architecture.</p>
-<section class="showcase-shell" aria-label="AI Engineering Handbook Series">
-<div class="showcase-wrap">
-<img src="books/handbook-series-showcase.webp?v=20260826.30" width="1034" height="618" fetchpriority="high" loading="eager" decoding="async" alt="AI Engineering Handbook Series by Mahsa Keikha, PhD. Volume 1 Foundations and Core AI Components, Volume 2 Agentic AI and Engineering Practice, and Volume 3 Production AI and Multi-Agent Architecture, coming soon.">
-<a class="hotspot book1-link" href="https://a.co/d/0awLaJI1" target="_blank" rel="noopener" aria-label="Buy AI Engineering Handbook Book 1 on Amazon">Buy Book 1 on Amazon</a>
-<a class="hotspot book2-link" href="https://a.co/d/0eoamd3t" target="_blank" rel="noopener" aria-label="Buy AI Engineering Handbook Book 2 on Amazon">Buy Book 2 on Amazon</a>
+<section class="handbook-shell" aria-label="AI Engineering Handbook Series">
+<div class="hero-panel">
+<div class="hero-crop">
+<img src="books/handbook-series-showcase.webp?v=20260826.31" width="1034" height="618" fetchpriority="high" loading="eager" decoding="async" alt="AI Engineering Handbook Series by Mahsa Keikha, PhD, showing three 3D book volumes">
+</div>
+</div>
+<div class="details-panel">
+<div class="book-grid">
+<article class="book-card">
+<div class="volume-row"><span class="volume-dot" aria-hidden="true"></span><span class="volume-label">Volume 1</span></div>
+<h2>AI Engineering Handbook</h2>
+<p class="book-subtitle">Foundations and Core AI Components</p>
+<p class="book-description">A practical foundation in AI engineering, covering core components, system concepts, architecture, and the engineering thinking behind modern AI systems.</p>
+<div class="card-action"><a class="book-button" href="https://a.co/d/0awLaJI1" target="_blank" rel="noopener">Buy Book 1 on Amazon <span class="arrow" aria-hidden="true">↗</span></a></div>
+</article>
+<article class="book-card">
+<div class="volume-row"><span class="volume-dot" aria-hidden="true"></span><span class="volume-label">Volume 2</span></div>
+<h2>AI Engineering Handbook</h2>
+<p class="book-subtitle">Agentic AI and Engineering Practice</p>
+<p class="book-description">A hands-on guide to building, orchestrating, evaluating, and operating agentic AI systems with engineering rigor and responsible design practices.</p>
+<div class="card-action"><a class="book-button" href="https://a.co/d/0eoamd3t" target="_blank" rel="noopener">Buy Book 2 on Amazon <span class="arrow" aria-hidden="true">↗</span></a></div>
+</article>
+<article class="book-card">
+<div class="volume-row"><span class="volume-dot" aria-hidden="true"></span><span class="volume-label">Volume 3</span></div>
+<h2>AI Engineering Handbook</h2>
+<p class="book-subtitle">Production AI and Multi-Agent Architecture</p>
+<p class="book-description">Production AI systems, specialized agents, multi-agent architecture, observability, governance, and advanced technical modernization.</p>
+<div class="card-action"><span class="soon-button">Coming Soon</span></div>
+</article>
+</div>
+<p class="series-note">The three volumes are designed as one continuous engineering path, from foundations to agentic systems and production-scale multi-agent architecture.</p>
 </div>
 </section>
 </main>
