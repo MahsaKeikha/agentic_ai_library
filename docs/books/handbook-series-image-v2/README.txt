@@ -1,0 +1,1 @@
+This folder contains source chunks used by the Pages deployment to generate a single valid handbook showcase image.
