@@ -34,7 +34,7 @@ main{background:#061522;color:#f4f7fb;min-height:calc(100vh - 72px);padding:34px
 <script src="navigation.js?v=20260826.1" defer></script>
 <script>
 (()=>{
-const files=[1,2,3,4,5].map(n=>`books/handbook-series-image/chunk-${String(n).padStart(2,'0')}.txt?v=20260826.11`);
+const files=[1,2,3,4,5].map(n=>`books/handbook-series-image/chunk-${String(n).padStart(2,'0')}.txt?v=20260826.12`);
 const wrap=document.getElementById('showcaseWrap');
 const img=document.getElementById('handbookShowcase');
 Promise.all(files.map(url=>fetch(url,{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error(`Failed to load ${url}`);return response.text();})))
