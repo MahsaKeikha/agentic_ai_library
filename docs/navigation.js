@@ -40,7 +40,7 @@ if(missionPages[currentPage]){
 if(currentPage==="client-space.html"&&!document.querySelector('link[href*="space-contrast-fix-20260829.css"]')){
   const spaceCss=document.createElement("link");
   spaceCss.rel="stylesheet";
-  spaceCss.href="space-contrast-fix-20260829.css?v=2";
+  spaceCss.href="space-contrast-fix-20260829.css?v=4";
   document.head.appendChild(spaceCss);
 }
 
