@@ -37,6 +37,13 @@ if(missionPages[currentPage]){
   if(nav){const wrap=document.createElement("div");wrap.className="container";const label=document.createElement("span");label.className="suite-label";label.textContent="MISSION CONTROL SUITE";wrap.appendChild(label);Object.entries(missionPages).forEach(([href,text])=>{const a=document.createElement("a");a.href=href;a.textContent=text;if(href===currentPage){a.classList.add("active");a.setAttribute("aria-current","page");}wrap.appendChild(a);});nav.replaceChildren(wrap);}
 }
 
+if(currentPage==="client-space.html"&&!document.querySelector('link[href*="space-contrast-fix-20260829.css"]')){
+  const spaceCss=document.createElement("link");
+  spaceCss.rel="stylesheet";
+  spaceCss.href="space-contrast-fix-20260829.css?v=2";
+  document.head.appendChild(spaceCss);
+}
+
 const interactiveMissionPages=new Set(["client-project.html","client-clinical.html","client-industrial.html","client-research.html","client-space.html"]);
 if(interactiveMissionPages.has(currentPage)){
   if(!document.querySelector('link[href^="mission-enhancements.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="mission-enhancements.css?v=20260829.1";document.head.appendChild(css);}
