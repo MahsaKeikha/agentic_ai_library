@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>F36 Live Agent Runtime | Multi-Agent AI Atlas</title>
+<meta name="description" content="Run the F36 Multi-Agent Orchestrator through planning, capability routing, tool execution, critique, safety review, remediation, human approval, canary release, and verification in an inspectable browser sandbox.">
+<link rel="canonical" href="https://multiagentaiatlas.com/live-agent-demo.html">
+<link rel="stylesheet" href="styles.css?v=20260824.7">
+<link rel="stylesheet" href="live-agent-demo.css?v=20260829.1">
+</head>
+<body>
+<header class="nav-shell"><nav class="nav container" aria-label="Primary navigation">
+<a class="brand" href="index.html"><span class="brand-mark">A</span><span>Multi-Agent AI Atlas</span></a>
+<div class="nav-links">
+<a href="business-journey.html">See AI at Work</a>
+<details class="nav-dropdown group-active"><summary>Explore <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown-panel">
+<a href="atlas.html">170 Systems</a><a href="flagships.html">10 Flagships</a><a href="demo-lab.html">Demo Lab</a><a class="active" aria-current="page" href="live-agent-demo.html">Live Agent Runtime</a><a href="atlas-challenge.html">Atlas Challenge</a>
+</div></details>
+<details class="nav-dropdown"><summary>Trust <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown-panel">
+<a href="verification.html">Verification</a><a href="verification-registry.html">Registry</a><a href="evidence.html">Evidence</a>
+</div></details>
+<details class="nav-dropdown"><summary>Learn <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown-panel">
+<a href="atlas-book.html">Field Guide</a><a href="ai-engineering-handbooks.html">AI Engineering Handbooks</a><a href="training.html">Training</a>
+</div></details>
+<details class="nav-dropdown nav-services"><summary>Services <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown-panel">
+<a href="services.html">Services Overview</a><a href="book.html">Book a Discovery Call</a>
+</div></details>
+<a class="nav-cta" href="founding-partners.html">Partner Program</a>
+</div>
+<details class="mobile-menu"><summary aria-label="Open website navigation"><span>MENU</span><i aria-hidden="true"></i></summary><div class="mobile-menu-panel">
+<a href="business-journey.html">See AI at Work</a>
+<span class="mobile-menu-label">Explore</span><a href="atlas.html">170 Systems</a><a href="flagships.html">10 Flagships</a><a href="demo-lab.html">Demo Lab</a><a class="active" aria-current="page" href="live-agent-demo.html">Live Agent Runtime</a><a href="atlas-challenge.html">Atlas Challenge</a>
+<span class="mobile-menu-label">Trust</span><a href="verification.html">Verification</a><a href="verification-registry.html">Registry</a><a href="evidence.html">Evidence</a>
+<span class="mobile-menu-label">Learn</span><a href="atlas-book.html">Field Guide</a><a href="ai-engineering-handbooks.html">AI Engineering Handbooks</a><a href="training.html">Training</a>
+<span class="mobile-menu-label">Services</span><a href="services.html">Services Overview</a><a href="book.html">Book a Discovery Call</a>
+<a class="mobile-partner" href="founding-partners.html">Partner Program</a>
+</div></details>
+</nav></header>
+<main class="runtime-main">
+<section class="runtime-hero container">
+<div>
+<p class="eyebrow">F36 · AGENTIC MULTI-AGENT ORCHESTRATOR · LIVE REFERENCE RUNTIME</p>
+<h1>Watch an agentic system plan, route, act, critique, recover, and stop for human authority.</h1>
+<p class="hero-copy">This is executable orchestration, not a pre-rendered animation. The control plane runs in your browser, invokes sandboxed tools, mutates workflow state, preserves every attempt, and enforces automated gates before any protected release action can proceed.</p>
+<div class="hero-actions runtime-actions">
+<button id="run-runtime" class="button primary" type="button">Run full orchestrator</button>
+<button id="load-failure" class="button ghost" type="button">Load adversarial failure case</button>
+<a class="button ghost" href="https://github.com/MahsaKeikha/agentic_multi_agent_orchestrator" target="_blank" rel="noopener">Open F36 source</a>
+<a class="button ghost" href="https://github.com/MahsaKeikha/agentic_ai_library/blob/main/docs/live-agent-demo.js" target="_blank" rel="noopener">View runtime code</a>
+</div>
+</div>
+<aside class="runtime-contract" aria-label="Runtime contract">
+<span>RUNTIME CONTRACT</span>
+<dl>
+<div><dt>Control plane</dt><dd>Real browser execution</dd></div>
+<div><dt>Domain tools</dt><dd>Sandboxed stateful functions</dd></div>
+<div><dt>Agent routing</dt><dd>Capability scored</dd></div>
+<div><dt>Failures</dt><dd>Retained and retryable</dd></div>
+<div><dt>Protected action</dt><dd>Human approval required</dd></div>
+</dl>
+<p>Model-backed specialists can be attached through the same adapter boundary. This public demo keeps external credentials and production systems out of the browser.</p>
+</aside>
+</section>
+
+<section class="runtime-strip" aria-label="Current runtime state">
+<div class="container strip-grid">
+<div><span>RUN</span><b id="run-id">not started</b></div>
+<div><span>STATE VERSION</span><b id="state-version">0</b></div>
+<div><span>STATUS</span><b id="runtime-status" data-state="idle">IDLE</b></div>
+<div><span>AGENT HANDOFFS</span><b id="handoff-count">0</b></div>
+<div><span>TOOL CALLS</span><b id="tool-count">0</b></div>
+<div><span>RETRIES</span><b id="retry-count">0</b></div>
+<div><span>BLOCKERS</span><b id="blocker-count">0</b></div>
+</div>
+</section>
+
+<section class="workspace container">
+<div class="workspace-left">
+<article class="runtime-panel goal-panel">
+<div class="panel-title"><span>01</span><div><p>REQUEST AND SANDBOX</p><h2>Give the orchestrator a goal</h2></div></div>
+<label class="field-label" for="goal-input">Goal</label>
+<textarea id="goal-input" rows="6">Release version 2 of our AI customer support agent to production. It can search account data and issue refunds under policy. Validate quality, prompt injection resistance, tool permissions, observability, rollback readiness, and produce an approval-ready release decision.</textarea>
+<div class="sandbox-grid">
+<label>Test coverage <output id="coverage-output">82%</output><input id="coverage" type="range" min="40" max="100" value="82"></label>
+<label>Eval pass rate <output id="eval-output">86%</output><input id="eval-rate" type="range" min="40" max="100" value="86"></label>
+<label>Observability <output id="observability-output">76%</output><input id="observability" type="range" min="30" max="100" value="76"></label>
+<label class="check-row"><input id="prompt-attack" type="checkbox"><span>Inject adversarial prompt attack</span></label>
+<label class="check-row"><input id="tool-failure" type="checkbox"><span>Inject transient evaluation tool failure</span></label>
+<label class="check-row"><input id="rollback-ready" type="checkbox" checked><span>Rollback plan available</span></label>
+<label class="check-row"><input id="privilege-scoped" type="checkbox" checked><span>Refund tool privilege is scoped</span></label>
+</div>
+<div class="panel-actions">
+<button id="reset-runtime" type="button" class="text-button">Reset sandbox</button>
+<button id="download-state" type="button" class="text-button" disabled>Download state JSON</button>
+</div>
+</article>
+
+<article class="runtime-panel graph-panel">
+<div class="panel-title"><span>02</span><div><p>CONTROL PLANE</p><h2>Execution graph</h2></div></div>
+<div id="agent-graph" class="agent-graph" aria-live="polite"></div>
+</article>
+
+<article class="runtime-panel gate-panel">
+<div class="panel-title"><span>05</span><div><p>HUMAN AUTHORITY</p><h2>Protected release gate</h2></div></div>
+<div class="gate-state"><div><span>ELIGIBILITY</span><b id="eligibility">NOT EVALUATED</b></div><div><span>RELEASE STATE</span><b id="release-state">NOT STARTED</b></div></div>
+<p id="gate-explanation">The release control is disabled until all technical and safety blockers are cleared.</p>
+<div class="gate-actions">
+<button id="remediate" type="button" class="button ghost" disabled>Run bounded remediation</button>
+<button id="approve-release" type="button" class="button primary" disabled>Approve canary release</button>
+<button id="promote-release" type="button" class="button primary" disabled>Promote to full release</button>
+</div>
+</article>
+</div>
+
+<div class="workspace-right">
+<article class="runtime-panel trace-panel">
+<div class="panel-title"><span>03</span><div><p>PROVENANCE</p><h2>Live event trace</h2></div></div>
+<div class="trace-head"><span>EVENT</span><span>ACTOR</span><span>STATUS</span></div>
+<div id="event-trace" class="event-trace" role="log" aria-live="polite" aria-relevant="additions"></div>
+</article>
+
+<article class="runtime-panel inspector-panel">
+<div class="panel-title"><span>04</span><div><p>EVIDENCE</p><h2>Inspector</h2></div></div>
+<div id="inspector-empty" class="inspector-empty">Run the orchestrator, then select any trace event to inspect its structured payload, tool arguments, result, timing, and provenance.</div>
+<div id="inspector" class="inspector" hidden>
+<div class="inspector-summary"><div><span>ID</span><b id="inspect-id"></b></div><div><span>TYPE</span><b id="inspect-type"></b></div><div><span>ACTOR</span><b id="inspect-actor"></b></div></div>
+<pre id="inspect-json"></pre>
+</div>
+</article>
+
+<article class="runtime-panel registry-panel">
+<div class="panel-title"><span>06</span><div><p>SPECIALIST REGISTRY</p><h2>Capability routing</h2></div></div>
+<div id="specialist-registry" class="specialist-registry"></div>
+</article>
+</div>
+</section>
+
+<section class="runtime-explain container">
+<div><p class="eyebrow">WHAT A SOFTWARE ENGINEER CAN VERIFY</p><h2>The demo exposes the engineering behaviors that usually disappear behind a chat interface.</h2></div>
+<div class="explain-grid">
+<article><span>01</span><h3>Task graph, not role theater</h3><p>Tasks carry dependencies, required capabilities, status, attempts, evidence, and output contracts.</p></article>
+<article><span>02</span><h3>Capability routing</h3><p>The router scores registered specialists and records eligible, rejected, selected, and fallback candidates.</p></article>
+<article><span>03</span><h3>Tool boundary</h3><p>Every tool call passes through a gateway with arguments, side-effect class, result, latency, and audit state.</p></article>
+<article><span>04</span><h3>Failure containment</h3><p>A failed attempt remains in provenance. The orchestrator retries or reroutes instead of silently hiding it.</p></article>
+<article><span>05</span><h3>Critic plus safety gate</h3><p>Quality review and safety review operate on actual execution evidence before approval becomes eligible.</p></article>
+<article><span>06</span><h3>Human authority</h3><p>The system can prepare and verify a release, but the protected action remains unavailable until a person approves it.</p></article>
+</div>
+</section>
+
+<section class="runtime-next">
+<div class="container next-grid">
+<div><p class="eyebrow light">PRODUCTION ADAPTER PATH</p><h2>Replace sandbox specialists with real model and enterprise tool adapters without changing the control plane.</h2><p>The next production step is a server-side adapter that supplies authenticated LLM calls, private RAG, GitHub or Jira access, evaluation services, observability, and deployment tools while keeping the same routing, state, provenance, critic, safety, and approval contracts.</p></div>
+<div class="hero-actions"><a class="button inverted" href="founding-partners.html">Build a production pilot</a><a class="button ghost" href="demo-lab.html">Back to Demo Lab</a></div>
+</div>
+</section>
+</main>
+<footer class="footer container"><div><strong>Multi-Agent AI Atlas</strong><p>F36 live reference runtime. Public sandbox only.</p></div><div><a href="https://github.com/MahsaKeikha/agentic_multi_agent_orchestrator" target="_blank" rel="noopener">F36 source</a> · <a href="demo-lab.html">Demo Lab</a> · <a href="about.html">About</a></div></footer>
+<script src="live-agent-demo.js?v=20260829.1"></script>
+<script src="navigation.js?v=20260826.1" defer></script>
+</body>
+</html>
