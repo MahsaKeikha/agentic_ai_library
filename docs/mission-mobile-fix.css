@@ -1,0 +1,108 @@
+/* Mobile readability and contrast corrections for Mission Control rooms */
+body.room-space .space-card{
+  background:linear-gradient(180deg,#0b2339 0%,#071827 100%);
+  color:#f6fbff;
+  border:1px solid #365b78;
+  box-shadow:0 24px 70px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.04);
+}
+body.room-space .space-card>span{color:#ffb36b}
+body.room-space .space-card h2{color:#ffffff;text-shadow:0 1px 12px rgba(0,0,0,.2)}
+body.room-space .space-card>p{color:#b8cada}
+body.room-space .space-card dl div{border-top-color:#35516a}
+body.room-space .space-card dt{color:#9bb0c2}
+body.room-space .space-card dd{color:#f4f8fb}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr!important;gap:28px!important;align-items:start!important}
+  .project-hero{padding:54px 0!important}
+  .project-hero h1{font-size:clamp(42px,10vw,66px)!important;line-height:.98!important}
+  .hero-copy{font-size:17px!important;line-height:1.55!important}
+  .lead-card{max-width:none;width:100%;box-sizing:border-box}
+  .space-card{margin-top:4px}
+  .space-card h2{font-size:32px!important;line-height:1.08!important}
+  .space-card dl div{grid-template-columns:128px minmax(0,1fr)!important;gap:14px!important}
+  .space-card dt,.space-card dd{font-size:13px!important;line-height:1.45!important}
+  .space-card dd{overflow-wrap:anywhere}
+  .mission-console-head{align-items:flex-start!important;flex-direction:column!important}
+  .console-badges{justify-content:flex-start!important}
+  .runtime-layout{grid-template-columns:1fr!important}
+  .case-control{border-right:0!important;border-bottom:1px solid #1f4158!important}
+  .runtime-bottom{grid-template-columns:1fr!important}
+  .runtime-bottom>section:first-child{border-right:0!important;border-bottom:1px solid #1f4158!important}
+  .inspector-body{grid-template-columns:1fr!important}
+  .inspector-body>section{border-right:0!important;border-bottom:1px solid #29465b!important}
+  .inspector-body>section:last-child{border-bottom:0!important}
+  .architecture-grid{grid-template-columns:1fr 1fr!important}
+}
+
+@media(max-width:760px){
+  .mission-operator-bar{position:relative!important;top:auto!important}
+  .mission-operator-bar .container{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:8px!important;
+    padding:10px 14px!important;
+    overflow:visible!important;
+  }
+  .mission-operator-title{
+    grid-column:1/-1!important;
+    width:100%!important;
+    margin:0 0 2px!important;
+    min-height:30px;
+  }
+  .mission-operator-title b{font-size:11px!important;letter-spacing:.12em!important}
+  .mission-operator-btn{
+    width:100%!important;
+    min-height:42px!important;
+    padding:10px 8px!important;
+    font-size:9px!important;
+    white-space:normal!important;
+    line-height:1.2!important;
+  }
+  .mission-live-clock{display:none!important}
+  .mission-switcher .container{scrollbar-width:none}
+  .mission-switcher .container::-webkit-scrollbar{display:none}
+  .project-hero{padding:42px 0 48px!important}
+  .project-hero h1{font-size:43px!important;letter-spacing:-.035em!important;margin-bottom:18px!important}
+  .hero-actions{display:grid!important;grid-template-columns:1fr!important;gap:9px!important}
+  .hero-actions .button{width:100%!important;box-sizing:border-box;text-align:center!important;justify-content:center!important}
+  .room-identifier{font-size:9px!important;letter-spacing:.1em!important;line-height:1.35!important}
+  .lead-card{padding:22px!important}
+  .space-card h2{font-size:30px!important}
+  .space-card>p{font-size:15px!important}
+  .space-card dl div{grid-template-columns:112px minmax(0,1fr)!important;padding:12px 0!important}
+  .space-card dt{color:#a9becf!important}
+  .space-card dd{color:#ffffff!important;font-weight:700!important}
+  .orbital-console{gap:10px!important}
+  .orbit-visual{min-height:300px!important}
+  .mission-telemetry div{padding:14px!important}
+  .architecture-grid{grid-template-columns:1fr!important}
+  .architecture-card{min-height:175px!important}
+  .section-head{grid-template-columns:1fr!important;gap:16px!important}
+  .section-head h2{font-size:34px!important}
+  .scope-grid{grid-template-columns:1fr!important}
+  .telemetry-strip{grid-template-columns:repeat(2,1fr)!important;overflow:visible!important}
+  .telemetry-strip div:last-child{grid-column:1/-1}
+  .runtime-status{grid-template-columns:repeat(2,1fr)!important}
+  .runtime-status div:last-child{grid-column:1/-1}
+  .mission-console-head{margin-left:0!important;margin-right:0!important;padding:22px!important}
+  .telemetry-strip{margin-left:0!important;margin-right:0!important}
+  .runtime-layout{border-left:1px solid #193c54!important;border-right:1px solid #193c54!important}
+  .flowline{gap:8px!important}
+  .flowline span{font-size:10px!important;padding:7px 8px!important}
+  .mission-console-tools{grid-template-columns:1fr!important}
+  .mission-console-tools input,.mission-console-tools select,.mission-console-tools button{grid-column:1!important;width:100%!important;box-sizing:border-box}
+}
+
+@media(max-width:430px){
+  .project-hero h1{font-size:38px!important}
+  .space-card dl div{grid-template-columns:1fr!important;gap:4px!important}
+  .space-card dd{text-align:left!important}
+  .mission-operator-bar .container{grid-template-columns:1fr 1fr!important}
+  .mission-operator-title{grid-column:1/-1!important}
+  .telemetry-strip{grid-template-columns:1fr!important}
+  .telemetry-strip div:last-child{grid-column:auto}
+  .runtime-status{grid-template-columns:1fr 1fr!important}
+  .runtime-status div:first-child{grid-column:1/-1}
+  .profile-head strong{font-size:20px!important}
+}
