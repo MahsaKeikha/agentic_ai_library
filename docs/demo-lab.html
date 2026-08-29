@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Atlas Demo Lab | Multi-Agent AI Atlas</title>
-  <meta name="description" content="Explore 10 governed multi-agent simulations with visible evidence, bounded scenarios, and human authority.">
+  <meta name="description" content="Explore 10 governed multi-agent simulations plus the executable F36 live agent runtime with visible evidence, bounded scenarios, and human authority.">
   <meta property="og:title" content="Atlas Demo Lab">
-  <meta property="og:description" content="10 governed multi-agent simulations. Every handoff visible. Every protected action human-controlled.">
+  <meta property="og:description" content="10 governed multi-agent simulations plus an executable F36 live runtime. Every handoff visible. Every protected action human-controlled.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://multiagentaiatlas.com/demo-lab.html">
   <meta property="og:image" content="https://multiagentaiatlas.com/atlas-demo-lab-social-preview.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Atlas Demo Lab with 10 governed multi-agent simulations">
+  <meta property="og:image:alt" content="Atlas Demo Lab with governed multi-agent simulations">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Atlas Demo Lab">
-  <meta name="twitter:description" content="10 governed multi-agent simulations. Every handoff visible. Every protected action human-controlled.">
+  <meta name="twitter:description" content="10 governed simulations plus an executable F36 live runtime. Every handoff visible. Every protected action human-controlled.">
   <meta name="twitter:image" content="https://multiagentaiatlas.com/atlas-demo-lab-social-preview.png">
-  <meta name="twitter:image:alt" content="Atlas Demo Lab with 10 governed multi-agent simulations">
+  <meta name="twitter:image:alt" content="Atlas Demo Lab with governed multi-agent simulations">
   <meta name="twitter:url" content="https://multiagentaiatlas.com/demo-lab.html">
   <meta property="og:image:secure_url" content="https://multiagentaiatlas.com/atlas-demo-lab-social-preview.png">
   <link rel="canonical" href="https://multiagentaiatlas.com/demo-lab.html">
@@ -31,7 +31,7 @@
 <div class="nav-links">
 <a href="business-journey.html">See AI at Work</a>
 <details class="nav-dropdown group-active"><summary>Explore <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown-panel">
-<a href="atlas.html">170 Systems</a><a href="flagships.html">10 Flagships</a><a class="active" aria-current="page" href="demo-lab.html">Demo Lab</a><a href="atlas-challenge.html">Atlas Challenge</a>
+<a href="atlas.html">170 Systems</a><a href="flagships.html">10 Flagships</a><a class="active" aria-current="page" href="demo-lab.html">Demo Lab</a><a href="live-agent-demo.html">Live Agent Runtime</a><a href="atlas-challenge.html">Atlas Challenge</a>
 </div></details>
 <details class="nav-dropdown"><summary>Trust <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown-panel">
 <a href="verification.html">Verification</a><a href="verification-registry.html">Registry</a><a href="evidence.html">Evidence</a>
@@ -46,7 +46,7 @@
 </div>
 <details class="mobile-menu"><summary aria-label="Open website navigation"><span>MENU</span><i aria-hidden="true"></i></summary><div class="mobile-menu-panel">
 <a href="business-journey.html">See AI at Work</a>
-<span class="mobile-menu-label">Explore</span><a href="atlas.html">170 Systems</a><a href="flagships.html">10 Flagships</a><a class="active" aria-current="page" href="demo-lab.html">Demo Lab</a><a href="atlas-challenge.html">Atlas Challenge</a>
+<span class="mobile-menu-label">Explore</span><a href="atlas.html">170 Systems</a><a href="flagships.html">10 Flagships</a><a class="active" aria-current="page" href="demo-lab.html">Demo Lab</a><a href="live-agent-demo.html">Live Agent Runtime</a><a href="atlas-challenge.html">Atlas Challenge</a>
 <span class="mobile-menu-label">Trust</span><a href="verification.html">Verification</a><a href="verification-registry.html">Registry</a><a href="evidence.html">Evidence</a>
 <span class="mobile-menu-label">Learn</span><a href="atlas-book.html">Field Guide</a><a href="training.html">Training</a>
 <span class="mobile-menu-label">Services</span><a href="services.html">Services Overview</a><a href="book.html">Book a Discovery Call</a>
@@ -56,6 +56,7 @@
   <main>
     <section class="labbar"><div class="lab-title"><span>ATLAS DEMO LAB</span><b>10 governed simulations</b></div><div class="lab-nav"><a href="flagships.html">← BACK TO ATLAS</a><button id="previous-demo" type="button">← PREVIOUS</button><button id="next-demo" type="button">NEXT →</button></div><label>SELECT FLAGSHIP<select id="demo-select" aria-label="Select flagship demo"></select></label></section>
     <section class="demo-intro"><div><p class="eyebrow" id="demo-meta"></p><h1><span id="demo-title"></span><br><i>Decision Room</i></h1></div><p class="lede" id="demo-brief"></p></section>
+    <section class="cta-section"><div class="container cta-box"><p class="eyebrow light">NEW · EXECUTABLE F36 RUNTIME</p><h2>See a complete agentic system actually execute.</h2><p>The F36 Multi-Agent Orchestrator now runs planning, capability routing, specialist execution, tool calls, failure recovery, critique, safety review, remediation, human approval, canary release, and post-release verification with a fully inspectable event trace.</p><div class="hero-actions"><a class="button inverted" href="live-agent-demo.html">Open the live agent runtime</a><a class="button ghost" href="https://github.com/MahsaKeikha/agentic_multi_agent_orchestrator" target="_blank" rel="noopener">Inspect F36 source</a></div></div></section>
     <section class="console" aria-label="Interactive multi-agent simulation">
       <div class="panel controls"><div class="panelhead"><span>01 / SYNTHETIC CASE</span><button id="reset">RESET</button></div><h2 class="case-name" id="case-name"></h2><div id="sliders"></div><div class="presets"><button id="challenge">LOAD CHALLENGE</button><button id="baseline">LOAD BASELINE</button></div><p class="privacy">Runs in your browser. No operational, health, legal, research, or company data is collected.</p></div>
       <div class="panel output"><div class="panelhead"><span>02 / MULTI-AGENT ASSESSMENT</span><span class="signal" id="signal"></span></div><div class="metrics"><div><span>Composite signal</span><b id="severity"></b></div><div><span>Assessment confidence</span><b id="confidence"></b></div><div><span>Recommended path</span><b id="recommendation"></b></div></div><div class="diagnosis"><p>PRIMARY FINDING</p><h2 id="finding"></h2><p id="alternatives"></p></div><div class="scenario-grid" id="scenarios"></div></div>
@@ -65,7 +66,8 @@
     <section class="method"><div><p class="eyebrow">THE FIVE-AGENT TRACE</p><h2>Every handoff stays visible.</h2></div><div class="trace" id="trace"></div></section>
     <section id="lab-index" class="lab-index"><div class="index-head"><p class="eyebrow">ALL FLAGSHIP EXPERIENCES</p><h2>Choose your next decision room.</h2></div><div class="demo-grid" id="demo-grid"></div></section>
   </main>
-  <footer class="footer container"><div><strong>Atlas Demo Lab</strong><p>Educational synthetic simulations. Not professional advice or operational control.</p></div><div><a href="flagships.html">10 flagships</a> · <a href="atlas.html">170 systems</a> · <a href="https://github.com/MahsaKeikha/agentic_ai_library">GitHub</a></div></footer>
+  <footer class="footer container"><div><strong>Atlas Demo Lab</strong><p>Educational synthetic simulations. Not professional advice or operational control.</p></div><div><a href="live-agent-demo.html">Live runtime</a> · <a href="flagships.html">10 flagships</a> · <a href="atlas.html">170 systems</a> · <a href="https://github.com/MahsaKeikha/agentic_ai_library">GitHub</a></div></footer>
   <script src="demo-lab.js"></script>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b1823f8dc0c046e8888f7e27c0e8efc5"}'></script><!-- End Cloudflare Web Analytics --><script src="navigation.js?v=20260824.1" defer></script>\n</body>
+<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b1823f8dc0c046e8888f7e27c0e8efc5"}'></script><!-- End Cloudflare Web Analytics --><script src="navigation.js?v=20260824.1" defer></script>
+</body>
 </html>
