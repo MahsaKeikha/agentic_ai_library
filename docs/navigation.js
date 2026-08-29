@@ -29,22 +29,20 @@ if(mobilePanel&&!mobilePanel.querySelector(`a[href="${missionHref}"]`)){
 if(currentPage===handbookHref){const mobileLink=mobilePanel?.querySelector(`a[href="${handbookHref}"]`);mobileLink?.classList.add("active");mobileLink?.setAttribute("aria-current","page");}
 if(currentPage===missionHref){const mobileLink=mobilePanel?.querySelector(`a[href="${missionHref}"]`);mobileLink?.classList.add("active");mobileLink?.setAttribute("aria-current","page");}
 
-const missionPages={"client-missions.html":"Overview","client-project.html":"01 Commerce","client-clinical.html":"02 Clinical","client-industrial.html":"03 Industrial","client-research.html":"04 Research"};
+const missionPages={"client-missions.html":"Overview","client-project.html":"01 Commerce","client-clinical.html":"02 Clinical","client-industrial.html":"03 Industrial","client-research.html":"04 Research","client-space.html":"05 Space"};
 if(missionPages[currentPage]){
-  if(!document.querySelector('link[href^="mission-suite.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="mission-suite.css?v=20260829.2";document.head.appendChild(css);}
+  if(!document.querySelector('link[href^="mission-suite.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="mission-suite.css?v=20260829.3";document.head.appendChild(css);}
   let nav=document.querySelector(".mission-switcher");if(!nav){nav=document.createElement("nav");nav.className="mission-switcher";nav.setAttribute("aria-label","Client mission controls");const header=document.querySelector("header.nav-shell")||document.querySelector("header");header?.insertAdjacentElement("afterend",nav);}
   if(nav){const wrap=document.createElement("div");wrap.className="container";const label=document.createElement("span");label.className="suite-label";label.textContent="MISSION CONTROL SUITE";wrap.appendChild(label);Object.entries(missionPages).forEach(([href,text])=>{const a=document.createElement("a");a.href=href;a.textContent=text;if(href===currentPage){a.classList.add("active");a.setAttribute("aria-current","page");}wrap.appendChild(a);});nav.replaceChildren(wrap);}
 }
 
-const interactiveMissionPages=new Set(["client-project.html","client-clinical.html","client-industrial.html","client-research.html"]);
+const interactiveMissionPages=new Set(["client-project.html","client-clinical.html","client-industrial.html","client-research.html","client-space.html"]);
 if(interactiveMissionPages.has(currentPage)){
   if(!document.querySelector('link[href^="mission-enhancements.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="mission-enhancements.css?v=20260829.1";document.head.appendChild(css);}
   if(!document.querySelector('script[src^="mission-enhancements.js"]')){const script=document.createElement("script");script.src="mission-enhancements.js?v=20260829.1";script.defer=true;document.body.appendChild(script);}
 }
 
 const closeAll=except=>dropdowns.forEach(menu=>{if(menu!==except)menu.removeAttribute("open")});
-dropdowns.forEach(menu=>{menu.addEventListener("toggle",()=>{if(menu.open)closeAll(menu)});menu.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>menu.removeAttribute("open")));});
-document.addEventListener("click",event=>{if(!event.target.closest(".nav-dropdown"))closeAll()});
-document.addEventListener("keydown",event=>{if(event.key!=="Escape")return;const openMenu=dropdowns.find(menu=>menu.open);closeAll();mobileMenu?.removeAttribute("open");openMenu?.querySelector("summary")?.focus();});
+dropdowns.forEach(menu=>{menu.addEventListener("toggle",()=>{if(menu.open)closeAll(menu)});menu.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>menu.removeAttribute("open")));});document.addEventListener("click",event=>{if(!event.target.closest(".nav-dropdown"))closeAll()});document.addEventListener("keydown",event=>{if(event.key!=="Escape")return;const openMenu=dropdowns.find(menu=>menu.open);closeAll();mobileMenu?.removeAttribute("open");openMenu?.querySelector("summary")?.focus();});
 mobileMenu?.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>mobileMenu.removeAttribute("open")));const desktopView=window.matchMedia("(min-width: 981px)");desktopView.addEventListener?.("change",()=>{closeAll();mobileMenu?.removeAttribute("open")});
 })();
