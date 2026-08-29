@@ -81,16 +81,25 @@ if(currentPage===missionHref){
   mobileLink?.setAttribute("aria-current","page");
 }
 
-if(currentPage==="client-project.html"&&!document.querySelector(".mission-switcher")){
+const missionPages={
+  "client-missions.html":"Overview",
+  "client-project.html":"01 Commerce",
+  "client-clinical.html":"02 Clinical",
+  "client-industrial.html":"03 Industrial",
+  "client-research.html":"04 Research"
+};
+if(missionPages[currentPage]){
   if(!document.querySelector('link[href^="mission-suite.css"]')){
-    const css=document.createElement("link");css.rel="stylesheet";css.href="mission-suite.css?v=20260829.1";document.head.appendChild(css);
+    const css=document.createElement("link");css.rel="stylesheet";css.href="mission-suite.css?v=20260829.2";document.head.appendChild(css);
   }
-  const nav=document.createElement("nav");
-  nav.className="mission-switcher";
-  nav.setAttribute("aria-label","Client mission controls");
-  nav.innerHTML='<div class="container"><span class="suite-label">MISSION CONTROL SUITE</span><a href="client-missions.html">Overview</a><a class="active" href="client-project.html">01 Commerce</a><a href="client-clinical.html">02 Clinical</a><a href="client-industrial.html">03 Industrial</a></div>';
-  const header=document.querySelector("header.nav-shell")||document.querySelector("header");
-  header?.insertAdjacentElement("afterend",nav);
+  let nav=document.querySelector(".mission-switcher");
+  if(!nav){nav=document.createElement("nav");nav.className="mission-switcher";nav.setAttribute("aria-label","Client mission controls");const header=document.querySelector("header.nav-shell")||document.querySelector("header");header?.insertAdjacentElement("afterend",nav);}
+  if(nav){
+    const wrap=document.createElement("div");wrap.className="container";
+    const label=document.createElement("span");label.className="suite-label";label.textContent="MISSION CONTROL SUITE";wrap.appendChild(label);
+    Object.entries(missionPages).forEach(([href,text])=>{const a=document.createElement("a");a.href=href;a.textContent=text;if(href===currentPage){a.classList.add("active");a.setAttribute("aria-current","page");}wrap.appendChild(a);});
+    nav.replaceChildren(wrap);
+  }
 }
 
 const closeAll=except=>dropdowns.forEach(menu=>{if(menu!==except)menu.removeAttribute("open")});
