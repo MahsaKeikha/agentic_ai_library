@@ -48,6 +48,8 @@ const interactiveMissionPages=new Set(["client-project.html","client-clinical.ht
 if(interactiveMissionPages.has(currentPage)){
   if(!document.querySelector('link[href^="mission-enhancements.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="mission-enhancements.css?v=20260829.1";document.head.appendChild(css);}
   if(!document.querySelector('script[src^="mission-enhancements.js"]')){const script=document.createElement("script");script.src="mission-enhancements.js?v=20260829.1";script.defer=true;document.body.appendChild(script);}
+  if(!document.querySelector('link[href^="mission-outcomes.css"]')){const outcomeCss=document.createElement("link");outcomeCss.rel="stylesheet";outcomeCss.href="mission-outcomes.css?v=20260829.1";document.head.appendChild(outcomeCss);}
+  if(!document.querySelector('script[src^="mission-outcomes.js"]')){const outcomeScript=document.createElement("script");outcomeScript.src="mission-outcomes.js?v=20260829.1";outcomeScript.defer=true;document.body.appendChild(outcomeScript);}
 }
 
 const closeAll=except=>dropdowns.forEach(menu=>{if(menu!==except)menu.removeAttribute("open")});
