@@ -1,7 +1,7 @@
 (()=>{
 "use strict";
 const page=(location.pathname.split('/').pop()||'').toLowerCase();
-const missionPages=new Set(['client-project.html','client-clinical.html','client-industrial.html','client-research.html']);
+const missionPages=new Set(['client-project.html','client-clinical.html','client-industrial.html','client-research.html','client-space.html']);
 if(!missionPages.has(page))return;
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const runtime=$('#runtime'); if(!runtime)return;
@@ -9,7 +9,8 @@ const pageLabel={
 'client-project.html':'COMMERCE OPERATIONS',
 'client-clinical.html':'CLINICAL TRIAL OPERATIONS',
 'client-industrial.html':'INDUSTRIAL RELIABILITY',
-'client-research.html':'AGENTIC RESEARCH TEAM'
+'client-research.html':'AGENTIC RESEARCH TEAM',
+'client-space.html':'SPACE MISSION DESIGN'
 }[page];
 
 function toast(text){const old=$('.mission-toast');old?.remove();const n=document.createElement('div');n.className='mission-toast';n.textContent=text;document.body.appendChild(n);setTimeout(()=>n.remove(),2200)}
@@ -22,7 +23,7 @@ const clock=bar.querySelector('.mission-live-clock');const tick=()=>clock.textCo
 const tools=document.createElement('div');tools.className='mission-console-tools';tools.innerHTML=`<input id="mission-trace-search" type="search" placeholder="Search trace, agent, tool, blocker..." aria-label="Search execution trace"><select id="mission-event-filter" aria-label="Filter event type"><option value="all">All events</option><option value="agent">Agent events</option><option value="tool">Tool calls</option><option value="gate">Gates / decisions</option><option value="artifact">Artifacts</option></select><button type="button" id="mission-copy-evidence">COPY EVIDENCE</button><button type="button" id="mission-clear-filter">CLEAR</button>`;
 const trace=$('#trace');trace?.parentElement?.insertAdjacentElement('beforebegin',tools);
 
-const compare=document.createElement('section');compare.className='mission-comparison';compare.hidden=true;compare.innerHTML=`<div class="mission-comparison-head"><div><span class="eyebrow">SCENARIO COMPARISON</span><h3>Compare expected system behavior before running a case.</h3></div><button class="mission-operator-btn" type="button" data-close-compare>Close</button></div><p>The three scenarios are intentionally designed to test nominal execution, incomplete evidence, and adversarial or unsafe instructions. This panel explains what a credible system should do differently in each case.</p><div class="mission-compare-grid"><article class="mission-compare-card"><span>NOMINAL CASE</span><strong>Proceed to human gate</strong><small>Evidence is sufficient, specialist stages complete, checks pass, and the protected action remains human-controlled.</small></article><article class="mission-compare-card"><span>EDGE CASE</span><strong>Hold on missing evidence</strong><small>The workflow should expose gaps, lower confidence, preserve blockers, and avoid manufacturing facts merely to finish the run.</small></article><article class="mission-compare-card"><span>ADVERSARIAL CASE</span><strong>Block and escalate</strong><small>Requests to bypass policy, fabricate evidence, conceal findings, or defeat safety controls must be denied and recorded.</small></article></div>`;
+const compare=document.createElement('section');compare.className='mission-comparison';compare.hidden=true;compare.innerHTML=`<div class="mission-comparison-head"><div><span class="eyebrow">SCENARIO COMPARISON</span><h3>Compare expected system behavior before running a case.</h3></div><button class="mission-operator-btn" type="button" data-close-compare>Close</button></div><p>The three scenarios are intentionally designed to test nominal execution, incomplete evidence, and adversarial or unsafe instructions. This panel explains what a credible system should do differently in each case.</p><div class="mission-compare-grid"><article class="mission-compare-card"><span>NOMINAL CASE</span><strong>Proceed to human gate</strong><small>Evidence is sufficient, specialist stages complete, checks pass, and the protected action remains human-controlled.</small></article><article class="mission-compare-card"><span>EDGE CASE</span><strong>Hold on missing evidence</strong><small>The workflow should expose gaps, lower confidence, preserve blockers, and avoid manufacturing facts merely to finish the run.</small></article><article class="mission-compare-card"><span>ADVERSARIAL CASE</span><strong>Block and escalate</strong><small>Requests to bypass policy, fabricate evidence, conceal findings, defeat safety controls, or cross a command-authority boundary must be denied and recorded.</small></article></div>`;
 runtime.querySelector('.container')?.insertAdjacentElement('afterbegin',compare);
 
 const nodeDetail=document.createElement('aside');nodeDetail.className='mission-node-detail';nodeDetail.hidden=true;nodeDetail.innerHTML='<header><div><span class="eyebrow">PIPELINE NODE</span><h3 id="mnd-name">Agent stage</h3></div><button type="button" aria-label="Close node details">×</button></header><dl><div><dt>System</dt><dd id="mnd-system"></dd></div><div><dt>Responsibility</dt><dd id="mnd-role"></dd></div><div><dt>Runtime state</dt><dd id="mnd-state"></dd></div><div><dt>Evidence</dt><dd>Inspect matching events in the mission trace to see the exact inputs, outputs, tools, and blockers recorded for this stage.</dd></div></dl>';
@@ -40,7 +41,7 @@ function bindNodes(){
 }bindNodes();
 
 function traceButtons(){return $$('#trace button')}
-function applyTraceFilter(){const q=($('#mission-trace-search')?.value||'').toLowerCase();const f=$('#mission-event-filter')?.value||'all';traceButtons().forEach(b=>{const t=b.textContent.toLowerCase();let type=true;if(f==='agent')type=t.includes('agent.')||t.includes('agent ');if(f==='tool')type=t.includes('tool.call')||t.includes('tool');if(f==='gate')type=t.includes('gate')||t.includes('decision')||t.includes('approval');if(f==='artifact')type=t.includes('artifact');b.classList.toggle('trace-hidden',!(type&&(!q||t.includes(q))))})}
+function applyTraceFilter(){const q=($('#mission-trace-search')?.value||'').toLowerCase();const f=$('#mission-event-filter')?.value||'all';traceButtons().forEach(b=>{const t=b.textContent.toLowerCase();let type=true;if(f==='agent')type=t.includes('agent.')||t.includes('agent ');if(f==='tool')type=t.includes('tool.call')||t.includes('tool');if(f==='gate')type=t.includes('gate')||t.includes('decision')||t.includes('approval')||t.includes('authority');if(f==='artifact')type=t.includes('artifact');b.classList.toggle('trace-hidden',!(type&&(!q||t.includes(q))))})}
 $('#mission-trace-search')?.addEventListener('input',applyTraceFilter);$('#mission-event-filter')?.addEventListener('change',applyTraceFilter);$('#mission-clear-filter')?.addEventListener('click',()=>{$('#mission-trace-search').value='';$('#mission-event-filter').value='all';applyTraceFilter()});
 $('#mission-copy-evidence')?.addEventListener('click',async()=>{const text=$('#inspector')?.textContent||'';if(!text||text.startsWith('Select an event')){toast('Select an event first');return;}try{await navigator.clipboard.writeText(text);toast('Evidence copied')}catch{toast('Copy is unavailable in this browser')}});
 
