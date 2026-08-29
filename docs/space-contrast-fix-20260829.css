@@ -1,0 +1,101 @@
+/* Space Mission Control contrast and mobile readability override */
+body.room-space .space-card,
+body.room-space .lead-card.space-card {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(180deg,#0b2339 0%,#071827 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid #4a718d !important;
+  box-shadow: 0 24px 70px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.04) !important;
+}
+body.room-space .space-card::before,
+body.room-space .lead-card.space-card::before {
+  background: #04111c !important;
+  border-color: #4a718d !important;
+  color: #8fe9f4 !important;
+}
+body.room-space .space-card > span,
+body.room-space .lead-card.space-card > span {
+  color: #ffbd7c !important;
+  text-shadow: none !important;
+}
+body.room-space .space-card h2,
+body.room-space .lead-card.space-card h2 {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+body.room-space .space-card > p,
+body.room-space .lead-card.space-card > p {
+  color: #d1dee8 !important;
+  opacity: 1 !important;
+}
+body.room-space .space-card dl div,
+body.room-space .lead-card.space-card dl div {
+  border-top: 1px solid #35556d !important;
+}
+body.room-space .space-card dt,
+body.room-space .lead-card.space-card dt {
+  color: #a9bfd0 !important;
+  opacity: 1 !important;
+}
+body.room-space .space-card dd,
+body.room-space .lead-card.space-card dd {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  font-weight: 800 !important;
+}
+
+/* Strengthen contrast throughout the dark space mission surfaces */
+body.room-space .space-profile,
+body.room-space .architecture-section,
+body.room-space .space-trades {
+  color: #ffffff;
+}
+body.room-space .profile-head span,
+body.room-space .profile-state small,
+body.room-space .mission-telemetry span,
+body.room-space .mission-telemetry small,
+body.room-space .orbit-caption,
+body.room-space .trade-results span,
+body.room-space .trade-results small {
+  color: #a9bfd0 !important;
+}
+body.room-space .profile-head strong,
+body.room-space .mission-telemetry strong,
+body.room-space .trade-results strong {
+  color: #ffffff !important;
+}
+
+@media (max-width: 760px) {
+  body.room-space .space-hero { padding-top: 44px !important; padding-bottom: 50px !important; }
+  body.room-space .hero-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+  body.room-space .space-card,
+  body.room-space .lead-card.space-card { padding: 24px 20px !important; width: 100% !important; box-sizing: border-box !important; }
+  body.room-space .space-card h2 { font-size: 34px !important; line-height: 1.08 !important; }
+  body.room-space .space-card > p { font-size: 16px !important; line-height: 1.5 !important; }
+  body.room-space .space-card dl div { grid-template-columns: 42% 58% !important; gap: 10px !important; padding: 13px 0 !important; }
+  body.room-space .space-card dt { font-size: 12px !important; }
+  body.room-space .space-card dd { font-size: 13px !important; line-height: 1.45 !important; }
+
+  /* Keep mission operator controls usable instead of clipping off-screen */
+  body.room-space .mission-operator-bar .container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    padding: 10px 12px !important;
+    overflow: visible !important;
+  }
+  body.room-space .mission-operator-title {
+    grid-column: 1 / -1 !important;
+    margin-right: 0 !important;
+  }
+  body.room-space .mission-operator-btn {
+    width: 100% !important;
+    min-height: 42px !important;
+    padding: 10px 8px !important;
+    font-size: 10px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+  body.room-space .mission-live-clock { display: none !important; }
+}
