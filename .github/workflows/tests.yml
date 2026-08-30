@@ -58,5 +58,8 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Check Smart City client demo JavaScript syntax
+        run: node --check docs/smart-city-agentic-ai.js
+
       - name: Run Smart City Agentic AI deterministic runtime tests
         run: node tests/test_smart_city_agentic_ai_runtime.js
