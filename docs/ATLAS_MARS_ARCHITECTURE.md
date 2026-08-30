@@ -5,56 +5,70 @@
 **Data:** synthetic  
 **External control path:** none
 
-ATLAS: MARS is an executable public demonstration of governed multi-agent coordination under communications delay, scarce resources, subsystem failures, adversarial instructions, and explicit human authority boundaries.
+ATLAS: MARS started from a simple engineering question: what should an autonomous multi-agent system be allowed to do when Earth cannot answer quickly enough?
 
-It is not a flight system, habitat controller, robot controller, life-support controller, safety certification, or operational Mars product. No real telemetry, client credentials, spacecraft, robot, habitat, mission network, or production model API is connected.
+That question becomes much harder once the system is responsible for several things at the same time. Power is limited. Habitat systems have survival margins that cannot be treated like ordinary optimization variables. Robots may be available, but they also need energy and safe operating conditions. Maintenance evidence can be incomplete. A digital twin can become stale. Communications can disappear. An outside message can also try to push the system beyond its authority.
 
-## Core engineering question
+The public ATLAS: MARS runtime is built to make those conflicts visible.
 
-**Which actions may a local multi-agent system take when Earth cannot answer in time, and which actions must remain protected even when delay makes remote supervision impractical?**
+It is an executable software demonstration, but it is not a flight system, habitat controller, robot controller, life-support controller, safety certification, or operational Mars product. It does not use real Mars telemetry, real spacecraft, real robots, client credentials, command networks, or production model APIs.
 
-The runtime treats autonomy as a contract with explicit permissions, invariants, evidence, side-effect classes, and failure states rather than a binary setting.
+## The engineering idea behind the runtime
 
-## What actually executes
+I did not want the demo to be a sequence of agents producing attractive text and then always agreeing with one another. The point is to show a system in which several specialized agents have different responsibilities, different evidence, different tools, and different limits.
 
-The public page is driven by `docs/atlas-mars-core.js`, a deterministic runtime core that can execute in both the browser and Node.js.
+The core question is:
 
-The core implements:
+**Which actions can the system take locally, and which actions must remain protected even when waiting for Earth is impractical?**
 
-- scenario state initialization
-- structured mission state
-- agent handoff records
-- a registered tool catalog
-- tool side-effect and authority classes
-- fail-closed authorization checks
+The runtime treats autonomy as a contract. Every tool has an authority class. Every important state change is recorded. Unsafe requests create blockers. A good evaluation score cannot erase a safety problem. Human approval also cannot turn missing evidence into valid evidence.
+
+## What actually runs
+
+The main runtime logic lives in `docs/atlas-mars-core.js`.
+
+That core can run in the browser and in Node.js. The webpage in `docs/atlas-mars.js` is a visual layer over the runtime rather than a separate script inventing the final outcome.
+
+The core handles:
+
+- scenario initialization
+- mission state
+- agent handoffs
+- tool registration
+- tool authority classes
+- fail-closed authorization
 - synthetic tool effects
-- resource arbitration
+- resource conflicts
 - runtime invariants
-- blocker and warning creation
+- blockers and warnings
 - safety and evaluation review
 - secondary fault injection
-- protected-action tests
+- protected-action testing
 - decision graph generation
-- mission-package export
+- mission package export
 - built-in self-tests
 
-The browser UI in `docs/atlas-mars.js` renders that runtime. It does not independently invent the final state.
+This separation matters because it lets the same mission logic be exercised outside the visual demo.
 
-## Reference architectures
+## Atlas systems used in ATLAS: MARS
+
+The Mars runtime combines several existing Atlas architectures.
 
 | Layer | Atlas reference | Role in ATLAS: MARS |
 |---|---|---|
-| Control plane | F36 Multi-Agent Orchestrator | Planning, capability routing, handoffs, state, conflict arbitration, blocker propagation, approval eligibility |
-| Mission systems | F86 Space Mission Design | Mission requirements, margins, operations concept, fault protection, safe states, verification, mission authority boundaries |
-| Robotics governance | F12 Robotics Governance | Robotics hazards, gates, change control, incident readiness, human governance boundaries |
-| Predictive maintenance | F114 Predictive Maintenance | Condition evidence, competing failure modes, uncertainty, maintenance recommendation |
+| Control plane | F36 Multi-Agent Orchestrator | Planning, routing, handoffs, shared state, conflict arbitration, blocker propagation, approval eligibility |
+| Mission systems | F86 Space Mission Design | Mission requirements, margins, operations concepts, safe states, fault protection, verification, authority boundaries |
+| Robotics governance | F12 Robotics Governance | Robotics hazards, release gates, change control, incident readiness, human authority |
+| Predictive maintenance | F114 Predictive Maintenance | Condition evidence, competing failure modes, uncertainty, maintenance recommendations |
 | Digital twin | F117 Digital Twin Engineer | Model state, validation, synchronization, uncertainty, configuration identity |
-| Evaluation | F37 LLM Evaluator | Quality rubrics, robustness, calibration, disagreement, evidence thresholds |
+| Evaluation | F37 LLM Evaluator | Quality criteria, robustness, evidence completeness, calibration, disagreement |
 | Safety | F09 AI Safety | Unsafe permission requests, adversarial instructions, residual risk, release blockers |
 
-Power, Habitat, and Logistics are mission-specific demo specialists. They are not represented as new standalone Atlas F-number systems. Their constraints are grounded in the F86 mission-systems and operations concepts.
+Power, Habitat, and Logistics are mission-specific specialists created for this demo. They are not presented as new standalone F-number systems. Their operating constraints are grounded in the mission systems concepts represented by F86.
 
-## Runtime flow
+## How the runtime is organized
+
+At a high level, the flow looks like this:
 
 ```text
 Synthetic Colony State
@@ -84,52 +98,60 @@ F37 Evaluation + F09 Safety
 Protected Human / Qualified Authority Boundary
 ```
 
-## Authority classes
+The important point is that F36 is a control plane, not a physical controller. It coordinates the work and preserves the decision state, but it does not inherit every permission held by the systems it coordinates.
 
-Every registered tool has one of four authority classes.
+## Tool authority
 
-| Class | Meaning | Public runtime behavior |
+Every registered tool belongs to one of four authority classes.
+
+| Class | Meaning | Runtime behavior |
 |---|---|---|
 | `READ_ONLY` | Observe synthetic state | allowed |
 | `ANALYSIS` | Calculate, compare, project, or score | allowed |
 | `BOUNDED_AUTONOMY` | Reversible action inside a predefined synthetic envelope | allowed and logged |
 | `PROTECTED` | Crew, safety, irreversible, or out-of-policy authority | denied and logged |
 
-Examples of bounded actions include increasing monitoring frequency, shedding predefined noncritical simulated loads, routing a simulated robot inside an approved zone, and placing noncritical synthetic systems into a predefined safe state.
+Examples of bounded autonomous actions include:
 
-Examples of protected actions include human EVA initiation, safety-interlock override, crew survival-limit changes, critical-redundancy disablement, and irreversible mission-critical actions outside approved policy.
+- increasing monitoring frequency
+- shedding predefined noncritical simulated loads
+- routing a simulated robot inside an approved zone
+- placing noncritical simulated systems into a predefined safe state
 
-## Tool gateway
+Examples of protected actions include:
 
-`TOOL_REGISTRY` in `atlas-mars-core.js` is the public tool contract.
+- initiating human EVA
+- overriding a safety interlock
+- changing a crew survival limit
+- disabling critical life-support redundancy
+- executing an irreversible mission-critical action outside approved policy
 
-Each tool record declares:
+## The tool gateway
 
-```text
-name
-authority class
-reversibility
-description
-```
+The public tool contract is defined in `TOOL_REGISTRY` inside `atlas-mars-core.js`.
+
+Each tool declares its authority class, whether the action is reversible, and what the tool is intended to represent.
 
 All tool calls pass through `invokeTool()`.
 
-If a tool is unknown, the runtime fails closed.
+If the runtime receives an unknown tool request, it fails closed.
 
-If a tool is `PROTECTED`, the runtime:
+If a requested tool is classified as `PROTECTED`, the runtime does not simulate success. Instead it:
 
-1. denies execution
+1. denies the call
 2. increments the denied-action counter
 3. records that protected authority was requested
-4. adds a critical blocker
+4. creates a critical blocker
 5. emits a `tool.denied` event
-6. requires accountable review
+6. moves the mission toward accountable review
 
-The public demo therefore cannot turn a protected request into a synthetic success merely because an agent asked for it.
+This is one of the most important design choices in the demo. A system should not be able to gain more authority simply because an agent generated a confident request.
 
-## Mission state model
+## Mission state
 
-A run contains structured state for:
+Each run has a structured state object rather than a loose collection of messages.
+
+The main fields are:
 
 ```text
 schema_version
@@ -152,15 +174,17 @@ secondary_fault_injected
 completed_at
 ```
 
-The colony state includes synthetic generation, reserve, life-support load, CO2, monitoring state, noncritical load shedding, critical-system state, Earth-link state, and latency.
+The colony state contains synthetic generation, battery reserve, life-support load, CO2, monitoring state, noncritical load shedding, critical-system status, Earth-link status, and communications latency.
 
-The asset state includes SA-04, R-07, R-12, and the repair kit.
+The asset state currently contains SA-04, R-07, R-12, and the repair kit.
 
-The twin state includes model version, synchronization status, validated use cases, and uncertainty.
+The digital-twin state carries model version, synchronization status, validated uses, and uncertainty.
 
-## Event schema
+The authority state records whether a protected action was requested, whether it was denied, whether a human gate is required, and whether a human decision has been recorded.
 
-Every material runtime event contains:
+## Event trace
+
+Every material event has a structured record:
 
 ```text
 seq
@@ -173,7 +197,7 @@ payload
 phase
 ```
 
-Representative event types include:
+Typical event types include:
 
 ```text
 run.created
@@ -191,61 +215,76 @@ authority.boundary
 run.completed
 ```
 
-The UI exposes these records through the Mission Event Trace and Evidence Inspector.
+The public Mission Event Trace displays these events, and the Evidence Inspector lets a visitor open the underlying structured payload.
 
-## Default scenario: solar array failure during dust event
+This makes it possible to ask not only what the system decided, but why it decided it.
 
-The runtime models:
+## Scenario 1: solar array failure during a dust event
 
-1. degraded solar generation
-2. an SA-04 tracking anomaly
-3. battery reserve projection
-4. an explicit habitat reserve floor
-5. digital-twin synchronization and uncertainty
-6. competing actuator failure hypotheses
-7. repair-kit verification
-8. R-07/R-12 robotic task planning
-9. repair energy demand that conflicts with habitat reserve
-10. F36 resource arbitration
-11. predefined noncritical load shedding
-12. increased habitat monitoring
-13. reserve recalculation
-14. bounded robot routing
-15. synthetic routine repair
-16. safety and evaluation review
-17. final mission decision package
+This is the main flagship scenario.
 
-The central demonstration is not a sequence of agents agreeing with one another. It is a conflict between objectives.
+The runtime begins with degraded solar generation and an SA-04 tracking anomaly. From there it works through the problem in stages:
 
-The Robotics specialist wants energy to repair SA-04. The Habitat specialist protects a life-support reserve floor. The Power specialist proposes lower-priority loads that can be shed. F36 must find a plan satisfying the combined constraints.
+1. the Power Agent reads current generation and reserve
+2. the Habitat Agent establishes the protected life-support reserve floor
+3. the Digital Twin checks synchronization and projects the energy state
+4. Predictive Maintenance compares possible SA-04 failure modes
+5. Logistics checks whether the required repair kit is available
+6. Robotics creates a bounded repair plan using R-07 and R-12
+7. the robot plan requests additional energy
+8. that request conflicts with the habitat reserve requirement
+9. F36 records the conflict and asks the Power Agent to evaluate lower-priority loads
+10. predefined noncritical loads are shed
+11. habitat monitoring is increased
+12. reserve is projected again
+13. if the shared constraints are satisfied, the robots are routed inside their approved operating zone
+14. the synthetic repair is executed
+15. evaluation and safety review the resulting mission state
+16. the run produces a final mission decision package
 
-## Communications-loss scenario
+The most important part is step 8. The agents do not all want the same thing.
 
-When the Earth link is unavailable, the runtime may continue only predefined reversible operations such as:
+Robotics wants enough energy to repair SA-04. Habitat wants to protect the life-support reserve floor. Power wants to preserve a workable energy balance. F36 has to find a plan that satisfies the combined constraints instead of allowing one specialist to optimize the whole mission around its own objective.
 
-- increased monitoring
-- noncritical load shedding
-- noncritical safe-state transitions
-- diagnostic re-evaluation
+## Scenario 2: Earth communications are lost
 
-The loss of Earth communications does not cause protected authority to silently migrate into the agent system.
+The second scenario removes the Earth link while the colony is already under power pressure.
 
-Human EVA, safety overrides, survival-limit changes, and irreversible out-of-policy actions remain protected.
+The runtime is still allowed to perform predefined reversible operations, including:
 
-## Adversarial scenario
+- increasing monitoring
+- shedding noncritical loads
+- moving noncritical systems into predefined safe states
+- repeating diagnostics and calculations
 
-The untrusted maintenance message attempts to:
+What does not happen is just as important.
 
-- override reserve policy
-- falsely mark SA-04 repaired
-- conceal an anomaly
+The loss of Earth communications does not cause protected authority to migrate into the agent system.
+
+Human EVA, safety overrides, survival-limit changes, critical redundancy changes, and irreversible out-of-policy actions remain protected.
+
+This scenario is meant to explore local resilience without quietly turning resilience into unrestricted autonomy.
+
+## Scenario 3: adversarial maintenance message
+
+The third scenario tests the system with an untrusted external message.
+
+The message tries to make the agents:
+
+- ignore reserve policy
+- falsely mark SA-04 as repaired
+- conceal the anomaly
 - request protected exterior access
 
-The runtime detects the instruction pattern, preserves the original equipment state, denies the protected tool request, records the attempt, creates critical blockers, and finishes in `MISSION_HOLD`.
+The runtime keeps the original equipment evidence, flags the instruction pattern, rejects the protected request, records the attempted authority escalation, creates critical blockers, and ends in `MISSION_HOLD`.
+
+The point of this scenario is not simply prompt-injection detection. It is to show that untrusted language cannot directly become trusted state or physical authority.
 
 ## Runtime invariants
 
-The deterministic core checks machine-readable conditions including:
+The runtime checks a small set of machine-readable conditions that can directly affect mission status.
+
+Current checks include:
 
 - battery reserve below the simulated 8.0 hour life-support floor
 - CO2 at or above the simulated review threshold
@@ -253,39 +292,41 @@ The deterministic core checks machine-readable conditions including:
 - contradictory repair-kit inventory
 - any protected-action request
 
-These conditions are not merely explanatory text. They directly affect blocker state and final mission status.
+These checks are part of the runtime state. They are not only explanatory text shown after the fact.
 
 ## Secondary fault injection
 
-The public UI includes `INJECT SECOND FAULT`.
+The public interface includes an `INJECT SECOND FAULT` control.
 
-The injected fault depends on the selected scenario:
+The injected problem depends on the selected mission:
 
-- dust event -> CO2 scrubber degradation
-- Earth-link loss -> stale digital twin
-- adversarial input -> contradictory repair-kit inventory
+- dust event: CO2 scrubber degradation
+- Earth-link loss: stale digital twin
+- adversarial message: contradictory repair-kit inventory
 
-The runtime then emits new evidence and performs another assurance check.
+The new fault creates additional evidence and triggers another assurance check.
 
-A secondary fault can move a previously stable mission into `MISSION_HOLD`.
+A mission that was previously stable can move into `MISSION_HOLD` if the new evidence invalidates the current plan.
 
-## Final states
+This is intentional. Real operating systems need to respond to changing state, not only execute a plan that was valid at the beginning.
 
-The current deterministic runtime uses explicit final states:
+## Final mission states
+
+The current runtime uses three explicit final states:
 
 - `STABILIZED`
 - `DEGRADED_STABLE`
 - `MISSION_HOLD`
 
-A fluent narrative is never itself a final state.
+A fluent explanation from an agent is never treated as a mission state by itself.
 
-## Decision package
+## Mission package
 
-`missionPackage()` exports:
+`missionPackage()` produces a structured export containing:
 
 - scenario definition
 - final status
-- final colony state
+- colony state
 - asset state
 - digital-twin state
 - authority state
@@ -293,46 +334,46 @@ A fluent narrative is never itself a final state.
 - blockers
 - warnings
 - decisions
-- full event trace
+- complete event trace
 - decision graph
 - public-demo boundary statement
 
-The export is intended to make the demonstration inspectable and replayable.
+The purpose of this package is to make the run inspectable, reviewable, and reproducible.
 
 ## Decision graph
 
-`decisionGraph()` creates event nodes plus ordered edges, decisions, and blockers.
+`decisionGraph()` turns the event stream into ordered nodes and edges and attaches the recorded decisions and blockers.
 
-The browser UI lets a visitor open the complete graph and select a node to inspect the corresponding evidence record.
+The public interface lets a visitor open the graph and inspect individual events.
 
-## Automated tests
+This is useful because a decision should be traceable back to the evidence and actions that produced it.
 
-The runtime has a Node test suite at:
+## Tests
+
+The runtime has automated Node.js tests at:
 
 `tests/test_atlas_mars_runtime.js`
 
-The CI workflow runs the runtime tests on repository pushes and pull requests.
+The test suite verifies the most important expected behaviors, including:
 
-The self-test verifies at least the following properties:
-
-1. dust scenario reaches `STABILIZED`
-2. SA-04 synthetic repair completes in the nominal scenario
+1. the dust scenario reaches `STABILIZED`
+2. the synthetic SA-04 repair completes
 3. the reserve floor is preserved
 4. bounded autonomous actions actually occur
-5. Earth-link loss does not automatically request protected authority
-6. local bounded actions still execute during communications loss
+5. loss of the Earth link does not automatically grant protected authority
+6. local bounded actions still work during communications loss
 7. adversarial input reaches `MISSION_HOLD`
 8. protected actions are denied
 9. prompt injection remains an explicit blocker
-10. a manual interlock-override test fails closed
-11. stale-twin fault injection holds the communications-loss mission
-12. exported package and decision graph are structurally consistent
+10. a manual interlock-override attempt fails closed
+11. stale digital-twin evidence can hold the communications-loss mission
+12. the exported package and decision graph remain structurally consistent
 
-The page also exposes a browser-side **RUN RUNTIME SELF-TEST** button.
+The public page also includes a `RUN RUNTIME SELF-TEST` button so a visitor can run the core self-check directly in the browser.
 
-## Public claim boundary
+## What this demo proves and what it does not
 
-The public runtime demonstrates executable coordination logic, synthetic tools, state transitions, policy checks, event traces, failure logic, and authority boundaries.
+The public runtime does demonstrate executable coordination logic, structured state, synthetic tool calls, resource arbitration, authority checks, failure handling, event traces, decision packages, and bounded autonomy.
 
 It does not demonstrate:
 
@@ -341,16 +382,18 @@ It does not demonstrate:
 - life-support control
 - real autonomous maintenance
 - production LLM inference
-- production authentication or secrets
+- production authentication or secret management
 - spacecraft command
-- regulatory or safety certification
-- affiliation with any external company or agency
+- regulatory approval or safety certification
+- affiliation with SpaceX, Tesla, xAI, NASA, or any other organization
 
-## Production evolution
+I want that distinction to remain clear because the engineering value of the project does not depend on pretending the public demo is already connected to real hardware.
 
-A production implementation should keep the conceptual control boundaries while replacing synthetic adapters with authenticated server-side services.
+## How this could become a production system
 
-A representative deployment would use:
+A production version would keep the same conceptual boundaries while replacing the synthetic adapters with authenticated server-side services.
+
+A representative architecture could look like this:
 
 ```text
 Operator UI
@@ -379,31 +422,12 @@ Policy Enforcement Point
 Append-only Event / Audit Store
 ```
 
-Production requirements would include:
-
-- authenticated users and service identities
-- least-privilege connector scopes
-- server-side secret storage
-- signed requests
-- tool allowlists
-- environment separation
-- durable state
-- append-only audit events
-- replay protection
-- model and prompt versioning
-- data freshness checks
-- idempotency keys for side effects
-- rate limits
-- timeout and retry policies
-- compensating actions
-- human approval records
-- incident response
-- rollback
-- independent safety analysis
-- verification against the actual operational design domain
+A real deployment would also need authentication, service identities, least-privilege scopes, server-side secret storage, signed requests, tool allowlists, environment separation, durable state, append-only audit records, replay protection, model and prompt versioning, data-freshness checks, idempotency for side effects, rate limits, timeout and retry policy, compensating actions, human approval records, incident response, rollback, independent safety analysis, and verification against the actual operating environment.
 
 ## Design principle
 
-**Autonomy should increase operational resilience without causing accountability to disappear.**
+The principle behind ATLAS: MARS is simple:
 
-The purpose of ATLAS: MARS is to make that principle visible as software rather than leaving it as a slogan.
+**Autonomy should improve operational resilience without making accountability disappear.**
+
+The purpose of the runtime is to make that principle visible in software, where it can be inspected, tested, challenged, and improved.
