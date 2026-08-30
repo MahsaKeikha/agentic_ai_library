@@ -2,15 +2,11 @@
 const handbookHref="ai-engineering-handbooks.html";
 const missionHref="client-missions.html";
 const spaceHref="atlas-space.html";
-const legacySpaceHref="atlas-mars.html";
 const cityHref="smart-city-agentic-ai.html";
 const agewellHref="agewell-city.html";
 const currentPage=(location.pathname.split("/").pop()||"index.html").toLowerCase();
 const dropdowns=[...document.querySelectorAll(".nav-dropdown")];
 const mobileMenu=document.querySelector(".mobile-menu");
-
-// Repair any older static navigation markup without exposing the retired branding.
-document.querySelectorAll(`a[href="${legacySpaceHref}"]`).forEach(link=>{link.href=spaceHref;link.textContent='ATLAS: SPACE';});
 
 const findMenu=name=>dropdowns.find(menu=>menu.querySelector("summary")?.textContent.trim().toLowerCase().startsWith(name));
 const addBefore=(panel,href,text,beforeHref)=>{if(!panel||panel.querySelector(`a[href="${href}"]`))return;const link=document.createElement("a");link.href=href;link.textContent=text;const before=beforeHref?panel.querySelector(`a[href="${beforeHref}"]`):null;if(before)panel.insertBefore(link,before);else panel.appendChild(link);};
