@@ -1,0 +1,83 @@
+openapi: 3.1.0
+info:
+  title: ATLAS SPACE Reference Runtime API
+  version: 1.0.0
+  description: >-
+    Reference API for the synthetic ATLAS: SPACE multi-agent runtime. This API
+    is for demonstration and local engineering use only. It is not a flight
+    command interface and is not connected to real spacecraft or mission systems.
+servers:
+  - url: http://localhost:8788
+paths:
+  /health:
+    get:
+      summary: Read runtime health
+      responses:
+        '200':
+          description: Runtime health
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok: {type: boolean}
+                  runtime: {type: string}
+                  version: {type: string}
+  /api/scenarios:
+    get:
+      summary: List synthetic mission scenarios
+      responses:
+        '200':
+          description: Scenario registry
+  /api/run:
+    post:
+      summary: Execute one deterministic synthetic mission scenario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                scenario:
+                  type: string
+                  enum: [orbital, surface, adversarial]
+              required: [scenario]
+      responses:
+        '200':
+          description: Mission decision package
+        '400':
+          description: Invalid request
+  /api/protected:
+    post:
+      summary: Test a protected mission action against the fail-closed policy
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                scenario:
+                  type: string
+                  enum: [orbital, surface, adversarial]
+                tool:
+                  type: string
+                  enum:
+                    - space.human.eva.initiate
+                    - space.safety.interlock.override
+                    - space.crew.exposure_limit.change
+                    - space.life_support.redundancy.disable
+                    - space.mission.irreversible_command
+              required: [scenario, tool]
+      responses:
+        '200':
+          description: Mission package showing the denied protected request
+components:
+  schemas:
+    AuthorityClass:
+      type: string
+      enum: [READ_ONLY, ANALYSIS, BOUNDED_AUTONOMY, PROTECTED]
+    MissionStatus:
+      type: string
+      enum: [READY, MISSION_STABLE, MISSION_HOLD]
