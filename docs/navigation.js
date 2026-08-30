@@ -39,6 +39,11 @@ addMobile("services",missionHref,"Client Mission Controls","book.html");
 
 if(currentPage===marsHref&&!document.querySelector('link[href^="atlas-mars-runtime.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="atlas-mars-runtime.css?v=20260829.1";document.head.appendChild(css);}
 
+if([agewellHref,"flagships.html"].includes(currentPage)){
+  if(!document.querySelector('link[href^="agewell-signature.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="agewell-signature.css?v=20260829.1";document.head.appendChild(css);}
+  if(!document.querySelector('script[src^="agewell-signature.js"]')){const s=document.createElement("script");s.src="agewell-signature.js?v=20260829.1";s.defer=true;document.body.appendChild(s);}
+}
+
 const missionPages={"client-missions.html":"Overview","client-project.html":"01 Commerce","client-clinical.html":"02 Clinical","client-industrial.html":"03 Industrial","client-research.html":"04 Research","client-space.html":"05 Space"};
 if(missionPages[currentPage]){
   if(!document.querySelector('link[href^="mission-suite.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="mission-suite.css?v=20260829.3";document.head.appendChild(css);}
@@ -57,6 +62,7 @@ if(interactiveMissionPages.has(currentPage)){
 
 if(currentPage==="index.html"){
   const hero=document.querySelector(".hero .hero-actions");
+  if(hero&&!hero.querySelector(`a[href="${agewellHref}"]`)){const a=document.createElement("a");a.className="button secondary";a.href=agewellHref;a.textContent="Run AGEWELL CITY";hero.insertBefore(a,hero.firstChild);}
   if(hero&&!hero.querySelector(`a[href="${cityHref}"]`)){const a=document.createElement("a");a.className="button secondary";a.href=cityHref;a.textContent="Run Smart City Agentic AI";hero.insertBefore(a,hero.firstChild);}
   if(hero&&!hero.querySelector(`a[href="${marsHref}"]`)){const a=document.createElement("a");a.className="button secondary";a.href=marsHref;a.textContent="Run ATLAS: MARS";hero.insertBefore(a,hero.firstChild);}
 }
