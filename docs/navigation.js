@@ -1,6 +1,7 @@
 (()=>{
 const handbookHref="ai-engineering-handbooks.html";
 const missionHref="client-missions.html";
+const marsHref="atlas-mars.html";
 const currentPage=(location.pathname.split("/").pop()||"index.html").toLowerCase();
 const dropdowns=[...document.querySelectorAll(".nav-dropdown")];
 const mobileMenu=document.querySelector(".mobile-menu");
@@ -11,6 +12,13 @@ if(learnPanel&&!learnPanel.querySelector(`a[href="${handbookHref}"]`)){
   const link=document.createElement("a");link.href=handbookHref;link.textContent="AI Engineering Handbooks";const training=learnPanel.querySelector('a[href="training.html"]');if(training)learnPanel.insertBefore(link,training);else learnPanel.appendChild(link);
 }
 if(currentPage===handbookHref){learnDropdown?.classList.add("group-active");const desktopLink=learnPanel?.querySelector(`a[href="${handbookHref}"]`);desktopLink?.classList.add("active");desktopLink?.setAttribute("aria-current","page");}
+
+const exploreDropdown=dropdowns.find(menu=>menu.querySelector("summary")?.textContent.trim().toLowerCase().startsWith("explore"));
+const explorePanel=exploreDropdown?.querySelector(".nav-dropdown-panel");
+if(explorePanel&&!explorePanel.querySelector(`a[href="${marsHref}"]`)){
+  const link=document.createElement("a");link.href=marsHref;link.textContent="ATLAS: MARS";const flagships=explorePanel.querySelector('a[href="flagships.html"]');if(flagships)flagships.insertAdjacentElement("afterend",link);else explorePanel.appendChild(link);
+}
+if(currentPage===marsHref){exploreDropdown?.classList.add("group-active");const link=explorePanel?.querySelector(`a[href="${marsHref}"]`);link?.classList.add("active");link?.setAttribute("aria-current","page");}
 
 const servicesDropdown=dropdowns.find(menu=>menu.querySelector("summary")?.textContent.trim().toLowerCase().startsWith("services"));
 const servicesPanel=servicesDropdown?.querySelector(".nav-dropdown-panel");
@@ -26,8 +34,12 @@ if(mobilePanel&&!mobilePanel.querySelector(`a[href="${handbookHref}"]`)){
 if(mobilePanel&&!mobilePanel.querySelector(`a[href="${missionHref}"]`)){
   const labels=[...mobilePanel.querySelectorAll(".mobile-menu-label")];const servicesLabel=labels.find(label=>label.textContent.trim().toLowerCase()==="services");if(servicesLabel){let cursor=servicesLabel.nextElementSibling,booking=null;while(cursor&&!cursor.classList.contains("mobile-menu-label")){if(cursor.matches?.('a[href="book.html"]')){booking=cursor;break;}cursor=cursor.nextElementSibling;}const link=document.createElement("a");link.href=missionHref;link.textContent="Client Mission Controls";if(booking)mobilePanel.insertBefore(link,booking);else servicesLabel.insertAdjacentElement("afterend",link);}
 }
+if(mobilePanel&&!mobilePanel.querySelector(`a[href="${marsHref}"]`)){
+  const labels=[...mobilePanel.querySelectorAll(".mobile-menu-label")];const exploreLabel=labels.find(label=>label.textContent.trim().toLowerCase()==="explore");if(exploreLabel){let cursor=exploreLabel.nextElementSibling,flagships=null;while(cursor&&!cursor.classList.contains("mobile-menu-label")){if(cursor.matches?.('a[href="flagships.html"]')){flagships=cursor;break;}cursor=cursor.nextElementSibling;}const link=document.createElement("a");link.href=marsHref;link.textContent="ATLAS: MARS";if(flagships)flagships.insertAdjacentElement("afterend",link);else exploreLabel.insertAdjacentElement("afterend",link);}
+}
 if(currentPage===handbookHref){const mobileLink=mobilePanel?.querySelector(`a[href="${handbookHref}"]`);mobileLink?.classList.add("active");mobileLink?.setAttribute("aria-current","page");}
 if(currentPage===missionHref){const mobileLink=mobilePanel?.querySelector(`a[href="${missionHref}"]`);mobileLink?.classList.add("active");mobileLink?.setAttribute("aria-current","page");}
+if(currentPage===marsHref){const mobileLink=mobilePanel?.querySelector(`a[href="${marsHref}"]`);mobileLink?.classList.add("active");mobileLink?.setAttribute("aria-current","page");if(!document.querySelector('link[href^="atlas-mars-runtime.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="atlas-mars-runtime.css?v=20260829.1";document.head.appendChild(css);}}
 
 const missionPages={"client-missions.html":"Overview","client-project.html":"01 Commerce","client-clinical.html":"02 Clinical","client-industrial.html":"03 Industrial","client-research.html":"04 Research","client-space.html":"05 Space"};
 if(missionPages[currentPage]){
@@ -38,10 +50,7 @@ if(missionPages[currentPage]){
 }
 
 if(currentPage==="client-space.html"&&!document.querySelector('link[href*="space-contrast-fix-20260829.css"]')){
-  const spaceCss=document.createElement("link");
-  spaceCss.rel="stylesheet";
-  spaceCss.href="space-contrast-fix-20260829.css?v=4";
-  document.head.appendChild(spaceCss);
+  const spaceCss=document.createElement("link");spaceCss.rel="stylesheet";spaceCss.href="space-contrast-fix-20260829.css?v=4";document.head.appendChild(spaceCss);
 }
 
 const interactiveMissionPages=new Set(["client-project.html","client-clinical.html","client-industrial.html","client-research.html","client-space.html"]);
@@ -50,6 +59,13 @@ if(interactiveMissionPages.has(currentPage)){
   if(!document.querySelector('script[src^="mission-enhancements.js"]')){const script=document.createElement("script");script.src="mission-enhancements.js?v=20260829.1";script.defer=true;document.body.appendChild(script);}
   if(!document.querySelector('link[href^="mission-outcomes.css"]')){const outcomeCss=document.createElement("link");outcomeCss.rel="stylesheet";outcomeCss.href="mission-outcomes.css?v=20260829.1";document.head.appendChild(outcomeCss);}
   if(!document.querySelector('script[src^="mission-outcomes.js"]')){const outcomeScript=document.createElement("script");outcomeScript.src="mission-outcomes.js?v=20260829.1";outcomeScript.defer=true;document.body.appendChild(outcomeScript);}
+}
+
+if(currentPage==="index.html"&&!document.querySelector(`.hero-actions a[href="${marsHref}"]`)){
+  const heroActions=document.querySelector(".hero .hero-actions");if(heroActions){const a=document.createElement("a");a.className="button secondary";a.href=marsHref;a.textContent="Run ATLAS: MARS";heroActions.insertBefore(a,heroActions.firstChild);}
+}
+if(currentPage===missionHref&&!document.querySelector(`.suite-hero a[href="${marsHref}"]`)){
+  const status=document.querySelector(".suite-status");if(status){const actions=document.createElement("div");actions.className="hero-actions";actions.innerHTML=`<a class="button inverted" href="${marsHref}">Launch ATLAS: MARS flagship</a>`;status.insertAdjacentElement("afterend",actions);}
 }
 
 const closeAll=except=>dropdowns.forEach(menu=>{if(menu!==except)menu.removeAttribute("open")});
