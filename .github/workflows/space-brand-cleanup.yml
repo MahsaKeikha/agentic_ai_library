@@ -1,0 +1,60 @@
+name: One Shot ATLAS SPACE Source Cleanup
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/space-brand-cleanup.yml
+
+permissions:
+  contents: write
+
+jobs:
+  clean-public-html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove retired branding from public HTML source
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r -d '' file; do
+            if [[ "$file" == "docs/atlas-mars.html" ]]; then
+              continue
+            fi
+            python - "$file" <<'PY'
+          import pathlib, sys
+          path = pathlib.Path(sys.argv[1])
+          text = path.read_text(encoding="utf-8")
+          text = text.replace('atlas-mars.html', 'atlas-space.html')
+          text = text.replace('ATLAS: MARS', 'ATLAS: SPACE')
+          path.write_text(text, encoding="utf-8")
+          PY
+          done < <(find docs -maxdepth 1 -type f -name '*.html' -print0)
+
+      - name: Verify public HTML source
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RInE --include='*.html' --exclude='atlas-mars.html' 'ATLAS: MARS|atlas-mars\.html' docs; then
+            echo 'Retired branding remains in public HTML source.'
+            exit 1
+          fi
+
+      - name: Commit source cleanup if needed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo 'No public HTML cleanup was needed.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/*.html
+          git commit -m 'Remove retired branding from public HTML source'
+          git push origin HEAD:main
