@@ -30,7 +30,7 @@ jobs:
       - name: Run Python test suite
         run: python -m pytest -q
 
-  mars-runtime:
+  space-runtime:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -41,11 +41,17 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Run ATLAS MARS deterministic runtime tests
-        run: node tests/test_atlas_mars_runtime.js
+      - name: Check ATLAS SPACE JavaScript syntax
+        run: |
+          node --check docs/atlas-space-core.js
+          node --check docs/atlas-space.js
+          node --check tools/atlas-space-server.js
 
-      - name: Run ATLAS MARS local API smoke tests
-        run: node tests/test_atlas_mars_server.js
+      - name: Run ATLAS SPACE deterministic runtime tests
+        run: node tests/test_atlas_space_runtime.js
+
+      - name: Run ATLAS SPACE local API smoke tests
+        run: node tests/test_atlas_space_server.js
 
   smart-city-runtime:
     runs-on: ubuntu-latest
