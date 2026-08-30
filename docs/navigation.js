@@ -2,73 +2,66 @@
 const handbookHref="ai-engineering-handbooks.html";
 const missionHref="client-missions.html";
 const marsHref="atlas-mars.html";
+const cityHref="smart-city-agentic-ai.html";
 const currentPage=(location.pathname.split("/").pop()||"index.html").toLowerCase();
 const dropdowns=[...document.querySelectorAll(".nav-dropdown")];
 const mobileMenu=document.querySelector(".mobile-menu");
 
-const learnDropdown=dropdowns.find(menu=>menu.querySelector("summary")?.textContent.trim().toLowerCase().startsWith("learn"));
-const learnPanel=learnDropdown?.querySelector(".nav-dropdown-panel");
-if(learnPanel&&!learnPanel.querySelector(`a[href="${handbookHref}"]`)){
-  const link=document.createElement("a");link.href=handbookHref;link.textContent="AI Engineering Handbooks";const training=learnPanel.querySelector('a[href="training.html"]');if(training)learnPanel.insertBefore(link,training);else learnPanel.appendChild(link);
-}
-if(currentPage===handbookHref){learnDropdown?.classList.add("group-active");const desktopLink=learnPanel?.querySelector(`a[href="${handbookHref}"]`);desktopLink?.classList.add("active");desktopLink?.setAttribute("aria-current","page");}
+const findMenu=name=>dropdowns.find(menu=>menu.querySelector("summary")?.textContent.trim().toLowerCase().startsWith(name));
+const addBefore=(panel,href,text,beforeHref)=>{if(!panel||panel.querySelector(`a[href="${href}"]`))return;const link=document.createElement("a");link.href=href;link.textContent=text;const before=beforeHref?panel.querySelector(`a[href="${beforeHref}"]`):null;if(before)panel.insertBefore(link,before);else panel.appendChild(link);};
+const markActive=(panel,href,menu)=>{if(currentPage!==href)return;menu?.classList.add("group-active");const link=panel?.querySelector(`a[href="${href}"]`);link?.classList.add("active");link?.setAttribute("aria-current","page");};
 
-const exploreDropdown=dropdowns.find(menu=>menu.querySelector("summary")?.textContent.trim().toLowerCase().startsWith("explore"));
-const explorePanel=exploreDropdown?.querySelector(".nav-dropdown-panel");
-if(explorePanel&&!explorePanel.querySelector(`a[href="${marsHref}"]`)){
-  const link=document.createElement("a");link.href=marsHref;link.textContent="ATLAS: MARS";const flagships=explorePanel.querySelector('a[href="flagships.html"]');if(flagships)flagships.insertAdjacentElement("afterend",link);else explorePanel.appendChild(link);
-}
-if(currentPage===marsHref){exploreDropdown?.classList.add("group-active");const link=explorePanel?.querySelector(`a[href="${marsHref}"]`);link?.classList.add("active");link?.setAttribute("aria-current","page");}
+const learnDropdown=findMenu("learn"),learnPanel=learnDropdown?.querySelector(".nav-dropdown-panel");
+addBefore(learnPanel,handbookHref,"AI Engineering Handbooks","training.html");
+markActive(learnPanel,handbookHref,learnDropdown);
 
-const servicesDropdown=dropdowns.find(menu=>menu.querySelector("summary")?.textContent.trim().toLowerCase().startsWith("services"));
-const servicesPanel=servicesDropdown?.querySelector(".nav-dropdown-panel");
-if(servicesPanel&&!servicesPanel.querySelector(`a[href="${missionHref}"]`)){
-  const link=document.createElement("a");link.href=missionHref;link.textContent="Client Mission Controls";const booking=servicesPanel.querySelector('a[href="book.html"]');if(booking)servicesPanel.insertBefore(link,booking);else servicesPanel.appendChild(link);
-}
-if(currentPage===missionHref){servicesDropdown?.classList.add("group-active");const link=servicesPanel?.querySelector(`a[href="${missionHref}"]`);link?.classList.add("active");link?.setAttribute("aria-current","page");}
+const exploreDropdown=findMenu("explore"),explorePanel=exploreDropdown?.querySelector(".nav-dropdown-panel");
+addBefore(explorePanel,cityHref,"Smart City Agentic AI","atlas-mars.html");
+addBefore(explorePanel,marsHref,"ATLAS: MARS","demo-lab.html");
+markActive(explorePanel,cityHref,exploreDropdown);
+markActive(explorePanel,marsHref,exploreDropdown);
+
+const servicesDropdown=findMenu("services"),servicesPanel=servicesDropdown?.querySelector(".nav-dropdown-panel");
+addBefore(servicesPanel,missionHref,"Client Mission Controls","book.html");
+markActive(servicesPanel,missionHref,servicesDropdown);
 
 const mobilePanel=mobileMenu?.querySelector(".mobile-menu-panel");
-if(mobilePanel&&!mobilePanel.querySelector(`a[href="${handbookHref}"]`)){
-  const labels=[...mobilePanel.querySelectorAll(".mobile-menu-label")];const learnLabel=labels.find(label=>label.textContent.trim().toLowerCase()==="learn");if(learnLabel){let cursor=learnLabel.nextElementSibling,training=null;while(cursor&&!cursor.classList.contains("mobile-menu-label")){if(cursor.matches?.('a[href="training.html"]')){training=cursor;break;}cursor=cursor.nextElementSibling;}const link=document.createElement("a");link.href=handbookHref;link.textContent="AI Engineering Handbooks";if(training)mobilePanel.insertBefore(link,training);else learnLabel.insertAdjacentElement("afterend",link);}
-}
-if(mobilePanel&&!mobilePanel.querySelector(`a[href="${missionHref}"]`)){
-  const labels=[...mobilePanel.querySelectorAll(".mobile-menu-label")];const servicesLabel=labels.find(label=>label.textContent.trim().toLowerCase()==="services");if(servicesLabel){let cursor=servicesLabel.nextElementSibling,booking=null;while(cursor&&!cursor.classList.contains("mobile-menu-label")){if(cursor.matches?.('a[href="book.html"]')){booking=cursor;break;}cursor=cursor.nextElementSibling;}const link=document.createElement("a");link.href=missionHref;link.textContent="Client Mission Controls";if(booking)mobilePanel.insertBefore(link,booking);else servicesLabel.insertAdjacentElement("afterend",link);}
-}
-if(mobilePanel&&!mobilePanel.querySelector(`a[href="${marsHref}"]`)){
-  const labels=[...mobilePanel.querySelectorAll(".mobile-menu-label")];const exploreLabel=labels.find(label=>label.textContent.trim().toLowerCase()==="explore");if(exploreLabel){let cursor=exploreLabel.nextElementSibling,flagships=null;while(cursor&&!cursor.classList.contains("mobile-menu-label")){if(cursor.matches?.('a[href="flagships.html"]')){flagships=cursor;break;}cursor=cursor.nextElementSibling;}const link=document.createElement("a");link.href=marsHref;link.textContent="ATLAS: MARS";if(flagships)flagships.insertAdjacentElement("afterend",link);else exploreLabel.insertAdjacentElement("afterend",link);}
-}
-if(currentPage===handbookHref){const mobileLink=mobilePanel?.querySelector(`a[href="${handbookHref}"]`);mobileLink?.classList.add("active");mobileLink?.setAttribute("aria-current","page");}
-if(currentPage===missionHref){const mobileLink=mobilePanel?.querySelector(`a[href="${missionHref}"]`);mobileLink?.classList.add("active");mobileLink?.setAttribute("aria-current","page");}
-if(currentPage===marsHref){const mobileLink=mobilePanel?.querySelector(`a[href="${marsHref}"]`);mobileLink?.classList.add("active");mobileLink?.setAttribute("aria-current","page");if(!document.querySelector('link[href^="atlas-mars-runtime.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="atlas-mars-runtime.css?v=20260829.1";document.head.appendChild(css);}}
+function addMobile(labelName,href,text,beforeHref){if(!mobilePanel||mobilePanel.querySelector(`a[href="${href}"]`))return;const labels=[...mobilePanel.querySelectorAll(".mobile-menu-label")];const label=labels.find(x=>x.textContent.trim().toLowerCase()===labelName);if(!label)return;let cursor=label.nextElementSibling,before=null;while(cursor&&!cursor.classList.contains("mobile-menu-label")){if(beforeHref&&cursor.matches?.(`a[href="${beforeHref}"]`)){before=cursor;break;}cursor=cursor.nextElementSibling;}const link=document.createElement("a");link.href=href;link.textContent=text;if(before)mobilePanel.insertBefore(link,before);else label.insertAdjacentElement("afterend",link);}
+addMobile("learn",handbookHref,"AI Engineering Handbooks","training.html");
+addMobile("explore",cityHref,"Smart City Agentic AI","atlas-mars.html");
+addMobile("explore",marsHref,"ATLAS: MARS","demo-lab.html");
+addMobile("services",missionHref,"Client Mission Controls","book.html");
+[handbookHref,missionHref,marsHref,cityHref].forEach(href=>{if(currentPage===href){const link=mobilePanel?.querySelector(`a[href="${href}"]`);link?.classList.add("active");link?.setAttribute("aria-current","page");}});
+
+if(currentPage===marsHref&&!document.querySelector('link[href^="atlas-mars-runtime.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="atlas-mars-runtime.css?v=20260829.1";document.head.appendChild(css);}
 
 const missionPages={"client-missions.html":"Overview","client-project.html":"01 Commerce","client-clinical.html":"02 Clinical","client-industrial.html":"03 Industrial","client-research.html":"04 Research","client-space.html":"05 Space"};
 if(missionPages[currentPage]){
   if(!document.querySelector('link[href^="mission-suite.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="mission-suite.css?v=20260829.3";document.head.appendChild(css);}
-  if(!document.querySelector('link[href^="mission-mobile-fix.css"]')){const mobileCss=document.createElement("link");mobileCss.rel="stylesheet";mobileCss.href="mission-mobile-fix.css?v=20260829.1";document.head.appendChild(mobileCss);}
+  if(!document.querySelector('link[href^="mission-mobile-fix.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="mission-mobile-fix.css?v=20260829.1";document.head.appendChild(css);}
   let nav=document.querySelector(".mission-switcher");if(!nav){nav=document.createElement("nav");nav.className="mission-switcher";nav.setAttribute("aria-label","Client mission controls");const header=document.querySelector("header.nav-shell")||document.querySelector("header");header?.insertAdjacentElement("afterend",nav);}
   if(nav){const wrap=document.createElement("div");wrap.className="container";const label=document.createElement("span");label.className="suite-label";label.textContent="MISSION CONTROL SUITE";wrap.appendChild(label);Object.entries(missionPages).forEach(([href,text])=>{const a=document.createElement("a");a.href=href;a.textContent=text;if(href===currentPage){a.classList.add("active");a.setAttribute("aria-current","page");}wrap.appendChild(a);});nav.replaceChildren(wrap);}
 }
-
-if(currentPage==="client-space.html"&&!document.querySelector('link[href*="space-contrast-fix-20260829.css"]')){
-  const spaceCss=document.createElement("link");spaceCss.rel="stylesheet";spaceCss.href="space-contrast-fix-20260829.css?v=4";document.head.appendChild(spaceCss);
-}
-
+if(currentPage==="client-space.html"&&!document.querySelector('link[href*="space-contrast-fix-20260829.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="space-contrast-fix-20260829.css?v=4";document.head.appendChild(css);}
 const interactiveMissionPages=new Set(["client-project.html","client-clinical.html","client-industrial.html","client-research.html","client-space.html"]);
 if(interactiveMissionPages.has(currentPage)){
   if(!document.querySelector('link[href^="mission-enhancements.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="mission-enhancements.css?v=20260829.1";document.head.appendChild(css);}
-  if(!document.querySelector('script[src^="mission-enhancements.js"]')){const script=document.createElement("script");script.src="mission-enhancements.js?v=20260829.1";script.defer=true;document.body.appendChild(script);}
-  if(!document.querySelector('link[href^="mission-outcomes.css"]')){const outcomeCss=document.createElement("link");outcomeCss.rel="stylesheet";outcomeCss.href="mission-outcomes.css?v=20260829.1";document.head.appendChild(outcomeCss);}
-  if(!document.querySelector('script[src^="mission-outcomes.js"]')){const outcomeScript=document.createElement("script");outcomeScript.src="mission-outcomes.js?v=20260829.1";outcomeScript.defer=true;document.body.appendChild(outcomeScript);}
+  if(!document.querySelector('script[src^="mission-enhancements.js"]')){const s=document.createElement("script");s.src="mission-enhancements.js?v=20260829.1";s.defer=true;document.body.appendChild(s);}
+  if(!document.querySelector('link[href^="mission-outcomes.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="mission-outcomes.css?v=20260829.1";document.head.appendChild(css);}
+  if(!document.querySelector('script[src^="mission-outcomes.js"]')){const s=document.createElement("script");s.src="mission-outcomes.js?v=20260829.1";s.defer=true;document.body.appendChild(s);}
 }
 
-if(currentPage==="index.html"&&!document.querySelector(`.hero-actions a[href="${marsHref}"]`)){
-  const heroActions=document.querySelector(".hero .hero-actions");if(heroActions){const a=document.createElement("a");a.className="button secondary";a.href=marsHref;a.textContent="Run ATLAS: MARS";heroActions.insertBefore(a,heroActions.firstChild);}
+if(currentPage==="index.html"){
+  const hero=document.querySelector(".hero .hero-actions");
+  if(hero&&!hero.querySelector(`a[href="${cityHref}"]`)){const a=document.createElement("a");a.className="button secondary";a.href=cityHref;a.textContent="Run Smart City Agentic AI";hero.insertBefore(a,hero.firstChild);}
+  if(hero&&!hero.querySelector(`a[href="${marsHref}"]`)){const a=document.createElement("a");a.className="button secondary";a.href=marsHref;a.textContent="Run ATLAS: MARS";hero.insertBefore(a,hero.firstChild);}
 }
-if(currentPage===missionHref&&!document.querySelector(`.suite-hero a[href="${marsHref}"]`)){
-  const status=document.querySelector(".suite-status");if(status){const actions=document.createElement("div");actions.className="hero-actions";actions.innerHTML=`<a class="button inverted" href="${marsHref}">Launch ATLAS: MARS flagship</a>`;status.insertAdjacentElement("afterend",actions);}
-}
+if(currentPage===missionHref){const status=document.querySelector(".suite-status");if(status&&!document.querySelector(`.suite-hero a[href="${cityHref}"]`)){const actions=document.createElement("div");actions.className="hero-actions";actions.innerHTML=`<a class="button inverted" href="${cityHref}">Launch Smart City Agentic AI</a><a class="button ghost" href="${marsHref}">Launch ATLAS: MARS</a>`;status.insertAdjacentElement("afterend",actions);}}
 
 const closeAll=except=>dropdowns.forEach(menu=>{if(menu!==except)menu.removeAttribute("open")});
-dropdowns.forEach(menu=>{menu.addEventListener("toggle",()=>{if(menu.open)closeAll(menu)});menu.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>menu.removeAttribute("open")));});document.addEventListener("click",event=>{if(!event.target.closest(".nav-dropdown"))closeAll()});document.addEventListener("keydown",event=>{if(event.key!=="Escape")return;const openMenu=dropdowns.find(menu=>menu.open);closeAll();mobileMenu?.removeAttribute("open");openMenu?.querySelector("summary")?.focus();});
-mobileMenu?.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>mobileMenu.removeAttribute("open")));const desktopView=window.matchMedia("(min-width: 981px)");desktopView.addEventListener?.("change",()=>{closeAll();mobileMenu?.removeAttribute("open")});
+dropdowns.forEach(menu=>{menu.addEventListener("toggle",()=>{if(menu.open)closeAll(menu)});menu.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>menu.removeAttribute("open")));});
+document.addEventListener("click",e=>{if(!e.target.closest(".nav-dropdown"))closeAll();});
+document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const open=dropdowns.find(menu=>menu.open);closeAll();mobileMenu?.removeAttribute("open");open?.querySelector("summary")?.focus();});
+mobileMenu?.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>mobileMenu.removeAttribute("open")));
+window.matchMedia("(min-width: 981px)").addEventListener?.("change",()=>{closeAll();mobileMenu?.removeAttribute("open");});
 })();
