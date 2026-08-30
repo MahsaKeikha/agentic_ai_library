@@ -46,3 +46,17 @@ jobs:
 
       - name: Run ATLAS MARS local API smoke tests
         run: node tests/test_atlas_mars_server.js
+
+  smart-city-runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run Smart City Agentic AI deterministic runtime tests
+        run: node tests/test_smart_city_agentic_ai_runtime.js
