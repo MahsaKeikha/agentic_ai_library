@@ -79,6 +79,8 @@ jobs:
         run: |
           node --check docs/agewell-city-core.js
           node --check docs/agewell-city.js
+          node --check docs/agewell-signature.js
+          node --check docs/navigation.js
 
       - name: Run AGEWELL CITY deterministic runtime tests
         run: node tests/test_agewell_city_runtime.js
