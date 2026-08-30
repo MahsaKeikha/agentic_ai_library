@@ -44,6 +44,9 @@ if([agewellHref,"flagships.html"].includes(currentPage)){
   if(!document.querySelector('script[src^="agewell-signature.js"]')){const s=document.createElement("script");s.src="agewell-signature.js?v=20260829.1";s.defer=true;document.body.appendChild(s);}
 }
 
+if(currentPage===agewellHref){document.querySelectorAll('.aw-arabic').forEach(node=>node.remove());}
+if(currentPage===cityHref){document.querySelectorAll('.city-arabic').forEach(node=>node.closest('article')?.remove());}
+
 const missionPages={"client-missions.html":"Overview","client-project.html":"01 Commerce","client-clinical.html":"02 Clinical","client-industrial.html":"03 Industrial","client-research.html":"04 Research","client-space.html":"05 Space"};
 if(missionPages[currentPage]){
   if(!document.querySelector('link[href^="mission-suite.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="mission-suite.css?v=20260829.3";document.head.appendChild(css);}
