@@ -1,15 +1,29 @@
 (()=>{
 'use strict';
 const page=(location.pathname.split('/').pop()||'').toLowerCase();
-if(page!=='atlas-mars.html')return;
+const isLegacy=page==='atlas-mars.html';
+const isSpace=page==='atlas-space.html';
+if(!isLegacy&&!isSpace)return;
+
+if(isLegacy&&window.top===window.self){
+  location.replace('atlas-space.html');
+  return;
+}
+
+if(isLegacy&&window.top!==window.self){
+  document.querySelectorAll('a').forEach(a=>a.setAttribute('target','_top'));
+}
 
 document.title='ATLAS: SPACE | Autonomous Multi-Agent Space Operations';
 const setMeta=(selector,value)=>{const el=document.querySelector(selector);if(el)el.setAttribute('content',value);};
 setMeta('meta[name="description"]','ATLAS: SPACE is an executable multi-agent space operations flagship for autonomous mission coordination, robotics, habitats, logistics, digital twins, safety, evaluation, and human authority. The current public mission module is Mars Surface Operations.');
 setMeta('meta[property="og:title"]','ATLAS: SPACE | Autonomous Multi-Agent Space Operations');
 setMeta('meta[property="og:description"]','How far can autonomous intelligence operate when Earth cannot answer in time? Explore a tested multi-agent space operations runtime.');
+setMeta('meta[property="og:url"]','https://multiagentaiatlas.com/atlas-space.html');
+const canonical=document.querySelector('link[rel="canonical"]');
+if(canonical)canonical.href='https://multiagentaiatlas.com/atlas-space.html';
 
-document.querySelectorAll('a[href="atlas-mars.html"]').forEach(a=>{if(/ATLAS:\s*MARS/i.test(a.textContent))a.textContent=a.textContent.replace(/ATLAS:\s*MARS/ig,'ATLAS: SPACE');});
+document.querySelectorAll('a[href="atlas-mars.html"]').forEach(a=>{a.href='atlas-space.html';if(/ATLAS:\s*MARS/i.test(a.textContent))a.textContent=a.textContent.replace(/ATLAS:\s*MARS/ig,'ATLAS: SPACE');});
 
 const badge=document.querySelector('.mars-badge');
 if(badge)badge.innerHTML='<i></i>ATLAS FLAGSHIP / SPACE AUTONOMOUS OPERATIONS';
