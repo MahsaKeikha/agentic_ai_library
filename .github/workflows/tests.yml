@@ -63,3 +63,22 @@ jobs:
 
       - name: Run Smart City Agentic AI deterministic runtime tests
         run: node tests/test_smart_city_agentic_ai_runtime.js
+
+  agewell-city-runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Check AGEWELL CITY JavaScript syntax
+        run: |
+          node --check docs/agewell-city-core.js
+          node --check docs/agewell-city.js
+
+      - name: Run AGEWELL CITY deterministic runtime tests
+        run: node tests/test_agewell_city_runtime.js
