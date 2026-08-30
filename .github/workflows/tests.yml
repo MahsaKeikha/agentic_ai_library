@@ -43,3 +43,6 @@ jobs:
 
       - name: Run ATLAS MARS deterministic runtime tests
         run: node tests/test_atlas_mars_runtime.js
+
+      - name: Run ATLAS MARS local API smoke tests
+        run: node tests/test_atlas_mars_server.js
