@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ATLAS: MARS | Autonomous Multi-Agent Mission Control</title>
+<meta name="description" content="Interactive Mars autonomous operations mission control showing multi-agent coordination across power, habitat, robotics, logistics, digital twin, safety, evaluation, and human authority.">
+<link rel="canonical" href="https://multiagentaiatlas.com/atlas-mars.html">
+<link rel="stylesheet" href="styles.css?v=20260824.7">
+<link rel="stylesheet" href="atlas-mars.css?v=20260829.1">
+</head>
+<body class="mars-page">
+<header class="nav-shell"><nav class="nav container" aria-label="Primary navigation">
+<a class="brand" href="index.html"><span class="brand-mark">A</span><span>Multi-Agent AI Atlas</span></a>
+<div class="nav-links">
+<a href="business-journey.html">See AI at Work</a>
+<details class="nav-dropdown group-active"><summary>Explore <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown-panel"><a href="atlas.html">170 Systems</a><a href="flagships.html">10 Flagships</a><a class="active" aria-current="page" href="atlas-mars.html">ATLAS: MARS</a><a href="client-missions.html">Client Mission Controls</a><a href="demo-lab.html">Demo Lab</a><a href="live-agent-demo.html">Live Agent Runtime</a></div></details>
+<details class="nav-dropdown"><summary>Trust <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown-panel"><a href="verification.html">Verification</a><a href="verification-registry.html">Registry</a><a href="evidence.html">Evidence</a></div></details>
+<details class="nav-dropdown"><summary>Learn <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown-panel"><a href="atlas-book.html">Field Guide</a><a href="ai-engineering-handbooks.html">AI Engineering Handbooks</a><a href="training.html">Training</a></div></details>
+<details class="nav-dropdown"><summary>Services <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown-panel"><a href="services.html">Services Overview</a><a href="client-missions.html">Client Mission Controls</a><a href="client-project-guide.html">Implementation Guide</a><a href="book.html">Book a Discovery Call</a></div></details>
+<a class="nav-cta" href="founding-partners.html">Partner Program</a>
+</div>
+<details class="mobile-menu"><summary aria-label="Open website navigation"><span>MENU</span><i aria-hidden="true"></i></summary><div class="mobile-menu-panel"><a href="business-journey.html">See AI at Work</a><span class="mobile-menu-label">Explore</span><a href="atlas.html">170 Systems</a><a href="flagships.html">10 Flagships</a><a class="active" aria-current="page" href="atlas-mars.html">ATLAS: MARS</a><a href="client-missions.html">Client Mission Controls</a><a href="demo-lab.html">Demo Lab</a><span class="mobile-menu-label">Services</span><a href="services.html">Services Overview</a><a href="book.html">Book a Discovery Call</a></div></details>
+</nav></header>
+<main>
+<section class="mars-hero">
+<div class="mars-stars" aria-hidden="true"></div>
+<div class="container mars-hero-grid">
+<div>
+<div class="mars-badge"><i></i>ATLAS FLAGSHIP / AUTONOMOUS OPERATIONS</div>
+<p class="eyebrow light">MARS SURFACE SYSTEMS + MULTI-AGENT AUTONOMY</p>
+<h1>Can a colony survive when Earth cannot answer?</h1>
+<p class="mars-lede">A live public simulation of specialized agents coordinating power, habitat, robotics, maintenance, logistics, model state, safety, and human authority under communications delay and system failure.</p>
+<div class="hero-actions"><a class="button inverted" href="#mars-runtime">Run the mission</a><a class="button ghost" href="#mars-topology">Inspect the agent topology</a><a class="button ghost" href="client-space.html">Compare with Space Mission Design</a></div>
+<p class="claim-note">Executable browser simulation with synthetic Mars telemetry. No SpaceX, Tesla, xAI, NASA, or other organization affiliation is claimed. No real spacecraft, robot, habitat, life-support system, or command network is connected.</p>
+</div>
+<aside class="mars-command-card">
+<span>HABITAT ALPHA / SOL 0147</span><h2>MARS OPERATIONS CONTROL</h2><dl><div><dt>Crew model</dt><dd>12 simulated occupants</dd></div><div><dt>Earth latency</dt><dd id="hero-latency">12m 41s one way</dd></div><div><dt>Autonomy mode</dt><dd>BOUNDED</dd></div><div><dt>Critical reserve</dt><dd id="hero-reserve">9.4 h</dd></div><div><dt>Mission state</dt><dd id="hero-state">NOMINAL WATCH</dd></div></dl>
+<div class="mini-status"><span><i></i>LOCAL CONTROL PLANE ONLINE</span><span>PROTECTED ACTIONS HUMAN</span></div>
+</aside>
+</div>
+</section>
+
+<section class="mars-status-band" aria-label="Mars mission status"><div class="container">
+<div><span>SOL</span><b>0147</b><small>Habitat Alpha</small></div><div><span>SURFACE TEMP</span><b>-41 C</b><small>synthetic</small></div><div><span>ATM PRESSURE</span><b>6.4 mbar</b><small>synthetic</small></div><div><span>COMM DELAY</span><b id="band-delay">12:41</b><small>one way</small></div><div><span>POWER RESERVE</span><b id="band-reserve">9.4 h</b><small>critical loads</small></div><div><span>AUTHORITY</span><b>LOCAL HUMAN</b><small>protected actions</small></div>
+</div></section>
+
+<section id="mars-topology" class="mars-topology-section"><div class="container">
+<div class="section-heading-dark"><div><p class="eyebrow light">01 / AUTONOMOUS OPERATIONS TOPOLOGY</p><h2>Many intelligences. Different objectives. One accountable mission state.</h2></div><p>Select any node. The inspector shows what it knows, what it may do, what it cannot do, and which Atlas architecture supports the role.</p></div>
+<div class="mars-topology-grid" id="mars-topology-grid">
+<button class="mars-node core selected" data-system="F36" type="button" aria-pressed="true"><b>F36</b><strong>Control Plane</strong><small>plans, routes, arbitrates, preserves state</small><span>SELECTED</span></button>
+<button class="mars-node" data-system="POWER" type="button" aria-pressed="false"><b>OPS</b><strong>Power Agent</strong><small>generation, storage, critical-load allocation</small><span>INSPECT</span></button>
+<button class="mars-node" data-system="HABITAT" type="button" aria-pressed="false"><b>OPS</b><strong>Habitat Agent</strong><small>life support, pressure, thermal, reserve floor</small><span>INSPECT</span></button>
+<button class="mars-node" data-system="ROBOTICS" type="button" aria-pressed="false"><b>F12</b><strong>Robotics Ops</strong><small>field-unit tasks under explicit safety boundaries</small><span>INSPECT</span></button>
+<button class="mars-node" data-system="MAINT" type="button" aria-pressed="false"><b>F114</b><strong>Maintenance</strong><small>condition, failure modes, uncertainty, repair options</small><span>INSPECT</span></button>
+<button class="mars-node" data-system="LOGISTICS" type="button" aria-pressed="false"><b>OPS</b><strong>Logistics Agent</strong><small>spares, tools, inventory, mission dependencies</small><span>INSPECT</span></button>
+<button class="mars-node" data-system="F117" type="button" aria-pressed="false"><b>F117</b><strong>Digital Twin</strong><small>model state, synchronization, validation, uncertainty</small><span>INSPECT</span></button>
+<button class="mars-node" data-system="F86" type="button" aria-pressed="false"><b>F86</b><strong>Mission Systems</strong><small>operations concept, margins, fault protection</small><span>INSPECT</span></button>
+<button class="mars-node" data-system="ASSURANCE" type="button" aria-pressed="false"><b>F09 + F37</b><strong>Safety + Evaluation</strong><small>blockers, robustness, evidence, authority checks</small><span>INSPECT</span></button>
+</div>
+<div class="mars-system-inspector" id="mars-system-inspector" aria-live="polite">
+<div class="mars-inspector-head"><div><span>SELECTED SYSTEM</span><b id="mi-code">F36</b><strong id="mi-name">Control Plane</strong></div><div class="mars-state-pill"><i></i><span id="mi-status">CONTROL PLANE</span></div></div>
+<div class="mars-inspector-body"><section><span>MISSION ROLE</span><h3 id="mi-role"></h3><p id="mi-summary"></p><a id="mi-repo" href="https://github.com/MahsaKeikha/agentic_multi_agent_orchestrator" target="_blank" rel="noopener">Inspect related Atlas implementation ↗</a></section><section><span>INPUTS</span><ul id="mi-inputs"></ul><span>OUTPUTS</span><ul id="mi-outputs"></ul></section><section><span>TOOLS / INTERFACES</span><ul id="mi-tools"></ul><span>AUTHORITY BOUNDARY</span><p id="mi-boundary"></p></section></div>
+</div>
+</div></section>
+
+<section id="mars-runtime" class="mars-runtime"><div class="container">
+<div class="mars-console-title"><div><p class="eyebrow light">02 / MARS AUTONOMOUS OPERATIONS</p><h2>Break the colony. Watch the agents negotiate what happens next.</h2></div><div class="mars-console-badges"><span><i></i>RUNTIME READY</span><span>SYNTHETIC TELEMETRY</span><span>BOUNDED AUTONOMY</span></div></div>
+<div class="mars-runtime-shell">
+<aside class="mars-input-panel">
+<span class="panel-kicker">MISSION SCENARIO</span>
+<select id="mars-scenario" aria-label="Mars mission scenario"><option value="dust">Solar array failure during dust event</option><option value="blackout">Earth link lost with declining reserve</option><option value="adversarial">Adversarial maintenance message</option></select>
+<div id="mars-case" class="mars-case"></div>
+<button id="mars-run" class="mars-primary" type="button">▶ RUN THE MISSION</button>
+<button id="mars-inject" type="button">INJECT SECOND FAULT</button>
+<button id="mars-reset" type="button">RESET MISSION</button>
+<p>Public simulation only. Bounded actions are simulated state changes. Protected physical or crew actions are never executed.</p>
+</aside>
+<div class="mars-console-main">
+<div class="mars-metrics"><div><span>RUN ID</span><b id="mars-run-id">not started</b></div><div><span>STATUS</span><b id="mars-run-status">READY</b></div><div><span>HANDOFFS</span><b id="mars-handoffs">0</b></div><div><span>TOOL CALLS</span><b id="mars-tools">0</b></div><div><span>BLOCKERS</span><b id="mars-blockers">0</b></div><div><span>AUTO ACTIONS</span><b id="mars-auto-actions">0</b></div></div>
+<div class="mars-live-grid">
+<section class="mars-telemetry-panel"><div class="panel-title"><span>COLONY TELEMETRY</span><small>synthetic live state</small></div><div class="mars-telemetry-cards"><article><span>SOLAR OUTPUT</span><strong id="tele-solar">82 kW</strong><small id="tele-solar-note">nominal generation</small></article><article><span>BATTERY RESERVE</span><strong id="tele-battery">9.4 h</strong><small>critical load estimate</small></article><article><span>HABITAT LOAD</span><strong id="tele-load">38 kW</strong><small>life support floor</small></article><article><span>CO2</span><strong id="tele-co2">0.54%</strong><small>habitat synthetic</small></article><article><span>R-07</span><strong id="tele-r07">READY 82%</strong><small>maintenance unit</small></article><article><span>R-12</span><strong id="tele-r12">READY 76%</strong><small>maintenance unit</small></article></div></section>
+<section class="mars-conflict-panel"><div class="panel-title"><span>RESOURCE ARBITRATION</span><small id="conflict-status">waiting</small></div><div id="conflict-body"><p>No active resource conflict. Run a mission to see agents negotiate constraints.</p></div></section>
+</div>
+<div class="mars-runtime-lower"><section><div class="panel-title"><span>MISSION EVENT TRACE</span><small>select any event</small></div><div id="mars-trace" class="mars-trace"><p>Run the mission to generate an inspectable trace.</p></div></section><section><div class="panel-title"><span>EVIDENCE INSPECTOR</span><small>structured state</small></div><pre id="mars-evidence">Select an event from the trace.</pre></section></div>
+</div>
+</div>
+
+<div class="mars-authority-grid"><section><div class="panel-title"><span>BOUNDED AUTONOMOUS ACTIONS</span><small>allowed in this simulation</small></div><ul><li>Increase monitoring frequency</li><li>Reroute a field robot within approved zones</li><li>Shed predefined noncritical compute and science loads</li><li>Re-run diagnostics and update the local plan</li><li>Place noncritical systems into predefined safe states</li></ul></section><section><div class="panel-title"><span>PROTECTED MISSION AUTHORITY</span><small>human or qualified authority required</small></div><ul><li>Initiate human EVA</li><li>Override a life-support or robotics safety interlock</li><li>Change crew exposure or survival limits</li><li>Disable critical life-support redundancy</li><li>Execute irreversible mission-critical actions outside predefined policy</li></ul></section></div>
+
+<div id="mars-outcome" class="mars-outcome" hidden><div class="mars-outcome-head"><div><span>MISSION DECISION PACKAGE</span><h2 id="mars-outcome-title">Mission state</h2><p id="mars-outcome-copy"></p></div><div id="mars-outcome-state" class="mars-outcome-state"><i></i><b>STABILIZED</b></div></div><div class="mars-outcome-stats"><div><span>POWER RESERVE</span><b id="out-reserve">-</b></div><div><span>CRITICAL SYSTEMS</span><b id="out-critical">-</b></div><div><span>ROBOTIC REPAIR</span><b id="out-repair">-</b></div><div><span>HUMAN EVA</span><b id="out-eva">-</b></div><div><span>HANDOFFS</span><b id="out-handoffs">0</b></div><div><span>TOOL EXECUTIONS</span><b id="out-tools">0</b></div><div><span>AUTO ACTIONS</span><b id="out-actions">0</b></div><div><span>EVIDENCE OBJECTS</span><b id="out-evidence">0</b></div></div><div class="mars-outcome-actions"><button id="mars-graph-button" type="button">VIEW COMPLETE DECISION GRAPH</button><button id="mars-export" type="button">EXPORT MISSION PACKAGE</button><button id="mars-rerun" type="button">RUN ANOTHER SCENARIO</button></div><div id="mars-decision-graph" class="mars-decision-graph" hidden></div></div>
+</div></section>
+
+<section class="mars-why"><div class="container"><div class="section-heading-dark"><div><p class="eyebrow light">03 / THE ENGINEERING QUESTION</p><h2>The hard problem is not whether AI can make decisions.</h2></div><p>It is deciding which actions may be autonomous when communications are delayed, which require local human authority, and how evidence and conflicting objectives are preserved when the system is under stress.</p></div><div class="mars-principles"><article><b>01</b><h3>Resource conflicts are first class</h3><p>Power, robotics, science, thermal control, communications, and habitat survival cannot all optimize independently. F36 must arbitrate across shared constraints.</p></article><article><b>02</b><h3>Failure is visible</h3><p>Bad sensors, stale twin state, missing inventory, contradictory recommendations, or unsafe instructions remain explicit blockers instead of being hidden by fluent output.</p></article><article><b>03</b><h3>Autonomy is bounded</h3><p>The simulation allows reversible predefined operations while keeping crew safety limits, interlock overrides, human EVA, and irreversible mission actions outside autonomous authority.</p></article><article><b>04</b><h3>Every decision has provenance</h3><p>The event trace records agents, tools, evidence, conflicts, gates, and final authority so a reviewer can reconstruct why the system acted or refused to act.</p></article></div></div></section>
+
+<section class="cta-section"><div class="container cta-box"><p class="eyebrow light">ATLAS: MARS</p><h2>The future is not one super-agent controlling everything.</h2><p>It is specialized intelligences coordinating across physical systems, uncertainty, scarce resources, conflicting objectives, and human authority.</p><div class="hero-actions"><a class="button inverted" href="#mars-runtime">Run the mission again</a><a class="button ghost" href="client-missions.html">Explore client mission controls</a><a class="button ghost" href="book.html">Discuss an implementation</a></div></div></section>
+</main>
+<footer class="footer container"><div><strong>Multi-Agent AI Atlas</strong><p>ATLAS: MARS autonomous operations flagship.</p></div><div><a href="client-space.html">Space Mission Design</a> · <a href="client-missions.html">Client Mission Controls</a> · <a href="https://github.com/MahsaKeikha/agentic_ai_library">GitHub</a></div></footer>
+<script src="atlas-mars.js?v=20260829.1"></script><script src="navigation.js?v=20260829.4" defer></script>
+</body></html>
