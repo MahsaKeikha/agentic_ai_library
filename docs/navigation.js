@@ -19,10 +19,12 @@ markActive(learnPanel,handbookHref,learnDropdown);
 const exploreDropdown=findMenu("explore"),explorePanel=exploreDropdown?.querySelector(".nav-dropdown-panel");
 addBefore(explorePanel,cityHref,"Smart City Agentic AI","atlas-mars.html");
 addBefore(explorePanel,agewellHref,"AGEWELL CITY","atlas-mars.html");
-addBefore(explorePanel,marsHref,"ATLAS: MARS","demo-lab.html");
+addBefore(explorePanel,marsHref,"ATLAS: SPACE","demo-lab.html");
 markActive(explorePanel,cityHref,exploreDropdown);
 markActive(explorePanel,agewellHref,exploreDropdown);
 markActive(explorePanel,marsHref,exploreDropdown);
+
+document.querySelectorAll('a[href="atlas-mars.html"]').forEach(link=>{if(/ATLAS:\s*MARS/i.test(link.textContent))link.textContent=link.textContent.replace(/ATLAS:\s*MARS/ig,'ATLAS: SPACE');});
 
 const servicesDropdown=findMenu("services"),servicesPanel=servicesDropdown?.querySelector(".nav-dropdown-panel");
 addBefore(servicesPanel,missionHref,"Client Mission Controls","book.html");
@@ -33,11 +35,12 @@ function addMobile(labelName,href,text,beforeHref){if(!mobilePanel||mobilePanel.
 addMobile("learn",handbookHref,"AI Engineering Handbooks","training.html");
 addMobile("explore",cityHref,"Smart City Agentic AI","atlas-mars.html");
 addMobile("explore",agewellHref,"AGEWELL CITY","atlas-mars.html");
-addMobile("explore",marsHref,"ATLAS: MARS","demo-lab.html");
+addMobile("explore",marsHref,"ATLAS: SPACE","demo-lab.html");
 addMobile("services",missionHref,"Client Mission Controls","book.html");
 [handbookHref,missionHref,marsHref,cityHref,agewellHref].forEach(href=>{if(currentPage===href){const link=mobilePanel?.querySelector(`a[href="${href}"]`);link?.classList.add("active");link?.setAttribute("aria-current","page");}});
 
 if(currentPage===marsHref&&!document.querySelector('link[href^="atlas-mars-runtime.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="atlas-mars-runtime.css?v=20260829.1";document.head.appendChild(css);}
+if(currentPage===marsHref&&!document.querySelector('script[src^="atlas-space-brand.js"]')){const s=document.createElement("script");s.src="atlas-space-brand.js?v=20260830.1";s.defer=true;document.body.appendChild(s);}
 
 if([agewellHref,"flagships.html"].includes(currentPage)){
   if(!document.querySelector('link[href^="agewell-signature.css"]')){const css=document.createElement("link");css.rel="stylesheet";css.href="agewell-signature.css?v=20260829.1";document.head.appendChild(css);}
@@ -67,9 +70,9 @@ if(currentPage==="index.html"){
   const hero=document.querySelector(".hero .hero-actions");
   if(hero&&!hero.querySelector(`a[href="${agewellHref}"]`)){const a=document.createElement("a");a.className="button secondary";a.href=agewellHref;a.textContent="Run AGEWELL CITY";hero.insertBefore(a,hero.firstChild);}
   if(hero&&!hero.querySelector(`a[href="${cityHref}"]`)){const a=document.createElement("a");a.className="button secondary";a.href=cityHref;a.textContent="Run Smart City Agentic AI";hero.insertBefore(a,hero.firstChild);}
-  if(hero&&!hero.querySelector(`a[href="${marsHref}"]`)){const a=document.createElement("a");a.className="button secondary";a.href=marsHref;a.textContent="Run ATLAS: MARS";hero.insertBefore(a,hero.firstChild);}
+  if(hero&&!hero.querySelector(`a[href="${marsHref}"]`)){const a=document.createElement("a");a.className="button secondary";a.href=marsHref;a.textContent="Run ATLAS: SPACE";hero.insertBefore(a,hero.firstChild);}
 }
-if(currentPage===missionHref){const status=document.querySelector(".suite-status");if(status&&!document.querySelector(`.suite-hero a[href="${cityHref}"]`)){const actions=document.createElement("div");actions.className="hero-actions";actions.innerHTML=`<a class="button inverted" href="${cityHref}">Launch Smart City Agentic AI</a><a class="button ghost" href="${agewellHref}">Launch AGEWELL CITY</a><a class="button ghost" href="${marsHref}">Launch ATLAS: MARS</a>`;status.insertAdjacentElement("afterend",actions);}}
+if(currentPage===missionHref){const status=document.querySelector(".suite-status");if(status&&!document.querySelector(`.suite-hero a[href="${cityHref}"]`)){const actions=document.createElement("div");actions.className="hero-actions";actions.innerHTML=`<a class="button inverted" href="${cityHref}">Launch Smart City Agentic AI</a><a class="button ghost" href="${agewellHref}">Launch AGEWELL CITY</a><a class="button ghost" href="${marsHref}">Launch ATLAS: SPACE</a>`;status.insertAdjacentElement("afterend",actions);}}
 
 const closeAll=except=>dropdowns.forEach(menu=>{if(menu!==except)menu.removeAttribute("open")});
 dropdowns.forEach(menu=>{menu.addEventListener("toggle",()=>{if(menu.open)closeAll(menu)});menu.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>menu.removeAttribute("open")));});
