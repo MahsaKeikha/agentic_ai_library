@@ -42,12 +42,15 @@ main{min-height:calc(100vh - 72px);padding:30px 0 70px;background:radial-gradien
 .book-button:focus-visible{outline:3px solid rgba(255,255,255,.75);outline-offset:3px}
 .book-button .arrow{font-size:15px;opacity:.8}
 .soon-button{border:1px solid rgba(212,155,56,.42);background:rgba(212,155,56,.06);color:#e7b85e;cursor:default}
-.series-note{margin:24px auto 0;max-width:780px;text-align:center;color:#8fa3b5;font-size:12.5px;line-height:1.55}
+.series-store{margin:24px auto 0;max-width:520px}
+.series-store .book-button{border-color:rgba(85,201,194,.42);background:rgba(85,201,194,.07);color:#f6f8fb}
+.series-store .book-button:hover{border-color:rgba(85,201,194,.66);background:rgba(85,201,194,.11)}
+.series-note{margin:18px auto 0;max-width:780px;text-align:center;color:#8fa3b5;font-size:12.5px;line-height:1.55}
 .visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 .footer.container{width:100%;max-width:none;margin:0;background:#05111c;color:#c7d5e3;padding-left:max(28px,calc((100% - 1180px)/2 + 28px));padding-right:max(28px,calc((100% - 1180px)/2 + 28px));border-top:1px solid rgba(149,180,207,.16)}
 .footer a{color:#d7e4f0}
 @media(max-width:900px){.hero-crop{aspect-ratio:1034/455}.details-panel{padding:26px 22px 28px}.book-grid{gap:14px}.book-card{padding:21px 18px 20px}.book-card h2{font-size:17px}.book-description{font-size:13px}}
-@media(max-width:760px){main{padding:16px 0 42px}.handbook-shell{width:min(100% - 18px,620px)}.hero-panel{border-radius:20px 20px 0 0}.hero-crop{aspect-ratio:1034/470}.details-panel{border-radius:0 0 20px 20px;padding:22px 16px 24px}.book-grid{grid-template-columns:1fr;gap:14px}.book-card{min-height:0}.series-note{text-align:left;margin-top:18px}.footer.container{padding-left:20px;padding-right:20px}}
+@media(max-width:760px){main{padding:16px 0 42px}.handbook-shell{width:min(100% - 18px,620px)}.hero-panel{border-radius:20px 20px 0 0}.hero-crop{aspect-ratio:1034/470}.details-panel{border-radius:0 0 20px 20px;padding:22px 16px 24px}.book-grid{grid-template-columns:1fr;gap:14px}.book-card{min-height:0}.series-store{max-width:none}.series-note{text-align:left;margin-top:18px}.footer.container{padding-left:20px;padding-right:20px}}
 </style>
 </head>
 <body>
@@ -88,7 +91,8 @@ main{min-height:calc(100vh - 72px);padding:30px 0 70px;background:radial-gradien
 <div class="card-action"><a class="book-button" href="https://a.co/d/0cOvZDEf" target="_blank" rel="noopener">Buy Book 3 on Amazon <span class="arrow" aria-hidden="true">↗</span></a></div>
 </article>
 </div>
-<p class="series-note">The three volumes are designed as one continuous engineering path, from foundations to agentic systems and production-scale multi-agent architecture.</p>
+<div class="series-store"><a class="book-button" href="https://www.amazon.com/dp/B0HHQY9YJX?lv=shuf&amp;channelId=480&amp;plpRedirect=mhFallback" target="_blank" rel="noopener">View All 3 Kindle Books on Amazon <span class="arrow" aria-hidden="true">↗</span></a></div>
+<p class="series-note">The three volumes are designed as one continuous engineering path, from foundations to agentic systems and production-scale multi-agent architecture. The complete three-book series is also available together in Kindle format.</p>
 </div>
 </section>
 </main>
