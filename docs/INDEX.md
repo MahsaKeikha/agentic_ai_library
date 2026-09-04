@@ -13,6 +13,12 @@ Catalog presence, local implementation, flagship selection, interactive simulati
 
 README positioning and claim language are governed by the [Atlas README Standard](README_STANDARD.md).
 
+## Books and learning resources
+
+- [AI Engineering Handbook Series](../AI_ENGINEERING_HANDBOOK_SERIES.md)
+- [View all 3 AI Engineering Handbook volumes on Amazon Kindle](https://www.amazon.com/dp/B0HHQY9YJX?lv=shuf&channelId=480&plpRedirect=mhFallback)
+- [Explore the handbook series on Multi-Agent AI Atlas](https://multiagentaiatlas.com/ai-engineering-handbooks.html)
+
 ## Complete catalog
 
 | Range | Domain | Systems |
