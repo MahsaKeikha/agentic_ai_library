@@ -6,7 +6,7 @@ This matrix is operational, not a promise of acceptance. Final submission decisi
 
 | Paper | Primary venue | Why it fits | Submission posture |
 |---|---|---|---|
-| J01 | IEEE Transactions on Automatic Control | Formal control-theoretic guarantees for runtime supervision, compositional safety, and liveness | Target only after theorem/proof package is strong enough for a controls audience |
+| J01 | IEEE Transactions on Automatic Control | Formal control-theoretic guarantees for compositional runtime supervision, dynamic authority, evidence state, and liveness | Develop only after C01 is submitted and frozen; journal version must add substantial new theory and validation beyond C01 |
 | J02 | Automatica | Event-triggered oversight as a control problem with risk and intervention-load analysis | Develop after C03 establishes compact core result |
 | J03 | IEEE Transactions on Control Systems Technology | Receding-horizon orchestration with practical cost/latency/risk constraints | Requires realistic systems experiments, not only abstract theory |
 | J04 | IEEE Transactions on Automation Science and Engineering | Evidence freshness, provenance, workflow automation, deterministic fallback | Strong fit if evaluated as automation methodology across multiple workflows |
@@ -16,7 +16,7 @@ This matrix is operational, not a promise of acceptance. Final submission decisi
 | J08 | Autonomous Agents and Multi-Agent Systems | Correlated failures, orchestration, coordination, resilience | Natural journal home for expanded C02 line |
 | J09 | IEEE Transactions on Industrial Informatics | Agentic control planes, digital twins, industrial CPS, safe tooling | Requires industrially credible fault-injection and recovery evaluation |
 | J10 | Artificial Intelligence | General decision-theoretic model for act/ask/abstain/escalate | Highest burden on conceptual novelty and broad validation |
-| C01 | American Control Conference 2027 | Supervisory control of discrete protected-action task graphs | Deadline 2026-09-25; submit only if a complete, finished result is achieved and validated |
+| C01 | American Control Conference 2027 | Anticipatory supervisory control of protected actions using AETA, AESC, precursor vulnerability, exact reachability, and reproducible finite-state validation | First publication target for Research Family 1; freeze and submit before journal expansion |
 | C02 | AAMAS 2027 | Correlated/common-mode failures in agent teams and recovery benchmarking | Abstract 2026-10-01; paper 2026-10-08; current strongest near-term agentic-AI target |
 | C03 | IEEE CDC | Event-triggered human intervention and takeover | Build as a compact control-theoretic result for a later cycle |
 | C04 | Future AAAI/ICLR cycle | Evidence-aware delegation for tool-using generative agents | Do not force into a closed/near-closed 2027 cycle |
@@ -24,9 +24,13 @@ This matrix is operational, not a promise of acceptance. Final submission decisi
 
 ## Near-term decision
 
-ACC 2027 requires a complete description of finished work. Because the regular-paper deadline is 2026-09-25, C01 is a high-risk deadline and must not be submitted with invented, preliminary, or unverified results.
+Research Family 1 follows a conference-first path.
 
-AAMAS 2027 is the more realistic immediate target for a new agentic-AI contribution. Its Generative and Agentic AI area explicitly includes orchestration, runtime support, failure handling, resilience, human-agent delegation, controllability, assurance, verification, safety, benchmarks, and evaluation.
+C01 is the immediate submission target. Its purpose is to establish the compact control-theoretic result: AETA, AESC, precursor vulnerability, pointwise insufficiency, exact safe and nonblocking synthesis, and finite-state validation.
+
+J01 is not a simultaneous duplicate submission. It begins only from the frozen C01 baseline and must add substantial new material such as compositional contracts, partial observation, asynchronous handoffs, dynamic authority grant and revocation, evidence-age dynamics, delayed human review, correlated failures, richer real-agent integrations, and expanded proofs.
+
+Other conference and journal pairs should follow the same lineage discipline unless a venue explicitly supports a different journal-plus-conference presentation route.
 
 ## Submission package standard
 
