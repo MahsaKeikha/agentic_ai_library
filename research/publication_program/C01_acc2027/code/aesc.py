@@ -1,16 +1,16 @@
-"""Authority-Evidence Supervisory Control (AESC).
+"""Authority and Evidence Supervisory Control (AESC).
 
-Finite-state reference implementation for the Paper 1 reproducibility package.
+Finite-state reference implementation for Paper 1.
 
-The implementation computes the largest state subset that is:
-1) outside modeled forbidden states,
-2) closed under uncontrollable transitions, and
-3) nonblocking with respect to accepted marked states.
+The supervisor computes the largest state subset that is:
+1. outside modeled forbidden states,
+2. closed under uncontrollable transitions, and
+3. nonblocking with respect to accepted marked states.
 
-The returned supervisor disables controllable transitions whose destination lies
-outside the winning set. It does not disable uncontrollable events.
+It then enables every transition whose source and destination remain in that
+winning set. Uncontrollable events are never selectively disabled.
 
-This is a research reference implementation, not a production authorization
+This package is a research implementation, not a production authorization
 engine.
 """
 from __future__ import annotations
@@ -50,14 +50,18 @@ class Supervisor:
         return transition_id in self.enabled_transition_ids
 
 
-def synthesize_supervisor(plant: Plant) -> Supervisor:
-    """Compute the maximal safe, uncontrollable-closed, nonblocking state set."""
+def _graphs(plant: Plant):
     outgoing: Dict[int, List[Tuple[int, Transition]]] = defaultdict(list)
     incoming: Dict[int, List[Tuple[int, Transition]]] = defaultdict(list)
     for idx, tr in enumerate(plant.transitions):
         outgoing[tr.src].append((idx, tr))
         incoming[tr.dst].append((idx, tr))
+    return outgoing, incoming
 
+
+def synthesize_supervisor(plant: Plant) -> Supervisor:
+    """Compute the maximal safe, uncontrollable-closed, nonblocking state set."""
+    outgoing, incoming = _graphs(plant)
     winning: Set[int] = set(range(plant.n_states)) - set(plant.forbidden)
     changed = True
     iterations = 0
@@ -69,7 +73,8 @@ def synthesize_supervisor(plant: Plant) -> Supervisor:
         uncontrollable_bad = {
             state
             for state in winning
-            if any((not tr.controllable) and tr.dst not in winning for _, tr in outgoing[state])
+            if any((not tr.controllable) and tr.dst not in winning
+                   for _, tr in outgoing[state])
         }
         if uncontrollable_bad:
             winning.difference_update(uncontrollable_bad)
@@ -119,7 +124,7 @@ def reachable_states(plant: Plant, enabled_transition_ids: Iterable[int]) -> Fro
 
 
 def pointwise_gate_transition_ids(plant: Plant) -> FrozenSet[int]:
-    """Immediate-only baseline; blocks only controllable transitions directly into forbidden states."""
+    """Immediate-only baseline that blocks controllable transitions into forbidden states."""
     return frozenset(
         idx for idx, tr in enumerate(plant.transitions)
         if (not tr.controllable) or tr.dst not in plant.forbidden
@@ -128,3 +133,29 @@ def pointwise_gate_transition_ids(plant: Plant) -> FrozenSet[int]:
 
 def all_transition_ids(plant: Plant) -> FrozenSet[int]:
     return frozenset(range(len(plant.transitions)))
+
+
+def precursor_vulnerability(plant: Plant) -> dict:
+    """Characterize states admitted by pointwise gating but rejected by AESC.
+
+    The precursor-vulnerable set is R_P \ W, where R_P is the set reachable
+    under a direct-action pointwise gate and W is the synthesized winning set.
+    Such states need not be forbidden themselves. They are removed because
+    uncontrollable closure or nonblockingness cannot be maintained.
+    """
+    supervisor = synthesize_supervisor(plant)
+    point_ids = pointwise_gate_transition_ids(plant)
+    reachable_pointwise = reachable_states(plant, point_ids)
+    vulnerable_states = reachable_pointwise - supervisor.winning_states
+    precursor_edges = {
+        idx for idx in point_ids
+        if plant.transitions[idx].src in supervisor.winning_states
+        and plant.transitions[idx].dst in vulnerable_states
+        and plant.transitions[idx].controllable
+    }
+    return {
+        "reachable_pointwise": reachable_pointwise,
+        "vulnerable_states": frozenset(vulnerable_states),
+        "precursor_transition_ids": frozenset(precursor_edges),
+        "winning_states": supervisor.winning_states,
+    }
