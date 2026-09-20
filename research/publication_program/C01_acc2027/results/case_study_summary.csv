@@ -1,0 +1,13 @@
+case,controller,runs,seed,invalidation_probability,winning_states,total_states,pointwise_reachable_states,precursor_vulnerable_states,suppressed_precursor_transitions,complete,human_review,violation,deadlock,timeout,mean_steps
+software_release,unconstrained,100000,20260919,0.22,5,8,7,2,1,0.82523,0.09853,0.07624,0.0,0.0,3.97771
+software_release,pointwise_gate,100000,20260936,0.22,5,8,7,2,1,0.82151,0.10092,0.0,0.07757,0.0,3.89908
+software_release,aesc,100000,20260953,0.22,5,8,7,2,1,0.84495,0.15505,0.0,0.0,0.0,3.84495
+industrial_digital_twin,unconstrained,100000,20261919,0.3,5,8,7,2,1,0.79433,0.10181,0.10386,0.0,0.0,4.00205
+industrial_digital_twin,pointwise_gate,100000,20261936,0.3,5,8,7,2,1,0.79405,0.10068,0.0,0.10527,0.0,3.89932
+industrial_digital_twin,aesc,100000,20261953,0.3,5,8,7,2,1,0.84776,0.15224,0.0,0.0,0.0,3.84776
+agewell_support,unconstrained,100000,20262919,0.18,5,8,7,2,1,0.83623,0.10094,0.06283,0.0,0.0,3.96189
+agewell_support,pointwise_gate,100000,20262936,0.18,5,8,7,2,1,0.83842,0.09898,0.0,0.0626,0.0,3.90102
+agewell_support,aesc,100000,20262953,0.18,5,8,7,2,1,0.84743,0.15257,0.0,0.0,0.0,3.84743
+smart_city,unconstrained,100000,20263919,0.27,5,8,7,2,1,0.8041,0.10046,0.09544,0.0,0.0,3.99498
+smart_city,pointwise_gate,100000,20263936,0.27,5,8,7,2,1,0.80646,0.09867,0.0,0.09487,0.0,3.90133
+smart_city,aesc,100000,20263953,0.27,5,8,7,2,1,0.84596,0.15404,0.0,0.0,0.0,3.84596
