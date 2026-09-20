@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "code"))
 
-from aesc import pointwise_gate_transition_ids, synthesize_supervisor
+from aesc import pointwise_gate_transition_ids, precursor_vulnerability, synthesize_supervisor
 from benchmarks import atlas_case_studies
 
 
@@ -27,11 +27,14 @@ def test_aesc_preserves_secure_completion_and_human_review():
         assert "human_review" in labels
 
 
-def test_pointwise_gate_does_not_remove_risky_precursor():
+def test_pointwise_gate_keeps_the_vulnerable_precursor():
     for plant, _ in atlas_case_studies():
         enabled = pointwise_gate_transition_ids(plant)
         events = {plant.transitions[idx].event for idx in enabled}
         assert any("unbound" in event or "unpinned" in event for event in events)
+        vuln = precursor_vulnerability(plant)
+        assert len(vuln["vulnerable_states"]) >= 1
+        assert len(vuln["precursor_transition_ids"]) >= 1
 
 
 def test_against_bruteforce_oracle():
