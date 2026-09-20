@@ -35,7 +35,7 @@ The existing Atlas is treated as shared research infrastructure: reference archi
 
 | ID | Working title | Distinct new contribution | Primary target |
 |---|---|---|---|
-| C01 | Supervisory Control of Protected Actions in Agentic Task Graphs | Discrete-event supervisory controller that disables unsafe task transitions while preserving nonblocking progress | American Control Conference 2027 |
+| C01 | Anticipatory Supervisory Control of Protected Actions in Tool-Using Multi-Agent AI | Authority and Evidence Task Automaton, precursor vulnerability, and maximally permissive safe nonblocking supervisory synthesis | American Control Conference 2027 |
 | C02 | Correlated Failure Benchmarks for Multi-Agent LLM Orchestration | New benchmark, failure-injection protocol, common-mode failure taxonomy, and recovery baselines | AAMAS 2027 |
 | C03 | Event-Triggered Human Intervention for Multi-Agent Decision Systems | Compact theory and simulation study of selective human takeover under risk and delay constraints | IEEE Conference on Decision and Control |
 | C04 | Evidence-Aware Delegation for Tool-Using AI Agents | New delegation policy that conditions authority on evidence completeness, freshness, and action reversibility | AAAI / ICLR cycle after full benchmark completion |
@@ -63,8 +63,8 @@ Paper-specific experiments must introduce new test harnesses, baselines, metrics
 
 ## Immediate sequence
 
-### Phase A: formalize and validate J01 / C01
-Build the common mathematical foundation for runtime assurance and supervisory control, while keeping the conference and journal contributions distinct.
+### Phase A: submit C01 first, then mature J01
+C01 is the frozen first publication in this research lineage. Submit the finished ACC 2027 conference result first. Preserve its exact manuscript, code, figures, results, and commit as the conference baseline. Only after that baseline is sealed do we develop J01 as a substantially expanded journal contribution with new theory, new experiments, and explicit citation of C01.
 
 ### Phase B: build C02 / J08 correlated-failure benchmark
 Use heterogeneous Atlas agents and controlled fault injection to quantify common-mode, correlated, critic, routing, and recovery failures.
@@ -77,6 +77,20 @@ Extend F117/F118 into J03/J09/C05 with new model-predictive orchestration, tool-
 
 ### Phase E: evidence, observability, and delegation
 Complete J04/J05/J07/J10/C04 with formal evidence-state, graph-observability, uncertainty, and decision-theoretic models.
+
+## Conference-to-journal lineage rule
+
+For research families that have both conference and journal outputs, the default sequence is:
+
+1. finish and submit the conference paper;
+2. freeze the conference manuscript, code, figures, data, and result manifest;
+3. collect reviewer feedback when available;
+4. begin the journal extension from that frozen baseline;
+5. require substantial new theory, proofs, experiments, validation, figures, and discussion;
+6. cite and disclose the conference version in the journal manuscript;
+7. never submit the same or minimally changed manuscript as both a conference and journal paper.
+
+For Research Family 1, C01 is the conference baseline and J01 is the later journal extension.
 
 ## Submission rule
 
