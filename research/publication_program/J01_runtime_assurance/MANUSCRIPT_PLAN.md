@@ -133,6 +133,31 @@ Fallback scope-aligned venues:
 - IEEE Transactions on Systems, Man, and Cybernetics: Systems
 - IEEE Transactions on Artificial Intelligence
 
+## Conference lineage
+
+J01 is the journal extension of the C01 research family, but it is not a duplicate of C01.
+
+The frozen C01 conference baseline contains:
+- the Authority and Evidence Task Automaton;
+- the AESC finite-state supervisor;
+- precursor vulnerability;
+- pointwise sufficiency and anticipatory precursor suppression;
+- exact reachability analysis;
+- four heterogeneous workflow abstractions;
+- finite-state scaling and implementation verification.
+
+J01 must cite C01 and add substantial new scientific content. Planned journal-only additions include:
+- compositional assume-guarantee contracts across heterogeneous agents;
+- partial observation;
+- asynchronous handoff and message-age semantics;
+- dynamic authority grant and revocation;
+- evidence-age dynamics;
+- delayed or unavailable human review;
+- correlated and common-mode failures;
+- incremental or dynamic supervisor updates;
+- substantially larger and richer runtime integrations;
+- additional baselines, ablations, proofs, and failure-regime analysis.
+
 ## Status
 
-Research formulation started. No theorem or quantitative result is yet claimed.
+Journal development is intentionally deferred until C01 is submitted and its exact conference baseline is frozen. No J01 submission should be prepared as a lightly expanded copy of C01.
